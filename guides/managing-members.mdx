@@ -1,9 +1,171 @@
 ---
-title: "Managing members"
-sidebarTitle: "Managing members"
-description: "Add, edit, and organise church members in Bethel ChMS."
+title: "Managing members and visitors"
+description: "Add, edit, and manage church members and visitors in Bethel ChMS, including lifecycle statuses, visitor conversion, and duplicate detection."
+sidebarTitle: "Members & visitors"
 ---
 
+Bethel ChMS tracks two types of people in your church: **members** and **visitors**. Members are the people who belong to your congregation, while visitors are those who have attended but haven't yet joined. This page covers how to add, edit, and manage both, along with lifecycle statuses, duplicate detection, and converting visitors into members.
+
+<Info>
+**Who can do this:** Branch Admin and Editor can create and edit members and visitors. Only Branch Admin can delete. Organisation-level roles (Org Owner, Org Admin) have read-only access across all branches.
+</Info>
+
+## Members
+
+### Adding a member
+
+<Steps>
+  <Step title="Open the member list">
+    In the sidebar, click **Members** to open the member list for your branch.
+  </Step>
+  <Step title="Click Add Member">
+    Click the **Add Member** button to open the new member dialog.
+  </Step>
+  <Step title="Fill in the member details">
+    Enter the required fields: **First name** and **Last name**. You can also fill in optional fields: **Date of birth**, **Gender**, **Email**, **Mobile number**, **Address**, and **Post code**.
+  </Step>
+  <Step title="Save the member">
+    Click **Save**. The member is created with a status of **Newcomer** automatically.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/add-member-dialog.png" alt="Add member dialog showing required and optional fields" />
+</Frame>
+
+### Email and mobile uniqueness
+
+When you add or edit a member, Bethel ChMS checks whether the email address or mobile number already belongs to someone else in the same branch. If a duplicate is found, you'll see a warning with a link to the existing record so you can review it before continuing.
+
+<Tip>
+The duplicate warning is non-blocking, but two members in the same branch cannot share the same email or mobile number. If you see a warning, check the existing record to make sure you're not creating a duplicate.
+</Tip>
+
+### Editing a member
+
+<Steps>
+  <Step title="Open the member's profile">
+    Navigate to the member list and click on the member you want to edit.
+  </Step>
+  <Step title="Click Edit">
+    On the member detail page, click **Edit** to open the editing form.
+  </Step>
+  <Step title="Update fields and save">
+    Make your changes and click **Save**. All fields are editable except system-managed fields like creation date. If you change the email or mobile number, duplicate detection runs again automatically.
+  </Step>
+</Steps>
+
+### Deleting a member
+
+<Warning>
+Only Branch Admins can delete members. Editors do not have permission to delete.
+</Warning>
+
+Deleting a member is a soft delete, the record is hidden but not permanently removed. Any active ministry assignments are automatically closed when a member is deleted. You have 30 days to recover a deleted member before the record is permanently removed.
+
 <Note>
-  This guide is coming soon. Check back shortly for step-by-step instructions on adding, editing, and organising members in Bethel ChMS.
+Attendance history is preserved even after a member is deleted. You won't lose any historical data.
 </Note>
+
+<Frame>
+  <img src="/images/guides/delete-member-confirmation.png" alt="Delete member confirmation dialog showing active ministry assignments" />
+</Frame>
+
+### Lifecycle statuses
+
+Every member in Bethel ChMS has one of three lifecycle statuses:
+
+- **Newcomer**, assigned automatically when a member is first created.
+- **Active**, indicates the member is regularly attending.
+- **Inactive**, indicates the member has stopped attending.
+
+You can manually change a member's status from their detail page at any time.
+
+<Accordion title="How automation rules work">
+Bethel ChMS can automatically update lifecycle statuses based on attendance patterns. Here's how the defaults work:
+
+- **Newcomer to Active:** A member is promoted to Active after 4 attendances within 90 days.
+- **Active to Inactive:** A member is moved to Inactive after 30 days of absence.
+
+These thresholds are configured at the organisation level, with optional per-branch overrides. Automation is disabled by default. To enable it, an Org Owner can go to **Organisation > Automation** in the settings.
+</Accordion>
+
+### Filtering and searching
+
+Use the search bar at the top of the member list to find members by first name, last name, email, or mobile number. You can also filter the list by lifecycle status to see only Newcomers, Active members, or Inactive members.
+
+## Visitors
+
+### What is a visitor?
+
+A **visitor** is someone who has attended your church but is not yet a member. Visitors are tracked separately so your team can follow up with them and, when the time is right, convert them into full members.
+
+### Adding a visitor
+
+<Steps>
+  <Step title="Open the visitor list">
+    In the sidebar, click **Visitors** to open the visitor list for your branch.
+  </Step>
+  <Step title="Click Add Visitor">
+    Click the **Add Visitor** button to open the new visitor dialog.
+  </Step>
+  <Step title="Fill in visitor details">
+    Enter the required fields: **First name** and **Last name**. You can also fill in optional fields: **Gender**, **Email**, and **Mobile number**.
+  </Step>
+  <Step title="Save the visitor">
+    Click **Save**. The visit count is set to 1 and the first visit date is recorded automatically.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/add-visitor-dialog.png" alt="Add visitor dialog" />
+</Frame>
+
+### Visit tracking
+
+Bethel ChMS automatically tracks three fields for every visitor:
+
+- **Visit count**, increments each time the visitor checks in to an event.
+- **Last visit date**, updates to the most recent check-in date.
+- **First visit date**, set when the visitor is created and never changes.
+
+These fields are system-managed and cannot be edited manually. They update automatically whenever the visitor is checked in through any attendance method.
+
+### Converting a visitor to a member
+
+When a visitor is ready to join your church as a member, you can convert their record directly.
+
+<Steps>
+  <Step title="Open the visitor's record">
+    Navigate to the visitor list and click on the visitor you want to convert.
+  </Step>
+  <Step title="Click Convert to Member">
+    On the visitor detail page, click **Convert to Member**. A dialog opens with the visitor's details pre-filled, including first name, last name, email, mobile number, and gender.
+  </Step>
+  <Step title="Review and add details">
+    Review the pre-filled fields and make any corrections. You can also add additional member fields such as **Date of birth**, **Address**, and **Post code**.
+  </Step>
+  <Step title="Complete the conversion">
+    Click **Convert**. Bethel ChMS creates a new member record with a status of **Newcomer** and archives the visitor record.
+  </Step>
+</Steps>
+
+<Info>
+The visitor's attendance history is linked to the new member record, not migrated. All history is preserved and accessible from the member's profile.
+</Info>
+
+<Tip>
+If the visitor's email or mobile number already belongs to an existing member in the same branch, you'll see a warning before the conversion completes. Check the existing member record to avoid creating a duplicate.
+</Tip>
+
+<Frame>
+  <img src="/images/guides/convert-visitor-to-member.png" alt="Convert visitor to member dialog with pre-filled fields" />
+</Frame>
+
+### Deleting a visitor
+
+<Warning>
+Only Branch Admins can delete visitors. Editors do not have permission to delete.
+</Warning>
+
+Like members, deleting a visitor is a soft delete. The record is hidden but can be recovered within 30 days. Attendance history is preserved even after the visitor is deleted.

@@ -26,7 +26,10 @@
             "pages": [
               "guides/roles-and-permissions",
               "guides/recording-attendance",
-              "guides/managing-members"
+              "guides/managing-members",
+              "guides/setting-up-ministries",
+              "guides/managing-events",
+              "guides/branch-management"
             ]
           }
         ]

@@ -1,0 +1,140 @@
+---
+title: "Setting up ministries"
+description: "Create ministries, assign members with roles, manage rosters, and archive or delete ministries in Bethel ChMS."
+sidebarTitle: "Ministries"
+---
+
+A ministry in Bethel ChMS is an organisational grouping for teams, departments, or service groups within a branch. Ministries are not events. They help you organise who is responsible for what, whether that's a worship team, an ushering department, or a children's ministry.
+
+<Info>
+**Who can do this:** Branch Admin and Editor can create, edit, and manage ministry rosters. Only Branch Admin can delete a ministry. Organisation-level roles have read-only access.
+</Info>
+
+## Creating a ministry
+
+<Steps>
+  <Step title="Open the ministries page">
+    In the sidebar, click **Ministries**.
+  </Step>
+  <Step title="Start a new ministry">
+    Click **Add Ministry**. A dialog will open with the ministry form.
+  </Step>
+  <Step title="Fill in the details">
+    Enter a **Name** for the ministry. The name must be unique within your branch. Optionally, add a **Description** to explain the ministry's purpose.
+  </Step>
+  <Step title="Save the ministry">
+    Click **Save**. The ministry is created with an **Active** status by default.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/create-ministry-dialog.png" alt="Create ministry dialog" />
+</Frame>
+
+## Assigning members
+
+Once a ministry exists, you can start adding members to it and assigning them roles.
+
+<Steps>
+  <Step title="Open the ministry">
+    Click on the ministry you want to add members to.
+  </Step>
+  <Step title="Add a member">
+    Click **Add Member**. A dialog will open with a search field.
+  </Step>
+  <Step title="Search and select">
+    Search for a member by name, then select them from the results.
+  </Step>
+  <Step title="Assign a role">
+    Choose a role for this member: **Leader**, **Assistant Leader**, or **Member**.
+  </Step>
+  <Step title="Set the joined date and confirm">
+    Set the **Joined Date** and click **Save** to add them to the roster.
+  </Step>
+</Steps>
+
+<Info>
+A member can only be assigned to a ministry within their own branch.
+</Info>
+
+<Frame>
+  <img src="/images/guides/add-member-to-ministry.png" alt="Add member to ministry dialog with role selector" />
+</Frame>
+
+## Ministry roles explained
+
+Each person in a ministry is assigned one of three roles:
+
+- **Leader:** The primary person responsible for the ministry. Ministry leaders may have additional portal permissions in future.
+- **Assistant Leader:** Supports the ministry leader in coordinating the team.
+- **Member:** A general participant in the ministry.
+
+<Tip>
+A ministry can have multiple leaders and assistant leaders. For example, a large worship ministry might have two leaders who alternate between services.
+</Tip>
+
+## Removing a member from a ministry
+
+When you remove someone from a ministry, Bethel ChMS sets a **Leave Date** on their assignment rather than deleting the record. This preserves their tenure history.
+
+<Steps>
+  <Step title="Open the ministry roster">
+    Navigate to the ministry and view its roster.
+  </Step>
+  <Step title="Remove the member">
+    Find the member you want to remove and click **Remove**.
+  </Step>
+  <Step title="Confirm removal">
+    Confirm the action. Bethel ChMS will set a leave date on the assignment, and the member will no longer appear in the active roster.
+  </Step>
+</Steps>
+
+<Note>
+If a member re-joins a ministry later, a new assignment record is created. Their previous tenure is preserved as a separate record.
+</Note>
+
+## Viewing the roster
+
+The ministry detail page shows all active members, those with no leave date. For each person, you can see their name, role, and joined date.
+
+<Frame>
+  <img src="/images/guides/ministry-roster.png" alt="Ministry roster showing active members with role badges" />
+</Frame>
+
+## Archiving a ministry
+
+Archiving a ministry sets its status to **Archived**. You can no longer assign new members to an archived ministry, but the existing roster and history are preserved. You can reactivate an archived ministry at any time.
+
+<Steps>
+  <Step title="Open the ministry">
+    Navigate to the ministry you want to archive.
+  </Step>
+  <Step title="Archive the ministry">
+    Click **Archive**. The ministry status changes to **Archived**.
+  </Step>
+</Steps>
+
+<Tip>
+Use archiving when a ministry is on pause but you want to keep the history. For example, a seasonal outreach team that runs every December.
+</Tip>
+
+## Deleting a ministry
+
+<Warning>
+Only Branch Admins can delete a ministry.
+</Warning>
+
+Deleting a ministry is a soft delete. Bethel ChMS automatically closes all active assignments and moves the ministry to a deleted state. Deleted ministries can be recovered within 30 days.
+
+<Steps>
+  <Step title="Open the ministry">
+    Navigate to the ministry you want to delete.
+  </Step>
+  <Step title="Delete the ministry">
+    Click **Delete** and confirm the action. All active member assignments are closed automatically.
+  </Step>
+</Steps>
+
+<Note>
+If you just want to pause a ministry temporarily, consider archiving it instead. Archiving keeps the ministry visible in your list and preserves the roster without requiring recovery.
+</Note>

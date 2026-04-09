@@ -1,0 +1,147 @@
+---
+title: "Managing events and locations"
+description: "Create one-off and recurring events, manage occurrences, and set up locations for your branch in Bethel ChMS."
+sidebarTitle: "Events & locations"
+---
+
+Events in Bethel ChMS represent scheduled activities like services, Bible studies, or outreach programs. Each event happens at a location, and every event has one or more occurrences that you can manage individually. This page covers how to create and manage both events and locations.
+
+<Info>
+**Who can do this:** Branch Admin and Editor can create and edit events and locations. Only Branch Admin can delete. Organisation-level roles (Org Owner, Org Admin) have read-only access across all branches.
+</Info>
+
+## Events
+
+### Creating a one-off event
+
+A one-off event is a single scheduled activity with exactly one occurrence, such as a guest speaker visit or a special community outreach day.
+
+<Steps>
+  <Step title="Open the events list">
+    In the sidebar, click **Events** to open the events list for your branch.
+  </Step>
+  <Step title="Click Add Event">
+    Click the **Add Event** button to open the new event dialog.
+  </Step>
+  <Step title="Fill in the event details">
+    Enter the required fields: **Name**, **Location** (defaults to your branch's primary location), **Start date/time**, and **End date/time** (must be after the start). You can also add an optional **Description**.
+  </Step>
+  <Step title="Save the event">
+    Click **Save**. Bethel ChMS creates the event with a single occurrence automatically.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/create-event-oneoff.png" alt="Create event dialog for a one-off event" />
+</Frame>
+
+### Creating a recurring event
+
+Recurring events are for activities that repeat on a regular schedule, such as weekly services or monthly prayer meetings.
+
+<Steps>
+  <Step title="Open the events list">
+    In the sidebar, click **Events** to open the events list for your branch.
+  </Step>
+  <Step title="Click Add Event">
+    Click the **Add Event** button to open the new event dialog.
+  </Step>
+  <Step title="Fill in the event details">
+    Enter the required fields: **Name**, **Location**, **Start date/time**, and **End date/time**. Add an optional **Description** if needed.
+  </Step>
+  <Step title="Enable recurrence">
+    Tick the **This is a recurring event** checkbox. Choose a recurrence pattern: **Daily**, **Weekly**, **Bi-weekly**, or **Monthly**. Set the **Recurrence end date** (required).
+  </Step>
+  <Step title="Save the event">
+    Click **Save**. Bethel ChMS generates all occurrences based on your chosen pattern.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/create-event-recurring.png" alt="Create event dialog with recurring options expanded" />
+</Frame>
+
+<Info>
+Bethel ChMS generates up to 52 occurrences at a time. If your recurring event runs longer than that, additional occurrences are generated automatically each week as needed.
+</Info>
+
+### Understanding occurrences
+
+Every event in Bethel ChMS has one or more **occurrences**. A one-off event has exactly one occurrence, while a recurring event has many. Each occurrence has its own date, time, location, and status.
+
+Attendance is always recorded against a specific occurrence, not the event itself. This means you can track who attended each individual service or meeting, even when it's part of a recurring series.
+
+### Editing a recurring event
+
+When you edit a recurring event, Bethel ChMS prompts you to confirm whether to **Apply to all future occurrences**. Changes apply only to future occurrences, past occurrences are never modified.
+
+<Frame>
+  <img src="/images/guides/apply-to-future-occurrences.png" alt="Apply to all future occurrences confirmation prompt" />
+</Frame>
+
+### Managing a single occurrence
+
+You can manage individual occurrences without affecting the rest of the series. Open the occurrence from the event detail page to see the following actions:
+
+- **Reschedule:** Change the date or time of the occurrence. The occurrence is marked as **Rescheduled** so your team can see it was moved.
+- **Change location:** Override the default location for this occurrence. Choose **Same as event** to revert back to the event's default location.
+- **Cancel:** Mark the occurrence as **Cancelled**. Once cancelled, attendance recording and other actions are disabled for that occurrence.
+
+<Frame>
+  <img src="/images/guides/occurrence-detail-actions.png" alt="Occurrence detail showing Reschedule, Change Location, and Cancel actions" />
+</Frame>
+
+### Deleting an event
+
+<Warning>
+Only Branch Admins can delete events. Editors do not have permission to delete.
+</Warning>
+
+Deleting an event removes the event and all of its occurrences from view. Any attendance records that were previously recorded against the event's occurrences are preserved and remain accessible in attendance reports.
+
+## Locations
+
+### What is a location?
+
+A **location** is a physical venue where your branch holds events, such as a main auditorium, a community hall, or an outdoor space. Every branch has a primary location that is created during initial setup.
+
+### Creating a location
+
+<Steps>
+  <Step title="Open the locations list">
+    In the sidebar, click **Locations** to open the locations list for your branch.
+  </Step>
+  <Step title="Click Add Location">
+    Click the **Add Location** button to open the new location dialog.
+  </Step>
+  <Step title="Fill in the location details">
+    Enter the required field: **Name**. You can also fill in optional fields: **Address**, **Post code**, and **Capacity**.
+  </Step>
+  <Step title="Save the location">
+    Click **Save**. The new location is now available when creating or editing events.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/create-location-dialog.png" alt="Create location dialog" />
+</Frame>
+
+### The primary location
+
+Each branch has exactly one primary location. When you create a new event, the location defaults to your branch's primary location. You can change which location is primary by selecting **Set as Primary** on any other location.
+
+<Note>
+You cannot delete the primary location. To delete it, first set another location as primary.
+</Note>
+
+### Deleting a location
+
+You cannot delete a location that is linked to future events, either directly or through event inheritance. If you attempt to delete a linked location, Bethel ChMS displays a list of the events that are still using it.
+
+<Tip>
+To delete a location that is linked to future events, first reassign those events to a different location.
+</Tip>
+
+<Frame>
+  <img src="/images/guides/delete-location-blocked.png" alt="Delete location blocked dialog showing linked events" />
+</Frame>

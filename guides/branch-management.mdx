@@ -1,0 +1,133 @@
+---
+title: "Branch management"
+description: "Create, duplicate, and manage branches across your multi-site church network in Bethel ChMS."
+sidebarTitle: "Branch management"
+---
+
+Branch management is where org-level administrators set up and maintain the branches that make up a multi-site church network. From here you can create new branches, duplicate existing ones to save time, copy resources between branches, and manage branch details. If you're running more than one location, this is where it all comes together.
+
+<Info>
+**Who can do this:** Org Owner and Org Admin can create and edit branches. Only Org Owner can delete a branch. Branch Admins can edit their own branch's details but cannot create or delete branches.
+</Info>
+
+## Creating a new branch
+
+<Steps>
+  <Step title="Open the Branches page">
+    Navigate to **Organisation** > **Branches** and click **Create Branch**.
+  </Step>
+  <Step title="Fill in branch details">
+    Enter the **Branch Name** (required, must be unique within your organisation) and **Branch Email** (required).
+  </Step>
+  <Step title="Fill in the primary location">
+    Enter the **Location Name** (required). You can also fill in optional fields: **Address**, **Post Code**, and **Capacity**.
+  </Step>
+  <Step title="Configure Sunday Service">
+    Set the **Start time**, **End time**, and optionally a **Description** for the branch's Sunday Service. If the branch doesn't have a Sunday Service, you can skip this section.
+  </Step>
+  <Step title="Create the branch">
+    Click **Create**. Bethel ChMS provisions the branch with its primary location, a Sunday Service event (if configured), and 52 weekly occurrences.
+  </Step>
+</Steps>
+
+<Tip>
+Everything is set up in one step. You don't need to create the location or Sunday Service separately.
+</Tip>
+
+<Frame>
+  <img src="/images/guides/create-branch-form.png" alt="Create branch form showing branch details, location, and Sunday Service sections" />
+</Frame>
+
+## Duplicating a branch
+
+Duplicating lets you create up to 10 new branches at once, using an existing branch as a template. This is useful when you're launching multiple new locations with a similar setup.
+
+<Steps>
+  <Step title="Open the duplication wizard">
+    From the Branches list, open the context menu on the branch you want to use as a template and select **Duplicate Branch**.
+  </Step>
+  <Step title="Choose how many copies">
+    Select the number of branches to create (1 to 10).
+  </Step>
+  <Step title="Configure each new branch">
+    For each copy, fill in the **Branch name** and location details: **Location name**, **Address**, **Post code**, and **Capacity**. You can also configure **Sunday Service** times and description for each branch.
+  </Step>
+  <Step title="Select additional events to clone">
+    Optionally, select which additional events from the source branch you'd like to clone into the new branches.
+  </Step>
+  <Step title="Review and duplicate">
+    Review the summary and click **Duplicate**.
+  </Step>
+  <Step title="Check the results">
+    The results screen shows the status of each branch (success or failure). If any branches failed to create, use the **Retry Failed** button to try again.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/guides/duplicate-branch-wizard-step2.png" alt="Branch duplication wizard showing branch name and location configuration" />
+</Frame>
+
+<Frame>
+  <img src="/images/guides/duplicate-branch-results.png" alt="Branch duplication results showing success or failure per branch" />
+</Frame>
+
+### What gets duplicated
+
+**Included:** Primary location (with your configured details), Sunday Service event (if configured, with 52 occurrences), any additional events you selected (with their occurrences), and all active ministries (name, description, and status only).
+
+**Not included:** Members, visitors, attendance records, user accounts, or ministry member assignments.
+
+<Info>
+Duplicated branches start empty of people. You'll need to add members, invite users, and assign ministry rosters separately.
+</Info>
+
+## Copying resources between branches
+
+Copy events, locations, or ministries from one branch to one or more target branches without duplicating the entire branch.
+
+<Steps>
+  <Step title="Open the copy dialog">
+    From the Branches list, open the context menu on the source branch and select **Copy Resources**.
+  </Step>
+  <Step title="Select target branches">
+    Choose the branches you want to copy resources into.
+  </Step>
+  <Step title="Choose which resources to copy">
+    Select the resource types you'd like to copy: **events**, **locations**, **ministries**, or any combination.
+  </Step>
+  <Step title="Review and confirm">
+    Review the summary and confirm to start the copy.
+  </Step>
+</Steps>
+
+<Note>
+Copied events use the target branch's primary location. Copied locations are never set as the primary location. Copied ministries include name, description, and status only, with no member assignments.
+</Note>
+
+<Frame>
+  <img src="/images/guides/copy-resources-dialog.png" alt="Copy resources dialog showing resource selection" />
+</Frame>
+
+## Editing a branch
+
+You can update a branch's **Name** and **Email** at any time. The branch name must remain unique within your organisation. Branch Admins can edit the details of their own branch, while Org Owners and Org Admins can edit any branch.
+
+## Deleting a branch
+
+<Warning>
+Only the Org Owner can delete a branch. This action affects all data within that branch.
+</Warning>
+
+Deleting a branch is a soft delete. The branch and all of its associated data are hidden, including members, visitors, events, locations, ministries, and user accounts. You must type the branch name to confirm the deletion. Deleted branches can be recovered within 30 days before the data is permanently removed.
+
+<Frame>
+  <img src="/images/guides/delete-branch-confirmation.png" alt="Delete branch confirmation dialog with name input" />
+</Frame>
+
+## Maximum branches
+
+Your organisation has a maximum number of branches based on your plan. You cannot create or duplicate branches beyond this limit.
+
+<Note>
+Contact BethelWare Software Ltd if you need to increase your branch limit.
+</Note>
