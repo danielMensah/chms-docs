@@ -3,9 +3,9 @@
   "theme": "luma",
   "name": "Bethel ChMS",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#284557",
+    "light": "#dfb160",
+    "dark": "#dfb160"
   },
   "appearance": {
     "default": "light"
@@ -56,7 +56,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@bethelware.com"
+        "href": "mailto:mrdanielmensah@hotmail.co.uk"
       }
     ],
     "primary": {
