@@ -1,0 +1,148 @@
+{
+  "project": "bethelware-docs",
+  "branchName": "ralph/docs-getting-started-roles-attendance",
+  "description": "First three guide-style documentation pages for Bethel ChMS: Getting Started (intro, setup, invite), Roles & Permissions, and Recording Attendance",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Remove template pages and set up docs structure",
+      "description": "As a developer, I need to remove the Mintlify template pages and create the directory structure and docs.json navigation skeleton for the new documentation pages.",
+      "acceptanceCriteria": [
+        "Remove quickstart.mdx and development.mdx from project root",
+        "Remove essentials/, api-reference/, ai-tools/, snippets/ directories",
+        "Remove all references to deleted pages from docs.json navigation",
+        "Create getting-started/ and guides/ directories",
+        "Add 'Getting started' and 'Guides' navigation groups to docs.json with placeholder paths for all five new pages",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": "This must run first so subsequent stories can add their pages to the existing navigation structure."
+    },
+    {
+      "id": "US-002",
+      "title": "Write introduction page — What is Bethel?",
+      "description": "As a prospective user landing on the docs, I want a one-sentence explanation of what Bethel is and who it's for, so I can confirm this product is relevant to me.",
+      "acceptanceCriteria": [
+        "Create getting-started/introduction.mdx with title, description, and sidebarTitle frontmatter",
+        "Page opens with a single-sentence description of what Bethel is and who it's for",
+        "Brief bullet list of capabilities: manage members, track attendance, run events, handle visitors",
+        "A 'What you'll need' note callout: just an email address and a few minutes",
+        "Ends with a clear call-to-action linking to /getting-started/setup",
+        "Screenshot placeholder as MDX comment: {/* Screenshot: Bethel dashboard overview */}",
+        "Page path is listed in docs.json navigation under Getting started group",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Write setup page — Set up your church",
+      "description": "As a new user, I want a single walkthrough that takes me from sign-up to a fully provisioned branch, so I can start using Bethel immediately.",
+      "acceptanceCriteria": [
+        "Create getting-started/setup.mdx with title, description, and sidebarTitle frontmatter",
+        "Uses <Steps> component for the sequential flow",
+        "Step 1 — Sign up: email and password, validation rules (min 8 characters)",
+        "Step 2 — Create your organisation: explains what an organisation is on first use, lists form fields (Name required, Email required, Address optional, Post Code optional)",
+        "Info callout: 'You automatically become the organisation owner — the highest permission level in Bethel.'",
+        "Step 3 — Create your first branch: explains what a branch is on first use, lists form fields (Branch Name required, Location Name required, Sunday Service start/end time)",
+        "Tip callout explaining auto-provisioned items: primary location, Sunday Service event, 52 weekly occurrences",
+        "Step 4 — You're in: brief dashboard description, links to next steps (invite users or add members)",
+        "Screenshot placeholders as MDX comments for: sign-up form, create organisation form, create branch form, dashboard after setup",
+        "Page path is listed in docs.json navigation under Getting started group",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Write invite users page — Invite your team",
+      "description": "As an org owner who just completed setup, I want to invite my first team members and assign them the right roles, so we can start working together in Bethel.",
+      "acceptanceCriteria": [
+        "Create getting-started/invite-users.mdx with title, description, and sidebarTitle frontmatter",
+        "Brief intro: 'Now that your church is set up, invite the people who'll help manage it.'",
+        "Uses <Steps> for the invitation flow",
+        "Step 1 — Open user management: where to find it in the UI",
+        "Step 2 — Send an invitation: form fields (Email required, Name required, Role required, Branch required if branch-scoped), explains magic link email",
+        "Step 3 — Choosing a role: plain-language summary of three invitable roles (org admin, branch admin, editor) with link to /guides/roles-and-permissions",
+        "Info callout: who can invite whom hierarchy (org owner → any; org admin → org admin/branch admin/editor; branch admin → branch admin/editor in own branch; editor → nobody)",
+        "Note callout: invitations expire after 7 days",
+        "Step 4 — What the invitee sees: accept invitation page, set password",
+        "Ends with 'What to do next' pointing to adding members",
+        "Screenshot placeholders as MDX comments for: invite user form with role dropdown, invitation email / accept invitation page",
+        "Page path is listed in docs.json navigation under Getting started group",
+        "Typecheck passes"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "Write roles and permissions page",
+      "description": "As any Bethel user, I want to understand what each role can do, so I know my own capabilities and can assign roles appropriately to my team.",
+      "acceptanceCriteria": [
+        "Create guides/roles-and-permissions.mdx with title, description, and sidebarTitle frontmatter",
+        "Opens with brief intro: Bethel has four roles, two scopes",
+        "The four roles section with plain-language descriptions: Organisation owner, Organisation admin, Branch admin, Editor",
+        "Org-scoped vs branch-scoped section explaining practical differences",
+        "Info callout explaining why org-level roles cannot edit branch records (branch admins own their data, headquarters has visibility not control)",
+        "Per-role capabilities section using Accordion panels covering: manage org settings, manage branches, manage users, manage members, manage events, manage locations, record attendance, manage visitors, delete records",
+        "Who can invite whom section with the invitation hierarchy",
+        "How role changes take effect section (JWT refresh, no logout needed)",
+        "Transferring ownership section (current owner only, describes flow)",
+        "Screenshot placeholders as MDX comments for: user list showing role badges, role selector in user edit form, transfer ownership confirmation dialog",
+        "Page path is listed in docs.json navigation under Guides group",
+        "Typecheck passes"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "Write recording attendance page",
+      "description": "As a branch admin or editor, I want to understand all the ways I can record attendance in Bethel, so I can pick the method that works best for my church.",
+      "acceptanceCriteria": [
+        "Create guides/recording-attendance.mdx with title, description, and sidebarTitle frontmatter",
+        "Opens with brief intro: several ways to record attendance, pick or mix and match",
+        "Selecting an event occurrence section: attendance recorded against a specific occurrence, how to navigate to it",
+        "Manual check-in section: search member/visitor by name, mark present",
+        "QR code check-in section: event QR code flow only (scan → enter email/mobile → identify → confirm/register → checked in). Do NOT mention member-level QR codes",
+        "Tip callout: print QR code and display at venue entrance",
+        "Self-service kiosk section: 3-5 sentence overview with Note callout linking to future dedicated guide",
+        "Admin entry after the event section: bulk entry for paper sign-in sheets",
+        "Viewing attendance section: three views (by event, by member, by date range)",
+        "Editing attendance section: edits are logged with who made the change",
+        "Members vs visitors section: both appear in records, visitor visit count auto-updates, conversion carries over history",
+        "Info callout: who can do this (Branch Admin, Editor can record/edit; Org Owner, Org Admin can view only)",
+        "Screenshot placeholders as MDX comments for: manual check-in, event QR code, public check-in screen, kiosk mode, bulk attendance entry, attendance list filtered by event",
+        "Page path is listed in docs.json navigation under Guides group",
+        "Typecheck passes"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "IMPORTANT: Do NOT mention members having their own QR codes. Only document the event QR code flow."
+    },
+    {
+      "id": "US-007",
+      "title": "Create placeholder managing members page and validate",
+      "description": "As a user following the Getting Started flow, I need the 'managing members' link to resolve so there are no broken links in the documentation.",
+      "acceptanceCriteria": [
+        "Create guides/managing-members.mdx with title, description, sidebarTitle frontmatter and a 'Coming soon' body",
+        "Page path is listed in docs.json navigation under Guides group",
+        "All internal links across all pages use root-relative paths without file extensions",
+        "mint broken-links passes with no errors",
+        "mint validate passes with no errors",
+        "Typecheck passes"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": "This is the final validation story. Run mint broken-links and mint validate to confirm everything is wired up correctly."
+    }
+  ]
+}

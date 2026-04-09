@@ -1,0 +1,149 @@
+---
+title: "Roles and permissions"
+sidebarTitle: "Roles and permissions"
+description: "Understand the four roles in Bethel ChMS, what each one can do, and how org-scoped and branch-scoped access work."
+---
+
+Bethel ChMS uses four roles to control what people can see and do. Each role operates at one of two scopes: **organisation-level** (across all branches) or **branch-level** (within a single branch). This guide explains how the roles work so you can give your team the right level of access.
+
+## The four roles
+
+### Organisation owner
+
+There is one organisation owner per organisation. The owner has full control over the organisation, including settings, branches, users, and billing. This is typically the senior pastor or denominational leader who set up the account.
+
+The organisation owner is the only person who can transfer ownership to someone else.
+
+### Organisation admin
+
+Organisation admins have visibility across the entire organisation. They can view members, events, locations, attendance, and visitors in every branch, but they cannot edit branch-level records directly. They can manage users and invite new team members.
+
+Think of this role as headquarters oversight: you can see everything, but day-to-day data entry happens at the branch level.
+
+### Branch admin
+
+Branch admins have full control within their own branch. They can create, edit, and delete members, events, locations, attendance records, and visitors. They can also invite other branch admins and editors to their branch.
+
+This is the right role for a local church administrator or branch pastor who manages their own congregation's data.
+
+### Editor
+
+Editors can create and edit records within their branch: members, events, locations, attendance, and visitors. They cannot delete records or manage users.
+
+Assign this role to volunteers or staff who need to enter data but shouldn't be able to remove anything or invite other users.
+
+## Org-scoped vs branch-scoped
+
+Roles fall into two groups based on what they can see:
+
+- **Org-scoped roles** (organisation owner and organisation admin) can see data across all branches. Their access to branch-level operational data, including members, events, locations, attendance, and visitors, is **read-only**. They see the full picture but don't change branch records directly.
+- **Branch-scoped roles** (branch admin and editor) only see their own branch. They work with the data they're responsible for and have no visibility into other branches.
+
+<Info>
+**Why can't org-level roles edit branch records?** Branch admins own their data. Headquarters has visibility, not control. If an org admin needs to edit a branch record, they should ask the branch admin, or be assigned as a branch admin for that branch.
+</Info>
+
+## Per-role capabilities
+
+<AccordionGroup>
+  <Accordion title="Organisation owner">
+    | Capability | Access |
+    | --- | --- |
+    | Manage org settings | Full access |
+    | Manage branches | Full access |
+    | Manage users | Invite any role |
+    | Manage members | Read-only across all branches |
+    | Manage events | Read-only across all branches |
+    | Manage locations | Read-only across all branches |
+    | Record attendance | View only across all branches |
+    | Manage visitors | Read-only across all branches |
+    | Delete records | Org-level records only |
+  </Accordion>
+
+  <Accordion title="Organisation admin">
+    | Capability | Access |
+    | --- | --- |
+    | Manage org settings | No access |
+    | Manage branches | Read-only |
+    | Manage users | Invite org admin, branch admin, or editor |
+    | Manage members | Read-only across all branches |
+    | Manage events | Read-only across all branches |
+    | Manage locations | Read-only across all branches |
+    | Record attendance | View only across all branches |
+    | Manage visitors | Read-only across all branches |
+    | Delete records | No access |
+  </Accordion>
+
+  <Accordion title="Branch admin">
+    | Capability | Access |
+    | --- | --- |
+    | Manage org settings | No access |
+    | Manage branches | Own branch only |
+    | Manage users | Invite branch admin or editor in own branch |
+    | Manage members | Full access in own branch |
+    | Manage events | Full access in own branch |
+    | Manage locations | Full access in own branch |
+    | Record attendance | Full access in own branch |
+    | Manage visitors | Full access in own branch |
+    | Delete records | Branch-level records only |
+  </Accordion>
+
+  <Accordion title="Editor">
+    | Capability | Access |
+    | --- | --- |
+    | Manage org settings | No access |
+    | Manage branches | No access |
+    | Manage users | No access |
+    | Manage members | Create and edit in own branch (no delete) |
+    | Manage events | Create and edit in own branch (no delete) |
+    | Manage locations | Create and edit in own branch (no delete) |
+    | Record attendance | Full access in own branch |
+    | Manage visitors | Create and edit in own branch (no delete) |
+    | Delete records | No access |
+  </Accordion>
+</AccordionGroup>
+
+## Who can invite whom
+
+Not every role can invite every other role. Here's how the invitation chain works:
+
+| Your role | You can invite |
+| --- | --- |
+| Organisation owner | Any role |
+| Organisation admin | Organisation admin, branch admin, or editor |
+| Branch admin | Branch admin or editor (in your own branch only) |
+| Editor | No one |
+
+<Note>
+Branch admins can only invite people into their own branch. They cannot add users to other branches.
+</Note>
+
+## How role changes take effect
+
+When you change someone's role, Bethel ChMS refreshes their access token automatically. The new permissions apply almost immediately, so the person does not need to log out and back in.
+
+{/* Screenshot: user list showing role badges */}
+
+## Transferring ownership
+
+Only the current organisation owner can transfer ownership. You might do this when a senior pastor hands off leadership, or when a denominational office restructures how accounts are managed.
+
+<Steps>
+  <Step title="Open organisation settings">
+    Go to **Organisation Settings** from the sidebar.
+  </Step>
+  <Step title="Select a new owner">
+    In the ownership section, choose an existing organisation admin to become the new owner. Only organisation admins are eligible.
+  </Step>
+  <Step title="Confirm with your password">
+    Enter your password to confirm the transfer. Once confirmed, you become an organisation admin and the selected person becomes the organisation owner.
+  </Step>
+</Steps>
+
+{/* Screenshot: role selector in user edit form */}
+
+{/* Screenshot: transfer ownership confirmation dialog */}
+
+<Warning>
+Ownership transfer is immediate and cannot be undone by you. The new owner would need to transfer it back. Make sure you're selecting the right person.
+</Warning>
