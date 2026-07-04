@@ -1,0 +1,99 @@
+---
+title: "Households"
+description: "Create households, assign members, set a head of household, and manage household QR codes in Bethel ChMS."
+---
+
+Households group members who belong to the same family or home. Use them to see related members together, assign a head of household, and manage household check-in QR codes when portal access is enabled.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can create and edit households. Org Owner, Org Admin, and Branch Admin can delete households and regenerate household QR codes.
+</Info>
+
+## Create a household
+
+<Steps>
+  <Step title="Open Households">
+    In the sidebar, click **Households**.
+  </Step>
+  <Step title="Start a household">
+    Click **Add Household**.
+  </Step>
+  <Step title="Enter a name">
+    Enter **Household Name**. The name must be unique within the branch.
+  </Step>
+  <Step title="Create the household">
+    Click **Create Household**.
+  </Step>
+</Steps>
+
+Org-scoped users select a branch before creating or viewing households.
+
+## Find a household
+
+Use the search field to search by household name. The household list shows:
+
+- **Household Name**
+- **Head of Household**
+- **Members**
+- **Created**
+
+Click a household name to open the household detail page.
+
+## Add members
+
+<Steps>
+  <Step title="Open the household">
+    From **Households**, click the household name.
+  </Step>
+  <Step title="Add a member">
+    Click **Add Member**.
+  </Step>
+  <Step title="Search and select">
+    Search for a member in the same branch and select them.
+  </Step>
+  <Step title="Confirm">
+    Add the member to the household.
+  </Step>
+</Steps>
+
+If the member already belongs to another household, Bethel ChMS moves them to the selected household. If this is the first member in the household, Bethel ChMS sets them as the head of household automatically.
+
+## Set the head of household
+
+The head of household appears in the household list and receives a **Head** badge in the roster.
+
+1. Open the household.
+2. Find the member in the **Members** table.
+3. Click **Set as Head**.
+4. Confirm the change.
+
+Only one member can be the head of a household. Setting a new head removes the head status from the previous person.
+
+## Remove a member
+
+Removing a member clears their household link. It does not delete the member record or affect attendance history.
+
+1. Open the household.
+2. Find the member in the **Members** table.
+3. Click **Remove**.
+4. Confirm the removal.
+
+## Edit or delete a household
+
+Use the row **Actions** menu in the household list to edit or delete a household.
+
+<Warning>
+Deleting a household soft-deletes the household and removes the household link from all members in it. It also clears any head-of-household flag for those members.
+</Warning>
+
+## Household QR codes
+
+When portal access is enabled for your organisation, the household detail page shows **QR Code**. Use it with kiosk check-in to check in household members together.
+
+Org Owner, Org Admin, and Branch Admin can click **Regenerate QR** to rotate the household QR token. Bethel ChMS sends the new household QR code to household members who have an email address.
+
+<Warning>
+After you regenerate a household QR code, the previous code no longer works.
+</Warning>
+
+In kiosk mode, select **Scan QR** and scan the household QR code. Bethel ChMS shows **[Household name] — Who's here today?**. Select each household member who is present, then click **Check In**. Members who are already checked in are shown as already checked in and cannot be selected again.

@@ -1,0 +1,149 @@
+---
+title: "Automation rules"
+description: "Configure automation rules, branch overrides, and execution history in Bethel ChMS."
+---
+
+Automation rules keep member lifecycle and recurring event work up to date without manual updates. You manage them from the organisation-level **Automation** page.
+
+<Info>
+**Who can do this:** Org Owner can enable rules, disable rules, and update thresholds. Org Admin can view rules and execution history in read-only mode. Branch Admin, Editor, and Treasurer do not see **Automation** in the sidebar.
+</Info>
+
+## Open automation
+
+1. In the sidebar, find **Organisation**.
+2. Click **Automation**.
+3. Use **Rules** to review and configure rules.
+4. Use **Execution History** to review automation activity.
+
+Automation is an organisation-level feature. Branch-scoped users who open the route directly see: **Automation rules are managed at the organisation level.**
+
+## Feature access and redirects
+
+Bethel ChMS checks automation access before it shows the page.
+
+- If automations are available, the page opens normally.
+- If automations are temporarily unavailable, the page shows **Automations** as unavailable.
+- Automation is included on the Standard plan. If automation access is unavailable because of an account or entitlement issue, contact support.
+
+See [Feature availability by plan](/guides/feature-availability-by-plan) for plan and feature availability behavior.
+
+## Automation rules
+
+The **Rules** tab shows one card for each configurable rule. Each card shows the rule name, description, **Enabled** or **Disabled** status, current threshold, a toggle, and **Configure**.
+
+| Rule | What it does | Default threshold |
+| --- | --- | --- |
+| **Visitor Conversion** | Converts visitors to newcomer members when they reach the visit threshold inside the recency window. | `3` visits within `30` days |
+| **Newcomer to Active** | Promotes newcomer members to active after enough attendances in the configured period. | `4` attendances within `90` days |
+| **Active to Inactive** | Marks active members inactive when they have not attended for the configured number of days. | No attendance in `30` days |
+
+New organisations start with these default thresholds, and automation is disabled by default for new rules. Your organisation may show different thresholds if they were previously changed or migrated. Enable only the rules you want Bethel ChMS to run.
+
+## Enable or disable a rule
+
+Org Owner can use the switch on each rule card.
+
+<Steps>
+  <Step title="Open rules">
+    Go to **Organisation** > **Automation** and open **Rules**.
+  </Step>
+  <Step title="Find the rule">
+    Review the rule cards and current **Threshold** values.
+  </Step>
+  <Step title="Change the status">
+    Use the switch beside the rule status badge.
+  </Step>
+</Steps>
+
+Bethel ChMS confirms the change with a toast such as **Visitor Conversion enabled** or **Visitor Conversion disabled**.
+
+The Standard plan does not enforce an automation rule limit. You can enable any available automation rule.
+
+## Configure organisation thresholds
+
+Org Owner can update the default thresholds that apply to every branch unless a branch has its own override.
+
+<Steps>
+  <Step title="Open the rule dialog">
+    On the **Rules** tab, click **Configure** on a rule card.
+  </Step>
+  <Step title="Edit organisation thresholds">
+    In **Organisation Thresholds**, update the fields for the rule.
+  </Step>
+  <Step title="Save the rule">
+    Click **Save**.
+  </Step>
+</Steps>
+
+The configuration dialog is titled **Configure: Visitor Conversion**, **Configure: Newcomer to Active**, or **Configure: Active to Inactive**.
+
+### Threshold fields
+
+| Rule | Fields |
+| --- | --- |
+| **Visitor Conversion** | **Visit threshold**, **Recency window (days)** |
+| **Newcomer to Active** | **Attendance threshold**, **Period (days)** |
+| **Active to Inactive** | **Inactivity threshold (days)** |
+
+All threshold fields must be whole numbers of at least `1`.
+
+Org Admin can see the rule cards and thresholds, but the switch and **Configure** button are disabled.
+
+## Configure branch overrides
+
+Use **Branch Overrides** when a branch needs different thresholds or a different enabled state from the organisation default.
+
+<Steps>
+  <Step title="Open Configure">
+    On the **Rules** tab, click **Configure** on the rule you want to adjust.
+  </Step>
+  <Step title="Open a branch row">
+    In **Branch Overrides**, click a branch row. Branches without overrides show **Using org default**.
+  </Step>
+  <Step title="Choose enabled behavior">
+    Use **Override enabled state**. Click **Override** to set a branch-specific enabled state, or **Inherit** to use the organisation setting.
+  </Step>
+  <Step title="Set branch thresholds">
+    Enter branch-specific threshold values for the rule.
+  </Step>
+  <Step title="Save the override">
+    Click **Save override**.
+  </Step>
+</Steps>
+
+After you save, the branch row shows **Custom**. To remove the branch-specific settings, open the row and click **Reset to default**.
+
+<Note>
+The branch list only includes active, non-deleted branches in the organisation.
+</Note>
+
+## Review execution history
+
+Use **Execution History** to see what automation has done for the organisation.
+
+The page shows summary cards for:
+
+- **Visitors Converted**
+- **Members Promoted**
+- **Marked Inactive**
+- **Occurrences Extended**
+
+The history table includes **Executed At**, **Rule Type**, **Entity**, **Branch**, and **Details**.
+
+## Filter execution history
+
+Use the filters above the table to narrow the log.
+
+| Filter | Options |
+| --- | --- |
+| **All rule types** | **Visitor Conversion**, **Newcomer to Active**, **Active to Inactive**, **Occurrence Generation** |
+| **All branches** | Any active branch in the organisation |
+| **From** | Start date |
+| **To** | End date |
+
+The table shows 20 entries per page. Use **Previous** and **Next** to move through additional pages.
+
+<Note>
+**Occurrence Generation** appears in execution history, but it is not configurable from the **Rules** tab.
+</Note>

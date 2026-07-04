@@ -1,0 +1,101 @@
+---
+title: "Organisation settings"
+description: "Manage organisation details, plan usage, billing, custom fields, currency, ownership, and deletion in Bethel ChMS."
+sidebarTitle: "Organisation settings"
+---
+
+Use **Organisation Settings** to view and manage account-level settings for your church network.
+
+<Info>
+Access depends on your role. **Org Owner** can manage organisation details, currency, billing, ownership, and deletion. **Org Admin** can manage custom fields and view organisation-level settings. Other roles may see read-only settings, but they cannot change owner-only controls.
+</Info>
+
+## Organisation details
+
+The **Organisation Details** section shows:
+
+- **Name**
+- **Email**
+- **Address**
+- **Post Code**
+- **Created At**
+
+Only the **Org Owner** can click **Edit** and update these fields.
+
+## Plan and usage
+
+The **Plan & Usage** section shows your current plan and branch usage. Bethel ChMS uses branch count as the enforced usage limit.
+
+If you reach your branch limit, you cannot create or duplicate more branches until your limit is raised.
+
+## Billing
+
+The **Billing** section shows your subscription status, branch count, and renewal or cancellation date.
+
+Only the **Org Owner** can click **Manage Billing**. Other users should contact the account owner to manage billing.
+
+## Custom fields
+
+Use **Custom Fields** to define additional fields for **Member Fields** and **Visitor Fields**.
+
+**Org Owner** and **Org Admin** can:
+
+- Add custom fields.
+- Edit custom field labels, required status, and single-select options.
+- Reorder fields.
+- Remove fields.
+
+Removed fields are hidden from forms, but existing values are preserved. Field keys stay reserved and cannot be reused.
+
+Each entity type supports up to 10 active custom fields.
+
+## Currency
+
+The **Currency** section sets the default currency for new gifting entries.
+
+Only the **Org Owner** can change the currency. Existing gifting entries keep their original currency and are never rewritten.
+
+Supported currencies are **GBP**, **USD**, **EUR**, **NGN**, **GHS**, **KES**, **ZAR**, **CAD**, and **AUD**.
+
+## Transfer ownership
+
+Only the current **Org Owner** can transfer ownership.
+
+<Steps>
+  <Step title="Open Organisation Settings">
+    Go to **Organisation Settings**.
+  </Step>
+  <Step title="Click Transfer Ownership">
+    In **Ownership & Danger Zone**, click **Transfer Ownership**.
+  </Step>
+  <Step title="Choose the new owner">
+    Select an existing **Org Admin** from **New Owner**.
+  </Step>
+  <Step title="Confirm the transfer">
+    Enter your password, complete the CAPTCHA challenge, and click **Transfer Ownership**.
+  </Step>
+</Steps>
+
+After the transfer, you become an **Org Admin** and the selected user becomes the **Org Owner**.
+
+<Warning>
+Ownership transfer is immediate. The new owner must transfer ownership back if you need to reverse it.
+</Warning>
+
+## Delete an organisation
+
+Only the **Org Owner** can delete an organisation.
+
+Deleting an organisation soft-deletes the organisation and all associated data, including branches, users, members, visitors, events, and ministries. You must type the organisation name to confirm deletion.
+
+After deletion, Bethel ChMS signs you out and redirects you to sign up.
+
+<Warning>
+Deleted organisation data can be recovered within 30 days. After the recovery period, it may be permanently removed.
+</Warning>
+
+## Related pages
+
+- [Set up your church](/getting-started/setup)
+- [Roles and permissions](/guides/roles-and-permissions)
+- [Branch management](/guides/branch-management)

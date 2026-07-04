@@ -7,8 +7,10 @@ sidebarTitle: "Ministries"
 A ministry in Bethel ChMS is an organisational grouping for teams, departments, or service groups within a branch. Ministries are not events. They help you organise who is responsible for what, whether that's a worship team, an ushering department, or a children's ministry.
 
 <Info>
-**Who can do this:** Branch Admin and Editor can create, edit, and manage ministry rosters. Only Branch Admin can delete a ministry. Organisation-level roles have read-only access.
+**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can create, edit, and manage ministry rosters. Org Owner, Org Admin, and Branch Admin can delete ministries and link groups. Editors cannot delete ministries or link groups.
 </Info>
+
+Org-scoped users can switch branches before creating or editing branch records. Branch-scoped users work in their assigned branch.
 
 ## Creating a ministry
 
@@ -23,7 +25,7 @@ A ministry in Bethel ChMS is an organisational grouping for teams, departments, 
     Enter a **Name** for the ministry. The name must be unique within your branch. Optionally, add a **Description** to explain the ministry's purpose.
   </Step>
   <Step title="Save the ministry">
-    Click **Save**. The ministry is created with an **Active** status by default.
+    Click **Create Ministry**. The ministry is created with an **Active** status by default.
   </Step>
 </Steps>
 
@@ -49,7 +51,7 @@ Once a ministry exists, you can start adding members to it and assigning them ro
     Choose a role for this member: **Leader**, **Assistant Leader**, or **Member**.
   </Step>
   <Step title="Set the joined date and confirm">
-    Set the **Joined Date** and click **Save** to add them to the roster.
+    Set the **Joined Date** and click **Add Member** to add them to the roster.
   </Step>
 </Steps>
 
@@ -95,7 +97,12 @@ If a member re-joins a ministry later, a new assignment record is created. Their
 
 ## Viewing the roster
 
-The ministry detail page shows all active members, those with no leave date. For each person, you can see their name, role, and joined date.
+The ministry detail page shows active roster members, those with no leave date. For each person, you can see their name, role, and joined date.
+
+Use the roster view toggle to choose how you want to read the roster:
+
+- **Flat** shows each member once. If a member is in the ministry directly and through a linked group, the direct assignment takes precedence for the displayed role.
+- **By group** groups members by linked group. It also shows a **Direct only** bucket for members who are assigned directly and are not active in a linked group.
 
 <Frame>
   <img src="/images/guides/ministry-roster.png" alt="Ministry roster showing active members with role badges" />
@@ -110,9 +117,13 @@ Archiving a ministry sets its status to **Archived**. You can no longer assign n
     Navigate to the ministry you want to archive.
   </Step>
   <Step title="Archive the ministry">
-    Click **Archive**. The ministry status changes to **Archived**.
+    Click **Edit**, change **Status** to **Archived**, and click **Save Changes**.
   </Step>
 </Steps>
+
+<Warning>
+You cannot archive a ministry while groups are linked to it. Unlink all groups first.
+</Warning>
 
 <Tip>
 Use archiving when a ministry is on pause but you want to keep the history. For example, a seasonal outreach team that runs every December.
@@ -121,20 +132,84 @@ Use archiving when a ministry is on pause but you want to keep the history. For 
 ## Deleting a ministry
 
 <Warning>
-Only Branch Admins can delete a ministry.
+Org Owner, Org Admin, and Branch Admin can delete a ministry. Editors cannot delete ministries.
 </Warning>
 
-Deleting a ministry is a soft delete. Bethel ChMS automatically closes all active assignments and moves the ministry to a deleted state. Deleted ministries can be recovered within 30 days.
+Deleting a ministry is a soft delete. Bethel ChMS automatically closes all active direct assignments and moves the ministry to a deleted state. Deleted ministries can be recovered within 30 days.
 
 <Steps>
   <Step title="Open the ministry">
-    Navigate to the ministry you want to delete.
+    In the **Ministries** list, find the ministry you want to delete.
   </Step>
   <Step title="Delete the ministry">
-    Click **Delete** and confirm the action. All active member assignments are closed automatically.
+    Open the ministry's actions menu, click **Delete**, and confirm the action. All active member assignments are closed automatically.
   </Step>
 </Steps>
+
+<Warning>
+You cannot delete a ministry while groups are linked to it. Unlink all groups first.
+</Warning>
 
 <Note>
 If you just want to pause a ministry temporarily, consider archiving it instead. Archiving keeps the ministry visible in your list and preserves the roster without requiring recovery.
 </Note>
+
+## Linking groups to a ministry
+
+You can link groups to a ministry when groups represent sub-teams, cells, or fellowships that belong under the ministry. A ministry can have many linked groups, but each group can link to only one ministry.
+
+When you link a group, Bethel ChMS adds the group's active members to the ministry roster as group-sourced members. Direct ministry assignments stay separate, so unlinking a group does not remove members who still have a direct assignment or another linked-group path into the ministry.
+
+### Link a group from a ministry
+
+<Steps>
+  <Step title="Open the ministry">
+    In the sidebar, click **Ministries**, then open the ministry.
+  </Step>
+  <Step title="Start linking">
+    In **Linked Groups**, click **Link a group**.
+  </Step>
+  <Step title="Choose a group">
+    Select an unlinked group from the same branch. Groups that are already linked to a ministry do not appear in the list.
+  </Step>
+  <Step title="Confirm the link">
+    Click **Link Group**. Bethel ChMS adds the group's active members to the ministry roster.
+  </Step>
+</Steps>
+
+Only active, non-archived ministries can receive linked groups. The group and ministry must belong to the same branch.
+
+### Link a ministry when creating a group
+
+You can also link a group while creating it from **Groups**. Choose the ministry in the **Ministry** field before you click **Create Group**.
+
+If the group is created but the ministry link fails, Bethel ChMS keeps the group and shows an error toast for the failed link.
+
+### Unlink a group
+
+<Steps>
+  <Step title="Open the ministry">
+    In the sidebar, click **Ministries**, then open the ministry.
+  </Step>
+  <Step title="Find the group">
+    In **Linked Groups**, find the group you want to unlink.
+  </Step>
+  <Step title="Preview the impact">
+    Click **Unlink**. Bethel ChMS shows how many roster members will be removed and how many will stay because they are direct members or are in another linked group.
+  </Step>
+  <Step title="Confirm unlinking">
+    Click **Unlink** to remove the group link.
+  </Step>
+</Steps>
+
+Unlinking closes the group-sourced roster rows for that group. It does not remove the members from the group itself.
+
+### Group-sourced roster rows
+
+Members who come into a ministry through a linked group are managed from the group, not directly from the ministry roster. In the ministry roster, **Change Role** and **Remove** are disabled for group-sourced rows.
+
+To change a group-sourced member's role or remove them, open the linked group and update the group roster. Bethel ChMS keeps the ministry roster in sync.
+
+## Change history
+
+The ministry detail page includes a **Change History** tab. Use it to review changes to ministry details such as **Name**, **Description**, and **Status**.

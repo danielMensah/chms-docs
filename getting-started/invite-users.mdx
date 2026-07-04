@@ -1,7 +1,7 @@
 ---
 title: "Invite your team"
 sidebarTitle: "Invite users"
-description: "Send invitations to pastors, branch admins, and editors so they can help manage your church in Bethel ChMS."
+description: "Send invitations to pastors, branch admins, finance users, and editors so they can help manage your church in Bethel ChMS."
 ---
 
 Now that your church is set up, invite the people who'll help manage it. Each person you invite gets a specific role that controls what they can see and do in Bethel ChMS.
@@ -12,28 +12,29 @@ Now that your church is set up, invite the people who'll help manage it. Each pe
   </Step>
 
   <Step title="Send an invitation">
-    Click **Invite user** and fill in the form:
+    Click **Invite User** and fill in the form:
 
     | Field      | Required | Notes |
     | ---------- | -------- | ----- |
     | **Email**  | Yes      | The email address where the invitation will be sent. |
     | **Name**   | Yes      | The person's display name in Bethel ChMS. |
-    | **Role**   | Yes      | Choose from Organisation Admin, Branch Admin, or Editor. |
-    | **Branch** | Sometimes | Required when you select a branch-scoped role (Branch Admin or Editor). |
+    | **Role**   | Yes      | Choose from **Org Admin**, **Branch Admin**, **Editor**, or **Treasurer**, depending on your own role. |
+    | **Branch** | Sometimes | Required when you select a branch-scoped role: **Branch Admin**, **Editor**, or **Treasurer**. |
 
     <Frame>
       <img src="/images/getting-started/invite-user-form.png" alt="Invite user form with role dropdown" />
     </Frame>
 
-    Click **Send invitation**. Bethel ChMS sends the invitee an email with a magic link they can use to accept.
+    Click **Send Invitation**. Bethel ChMS sends the invitee an email with a link they can use to accept.
   </Step>
 
   <Step title="Choose the right role">
     Not sure which role to pick? Here's a quick summary:
 
-    - **Organisation Admin:** Full access across every branch. Good for senior pastors or headquarters staff who oversee the whole network.
+    - **Org Admin:** Organisation-level access across every branch. Good for senior pastors or headquarters staff who oversee the whole network.
     - **Branch Admin:** Manages members, attendance, and events for a specific branch. Ideal for local pastors or office managers.
     - **Editor:** Can add and update records within a branch but cannot change settings or invite others.
+    - **Treasurer:** Can access **Gifting & Donations** for one branch, without access to members, events, or other branch data.
 
     For a full breakdown of what each role can do, see [Roles and permissions](/guides/roles-and-permissions).
   </Step>
@@ -43,7 +44,7 @@ Now that your church is set up, invite the people who'll help manage it. Each pe
 
     - The name of your organisation
     - The role they've been assigned
-    - The branch they belong to (if applicable)
+    - The branch they belong to, if their role is branch-scoped
 
     They set a password (minimum 8 characters) and they're in. No extra setup required on their end.
 
@@ -55,15 +56,22 @@ Now that your church is set up, invite the people who'll help manage it. Each pe
 
 <Info>
 **Who can invite whom:**
-- **Organisation Owner** can invite any role.
-- **Organisation Admin** can invite Organisation Admins, Branch Admins, and Editors.
-- **Branch Admin** can invite Branch Admins and Editors within their own branch.
+- **Org Owner** can invite **Org Admin**, **Branch Admin**, **Editor**, and **Treasurer**.
+- **Org Admin** can invite **Org Admin**, **Branch Admin**, **Editor**, and **Treasurer**.
+- **Branch Admin** can invite **Branch Admin** and **Editor** within their own branch.
 - **Editor** cannot invite anyone.
+- **Treasurer** cannot invite anyone.
 </Info>
 
 <Note>
 Invitations expire after 7 days. If someone misses theirs, go back to the **Users** page and resend it.
 </Note>
+
+## Manage invitations and users
+
+Use the **Users** page to search users, filter by role, filter by status, and resend pending invitations. Org-scoped users can also filter by **All Branches** or a specific branch.
+
+For the full user management workflow, see [User management](/guides/user-management).
 
 ## What to do next
 

@@ -1,24 +1,24 @@
 ---
 title: "Roles and permissions"
 sidebarTitle: "Roles and permissions"
-description: "Understand the four roles in Bethel ChMS, what each one can do, and how org-scoped and branch-scoped access work."
+description: "Understand the five roles in Bethel ChMS, what each one can do, and how org-scoped and branch-scoped access work."
 ---
 
-Bethel ChMS uses four roles to control what people can see and do. Each role operates at one of two scopes: **organisation-level** (across all branches) or **branch-level** (within a single branch). This guide explains how the roles work so you can give your team the right level of access.
+Bethel ChMS uses five roles to control what people can see and do. Each role operates at one of two scopes: **organisation-level** across all branches, or **branch-level** within a single branch.
 
-## The four roles
+## The five roles
 
 ### Organisation owner
 
-There is one organisation owner per organisation. The owner has full control over the organisation, including settings, branches, users, and billing. This is typically the senior pastor or denominational leader who set up the account.
+There is one organisation owner per organisation. The owner has full control over the organisation, including settings, branches, users, billing, currency, ownership transfer, and organisation deletion.
 
 The organisation owner is the only person who can transfer ownership to someone else.
 
 ### Organisation admin
 
-Organisation admins have visibility across the entire organisation. They can view members, events, locations, attendance, and visitors in every branch, but they cannot edit branch-level records directly. They can manage users and invite new team members.
+Organisation admins have visibility across the entire organisation. They can view branch records across all branches and manage supported branch records after selecting a branch. They can manage users, branches, custom fields, and organisation-wide reports.
 
-Think of this role as headquarters oversight: you can see everything, but day-to-day data entry happens at the branch level.
+Think of this role as headquarters oversight and administration. Most day-to-day branch data entry still happens at the branch level.
 
 ### Branch admin
 
@@ -28,20 +28,32 @@ This is the right role for a local church administrator or branch pastor who man
 
 ### Editor
 
-Editors can create and edit records within their branch: members, events, locations, attendance, and visitors. They cannot delete records or manage users.
+Editors can create and edit records within their branch, including members, events, locations, attendance, and visitors. They cannot delete records or manage users.
 
-Assign this role to volunteers or staff who need to enter data but shouldn't be able to remove anything or invite other users.
+Assign this role to volunteers or staff who need to enter data but should not remove anything or invite other users.
+
+### Treasurer
+
+Treasurers are branch-scoped finance users. They can access **Gifting & Donations** and gifting reports for their assigned branch. They cannot access members, events, ministries, attendance, users, branch settings, or organisation settings.
+
+Assign this role to finance team members who need donation records without wider church management access.
 
 ## Org-scoped vs branch-scoped
 
 Roles fall into two groups based on what they can see:
 
-- **Org-scoped roles** (organisation owner and organisation admin) can see data across all branches. Their access to branch-level operational data, including members, events, locations, attendance, and visitors, is **read-only**. They see the full picture but don't change branch records directly.
-- **Branch-scoped roles** (branch admin and editor) only see their own branch. They work with the data they're responsible for and have no visibility into other branches.
+- **Org-scoped roles** (**Org Owner** and **Org Admin**) can see data across all branches. Branch-level pages let them select a branch and manage supported records in that branch.
+- **Branch-scoped roles** (**Branch Admin**, **Editor**, and **Treasurer**) only see their own branch. They work with the data they're responsible for and have no visibility into other branches.
 
 <Info>
-**Why can't org-level roles edit branch records?** Branch admins own their data. Headquarters has visibility, not control. If an org admin needs to edit a branch record, they should ask the branch admin, or be assigned as a branch admin for that branch.
+Org-scoped roles use the branch selector for branch-level pages. Check each feature guide for the exact actions available.
 </Info>
+
+## Branch selector behavior
+
+Org-scoped users see a branch selector on branch-level pages such as **Dashboard**, **Members**, **Events**, **Locations**, **Attendance**, and **Visitors**. Selecting a branch adds a `branchId` value to the URL and saves the selection for future pages.
+
+Branch-scoped users do not see the branch selector. Bethel ChMS always uses their assigned branch.
 
 ## Per-role capabilities
 
@@ -50,56 +62,80 @@ Roles fall into two groups based on what they can see:
     | Capability | Access |
     | --- | --- |
     | Manage org settings | Full access |
-    | Manage branches | Full access |
-    | Manage users | Invite any role |
-    | Manage members | Read-only across all branches |
-    | Manage events | Read-only across all branches |
-    | Manage locations | Read-only across all branches |
-    | Record attendance | View only across all branches |
-    | Manage visitors | Read-only across all branches |
-    | Delete records | Org-level records only |
+    | Manage branches | Create, edit, duplicate, copy resources, and delete |
+    | Manage users | Invite and manage any role |
+    | Manage members | Full access through branch selector |
+    | Manage events | Full access through branch selector |
+    | Manage locations | Full access through branch selector |
+    | Record attendance | Full access through branch selector |
+    | Manage visitors | Full access through branch selector |
+    | Manage custom fields | Full access |
+    | Manage billing and currency | Full access |
+    | Gifting & Donations | Full access across branches |
+    | Delete records | Org-level records, branches, and supported branch records |
   </Accordion>
 
   <Accordion title="Organisation admin">
     | Capability | Access |
     | --- | --- |
-    | Manage org settings | No access |
-    | Manage branches | Read-only |
-    | Manage users | Invite org admin, branch admin, or editor |
-    | Manage members | Read-only across all branches |
-    | Manage events | Read-only across all branches |
-    | Manage locations | Read-only across all branches |
-    | Record attendance | View only across all branches |
-    | Manage visitors | Read-only across all branches |
-    | Delete records | No access |
+    | Manage org settings | Limited access |
+    | Manage branches | Create, edit, duplicate, and copy resources |
+    | Manage users | Invite and manage org admin, branch admin, editor, or treasurer |
+    | Manage members | Full access through branch selector |
+    | Manage events | Full access through branch selector |
+    | Manage locations | Full access through branch selector |
+    | Record attendance | Full access through branch selector |
+    | Manage visitors | Full access through branch selector |
+    | Manage custom fields | Full access |
+    | Manage billing and currency | View only |
+    | Gifting & Donations | Full access across branches |
+    | Delete records | Supported branch records only |
   </Accordion>
 
   <Accordion title="Branch admin">
     | Capability | Access |
     | --- | --- |
-    | Manage org settings | No access |
-    | Manage branches | Own branch only |
-    | Manage users | Invite branch admin or editor in own branch |
+    | Manage org settings | Read-only where visible |
+    | Manage branches | Edit own branch details only |
+    | Manage users | Invite and manage branch admin or editor in own branch |
     | Manage members | Full access in own branch |
     | Manage events | Full access in own branch |
     | Manage locations | Full access in own branch |
     | Record attendance | Full access in own branch |
     | Manage visitors | Full access in own branch |
+    | Gifting & Donations | No access |
     | Delete records | Branch-level records only |
   </Accordion>
 
   <Accordion title="Editor">
     | Capability | Access |
     | --- | --- |
+    | Manage org settings | Read-only where visible |
+    | Manage branches | No access |
+    | Manage users | No access |
+    | Manage members | Create and edit in own branch, no delete |
+    | Manage events | Create and edit in own branch, no delete |
+    | Manage locations | Create and edit in own branch, no delete |
+    | Record attendance | Full access in own branch |
+    | Manage visitors | Create and edit in own branch, no delete |
+    | Gifting & Donations | No access |
+    | Delete records | No access |
+  </Accordion>
+
+  <Accordion title="Treasurer">
+    | Capability | Access |
+    | --- | --- |
     | Manage org settings | No access |
     | Manage branches | No access |
     | Manage users | No access |
-    | Manage members | Create and edit in own branch (no delete) |
-    | Manage events | Create and edit in own branch (no delete) |
-    | Manage locations | Create and edit in own branch (no delete) |
-    | Record attendance | Full access in own branch |
-    | Manage visitors | Create and edit in own branch (no delete) |
-    | Delete records | No access |
+    | Manage members | No access |
+    | Manage events | No access |
+    | Manage locations | No access |
+    | Record attendance | No access |
+    | Manage visitors | No access |
+    | Gifting & Donations | Full access in own branch |
+    | Gifting reports | Own branch |
+    | Delete records | No access outside finance permissions |
   </Accordion>
 </AccordionGroup>
 
@@ -109,18 +145,19 @@ Not every role can invite every other role. Here's how the invitation chain work
 
 | Your role | You can invite |
 | --- | --- |
-| Organisation owner | Any role |
-| Organisation admin | Organisation admin, branch admin, or editor |
-| Branch admin | Branch admin or editor (in your own branch only) |
+| Org Owner | Org Admin, Branch Admin, Editor, or Treasurer |
+| Org Admin | Org Admin, Branch Admin, Editor, or Treasurer |
+| Branch Admin | Branch Admin or Editor in your own branch only |
 | Editor | No one |
+| Treasurer | No one |
 
 <Note>
-Branch admins can only invite people into their own branch. They cannot add users to other branches.
+Branch admins can only invite people into their own branch. They cannot invite **Org Admin** or **Treasurer** users.
 </Note>
 
 ## How role changes take effect
 
-When you change someone's role, Bethel ChMS refreshes their access token automatically. The new permissions apply almost immediately, so the person does not need to log out and back in.
+When you change someone's role or branch assignment, Bethel ChMS refreshes their access token automatically. The new permissions apply almost immediately, so the person does not need to log out and back in.
 
 <Frame>
   <img src="/images/guides/user-list-role-badges.png" alt="User list showing role badges" />
@@ -135,10 +172,10 @@ Only the current organisation owner can transfer ownership. You might do this wh
     Go to **Organisation Settings** from the sidebar.
   </Step>
   <Step title="Select a new owner">
-    In the ownership section, choose an existing organisation admin to become the new owner. Only organisation admins are eligible.
+    In the ownership section, choose an existing **Org Admin** to become the new owner. Only active org-scoped **Org Admin** users are eligible.
   </Step>
   <Step title="Confirm with your password">
-    Enter your password to confirm the transfer. Once confirmed, you become an organisation admin and the selected person becomes the organisation owner.
+    Enter your password and complete the CAPTCHA challenge to confirm the transfer. Once confirmed, you become an **Org Admin** and the selected person becomes the **Org Owner**.
   </Step>
 </Steps>
 

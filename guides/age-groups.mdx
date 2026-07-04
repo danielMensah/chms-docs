@@ -1,0 +1,97 @@
+---
+title: "Age groups"
+description: "Configure organisation-wide age groups and understand how Bethel ChMS assigns members to age brackets."
+---
+
+Age groups define the age brackets Bethel ChMS uses for member demographics, member filters, group rosters, reports, imports, and related workflows.
+
+Age groups are organisation-wide. They apply across all branches.
+
+<Info>
+**Who can do this:** Org-scoped roles can view age groups from the organisation sidebar. Only the Org Owner can edit age groups or restore defaults.
+</Info>
+
+## How age groups are assigned
+
+Bethel ChMS uses two assignment paths:
+
+- **Date of Birth provided:** Bethel ChMS derives the age group from the member's date of birth and your current age-group configuration.
+- **Date of Birth blank:** You can assign an age group manually on the member record or through import.
+
+If both **Date of Birth** and **Age Group** are present, **Date of Birth** takes precedence.
+
+## Default age groups
+
+The default configuration is:
+
+- `0-12`
+- `13-19`
+- `20-34`
+- `35+`
+
+You can restore these defaults from the age groups page.
+
+## Configure age groups
+
+<Steps>
+  <Step title="Open Age Groups">
+    In the organisation section of the sidebar, click **Age Groups**.
+  </Step>
+  <Step title="Edit the brackets">
+    Update **From**, **To**, **Label**, or **Color** for each row.
+  </Step>
+  <Step title="Add or reorder rows">
+    Click **Add Age Group** to add a row, or drag rows to reorder them.
+  </Step>
+  <Step title="Save changes">
+    Click **Save Age Groups**.
+  </Step>
+</Steps>
+
+## Validation rules
+
+Age groups must meet these rules before you can save:
+
+- You must have at least 1 age group.
+- You can have at most 12 age groups.
+- The first group must start at age `0`.
+- Groups must be contiguous with no gaps or overlaps.
+- Only the highest group can be open-ended.
+- The highest group must be open-ended.
+- **Label** is optional and can be up to 40 characters.
+- **Color** must use one of the app's supported colour tokens.
+
+Leave **To** blank for the open-ended highest group.
+
+## What happens when you save
+
+When the Org Owner saves age groups, Bethel ChMS reassigns members across the organisation.
+
+- Members with **Date of Birth** are re-bucketed from their date of birth.
+- Members with manually assigned age groups are preserved when their previous bracket maps clearly into the new configuration.
+- Members with manually assigned age groups are cleared to **Not Set** when their previous bracket cannot be uniquely mapped.
+
+After saving, the confirmation panel shows how many members were re-bucketed, how many manual entries were preserved, and how many manual entries were cleared.
+
+If manual entries are cleared, click **View affected members** to open the member list filtered to **Age Group = Not Set**.
+
+## Restore defaults
+
+Use **Restore Defaults** to replace your current age-group configuration with the default brackets.
+
+<Warning>
+Restoring defaults reassigns members with a date of birth and may clear manual entries that cannot be uniquely mapped. This cannot be undone from the page.
+</Warning>
+
+## Where age groups appear
+
+Age groups appear in several people workflows:
+
+- Member create and edit forms
+- Member detail tags
+- Member list filters and sorting
+- Group rosters and bulk assignment dialogs
+- Member import mapping and validation
+- Demographics reports and dashboards
+
+Use [importing members](/guides/importing-members) when you need to set age groups during a CSV import.

@@ -1,0 +1,80 @@
+---
+title: "User management"
+description: "Manage staff users, invitations, roles, branch assignments, and user access in Bethel ChMS."
+sidebarTitle: "User management"
+---
+
+Use the **Users** page to manage the people who can access the staff app. You can invite users, resend pending invitations, edit names, change roles, move users between branches, deactivate users, and reactivate users.
+
+<Info>
+**Who can do this:** **Org Owner** and **Org Admin** can manage users across the organisation. **Branch Admins** can manage **Branch Admin** and **Editor** users in their own branch. **Editors** and **Treasurers** cannot access user management.
+</Info>
+
+## Open the users page
+
+In the sidebar, click **Users**. The page shows each user's **Name**, **Email**, **Role**, **Branch**, **Status**, and available actions.
+
+You can search by name or email. You can filter by **All Roles**, status, and branch. Org-scoped users can choose **All Branches** or a specific branch. Branch-scoped users only see users in their own branch.
+
+## User statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Pending** | The user has been invited but has not accepted the invitation yet. |
+| **Active** | The user has accepted the invitation and can sign in. |
+| **Deactivated** | The user cannot sign in until you reactivate them. |
+
+## Invite a user
+
+<Steps>
+  <Step title="Open the invite form">
+    Click **Invite User**.
+  </Step>
+  <Step title="Enter user details">
+    Enter **Email**, **Name**, and **Role**.
+  </Step>
+  <Step title="Choose a branch when needed">
+    Select **Branch** for **Branch Admin**, **Editor**, or **Treasurer**. **Org Admin** users use **All branches** and do not need a branch.
+  </Step>
+  <Step title="Send the invitation">
+    Click **Send Invitation**. Bethel ChMS emails the invitation link to the user.
+  </Step>
+</Steps>
+
+Branch admins cannot choose another branch. The **Branch** field is locked to their assigned branch.
+
+## Resend an invitation
+
+Pending users show a **Resend** action. Click **Resend** to send another invitation email.
+
+If the user's email has already been confirmed, Bethel ChMS sends a password reset email instead of a new invitation. This gives users a recovery path if they accepted an invite but did not finish setting their password.
+
+## Edit a user
+
+Click **Edit** on an active user to update their **Name**, **Role**, or **Branch**.
+
+The following restrictions apply:
+
+- You cannot change your own role or branch.
+- You cannot assign the **Org Owner** role from the user edit dialog. Use [ownership transfer](/guides/roles-and-permissions#transferring-ownership) instead.
+- **Branch Admins** can edit **Branch Admin** and **Editor** users in their own branch only.
+- **Branch Admins** cannot assign **Org Admin** or **Treasurer** roles.
+- **Treasurer** users must belong to one branch.
+
+## Deactivate or reactivate a user
+
+Deactivate a user when they should no longer access Bethel ChMS. Deactivation keeps the user record but blocks sign-in.
+
+You cannot deactivate yourself. You also cannot deactivate the **Org Owner**.
+
+To restore access, click **Reactivate** on a deactivated user. The user regains access with their current role and branch assignment.
+
+## View user details and change history
+
+Click a user's name to open their detail page. The **Details** tab shows their role, scope, and branch assignment. The **Change History** tab shows field-level changes to the user record.
+
+## Related pages
+
+- [Invite your team](/getting-started/invite-users)
+- [Roles and permissions](/guides/roles-and-permissions)
+- [Branch management](/guides/branch-management)

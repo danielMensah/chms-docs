@@ -1,0 +1,66 @@
+---
+title: "Dashboards"
+description: "Understand the branch dashboard, organisation dashboard, and branch scope behavior in Bethel ChMS."
+sidebarTitle: "Dashboards"
+---
+
+Bethel ChMS has two dashboard views:
+
+- **Dashboard** shows one branch at a time.
+- **Organisation Dashboard** shows network-wide trends across branches.
+
+## Branch dashboard
+
+The main **Dashboard** is branch-scoped. It shows activity for one branch, including:
+
+- Member status counts.
+- Gender demographics.
+- Age group demographics.
+- Nationality distribution.
+- Upcoming events.
+- Latest check-ins.
+- A member table with filters.
+
+Org-scoped users can use the branch selector in the page header to choose which branch to view. Branch-scoped users do not see the selector because they are locked to their assigned branch.
+
+<Info>
+The branch dashboard uses the selected branch from the `branchId` URL parameter. If an org-scoped user opens the dashboard without a valid branch selected, Bethel ChMS falls back to the organisation's first active branch.
+</Info>
+
+## Branch scope across pages
+
+For org-scoped users, Bethel ChMS carries the selected branch through branch-level pages by adding `branchId` to links in the sidebar. The selected branch is also saved in the browser so future pages open in the same branch context.
+
+Branch-scoped users always use their assigned branch. They cannot switch to another branch.
+
+Branch scope affects pages such as **Dashboard**, **Locations**, **Events**, **Ministries**, **Members**, **Visitors**, and **Attendance**.
+
+## Organisation dashboard
+
+The **Organisation Dashboard** is available to **Org Owner** and **Org Admin** users. It shows organisation-wide analytics, including:
+
+- **Network Attendance**
+- **Network Growth**
+- **Branch Health**
+- **Network Gender Demographics**
+- **Network Age Group Demographics**
+- **Nationality Distribution**
+- **Branch Performance**
+- **Attendance Trends**
+
+Use the range controls to switch between **7d**, **30d**, **90d**, and **12mo**.
+
+Branch-scoped users cannot access the **Organisation Dashboard**.
+
+## Choose the right dashboard
+
+| Use this dashboard | When you need to |
+| --- | --- |
+| **Dashboard** | Review one branch's members, events, check-ins, and demographics. |
+| **Organisation Dashboard** | Compare branches and monitor network-wide attendance, growth, and demographics. |
+
+## Related pages
+
+- [Roles and permissions](/guides/roles-and-permissions)
+- [Branch management](/guides/branch-management)
+- [Managing members and visitors](/guides/managing-members)

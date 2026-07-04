@@ -1,0 +1,183 @@
+---
+title: "Activity log and change history"
+description: "Record pastoral activity counts, review activity reports, and use change history to audit record updates in Bethel ChMS."
+---
+
+Bethel ChMS has two audit-related tools:
+
+- **Activity Log** records activity counts for a branch, such as outreach, pastoral care, or other organisation-defined activity types.
+- **Change History** shows who changed a record, when they changed it, and which tracked fields changed.
+
+## Activity log
+
+Use **Activity Log** when you need to record counts for activity types across a date range. Each entry stores the branch, activity type, date, optional time, count, notes, and the user who logged it.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can use **Activity Log**. Treasurers are redirected away from the activity log. Org Owner and Org Admin can manage activity types.
+</Info>
+
+### Open activity log
+
+1. In the sidebar, click **Activity Log**.
+2. If you are org-scoped, choose a branch from the branch selector.
+3. Use the date range control to review totals for the period.
+
+The page shows three summary tiles: **Total entries**, **Total count**, and **Top activity type**.
+
+### Log a single entry
+
+1. Open **Activity Log**.
+2. In **Log a single entry**, choose an **Activity type**.
+3. Select the **Date**.
+4. Add an optional **Time**.
+5. Enter the **Count**.
+6. Add optional **Notes**.
+7. Click **Log entry**.
+
+Bethel ChMS keeps the selected date and activity type after saving so you can enter another entry quickly.
+
+### Log multiple entries
+
+Use **Log multiple** when you want to enter counts for several activity types at once.
+
+1. Click **Log multiple**.
+2. Set the shared **Date** and optional **Time**.
+3. Enter counts for the activity types you want to save.
+4. Add row-specific notes with **Note**, or add shared **Notes** that apply to all rows.
+5. Click **Save all**.
+
+Rows with no count are skipped. A count of `0` is saved as a valid entry.
+
+### Review recent entries
+
+The **Recent entries** table shows entries for the selected branch and date range. It includes **Date**, **Time**, **Type**, **Count**, **Notes**, **Logged by**, and **Status**.
+
+Use the filters to narrow entries by activity type. Org Owner and Org Admin can also filter by **Logged by**. Org Owner, Org Admin, and Branch Admin can turn on **Show deleted** and restore deleted entries.
+
+Click an entry to open **Entry Detail**.
+
+### Edit or delete entries
+
+On **Entry Detail**, you can review the entry information and **Audit History**.
+
+- Org Owner, Org Admin, Branch Admin, and Editor can edit active entries.
+- Org Owner, Org Admin, and Branch Admin can delete active entries.
+- Deleted entries show a **Deleted** badge and cannot be edited from the detail page.
+
+The entry audit history records create, update, delete, and restore actions.
+
+## Activity types
+
+Activity types define the categories that users can log. Org Owner and Org Admin can manage them from **Activity Log** > **Activity Types**.
+
+From **Activity Types**, you can:
+
+- Click **Add Activity Type** to create a type.
+- Edit a type name or description.
+- Drag types to reorder them.
+- Archive a type you no longer want users to select.
+- Delete a type only when it is not system-seeded and has no entries.
+
+<Note>
+If an activity type has entries, archive it instead of deleting it. Archived types preserve history.
+</Note>
+
+## Activity log report
+
+The activity log report turns logged entries into aggregate reporting.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can use the activity log report when the organisation has pastoral activity reporting access. Treasurers are redirected to **Gifting & Donations**.
+</Info>
+
+### Open the activity log report
+
+1. In the sidebar, click **Reports**.
+2. Click **Activity Log**.
+
+Bethel ChMS opens **Activity Log Report** at `/organisation/reports/activity-log`.
+
+### Filter the report
+
+The report defaults to the last 30 days, monthly granularity, and active entries.
+
+Use these controls to adjust the report:
+
+| Control | What it does |
+| --- | --- |
+| **Date Range** | Sets the period. Presets include **This Week**, **This Month**, **This Quarter**, **This Year**, and **Last Year**. |
+| **Branch** | Filters by one or more branches. Branch-scoped users are locked to their own branch. |
+| **Activity Type** | Filters by one or more activity types. |
+| **Granularity** | Changes chart buckets to **Daily**, **Weekly**, **Monthly**, or **Yearly**. |
+| **Include deleted entries** | Includes deleted entries. Editors do not see this option. |
+
+### Read the report
+
+The report includes:
+
+- **Total Entries**, the number of log entry rows.
+- **Total Count**, the sum of entry counts.
+- **vs Prior Period**, the percentage change compared with the previous equivalent period.
+- **Top Activity Type**, the activity type with the highest count.
+- **Activity Type Breakdown**, sorted by total count.
+- **Activity Count Over Time**, a time-series chart.
+- **Branch Comparison**, shown to Org Owner and Org Admin.
+- **Entries**, a drill-down table with entry-level details.
+
+Click an entry in **Entries** to open its **Entry Detail** page.
+
+### Export the activity log report
+
+Click **Export CSV** to download the entry-level rows for the selected filters. The CSV includes columns for entry date, time, activity type, count, notes, branch, logged by, logged at, last updated by, last updated at, deleted by, and deleted at.
+
+## Change history
+
+Use **Change History** when you need to audit changes to a specific record. It appears as a tab on supported record detail pages.
+
+### Supported records
+
+Change history is available on these detail pages:
+
+- **Members**
+- **Ministries**
+- **Events**
+- **Households**
+- **Groups**
+- **Locations**
+- **Users**
+
+Change history is not available for visitor records.
+
+### Open change history
+
+1. Open a supported record.
+2. Click the **Change History** tab.
+
+The timeline shows the newest changes first.
+
+### What the timeline shows
+
+Each timeline entry shows:
+
+- The action: **Created**, **Updated**, **Deleted**, or **Restored**.
+- The person who made the change, or **System** when automation made the change.
+- The date and time of the change.
+- For updates, the tracked fields that changed, shown as previous value to current value.
+
+If no changes have been recorded, Bethel ChMS shows **No changes recorded yet.**
+
+### Access rules
+
+Change history follows the same access rules as the record detail page.
+
+| Role | What they can see |
+| --- | --- |
+| Org Owner / Org Admin | Change history for records across the organisation. |
+| Branch Admin / Editor | Change history for records in their branch. |
+
+### Good to know
+
+- Change history starts from when tracking was enabled for the record type.
+- System and internal fields are hidden from the timeline.
+- Updates that do not change tracked values are not shown.
+- Change history is append-only in the UI. Users cannot edit or delete timeline entries.

@@ -1,0 +1,140 @@
+---
+title: "Gifting and donations"
+description: "Record donations, manage gifting categories, and review giving reports in Bethel ChMS."
+sidebarTitle: "Gifting & donations"
+---
+
+Use **Gifting & Donations** to record financial contributions by branch and category. You can log one entry at a time, use bulk entry for faster data entry, review recent entries, and report on giving across the organisation.
+
+<Info>
+**Who can do this:** Organisation owners and organisation admins can work across branches. Treasurers can work only with their assigned branch. Branch admins and editors do not see **Gifting & Donations** in the sidebar.
+</Info>
+
+## Open gifting
+
+In the sidebar, click **Gifting & Donations**.
+
+If you are org-scoped, choose a branch from the branch selector before logging entries. If you are a treasurer, Bethel ChMS uses your assigned branch automatically.
+
+The page defaults to the last 30 days. Use the date range control to change the totals and recent entries list.
+
+## Set up categories
+
+Gifting categories define how donations are grouped, such as general offering, missions, or building fund.
+
+Organisation owners and organisation admins can manage categories from **Gifting Categories**.
+
+You can:
+
+- Click **Add Category** to create a category.
+- Use **Rename / Edit** to update a category name or description.
+- Drag categories to change their display order.
+- Use **Archive** when you no longer want a category available for new entries.
+- Use **Delete** only for categories with no entries.
+
+System categories can be archived but not deleted. Categories that already have entries cannot be deleted.
+
+## Activate categories for a branch
+
+Each branch chooses which organisation categories it uses.
+
+<Steps>
+  <Step title="Open the branch">
+    Go to **Organisation** > **Branches** and open the branch.
+  </Step>
+  <Step title="Find Gifting Categories">
+    In the branch details page, find **Gifting Categories**.
+  </Step>
+  <Step title="Turn categories on or off">
+    Use the switch beside each category. Changes apply immediately.
+  </Step>
+</Steps>
+
+Only active, non-archived categories appear when you log entries for that branch.
+
+## Log a single entry
+
+Use **Log a single entry** when you have one donation to record.
+
+<Steps>
+  <Step title="Choose the date">
+    Enter the **Date** for the donation.
+  </Step>
+  <Step title="Choose a category">
+    Select **Category**. Bethel ChMS remembers the last category you used for that branch.
+  </Step>
+  <Step title="Enter the amount">
+    Enter **Amount**, or use a quick amount button.
+  </Step>
+  <Step title="Add notes">
+    Add **Notes** if you need extra context.
+  </Step>
+  <Step title="Save the entry">
+    Click **Log entry**.
+  </Step>
+</Steps>
+
+Treasurers can backdate entries up to 90 days. Organisation owners and organisation admins can use any entry date.
+
+## Use bulk entry
+
+Use **Bulk entry** when you need to log several donations for the same branch and date.
+
+<Steps>
+  <Step title="Open bulk entry">
+    From **Gifting & Donations**, click **Bulk entry**.
+  </Step>
+  <Step title="Confirm the branch">
+    Check the **Saving to** branch. Org-scoped users can use **Switch branch**.
+  </Step>
+  <Step title="Set the entry date">
+    Choose **Entry date**. This date applies to every row.
+  </Step>
+  <Step title="Fill in rows">
+    For each row, select **Category**, enter **Amount**, and add optional **Notes**.
+  </Step>
+  <Step title="Save valid rows">
+    Review the **Summary** panel and click **Save entries**.
+  </Step>
+</Steps>
+
+The bulk grid shows the number of valid rows, a running total, and a category breakdown. Empty or invalid rows are not saved.
+
+## Review and update entries
+
+The **Recent entries** card lists entries for the selected branch and date range. It shows the date, category, amount, notes, who logged the entry, and status badges such as **Edited** or **Deleted**.
+
+You can filter recent entries by category. Organisation owners and organisation admins can also filter by **Logged by** and turn on **Show deleted**.
+
+Click an entry to open **Entry Detail**. From there:
+
+- Use **Edit entry** to change the date, category, amount, or notes.
+- Use **Delete entry** to soft-delete the entry.
+- Review **Audit History** to see changes made to the entry.
+
+Deleted entries are reversible by an organisation owner or organisation admin. Treasurers can edit or delete non-deleted entries only in their assigned branch.
+
+## Run gifting reports
+
+Go to **Organisation** > **Reports** > **Gifting & Donations Report** to review aggregated giving.
+
+The report includes:
+
+- **Total Received** for the selected period.
+- **vs Prior Period** compared with the previous equivalent period.
+- **Number of Entries**.
+- **Top Category**.
+- **Category Breakdown** sorted by total received.
+- **Branch Comparison** when more than one branch is selected.
+- **Gifting Over Time** with daily, weekly, monthly, or yearly granularity.
+- **Entries** drill-down with pagination.
+
+Use the filters to choose date range, branches, categories, and granularity. Organisation owners and organisation admins can include deleted entries. Treasurers are locked to their assigned branch and cannot include deleted entries.
+
+Click **Export CSV** to download the report entries for the selected filters.
+
+## Feature and billing gates
+
+Gifting is included in the Standard plan. If a feature gate blocks access, Bethel ChMS sends you to the feature availability page instead of showing partial gifting screens. See [Feature availability by plan](/guides/feature-availability-by-plan).
+
+If your organisation is paused for billing, gifting mutations are blocked until billing is restored. See [Billing and subscription](/guides/billing-and-subscription).

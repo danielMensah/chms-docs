@@ -1,0 +1,123 @@
+---
+title: "Billing and subscription"
+description: "Understand Bethel ChMS pricing, subscription management, payment confirmation, and payment recovery."
+sidebarTitle: "Billing & subscription"
+---
+
+Bethel ChMS uses one Standard plan. Every feature is included, and you pay based on the number of branches in your organisation.
+
+<Info>
+**Who can manage billing:** Only the organisation owner can open the Stripe billing portal. Other admin-side roles can see billing status in organisation settings, but they cannot manage payment details.
+</Info>
+
+## Pricing
+
+Your subscription is priced per branch.
+
+| Billing period | Price per branch | Notes |
+| --- | --- | --- |
+| Monthly | £80 per branch per month | Billed monthly |
+| Annual | £880 per branch per year | 1 month free |
+
+VAT is included in the displayed price.
+
+## Set up payment during onboarding
+
+During onboarding, the **Payment** step shows **Your plan** as **Bethel: Everything included**.
+
+<Steps>
+  <Step title="Choose a billing period">
+    Select **Monthly** or **Annual** under **Billing period**.
+  </Step>
+  <Step title="Continue to Stripe">
+    Click **Continue to payment**. Bethel ChMS redirects you to Stripe Checkout.
+  </Step>
+  <Step title="Enter card details">
+    Complete payment in Stripe.
+  </Step>
+  <Step title="Wait for confirmation">
+    Bethel ChMS shows **Confirming your payment...** while it confirms the subscription.
+  </Step>
+</Steps>
+
+When payment is confirmed, Bethel ChMS returns you to onboarding so you can continue setting up your organisation.
+
+If confirmation takes longer than expected, the page shows **This is taking longer than usual...** with **Refresh** and a **contact support** link.
+
+## View plan and usage
+
+Open **Organisation Settings** and find **Plan & Usage**.
+
+This card shows:
+
+- Your current plan badge, shown as **Standard**.
+- Your branch usage, shown as current branches against the branch limit.
+- **Features**, shown as **All features included**.
+
+The branch limit is the only enforced usage limit in the Standard plan. See [Feature availability by plan](/guides/feature-availability-by-plan).
+
+## Manage billing
+
+The organisation owner can manage billing from **Organisation Settings**.
+
+<Steps>
+  <Step title="Open organisation settings">
+    In the sidebar, open **Organisation** > **Settings**.
+  </Step>
+  <Step title="Find Billing">
+    Find the **Billing** card.
+  </Step>
+  <Step title="Open Stripe">
+    Click **Manage Billing**.
+  </Step>
+</Steps>
+
+The Stripe billing portal lets the owner update the payment method, view invoice history, and cancel the subscription at the end of the billing period.
+
+You cannot change the subscription quantity or switch plan pricing in the Stripe portal. Bethel ChMS keeps billing quantity in sync with the number of active branches.
+
+If billing is not managed by Stripe, **Manage Billing** shows: **Billing is managed manually. Contact support to update your billing details.**
+
+## Add or remove branches
+
+Branch count affects billing quantity.
+
+When you create a branch, Bethel ChMS syncs the active branch count to Stripe. When you delete a branch, Bethel ChMS soft-deletes it and syncs the lower active branch count to Stripe.
+
+If your organisation is on annual billing, Bethel ChMS shows **Confirm branch addition** before adding a branch. The dialog shows an **Estimated charge** for the prorated cost of the new branch for the rest of the current billing period.
+
+<Note>
+You cannot delete your organisation's only branch. Create another branch first if you need to replace it.
+</Note>
+
+## Billing status
+
+The **Billing** card shows the subscription status.
+
+| Status | Meaning |
+| --- | --- |
+| **Active** | Your subscription is in good standing. |
+| **Trialing** | Your subscription is in a trial state. |
+| **Past due** | Bethel ChMS could not take the latest payment. |
+| **Suspended** | The account is paused until billing is restored. |
+
+If the subscription is set to renew, the card shows **Renewal** and the renewal date. If cancellation is scheduled, the card shows **Cancellation** and the date access ends.
+
+## Recover from a failed payment
+
+When a payment is past due, the organisation owner sees an amber warning banner above the app content:
+
+> We couldn't take your latest payment. Update your card to avoid interruption.
+
+Click **Manage Billing** in the banner to open Stripe and update the payment method. You can dismiss the banner for the current browser session.
+
+If the account becomes suspended, Bethel ChMS shows the **Billing** recovery page instead of normal app access. The page says **Account paused** and includes:
+
+- **Contact support**.
+- **Manage Billing**.
+
+After billing is restored, Bethel ChMS shows the app again. If you visit the recovery page while your subscription is active, it shows **Subscription active** and a **Go to app** button.
+
+## Get help
+
+Use **Contact support** from billing recovery, payment confirmation, or limit messages. Billing support goes to `hello@bethelware.app`.

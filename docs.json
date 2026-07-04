@@ -25,14 +25,65 @@
             ]
           },
           {
-            "group": "Guides",
+            "group": "Administration",
             "pages": [
               "guides/roles-and-permissions",
-              "guides/recording-attendance",
+              "guides/user-management",
+              "guides/organisation-settings",
+              "guides/branch-management",
+              "guides/dashboards",
+              "guides/whats-new"
+            ]
+          },
+          {
+            "group": "People",
+            "pages": [
               "guides/managing-members",
+              "guides/households",
+              "guides/importing-members",
+              "guides/age-groups"
+            ]
+          },
+          {
+            "group": "Attendance and check-in",
+            "pages": [
+              "guides/recording-attendance",
+              "guides/backsliders"
+            ]
+          },
+          {
+            "group": "Groups and ministries",
+            "pages": [
+              "guides/groups",
               "guides/setting-up-ministries",
-              "guides/managing-events",
-              "guides/branch-management"
+              "guides/managing-events"
+            ]
+          },
+          {
+            "group": "Reports and activity",
+            "pages": [
+              "guides/reports",
+              "guides/membership-demographics-report",
+              "guides/change-history"
+            ]
+          },
+          {
+            "group": "Giving",
+            "pages": [
+              "guides/gifting-and-donations"
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              "guides/automation-rules"
+            ]
+          },
+          {
+            "group": "Billing and plans",
+            "pages": [
+              "guides/billing-and-subscription",
+              "guides/feature-availability-by-plan"
             ]
           }
         ]

@@ -1,34 +1,38 @@
 ---
 title: "Branch management"
-description: "Create, duplicate, and manage branches across your multi-site church network in Bethel ChMS."
+description: "Create, duplicate, copy, edit, and manage branches across your multi-site church network in Bethel ChMS."
 sidebarTitle: "Branch management"
 ---
 
-Branch management is where org-level administrators set up and maintain the branches that make up a multi-site church network. From here you can create new branches, duplicate existing ones to save time, copy resources between branches, and manage branch details. If you're running more than one location, this is where it all comes together.
+Branch management is where org-level administrators set up and maintain the branches that make up a multi-site church network. From here you can create new branches, duplicate existing ones, copy resources between branches, and manage branch details.
 
 <Info>
-**Who can do this:** Org Owner and Org Admin can create and edit branches. Only Org Owner can delete a branch. Branch Admins can edit their own branch's details but cannot create or delete branches.
+**Who can do this:** **Org Owner** and **Org Admin** can create, edit, duplicate, and copy branch resources. Only **Org Owner** can delete a branch. **Branch Admins** can edit their own branch's details but cannot create, duplicate, copy, or delete branches.
 </Info>
 
 ## Creating a new branch
 
 <Steps>
   <Step title="Open the Branches page">
-    Navigate to **Organisation** > **Branches** and click **Create Branch**.
+    In the **Organisation** section of the sidebar, click **Branches**, then click **Create Branch**.
   </Step>
   <Step title="Fill in branch details">
-    Enter the **Branch Name** (required, must be unique within your organisation) and **Branch Email** (required).
+    Enter the **Branch Name**. It must be unique within your organisation. You can also enter an optional **Branch Email**.
   </Step>
   <Step title="Fill in the primary location">
-    Enter the **Location Name** (required). You can also fill in optional fields: **Address**, **Post Code**, and **Capacity**.
+    Enter the **Location Name**. You can also fill in optional fields: **Address** and **Capacity**.
   </Step>
   <Step title="Configure Sunday Service">
-    Set the **Start time**, **End time**, and optionally a **Description** for the branch's Sunday Service. If the branch doesn't have a Sunday Service, you can skip this section.
+    Set the **Start Time**, **End Time**, and optional **Description** for the branch's Sunday Service.
   </Step>
   <Step title="Create the branch">
-    Click **Create**. Bethel ChMS provisions the branch with its primary location, a Sunday Service event (if configured), and 52 weekly occurrences.
+    Click **Create Branch**. Bethel ChMS provisions the branch with its primary location, a Sunday Service event, and 52 weekly occurrences.
   </Step>
 </Steps>
+
+<Note>
+If your organisation uses annual billing, Bethel ChMS may show a **Confirm branch addition** dialog with the estimated prorated charge before it creates the branch.
+</Note>
 
 <Tip>
 Everything is set up in one step. You don't need to create the location or Sunday Service separately.
@@ -50,7 +54,7 @@ Duplicating lets you create up to 10 new branches at once, using an existing bra
     Select the number of branches to create (1 to 10).
   </Step>
   <Step title="Configure each new branch">
-    For each copy, fill in the **Branch name** and location details: **Location name**, **Address**, **Post code**, and **Capacity**. You can also configure **Sunday Service** times and description for each branch.
+    For each copy, fill in the **Branch name** and location details: **Location name**, **Address**, and **Capacity**. You can also configure **Sunday Service** times and description for each branch.
   </Step>
   <Step title="Select additional events to clone">
     Optionally, select which additional events from the source branch you'd like to clone into the new branches.
@@ -110,7 +114,9 @@ Copied events use the target branch's primary location. Copied locations are nev
 
 ## Editing a branch
 
-You can update a branch's **Name** and **Email** at any time. The branch name must remain unique within your organisation. Branch Admins can edit the details of their own branch, while Org Owners and Org Admins can edit any branch.
+You can update a branch's **Name**, **Email**, and group label at any time. The branch name must remain unique within your organisation. **Branch Admins** can edit their own branch. **Org Owners** and **Org Admins** can edit any branch.
+
+Org-level users may also see branch-level settings for **Gifting Categories** and **Activity Types** on a branch detail page. These settings control which organisation-level categories or activity types are active for that branch.
 
 ## Deleting a branch
 
@@ -120,13 +126,15 @@ Only the Org Owner can delete a branch. This action affects all data within that
 
 Deleting a branch is a soft delete. The branch and all of its associated data are hidden, including members, visitors, events, locations, ministries, and user accounts. You must type the branch name to confirm the deletion. Deleted branches can be recovered within 30 days before the data is permanently removed.
 
+You cannot delete your organisation's only branch. Create another branch first if you need to remove the original one.
+
 <Frame>
   <img src="/images/guides/delete-branch-confirmation.png" alt="Delete branch confirmation dialog with name input" />
 </Frame>
 
 ## Maximum branches
 
-Your organisation has a maximum number of branches based on your plan. You cannot create or duplicate branches beyond this limit.
+Your organisation has a branch limit. You cannot create or duplicate branches beyond this limit.
 
 <Note>
 Contact BethelWare Software Ltd if you need to increase your branch limit.

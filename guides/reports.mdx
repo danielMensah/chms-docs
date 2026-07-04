@@ -1,0 +1,117 @@
+---
+title: "Reports"
+description: "Build custom reports, export results, and save reusable report templates in Bethel ChMS."
+---
+
+Reports help you answer questions across members, attendance, visitors, events, ministries, activity, and giving. You can choose a report type, configure columns and filters, preview the results, export them, and save the setup as a reusable template.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, and Branch Admin can access the general **Reports** sidebar item. Editors do not see **Reports** in the sidebar, but the current app code does not block direct `/organisation/reports` access. Treasurers use finance-specific giving reports instead of the general report builder.
+</Info>
+
+## Open reports
+
+1. In the sidebar, click **Reports**.
+2. Use the **Build Report** tab to create a report.
+3. Use the **Templates** tab to load a saved, shared, or system template.
+
+## Report types
+
+The **Select a report type** section shows the report cards available to your role and plan.
+
+| Report type | Use it to |
+| --- | --- |
+| **Member Directory** | List members with contact details, status, branch, age group, and custom fields. |
+| **Attendance Summary** | Review attendance records across events and services. |
+| **Visitor Follow-up List** | Track visitors, contact details, visit counts, and last visit dates. |
+| **Event Performance** | Compare event dates, locations, attendee totals, and unique attendees. |
+| **Attendance Frequency** | See member attendance rates, absences, and last attended dates. |
+| **Growth Analysis** | Review membership growth trends and period comparisons. |
+| **Ministry Roster** | List ministry membership, roles, joined dates, and branch details. |
+| **Membership Demographics** | Build an age group and gender cross-tab. See [Membership demographics report](/guides/membership-demographics-report). |
+| **Activity Log** | Open the aggregate activity log report. See [Activity log and change history](/guides/change-history). |
+| **Gifting & Donations** | Open the dedicated giving report for finance roles. |
+
+<Note>
+Some report cards are feature-gated. For example, **Activity Log** requires pastoral activity reporting access. **Gifting & Donations** is only shown to finance roles.
+</Note>
+
+## Build a custom report
+
+<Steps>
+  <Step title="Select a report type">
+    On the **Build Report** tab, click the report card you want to build.
+  </Step>
+  <Step title="Configure columns">
+    In **Configure Columns**, drag fields between the available and selected panels. The selected fields become the report columns.
+  </Step>
+  <Step title="Apply filters">
+    Open **Filters** and set the filters for the report. Available filters depend on the report type.
+  </Step>
+  <Step title="Choose grouping">
+    Use the grouping selector when the report supports grouped output, such as **By Status**, **By Branch**, or **By Age Group**.
+  </Step>
+  <Step title="Review the preview">
+    Use **Preview** to check the data. You can search, sort, page through results, and click member rows in supported reports to open the member detail panel.
+  </Step>
+</Steps>
+
+## Filters and branch scope
+
+Filters vary by report type. Common filters include **Date Range**, **Lifecycle Status**, **Nationality**, **Branch**, **Event**, **Ministry**, **Member Name**, **Event Scope**, **Age Group**, and custom fields.
+
+Org-scoped users can choose a branch when the report supports branch filtering. Branch-scoped users do not see the **Branch** filter because Bethel ChMS locks the report to their branch.
+
+For event and ministry filters, org-scoped users must select a branch first. This keeps the event and ministry lists scoped to the selected branch.
+
+## Export a report
+
+Use the buttons in the **Preview** toolbar to export field-based reports:
+
+- **Export PDF** downloads a PDF that uses the selected columns, filters, grouping, and sort order.
+- **Export CSV** downloads a CSV that uses the selected columns, filters, grouping, and sort order.
+
+CSV and PDF exports for field-based reports are capped at 50,000 rows.
+
+<Note>
+If no columns are selected, exports are disabled until you select at least one column.
+</Note>
+
+## Save a report template
+
+Templates save the current report configuration so you can reuse it later. A template stores selected columns, filters, grouping, and sorting. For the membership demographics report, it stores the demographics-specific settings instead.
+
+1. Build the report you want to reuse.
+2. Click **Save as template** or **Save template**.
+3. Enter a **Name**.
+4. Add an optional **Description**.
+5. Click **Save**.
+
+Each user can save up to 25 personal templates.
+
+## Use saved templates
+
+Open the **Templates** tab to see three sections:
+
+| Section | What it contains |
+| --- | --- |
+| **System Templates** | Built-in templates provided by Bethel ChMS. |
+| **My Templates** | Templates you created. |
+| **Shared Templates** | Published templates created by other users in your organisation. |
+
+Use the template action menu to choose **Load** or **Clone**. For templates you own, you can also **Rename**, **Publish**, **Unpublish**, or **Delete**.
+
+<Info>
+Org Owner, Org Admin, and Branch Admin can publish templates. Published templates count toward the organisation limit of 25 published templates.
+</Info>
+
+Published templates are marked as organisation-scoped for org-scoped publishers and branch-scoped for branch-scoped publishers. In the current app, shared templates are fetched across the organisation even when the template is marked as branch-scoped.
+
+## Update an existing template
+
+When you load one of your templates, the save dialog lets you update it or save the current configuration as a new template.
+
+- Click **Update** to overwrite the loaded template.
+- Click **Save as New** to create a separate template.
+
+System and shared templates cannot be edited in place. Clone them first if you want your own editable copy.
