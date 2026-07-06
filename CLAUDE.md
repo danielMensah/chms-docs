@@ -1,8 +1,8 @@
-# CLAUDE.md — bethelware-docs
+# CLAUDE.md — bethelchms-docs
 
 ## What this repo is
 
-Client-facing documentation for **Bethel ChMS** (Church Management System), hosted at `docs.bethelware.com`. Built with Mintlify. Auto-deploys on push to `main` via the Mintlify GitHub App.
+Client-facing documentation for **Bethel ChMS** (Church Management System), hosted at `docs.bethelcj,s.com`. Built with Mintlify. Auto-deploys on push to `main` via the Mintlify GitHub App.
 
 For Mintlify conventions, components, and writing standards: use the installed Mintlify skills. They are authoritative — defer to them for all formatting, structure, and style decisions.
 
@@ -21,10 +21,10 @@ These supplement (not override) the Mintlify writing standards:
 
 ## Brand
 
-- Product name: **Bethel** (not "Bethel ChMS" in running text — use "Bethel" after first mention)
+- Product name: **Bethel ChMS**
 - Company: **BethelWare Software Ltd**
-- App URL: `app.bethelware.com`
-- Docs URL: `docs.bethelware.com`
+- App URL: `app.bethelchms.com`
+- Docs URL: `docs.bethelchms.com`
 - Tone: warm, professional, clear. Not corporate, not casual.
 
 ## PRD context
