@@ -18,6 +18,7 @@ Related people-management guides:
 - [Groups](/guides/groups)
 - [Importing members](/guides/importing-members)
 - [Age groups](/guides/age-groups)
+- [Tags](/guides/tags)
 
 ## Members
 
@@ -31,7 +32,7 @@ Related people-management guides:
     Click the **Add Member** button to open the new member dialog.
   </Step>
   <Step title="Fill in the member details">
-    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Date of Birth**, **Age Group**, **Gender**, **Nationality**, **Email**, **Mobile Number**, **Address**, **Post Code**, and any configured custom fields.
+    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Date of Birth**, **Age Group**, **Gender**, **Nationality**, **Email**, **Mobile Number**, **Address**, **Post Code**, **Tags**, and any configured custom fields.
   </Step>
   <Step title="Save the member">
     Click **Create Member**. The member is created with a **Newcomer** status.
@@ -60,6 +61,12 @@ Age groups help you filter the member directory and report on demographics.
 
 Use [age groups](/guides/age-groups) to configure the organisation-wide age brackets.
 
+### Tags on member records
+
+Tags help you label members for flexible filtering and reporting. For example, you might tag members as **Student**, **Deacon**, or **Choir**.
+
+Use [Tags](/guides/tags) to create organisation-wide tags. Member create and edit forms only show tags that apply to members.
+
 ### Editing a member
 
 <Steps>
@@ -74,7 +81,7 @@ Use [age groups](/guides/age-groups) to configure the organisation-wide age brac
   </Step>
 </Steps>
 
-The member detail page also shows attendance history, ministry assignments, household information, group information, custom fields, and change history where available.
+The member detail page also shows tags, attendance history, ministry assignments, household information, group information, custom fields, and change history where available.
 
 ### Deleting a member
 
@@ -121,9 +128,10 @@ You can filter or sort by:
 - **Nationality**
 - **Age Group**
 - **Gender**
+- **Tags**
 - Active member custom fields
 
-Click **Clear all** to remove active filters. Click **Export CSV** to export the filtered list.
+Click **Clear all** to remove active filters. Click **Export CSV** to export the filtered list. Member exports include a **Tags** column.
 
 ### Merging duplicate members
 
@@ -150,6 +158,8 @@ Merging members is permanent. If both records attended the same event, duplicate
 
 You can also select exactly two same-branch members in the member list and click **Merge**.
 
+When you merge duplicate members, Bethel ChMS keeps tags from both records on the survivor record.
+
 ## Visitors
 
 ### What is a visitor?
@@ -166,7 +176,7 @@ A **visitor** is someone who has attended your church but is not yet a member. V
     Click the **Add Visitor** button to open the new visitor dialog.
   </Step>
   <Step title="Fill in visitor details">
-    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Gender**, **Nationality**, **Email**, **Mobile Number**, and any configured visitor custom fields.
+    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Gender**, **Nationality**, **Email**, **Mobile Number**, **Tags**, and any configured visitor custom fields.
   </Step>
   <Step title="Save the visitor">
     Click **Create Visitor**. The visit count is set to 1, and the first and last visit dates are recorded automatically.
@@ -191,7 +201,7 @@ These fields are system-managed. They update when the visitor is checked in thro
 
 The visitor page includes stat cards for total visitors, new visitors this month, returning visitors, and visitors who are ready to convert. Click the **Ready to Convert** card to filter the list to visitors with at least 2 visits.
 
-Use the search bar to find visitors by name, email, or mobile number. You can also filter by **Nationality** and visitor custom fields. Click **Export CSV** to export the filtered list.
+Use the search bar to find visitors by name, email, or mobile number. You can also filter by **Nationality**, **Tags**, and visitor custom fields. Click **Export CSV** to export the filtered list. Visitor exports include a **Tags** column.
 
 ### Converting a visitor to a member
 
@@ -205,7 +215,7 @@ When a visitor is ready to join your church as a member, you can convert their r
     In the visitor row, click **Convert**. A dialog opens with the visitor's details pre-filled.
   </Step>
   <Step title="Review and add details">
-    Review the pre-filled fields and make any corrections. You can also add **Date of Birth**, **Address**, and **Post Code**.
+    Review the pre-filled fields and make any corrections. You can also add **Date of Birth**, **Address**, **Post Code**, and **Tags**.
   </Step>
   <Step title="Complete the conversion">
     Click **Convert to Member**. Bethel ChMS creates a new member record with **Newcomer** status and soft-deletes the visitor record.
@@ -214,6 +224,8 @@ When a visitor is ready to join your church as a member, you can convert their r
 
 <Info>
 The new member stores a link to the original visitor record through the conversion reference. On the member's dedicated profile page, the **Attendance** tab includes attendance recorded before conversion as visitor attendance, alongside attendance recorded after conversion as member attendance.
+
+Member-compatible tags from the visitor record are carried into the conversion dialog. Visitor-only tags are not added to the new member.
 </Info>
 
 <Tip>

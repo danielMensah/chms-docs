@@ -24,6 +24,7 @@ Use **Configure Report** to decide which members appear in the cross-tab.
 | --- | --- |
 | **Lifecycle Status** | Counts members with the selected statuses. New reports default to **Active** members. |
 | **Branch** | Counts members from **All branches** or one branch. Branch-scoped users do not see this filter. |
+| **Tags** | Counts members with selected tags. Use **Match any** or **Match all** when you select multiple tags. |
 | **Custom Fields** | Filters members by custom field values. Supported custom field filters include text, number range, date range, yes/no, and single select. |
 | **Attendance recency** | Counts only members who attended at least once in the last selected number of months. |
 
@@ -72,7 +73,7 @@ The report can show a data-completeness banner when matching members are missing
 Click a count in the banner to open the matching member list. Each listed member links to the member profile so you can update the missing data.
 
 <Note>
-Completeness counts follow the report's status and branch filters. They do not change when you add custom field filters or attendance recency.
+Completeness counts follow the same filters as the report, including status, branch, tags, custom fields, and attendance recency.
 </Note>
 
 ## Export the report
@@ -86,7 +87,7 @@ Filenames include the export date, such as `membership_demographics-2026-06-13.c
 
 ## Save demographics templates
 
-Click **Save as template** to save the current setup. The template stores lifecycle status, branch, custom field filters, attendance recency, composite rows, and nationality breakout selections.
+Click **Save as template** to save the current setup. The template stores lifecycle status, branch, tag filters, custom field filters, attendance recency, composite rows, and nationality breakout selections.
 
 You can load saved templates from **Reports** > **Templates**.
 

@@ -1,0 +1,101 @@
+---
+title: "Tags"
+description: "Create colour-coded tags for members and visitors, assign them to people, and use them in filters and reports."
+---
+
+Tags are organisation-wide labels that help you group members and visitors outside formal households, groups, ministries, or lifecycle statuses. Use them for labels such as `Student`, `Deacon`, `Choir`, or `Follow-up priority`.
+
+Tags appear as coloured chips on people records and lists. They are informational labels until you use them in filters, reports, or backslider rules.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, and Branch Admin can open **Tags**. These roles can create, edit, reorder, and archive tags. Editors and Treasurers do not see **Tags** in the sidebar.
+</Info>
+
+## Open tags
+
+In the sidebar, click **Tags**.
+
+The page lists your active tags in display order. Changes apply across the whole organisation, not only one branch.
+
+## Create a tag
+
+<Steps>
+  <Step title="Open the new tag dialog">
+    Click **New tag**.
+  </Step>
+  <Step title="Enter the label">
+    Enter a short **Label**, up to 32 characters.
+  </Step>
+  <Step title="Choose a colour">
+    Pick the colour that should appear on the tag chip.
+  </Step>
+  <Step title="Choose where it applies">
+    Set **Applies to** to **Members**, **Visitors**, or **Both**.
+  </Step>
+  <Step title="Save the tag">
+    Add an optional description, then click **Save**.
+  </Step>
+</Steps>
+
+The **Applies to** setting controls where the tag is offered. A member-only tag does not appear in visitor tag pickers. A visitor-only tag does not appear in member tag pickers.
+
+## Edit tags
+
+Use the tag row actions to edit a tag's label, colour, or **Applies to** setting.
+
+Drag tag rows to change their order. The new order saves immediately and controls how tags appear in pickers and chip lists.
+
+Bethel ChMS includes a system **Student** tag. You can change its colour and reorder it, but you cannot rename, remove, or change where it applies.
+
+## Archive a tag
+
+Click the archive action on a tag row, then confirm.
+
+Archived tags are hidden from new pickers and filters. People who already have the tag keep that tag until you remove it from their record.
+
+<Note>
+Archived tags are not hard-deleted. This keeps existing person records and history understandable.
+</Note>
+
+## Assign tags to people
+
+You can assign tags when you create or edit a member or visitor.
+
+1. Open the member or visitor form.
+2. Find **Tags**.
+3. Click **Add tag**.
+4. Search for and select one or more tags.
+5. Save the record.
+
+The picker only shows tags that apply to the person type. For example, member forms show member and both-purpose tags.
+
+When you convert a visitor to a member, member-compatible tags are carried into the conversion dialog. Visitor-only tags are not added to the new member.
+
+## Use tags in lists and exports
+
+Member and visitor lists show tags as chips. Use the **Tags** filter to narrow each list to people with selected tags.
+
+CSV exports for members and visitors include a **Tags** column. The export follows the current filters.
+
+## Use tags in reports
+
+Tags are available in reports where they apply to the report's people type.
+
+| Report | Tag support |
+| --- | --- |
+| **Member Directory** | Add **Tags** as a column and filter members by tag. |
+| **Visitor Follow-up List** | Add **Tags** as a column and filter visitors by tag. |
+| **Membership Demographics** | Filter counted members by tag. |
+
+When you select two or more tags in the report builder, choose **Match any** or **Match all**:
+
+- **Match any** includes people who have at least one selected tag.
+- **Match all** includes only people who have every selected tag.
+
+## Use tags in backslider rules
+
+Backslider rules can use **Tags** as a member condition.
+
+Use tag conditions when a rule should only include or exclude members with certain labels. Supported operators include **is any of**, **is not any of**, **is set**, and **is not set**.
+
+You can also filter the backsliders list by **Tags** during follow-up.
