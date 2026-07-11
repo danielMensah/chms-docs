@@ -6,3 +6,6 @@
 drafts/
 *.draft.mdx
 references/
+
+# PRD source material is not published documentation.
+references/prds/**

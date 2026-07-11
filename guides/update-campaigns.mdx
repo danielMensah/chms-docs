@@ -1,0 +1,159 @@
+---
+title: "Update campaigns"
+description: "Ask members to review and update their own details, then track responses and review submitted changes."
+sidebarTitle: "Update campaigns"
+---
+
+Update campaigns help you refresh member records without editing every profile yourself. You choose the audience, select the fields and tags members can review, send each member a personalised link, and track responses from one dashboard.
+
+Use update campaigns for periodic data refreshes, address checks, contact-detail updates, or tag confirmation.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, and Branch Admin can create, launch, share, stop, and delete campaigns. Editors can view campaign dashboards and review submitted changes. Treasurer users do not see Update Campaigns.
+</Info>
+
+<Note>
+The Update Campaigns feature is included in the Standard plan with no campaign limit. See [feature availability](/guides/feature-availability-by-plan).
+</Note>
+
+## How campaigns work
+
+Each campaign moves through three statuses:
+
+| Status | What it means |
+| --- | --- |
+| **Draft** | You can edit the name, message, audience, fields, dates, review mode, and reminders. |
+| **Open** | The audience is frozen, member links are active, and members can submit updates. |
+| **Closed** | Links stop working and no more responses are accepted. |
+
+Launching a campaign freezes the audience. Members added to a matching group, ministry, age group, or tag after launch are not added automatically.
+
+<Warning>
+Launching does not send emails. After you launch, click **Share & send**, then click **Send personalised emails** on the Share page to email members.
+</Warning>
+
+## Create a campaign
+
+<Steps>
+  <Step title="Open Update Campaigns">
+    In the sidebar, click **Update Campaigns**, then click **New campaign**.
+  </Step>
+  <Step title="Name the campaign">
+    Enter a **Name** and an optional **Message to members**. The message appears in the email preview and on the member update form.
+  </Step>
+  <Step title="Choose the audience">
+    Choose **Org-wide** or **Segment**. Org-wide campaigns target everyone in scope and are available to org-scoped roles only. Segments can include specific members, ministries, groups, age groups, and tags. A member who matches any selected segment option is included.
+  </Step>
+  <Step title="Select fields and tags">
+    Choose at least one standard member field, member custom field, or tag. Members only see the items you select.
+  </Step>
+  <Step title="Set dates and behaviour">
+    Add optional **Open date** and **Close date** values. Choose whether updates require staff review before they apply, and whether to nudge non-responders.
+  </Step>
+  <Step title="Preview and save">
+    Click **Save draft** to save your work and load the audience preview. The preview shows the current matched audience count.
+  </Step>
+  <Step title="Launch the campaign">
+    Click **Create & share** or launch from the campaign dashboard. Launching freezes the audience and opens the campaign for responses, but it does not send the email. To email members, continue to the Share page and click **Send personalised emails**.
+  </Step>
+</Steps>
+
+Standard fields include **First name**, **Last name**, **Date of birth**, **Gender**, **Nationality**, **Email**, **Mobile number**, **Address**, and **Post code**.
+
+<Tip>
+Select only the fields you need members to check. Shorter forms are easier to complete and reduce review work for staff.
+</Tip>
+
+## Review mode
+
+The **Require review before applying** toggle controls personalised member links only.
+
+| Review mode | What happens |
+| --- | --- |
+| **Requires review** | Submitted changes wait in the review queue until staff approve or reject them. |
+| **Auto-update** | Changes from personalised links apply after submission. |
+
+Public link and QR submissions are always reviewed, even when the campaign uses auto-update. This protects member records because public links first identify the member by last name and email or mobile number.
+
+## Share a campaign
+
+Open an active campaign and click **Share & send**.
+
+To email members, use the **Email** section and click **Send personalised emails**. This is the step that sends the campaign email. The earlier **Create & share** action only launches the campaign and takes you to the sharing screen.
+
+The Share page includes three options:
+
+| Option | Use it for |
+| --- | --- |
+| **Email** | Send personalised update links to targeted members with email addresses. |
+| **Public link** | Share one reusable link in a bulletin, chat group, or announcement. Members identify themselves before seeing the form. |
+| **QR** | Print or display a scannable version of the public link. |
+
+Initial campaign emails are sent in batches. The send status tracks sent emails, members with no email address, and failed sends. If any sends fail, retry them or export the failed email list.
+
+<Note>
+Org Owner and Org Admin users can send the initial email batch and download the QR PNG. Branch Admin users can open the Share page, copy the public link, and print the on-screen QR code.
+</Note>
+
+## What members see
+
+Members can open a campaign in two ways:
+
+| Link type | Member experience |
+| --- | --- |
+| Personalised link | The form opens directly because the link is already tied to the member. |
+| Public link or QR code | The member enters **Last name** and **Email or mobile number** before the form opens. |
+
+The form shows only the fields and tags you selected. Existing values are prefilled where available. Members click **Save my details** to submit.
+
+If the member changes values, the confirmation page shows what they updated. If nothing changed, it confirms that nothing changed.
+
+<Info>
+For privacy, failed public identification attempts all show the same message. The page does not reveal whether a name, email, mobile number, campaign, or audience match failed.
+</Info>
+
+## Track responses
+
+Open a campaign dashboard to see delivery and response progress.
+
+The dashboard includes:
+
+- KPI tiles for targeted, sent, no-email, opened, review, submitted, approved, rejected, no-reply, expired, and not-contactable counts.
+- A recipient table with delivery status, response status, sent date, and opened date.
+- A **Remind non-responders** action for members who have not replied and have a reachable email address.
+- A submissions CSV export for campaign managers.
+- A delivery and response chart.
+
+If **Nudge non-responders** is enabled, Bethel ChMS can send reminder emails to eligible non-responders on a seven-day cadence. You can also send reminders manually from the dashboard.
+
+## Review submissions
+
+When changes require review, open the campaign dashboard and click **Review submissions**.
+
+The review queue groups pending changes by member submission. Each field shows the previous value and the proposed value.
+
+You can:
+
+- Approve or reject one field.
+- Approve or reject all fields in a submission.
+- Select fields across submissions and approve or reject them in bulk.
+
+Approved fields update the member record. Rejected fields are discarded.
+
+<Note>
+Editors can review submitted campaign changes, even though they cannot create, launch, share, stop, or delete campaigns.
+</Note>
+
+## Stop or delete a campaign
+
+Open campaigns can be stopped from the campaign dashboard. Stopping a campaign closes it and turns off member links.
+
+Closed or draft campaigns can be deleted by campaign managers. Deleting archives the campaign and removes it from the list.
+
+<Warning>
+After a campaign is closed, old personal links, public links, and QR codes no longer accept responses.
+</Warning>
+
+## Data retention
+
+Bethel ChMS keeps campaign response records for tracking and audit purposes. Submitted field values are redacted after the campaign has been closed for 12 months.
