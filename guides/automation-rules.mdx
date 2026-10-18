@@ -43,6 +43,10 @@ All three rules start switched off in a new organisation. Your thresholds may di
 - **Visitor Conversion** and **Newcomer to Active** are checked every time attendance is recorded, so a change happens as soon as someone reaches the threshold.
 - **Active to Inactive** runs once a day, overnight (at 02:00 UTC).
 
+<Note>
+If a visitor reaches the threshold but a member in the same branch already has their email address or mobile number, Bethel ChMS still checks the visitor in but doesn't convert them, so you don't end up with two records for the same person. Open both records to check whether the visitor and the member are the same person.
+</Note>
+
 Bethel ChMS also checks your repeating events every Monday morning (at 03:00 UTC). When a repeating event that hasn't reached its **Recurrence End Date** is within four weeks of its last scheduled date, Bethel ChMS adds more dates, up to 52 ahead, so the event doesn't run out. This isn't a rule you can switch off. Each top-up shows in the execution history as **Occurrence Generation** and is counted under **Occurrences Extended**. See [Managing events](/guides/managing-events).
 
 ## Turn a rule on or off
