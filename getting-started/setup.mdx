@@ -37,8 +37,6 @@ The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up 
     4. Wait for the security check above the button to finish. It usually completes by itself.
     5. Click **Sign up**.
 
-    {/* TODO: new screenshot: the redesigned Create your account page, showing Email, Password with the eye icon, the terms checkbox, the security check and the Sign up button */}
-
     The page then shows **Check your email for a confirmation link.** If Bethel ChMS asks you to confirm your email address, open the link in that email by clicking **Confirm My Email**.
 
     Then go to [app.bethelchms.com](https://app.bethelchms.com) and, if you're asked to, sign in with your new email and password. Because you haven't set up your church yet, Bethel ChMS opens the setup wizard.
@@ -58,8 +56,6 @@ The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up 
 
     Click **Create & Continue**.
 
-    {/* TODO: new screenshot: the Create Organisation step with the four-step progress bar and the pinned Create & Continue button */}
-
     If you see **Organisation name already exists**, another organisation in Bethel ChMS already uses that name. Try a slightly different name, for example by adding your town.
 
     <Info>
@@ -70,12 +66,14 @@ The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up 
   <Step title="Choose a billing period and pay">
     The **Payment** step sets up your subscription. The **Your plan** card shows the plan and its price per branch, with VAT included.
 
+    <Frame>
+      <img src="/images/getting-started/setup-payment-step.png" alt="The Payment step of the Bethel ChMS setup wizard, showing the four-step progress bar, the Your plan card at £80 per branch with VAT included, Monthly and Annual billing period choices, the Monthly total, and the Back and Continue to payment buttons" width="480" />
+    </Frame>
+
     1. Under **Billing period**, choose **Monthly** (£80 a month) or **Annual** (£880 a year, marked **1 month free**).
     2. Check the **Monthly total** or **Annual total** line.
     3. Click **Continue to payment**.
     4. You're taken to Stripe, our secure payment provider. Enter your card details on Stripe's page, not in Bethel ChMS.
-
-    {/* TODO: new screenshot: the Payment step showing the Your plan card, the Monthly and Annual billing period cards and the Continue to payment button */}
 
     After you pay, Stripe brings you back to a page that says **Confirming your payment…**. Keep this page open. It usually takes a moment, then shows **Payment confirmed!** and moves you on to the branch step. Your subscription starts as soon as payment is confirmed.
 
@@ -106,9 +104,11 @@ The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up 
     | **Sunday Service** | **End Time** | Yes | When your Sunday service ends. It is filled in as 12:00 and must be after the start time. |
     | **Sunday Service** | **Description** | No | Fills in as "Weekly Sunday Service at" followed by your branch name. Change it if you like. |
 
-    Click **Create & Continue**.
+    <Frame>
+      <img src="/images/getting-started/setup-first-branch-step.png" alt="The Set Up Your First Branch step of the Bethel ChMS setup wizard, with the Branch, Primary Location and Sunday Service sections filled in, the Sunday service set to 10:00 to 12:00, and the Back and Create & Continue buttons" width="480" />
+    </Frame>
 
-    {/* TODO: new screenshot: the Set Up Your First Branch step showing the Branch, Primary Location and Sunday Service sections */}
+    Click **Create & Continue**.
 
     <Tip>
       Bethel ChMS creates your branch, its primary location, and a **Sunday Service** event that repeats every week for the next 52 weeks. You can change the service or add more events later in [Managing events](/guides/managing-events), and add more venues in [Locations](/guides/locations).
@@ -117,8 +117,6 @@ The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up 
 
   <Step title="You're all set">
     The **You're All Set** page confirms that your workspace is ready and shows the **Organisation** and **Branch** it created. When you're ready, click **Go to Dashboard**.
-
-    {/* TODO: new screenshot: the You're All Set page with the Organisation and Branch summary and the Go to Dashboard button */}
 
     Your dashboard shows your selected branch at a glance, including member demographics, upcoming events, recent check-ins, and member lists.
   </Step>
