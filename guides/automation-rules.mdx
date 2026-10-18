@@ -1,84 +1,83 @@
 ---
 title: "Automation rules"
-description: "Configure automation rules, branch overrides, and execution history in Bethel ChMS."
+description: "Turn automation rules on and off, set thresholds and branch overrides, and review execution history in Bethel ChMS."
 ---
 
-Automation rules keep member lifecycle and recurring event work up to date without manual updates. You manage them from the organisation-level **Automation** page.
+Automation rules keep member statuses up to date without anyone having to change them by hand. For example, Bethel ChMS can turn a regular visitor into a newcomer member, or mark someone inactive after a long absence. You manage the rules for your whole organisation, which is your church network, from the **Automation** page.
 
 <Info>
-**Who can do this:** Org Owner can enable rules, disable rules, and update thresholds. Org Admin can view rules and execution history in read-only mode. Branch Admin, Editor, and Treasurer do not see **Automation** in the sidebar.
+**Who can do this:** The Org Owner can turn rules on and off, change thresholds and set branch overrides. Org Admins can see the rules and the execution history but can't change anything. Branch Admins, Editors, Treasurers and Care Managers don't see **Automation** in the sidebar.
 </Info>
 
-## Open automation
+## Open Automation
 
-1. In the sidebar, find **Organisation**.
-2. Click **Automation**.
-3. Use **Rules** to review and configure rules.
-4. Use **Execution History** to review automation activity.
+In the sidebar, open the **Organisation** group and click **Automation**. On a tablet or phone, tap **More**, then look under **Organisation**. See [Find your way around](/getting-started/find-your-way-around).
 
-Automation is an organisation-level feature. Branch-scoped users who open the route directly see: **Automation rules are managed at the organisation level.**
+The page has two tabs:
 
-## Feature access and redirects
+- **Rules**, where you turn rules on and off and set their thresholds.
+- **Execution History**, a log of everything automation has done.
 
-Bethel ChMS checks automation access before it shows the page.
+Org Admins see the notice **You have read-only access. Only an organisation owner can enable or disable automation rules.**
 
-- If automations are available, the page opens normally.
-- If automations are temporarily unavailable, the page shows **Automations** as unavailable.
-- Automation is included on the Standard plan. If automation access is unavailable because of an account or entitlement issue, contact support.
+Automation is managed at organisation level because the rules apply across every branch. If someone without organisation-level access opens the page, they see **Automation rules are managed at the organisation level.**
 
-See [Feature availability by plan](/guides/feature-availability-by-plan) for plan and feature availability behavior.
+<Note>
+Automation is included in the Standard plan, with no limit on how many rules you turn on. If the page shows **Automations isn't available yet**, contact support at hello@bethelware.app. See [Feature availability by plan](/guides/feature-availability-by-plan).
+</Note>
 
-## Automation rules
+## The rules
 
-The **Rules** tab shows one card for each configurable rule. Each card shows the rule name, description, **Enabled** or **Disabled** status, current threshold, a toggle, and **Configure**.
+The **Rules** tab shows a card for each rule. Each card shows the rule's name, an **Enabled** or **Disabled** badge, a switch, a description, the current threshold and a **Configure** button.
 
 | Rule | What it does | Default threshold |
 | --- | --- | --- |
-| **Visitor Conversion** | Converts visitors to newcomer members when they reach the visit threshold inside the recency window. | `3` visits within `30` days |
-| **Newcomer to Active** | Promotes newcomer members to active after enough attendances in the configured period. | `4` attendances within `90` days |
-| **Active to Inactive** | Marks active members inactive when they have not attended for the configured number of days. | No attendance in `30` days |
+| **Visitor Conversion** | Turns visitors into newcomer members when they reach the visit threshold within the recency window. | 3 visits within 30 days |
+| **Newcomer to Active** | Makes newcomer members active once they attend enough services within the set period. | 4 attendances within 90 days |
+| **Active to Inactive** | Marks active members as inactive when they haven't attended any service for the set number of days. | No attendance in 30 days |
 
-New organisations start with these default thresholds, and automation is disabled by default for new rules. Your organisation may show different thresholds if they were previously changed or migrated. Enable only the rules you want Bethel ChMS to run.
+All three rules start switched off in a new organisation. Your thresholds may differ from the defaults if someone has changed them. Turn on only the rules you want Bethel ChMS to run.
 
-## Enable or disable a rule
+### When rules run
 
-Org Owner can use the switch on each rule card.
+- **Visitor Conversion** and **Newcomer to Active** are checked every time attendance is recorded, so a change happens as soon as someone reaches the threshold.
+- **Active to Inactive** runs once a day, overnight (at 02:00 UTC).
+
+Bethel ChMS also checks your repeating events every Monday morning (at 03:00 UTC). When a repeating event that hasn't reached its **Recurrence End Date** is within four weeks of its last scheduled date, Bethel ChMS adds more dates, up to 52 ahead, so the event doesn't run out. This isn't a rule you can switch off. Each top-up shows in the execution history as **Occurrence Generation** and is counted under **Occurrences Extended**. See [Managing events](/guides/managing-events).
+
+## Turn a rule on or off
+
+**Who can do this:** Org Owner
 
 <Steps>
-  <Step title="Open rules">
-    Go to **Organisation** > **Automation** and open **Rules**.
+  <Step title="Open the rules">
+    Go to **Automation** and open the **Rules** tab.
   </Step>
-  <Step title="Find the rule">
-    Review the rule cards and current **Threshold** values.
+  <Step title="Turn a rule on">
+    Click the switch on the rule's card. Bethel ChMS asks you to confirm, for example **Turn on Visitor Conversion?**, and explains what will happen while the rule is on. It also shows the threshold and reminds you that branch overrides still apply. Click **Turn on rule**. Bethel ChMS confirms with a message such as **Visitor Conversion enabled**.
   </Step>
-  <Step title="Change the status">
-    Use the switch beside the rule status badge.
+  <Step title="Turn a rule off">
+    Click the switch on a rule that's on. It turns off straight away, and Bethel ChMS confirms with a message such as **Visitor Conversion disabled**. If you turned it off by mistake, click **Undo** in that message.
   </Step>
 </Steps>
 
-Bethel ChMS confirms the change with a toast such as **Visitor Conversion enabled** or **Visitor Conversion disabled**.
+## Change the organisation thresholds
 
-The Standard plan does not enforce an automation rule limit. You can enable any available automation rule.
+The organisation thresholds are the default values for every branch, unless a branch has its own override.
 
-## Configure organisation thresholds
-
-Org Owner can update the default thresholds that apply to every branch unless a branch has its own override.
+**Who can do this:** Org Owner
 
 <Steps>
-  <Step title="Open the rule dialog">
-    On the **Rules** tab, click **Configure** on a rule card.
+  <Step title="Open the rule">
+    On the **Rules** tab, click **Configure** on the rule. The panel is titled, for example, **Configure: Visitor Conversion**.
   </Step>
-  <Step title="Edit organisation thresholds">
-    In **Organisation Thresholds**, update the fields for the rule.
+  <Step title="Change the thresholds">
+    Under **Organisation Thresholds**, change the values for the rule (see the table below).
   </Step>
-  <Step title="Save the rule">
-    Click **Save**.
+  <Step title="Save">
+    Click **Save**. Bethel ChMS confirms with **Configuration saved**.
   </Step>
 </Steps>
-
-The configuration dialog is titled **Configure: Visitor Conversion**, **Configure: Newcomer to Active**, or **Configure: Active to Inactive**.
-
-### Threshold fields
 
 | Rule | Fields |
 | --- | --- |
@@ -86,64 +85,70 @@ The configuration dialog is titled **Configure: Visitor Conversion**, **Configur
 | **Newcomer to Active** | **Attendance threshold**, **Period (days)** |
 | **Active to Inactive** | **Inactivity threshold (days)** |
 
-All threshold fields must be whole numbers of at least `1`.
+Every threshold must be a whole number of at least 1.
 
-Org Admin can see the rule cards and thresholds, but the switch and **Configure** button are disabled.
+For Org Admins, the switch and the **Configure** button are greyed out.
 
-## Configure branch overrides
+## Set branch overrides
 
-Use **Branch Overrides** when a branch needs different thresholds or a different enabled state from the organisation default.
+Use a branch override when one branch needs different thresholds from the rest of the organisation, or needs a rule switched on or off just for that branch. For example, a small branch that meets fortnightly might need a longer inactivity threshold.
+
+**Who can do this:** Org Owner
 
 <Steps>
-  <Step title="Open Configure">
-    On the **Rules** tab, click **Configure** on the rule you want to adjust.
+  <Step title="Open the rule">
+    On the **Rules** tab, click **Configure** on the rule.
   </Step>
-  <Step title="Open a branch row">
-    In **Branch Overrides**, click a branch row. Branches without overrides show **Using org default**.
+  <Step title="Open a branch">
+    Under **Branch Overrides**, click the branch. Each branch shows the values it currently uses, with **Custom** if it has an override or **Using org default** if it doesn't.
   </Step>
-  <Step title="Choose enabled behavior">
-    Use **Override enabled state**. Click **Override** to set a branch-specific enabled state, or **Inherit** to use the organisation setting.
+  <Step title="Choose whether the rule runs at this branch">
+    Under **Override enabled state**, choose **Inherit** to follow the organisation's setting, or **Enabled** or **Disabled** to set it just for this branch.
   </Step>
-  <Step title="Set branch thresholds">
-    Enter branch-specific threshold values for the rule.
+  <Step title="Set the branch thresholds">
+    Enter the values this branch should use. The fields are **Visit threshold** and **Recency (days)** for Visitor Conversion, **Attendance threshold** and **Period (days)** for Newcomer to Active, and **Inactive threshold (days)** for Active to Inactive. To give the branch its own thresholds, fill in every field for the rule. If you leave the fields blank, the branch keeps the organisation values, which are shown in the empty fields. This is useful when you only want to change whether the rule runs at this branch.
   </Step>
   <Step title="Save the override">
-    Click **Save override**.
+    Click **Save override**. Bethel ChMS confirms with **Override saved for** and the branch name.
   </Step>
 </Steps>
 
-After you save, the branch row shows **Custom**. To remove the branch-specific settings, open the row and click **Reset to default**.
+After you save, the branch shows **Custom**, and if you set the enabled state it also shows **Overriding: Enabled** or **Overriding: Disabled**. To go back to the organisation settings for that branch, open it and click **Reset to default**. Click **Cancel** to close the branch without saving.
 
-<Note>
-The branch list only includes active, non-deleted branches in the organisation.
-</Note>
+Only active branches are listed.
 
 ## Review execution history
 
-Use **Execution History** to see what automation has done for the organisation.
+The **Execution History** tab shows a log of everything automation has done for your organisation.
 
-The page shows summary cards for:
+At the top, summary cards show how many **Visitors Converted**, **Members Promoted**, **Marked Inactive** and **Occurrences Extended** there have been. The counts follow the branch and date filters you choose below.
 
-- **Visitors Converted**
-- **Members Promoted**
-- **Marked Inactive**
-- **Occurrences Extended**
+The log lists each action with **Executed At**, **Rule Type**, **Entity** (what the action was about, such as a person or an event), **Branch** and **Details**. It shows 20 entries a page. Use **Previous** and **Next** to move between pages.
 
-The history table includes **Executed At**, **Rule Type**, **Entity**, **Branch**, and **Details**.
-
-## Filter execution history
-
-Use the filters above the table to narrow the log.
+### Filter the log
 
 | Filter | Options |
 | --- | --- |
 | **All rule types** | **Visitor Conversion**, **Newcomer to Active**, **Active to Inactive**, **Occurrence Generation** |
-| **All branches** | Any active branch in the organisation |
+| **All branches** | Any active branch in your organisation |
 | **From** | Start date |
 | **To** | End date |
 
-The table shows 20 entries per page. Use **Previous** and **Next** to move through additional pages.
+If nothing matches, the log reads **No log entries match the selected filters.**
 
-<Note>
-**Occurrence Generation** appears in execution history, but it is not configurable from the **Rules** tab.
-</Note>
+### Care entries in the log
+
+If your church uses [Care](/guides/care), the log can also show entries from it, such as:
+
+- **Care retention**: the nightly clean-up that deletes closed care cases two years after they closed. See [How long care records are kept](/guides/care#how-long-care-records-are-kept).
+- **Visitor care assignment**: a new visitor's care case was opened without anyone assigned, because everyone in the rotation was already at the [workload limit](/guides/care#workload-limit).
+
+The rule type filter doesn't list these entries, so leave it on **All rule types** to see them.
+
+## Related pages
+
+- [Care](/guides/care)
+- [Managing members](/guides/managing-members)
+- [Visitors](/guides/visitors)
+- [Managing events](/guides/managing-events)
+- [Roles and permissions](/guides/roles-and-permissions)

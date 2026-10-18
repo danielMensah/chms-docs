@@ -1,0 +1,163 @@
+---
+title: "Kiosk mode"
+sidebarTitle: "Kiosk mode"
+description: "Turn a tablet or laptop at your entrance into a self check-in station where members and visitors check themselves in to a service."
+---
+
+**Kiosk mode** turns a tablet or laptop at your entrance into a self check-in station for one event. Members and visitors check themselves in by scanning their QR code, typing their email or mobile number, finding their name, or registering as a first-time visitor. Their check-ins go straight onto the attendance list for that service.
+
+An **occurrence** is one date and time of an event, for example this Sunday's 10:00 service. When you open kiosk mode, it picks the occurrence that is open for check-in at that moment and checks everyone in to it.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin and Editor can open kiosk mode. People using the kiosk don't need to sign in.
+</Info>
+
+## Before you start
+
+- **Public Check-in** must be on for the event. See [Set up public check-in](/guides/recording-attendance#set-up-public-check-in).
+- The kiosk works only while an occurrence is inside the event's check-in window. A kiosk left open after the window closes can't check anyone in, so if people arrive late or your service runs long, choose a longer **Check-in Window**. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works).
+- To scan QR codes, the device needs a camera. A tablet on a stand at the door works well.
+
+<Tip>
+Plug the tablet in before the service. Kiosk mode keeps the screen on while it runs, which uses more battery.
+</Tip>
+
+## Open kiosk mode
+
+<Steps>
+  <Step title="Open the event">
+    In the sidebar, open **Church life** and click **Events**, then select the event. On a phone, tap **Events** in the tab bar.
+  </Step>
+  <Step title="Open the Settings tab">
+    Click the **Settings** tab and find the **Public Check-in QR** card.
+  </Step>
+  <Step title="Launch the kiosk">
+    Click **Launch Kiosk Mode**. The kiosk opens in a new browser tab.
+  </Step>
+</Steps>
+
+You can also open kiosk mode from these places:
+
+- While a service is in progress, click **QR & kiosk** on its **Live now** card, on the **Dashboard** or the **Events** page. The kiosk opens in a new tab. If public check-in is off for that event, you go to the event page instead.
+- In the events list, open the event's **⋯** menu and choose **QR & kiosk**. This option appears only for events with public check-in on.
+
+## What people see at the kiosk
+
+The top of the screen shows "Check in" and the event name. Beside it on a wide screen, or below it on a narrower one, a row of tabs lets people choose how to check in:
+
+- **Scan QR**
+- **Find by name**, if your church has [Find by name (Quick Find)](/guides/quick-find) switched on
+- **Manual**, for email or mobile number
+- **Visitor**, for first-time visitors
+
+The kiosk always opens on **Scan QR**. The tabs show only on these starting screens, not while someone is part-way through checking in.
+
+### Scan QR
+
+The **Scan QR** screen asks people to point the camera at their QR code. On a wide screen, such as a tablet held landscape or a laptop, it also shows three short steps: open the QR code from the welcome email or a printed card, hold it about a hand's width from the camera, and wait for the chime.
+
+Under **No code with you?**, people can tap **Find by name** (when it's switched on) or **Email or mobile** instead.
+
+The kiosk uses the front camera, the one facing the person. If the device has more than one camera, a button lets you switch cameras, and the device remembers your choice.
+
+What happens after a scan depends on the code:
+
+| Code scanned | What the kiosk does |
+| --- | --- |
+| A member's personal code | Checks them in straight away and shows "Checked in" with their name and **Done**. If they're already in, it shows "Already checked in". |
+| A personal code, for a member in a household | Asks who else from the household is here. Everyone is ticked to begin with. They tap **Check in** to check in themselves and everyone ticked (the button shows the number), **Just me** for only themselves, or **Back**. |
+| A visitor's code from their welcome email | Shows "Welcome back" with their name and a **Check In** button. |
+| A code Bethel ChMS doesn't recognise | Shows **Member not found**, with **Check in as Visitor**, **Manual Check-in** and **Close**. |
+
+Anyone in a household who is already checked in can't be ticked again. If everyone is already in, the kiosk says so.
+
+#### If the camera doesn't work
+
+- If the browser hasn't been allowed to use the camera, the kiosk shows "Camera permission needed to scan QR codes". Allow camera access in the browser settings, then tap **Try again**.
+- If a steward has turned the camera off in [Staff options](#staff-options), the kiosk asks people to use Find by name or their email or mobile number instead.
+
+### Find by name
+
+Members type their first name and the start of their surname, pick themselves from a short list and confirm. Children never appear in the list. See [Find by name (Quick Find)](/guides/quick-find).
+
+### Manual
+
+The **Manual** tab asks people to type the email or mobile number your church has for them, then tap **Continue**. From there it works the same way as [self check-in on a phone](/guides/recording-attendance#self-check-in-on-a-phone): people confirm their name, choose who else from their household is here, or register as a visitor if they aren't found.
+
+The field is cleared after each person, and the kiosk never suggests an email address someone else typed earlier.
+
+### Visitor
+
+The **Visitor** tab opens the **Register** form. Visitors enter their name, an email address or mobile number, and any other details your church asks for, then tap **Register & Check In**.
+
+Visitors who give an email address are emailed their personal check-in QR code straight away, so they can scan it at the kiosk next time.
+
+### When someone has checked in
+
+The confirmation screen shows "Checked in" with the person's first name. For a household, it shows how many people were checked in and lists their names. Below that is "Welcome. We're glad you're here." and a **Done** button.
+
+The screen stays up until the person taps **Done**, or until the kiosk resets itself.
+
+## The kiosk resets itself
+
+After 30 seconds with nobody touching the screen, typing or moving the mouse, the kiosk goes back to **Scan QR** and clears the last person's details. This happens on every kiosk screen, including the confirmation screen and Find by name, so the next person never sees someone else's name.
+
+This only happens in kiosk mode, never on a member's own phone.
+
+## The check-in chime
+
+The kiosk plays a short beep every time someone checks in successfully, whichever way they checked in. It stays silent when someone is already checked in or isn't found.
+
+Browsers only play sound after someone has touched the screen, so tap the kiosk once after you open it. You can turn the chime off in [Staff options](#staff-options).
+
+The chime plays only in kiosk mode. It doesn't play on members' phones or when staff use **Scan QR** on the attendance page.
+
+## Staff options
+
+The bottom of the kiosk shows "Kiosk Mode" with two buttons, **Exit** and **Staff**. Both need a press and hold of about a second, so people tapping around the screen can't reach them by accident. A short tap shows "Hold to exit" or "Hold for staff".
+
+To change the kiosk's settings:
+
+1. Press and hold **Staff** until the lock opens.
+2. In **Staff options**, use the switches:
+   - **Camera** turns the camera for **Scan QR** on or off.
+   - **Keep screen on** stops the tablet dimming or locking during the service.
+   - **Chime on check-in** turns the [check-in chime](#the-check-in-chime) on or off.
+3. Close the dialog.
+
+All three switches start on. They aren't saved, so if the kiosk page reloads they go back to on.
+
+## Exit kiosk mode
+
+1. Press and hold **Exit**.
+2. In **Exit kiosk mode?**, click **Exit kiosk mode**. To carry on, click **Stay in kiosk**.
+
+The device goes to the attendance page for this occurrence in Bethel ChMS, where staff can carry on taking attendance. Members can't check themselves in on this device again until you launch kiosk mode again. The attendance page is part of Bethel ChMS, so you need to be signed in to see it.
+
+## Kiosk check-ins in attendance
+
+Check-ins from the kiosk are added to the occurrence's attendance list straight away. If a steward already has the attendance page open, it doesn't update by itself, so reload the page to see the latest kiosk check-ins. Their capture method is **Kiosk**, **Kiosk QR** or **Self Check-in**. See [How each check-in is labelled](/guides/recording-attendance#how-each-check-in-is-labelled).
+
+## Troubleshooting
+
+<Accordion title="The kiosk says there's no active check-in">
+"There's no active check-in for this event right now" means no occurrence is inside the check-in window. Check the time of the next occurrence and the event's **Check-in Window**, and check that the occurrence hasn't been cancelled. Check-in closes the same length of time after the start as it opens before it. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works).
+
+The kiosk doesn't refresh this screen by itself. If you opened it too early, reload the page once check-in has opened.
+</Accordion>
+
+<Accordion title="The kiosk says check-in is not available">
+"Check-in is not available for this event." means **Public Check-in** is off. Edit the event, turn on **Public Check-in** and launch kiosk mode again.
+</Accordion>
+
+<Accordion title="The kiosk says Event not found">
+The check-in link has changed, usually because someone clicked **Regenerate Token**. Close the kiosk's browser tab and launch kiosk mode again from the event's **Settings** tab.
+</Accordion>
+
+<Accordion title="There is no Find by name tab">
+Find by name appears only when it has been switched on for your church and branch. See [Turn on Find by name](/guides/quick-find#turn-on-find-by-name). Then reload or relaunch the kiosk.
+</Accordion>
+
+<Accordion title="The kiosk doesn't play a sound">
+Tap the screen once after opening the kiosk, check the device volume, and check that **Chime on check-in** is on in [Staff options](#staff-options).
+</Accordion>

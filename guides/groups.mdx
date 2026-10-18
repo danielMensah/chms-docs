@@ -1,129 +1,239 @@
 ---
 title: "Groups"
-description: "Create groups, manage rosters, assign leaders, bulk assign members, and link groups to ministries in Bethel ChMS."
+description: "Create groups, add members, assign leaders, link groups to ministries, and see a group's close events in Bethel ChMS."
 ---
 
-Groups organise members into fellowship structures such as small groups, zones, classes, or cells. Your branch can rename the group type, so the app sidebar may show a branch-specific label such as **Cells** or **Zones** instead of **Groups**.
+A **group** is a small fellowship unit inside a branch, such as a home cell, zone, class, or connect group. Each group has a **roster**, the list of people in it. A group can have one leader, one assistant leader, and as many members as you need.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can create and edit groups and rosters. Org Owner, Org Admin, and Branch Admin can delete groups and reassign all members.
+**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can view, create, and edit groups, add members, change roles, and remove members. Only Org Owner, Org Admin, and Branch Admin can delete groups and link a group to a ministry or unlink it. Treasurers and Care Managers don't see Groups.
 </Info>
 
-Members can belong to more than one active group. Use each group's roster to confirm membership. The member profile's **Group** tab currently shows a single group assignment and should not be treated as the full list of all active group memberships.
+## Your branch's name for groups
+
+Each branch can choose its own name for groups, such as **Homecell** or **Cell**. Org Owners and Org Admins set it in the branch details on the **Branches** page, under **What do you call your fellowship groups?**. See [Branch management](/guides/branch-management).
+
+- Branch Admins and Editors see the branch's name in the sidebar (for example **Homecells**), on the page, and on buttons.
+- Org Owners and Org Admins always see **Groups** in the sidebar. The page and its buttons use the name chosen by the branch you have selected.
+
+This guide uses **Group**. If your branch uses another name, you see that name instead, for example **Add Cell** instead of **Add Group**.
+
+## Open groups
+
+In the sidebar, open **People** and click **Groups** (or your branch's name for groups). On tablets and phones, tap **More**, then find **Groups** under **People**.
+
+Org Owners and Org Admins see one branch at a time. Choose the branch with the branch selector first. See [Find your way around](/getting-started/find-your-way-around).
+
+## Find a group
+
+The group list shows each group's name, how many members it has, its leader (or **No leader**), and an **Active** or **Inactive** badge. Inactive groups are greyed out. On tablets and computers, each row also shows the linked ministry (or **No ministry**) under the name, and the list uses the columns **Name**, **Leader**, **Members**, and **Status**. The widest screens add a **Created** column.
+
+To narrow the list:
+
+- Type in the search box to find a group by its name or its leader's name.
+- Click **All**, **Active**, or **Inactive** above the list. Each chip shows how many groups it contains.
+- Click **Filters** to sort the list and filter by **Status**. On tablets and computers, you can also use the sort menu next to the search box.
+
+You can sort by **Name** (the default, A to Z), **Member Count**, or **Created At**.
+
+Click a group to open its page. If you can edit groups, each row also has a **⋯** button with **Open group**, **Edit**, and **Delete**. Only Org Owner, Org Admin, and Branch Admin see **Delete**.
+
+The footer has a **Ministries** link that takes you straight to [your ministries](/guides/setting-up-ministries).
 
 ## Create a group
 
 <Steps>
   <Step title="Open Groups">
-    In the sidebar, click **Groups** or your branch's custom group label.
+    In the sidebar, open **People** and click **Groups**.
   </Step>
   <Step title="Start a group">
-    Click **Add Group**. If your branch uses a custom label, the button uses that label.
+    Click **Add Group** in the top bar. On phones, tap **+**.
   </Step>
-  <Step title="Enter details">
-    Enter **Name**. Optionally enter **Description** and choose a **Ministry**.
+  <Step title="Enter the name">
+    Enter a **Name**, up to 100 characters. Each group name must be unique within the branch.
+  </Step>
+  <Step title="Add a description (optional)">
+    Enter a **Description** if it helps people recognise the group.
+  </Step>
+  <Step title="Choose a ministry (optional)">
+    Under **Ministry (optional)**, leave **None** selected, or choose one of the branch's active ministries. See [Link a group to a ministry](#link-a-group-to-a-ministry).
   </Step>
   <Step title="Create the group">
     Click **Create Group**.
   </Step>
 </Steps>
 
-Group names must be unique within the branch. New groups start as **Active**.
+New groups start as **Active**. You can change the status later when you edit the group.
 
 ## Link a group to a ministry
 
-You can link a group to an active ministry when you create or edit the group. When you link a group, Bethel ChMS can add the group's active members to the ministry roster through the group relationship.
+A **ministry** is a team or department in your branch, such as a worship team or ushering department. When you link a group to a ministry, the group's members are added to the ministry's roster automatically. When people join or leave the group, Bethel ChMS keeps the ministry roster up to date. Each group can link to one ministry.
 
-<Note>
-Only active, non-archived ministries in the same branch are available in the **Ministry** selector.
-</Note>
+<Info>
+**Who can do this:** Org Owner, Org Admin, and Branch Admin.
+</Info>
 
-The group detail page shows a **Ministry** badge. Click the ministry name to open the linked ministry.
+You can choose a ministry when you create a group, or when you edit a group that has no ministry yet. The **Ministry (optional)** list only shows the branch's active ministries.
 
-## Find and filter groups
+<Tip>
+If you are an Editor, leave **Ministry (optional)** set to **None** and ask an Org Owner, Org Admin, or Branch Admin to link the group. If an Editor picks a ministry, the group is still created or saved, but the link fails with a message saying you don't have permission to change the group's ministry.
+</Tip>
 
-The group list shows each group's name, status, member count, leader, and created date.
+You can also link groups from the ministry's page. See [Setting up ministries](/guides/setting-up-ministries#linking-groups-to-a-ministry).
 
-Use the status filter to show:
+### Change a group's ministry
 
-- **All**
-- **Active**
-- **Inactive**
-
-Use **Sort by** or the table column headers to sort by name, member count, or created date.
-
-## Add a member
+When a group is already linked, the edit form shows the ministry name with a **Change** button. To link a different ministry, you unlink the current one first.
 
 <Steps>
-  <Step title="Open the group">
-    Click the group name in the group list.
+  <Step title="Open the edit form">
+    Open the group and click **Edit**, or open the **More actions** menu (⋮) and choose **Edit Group**.
   </Step>
-  <Step title="Click Add Member">
-    Click **Add Member** in the **Roster** section.
+  <Step title="Start the change">
+    Next to the ministry name, click **Change**. The **Change Ministry** confirmation shows how many people will be removed from the ministry's roster, and how many will stay because they are direct members of the ministry or are in another linked group.
   </Step>
-  <Step title="Choose a member">
-    Search for a member in the same branch and select them.
+  <Step title="Unlink the current ministry">
+    Click **Unlink & Change**. The form closes.
   </Step>
-  <Step title="Add the member">
-    Click **Add Member**.
+  <Step title="Pick the new ministry">
+    Open the edit form again, choose the new ministry under **Ministry (optional)**, and click **Save Changes**.
   </Step>
 </Steps>
 
-Members can belong to more than one group. The selector shows a member's current groups to help you avoid accidental duplicates.
+## The group page
 
-## Bulk assign members
+The top of the group page shows:
 
-Use **Bulk Assign** when you need to add many members to the same active group.
+- The group's status, and a **Ministry** chip with the linked ministry's name. Click the chip to open the ministry.
+- The description, the number of members, and the date the group was created.
+- A **Leadership** section with the **Leader** and **Assistant Leader**. When contact details exist, you can call, message, or email them from here.
 
-1. Open an active group.
-2. Click **Bulk Assign**.
-3. Search or select from members who are not already in this group.
-4. Click **Assign Members**.
+If the group is inactive, a banner says so.
 
-Bulk assignment adds selected members with the **Member** role. Inactive members are not included in the available list.
+Below that, the page has three tabs: **Roster**, **Close Events**, and **Change History**. The **Roster** and **Close Events** tabs show a count.
 
-## Change roles
+The **More actions** menu (⋮) in the top bar includes **Add Members** (for active groups), **Edit Group**, and, for Org Owner, Org Admin, and Branch Admin, **Delete Group**.
 
-Each group roster member has one role:
+## The roster
+
+The **Roster** tab lists the leader first, then the assistant leader, then members by the date they joined. Each row shows the person's name and age group, their role, and the date they joined. On wider screens, the roster also shows contact buttons.
+
+Tap or click a name to see the options for that person:
+
+- **Open member** opens their member profile.
+- **Call** and **Message** appear when the person has a mobile number. **Email** appears when they have an email address.
+- **Change Role** and **Remove from group** appear if you can edit groups.
+
+Members can belong to more than one active group. Use each group's roster to confirm who is in it. The member profile has a tab named after your branch's groups (for example **Group**), but it shows a single group assignment. Do not treat it as the full list of a person's active groups.
+
+## Add members
+
+You can add one person or many people at once. Everyone you add joins with the **Member** role.
+
+<Steps>
+  <Step title="Open the group">
+    Click the group in the group list.
+  </Step>
+  <Step title="Open Add Members">
+    Click **Add Members** in the top bar, or open the **More actions** menu (⋮) and choose **Add Members**.
+  </Step>
+  <Step title="Choose people">
+    Search by name, then tick each person you want to add. To pick everyone in the list, click **Select All**. The people you pick appear as chips at the top. Click a chip to take that person out of your selection.
+  </Step>
+  <Step title="Assign them">
+    Click **Assign Members**. Once you have picked people, the button shows how many, for example **Assign 5 Members**.
+  </Step>
+</Steps>
+
+The list shows everyone in the branch except inactive members and people already in this group. Each person's current groups appear under their name, so you can avoid adding someone to the wrong group by mistake.
+
+<Note>
+You cannot add members to an inactive group. The **Add Members** button is hidden until you make the group active again.
+</Note>
+
+## Change a member's role
+
+Each person on a roster has one role:
 
 - **Leader**
 - **Assistant Leader**
 - **Member**
 
-To change a role, open the group, find the person in **Roster**, and click **Change Role**.
+A group can have one **Leader** and one **Assistant Leader** at a time.
+
+<Steps>
+  <Step title="Open the person's options">
+    On the **Roster** tab, tap or click the person's name.
+  </Step>
+  <Step title="Change the role">
+    Choose **Change Role**, pick the new **Role**, and click **Save**.
+  </Step>
+  <Step title="Confirm if someone already holds the role">
+    If another person already holds that role, **Confirm Role Change** tells you they will become a member. Click **Promote to leader** or **Promote to assistant leader** to continue.
+  </Step>
+</Steps>
 
 ## Remove a member
 
-Removing a member closes their active group membership. It does not delete the member record or attendance history.
+Removing a person ends their membership of the group. Their member record and attendance history stay in Bethel ChMS, and you can add them to the group again later.
 
-1. Open the group.
-2. Find the person in **Roster**.
-3. Click **Remove**.
-4. Confirm the removal.
+<Steps>
+  <Step title="Open the person's options">
+    On the **Roster** tab, tap or click the person's name.
+  </Step>
+  <Step title="Remove them">
+    Choose **Remove from group**, then click **Remove** in the **Remove Member** confirmation.
+  </Step>
+</Steps>
 
-## Reassign all members
+## Edit or deactivate a group
 
-Branch Admin and org-level admin roles can move all active members from one group to another active group in the same branch.
+<Steps>
+  <Step title="Open the edit form">
+    In the group list, click the **⋯** button on the group's row and choose **Edit**. On the group page, click **Edit**, or open the **More actions** menu (⋮) and choose **Edit Group**.
+  </Step>
+  <Step title="Make your changes">
+    Update the **Name** or **Description**. To deactivate the group, set **Status** to **Inactive**. To reactivate it, set **Status** to **Active**.
+  </Step>
+  <Step title="Save">
+    Click **Save Changes**.
+  </Step>
+</Steps>
 
-1. Open the source group.
-2. Click **Reassign All Members**.
-3. Select the target group.
-4. Click **Move Members**.
+Inactive groups keep their roster, but you cannot add new members to them. They stay in the list, and you can find them with the **Inactive** chip.
 
-All moved members receive the **Member** role in the target group.
-
-## Edit, deactivate, or delete a group
-
-Use the group list **Actions** menu to edit a group's name, description, linked ministry, or active status.
-
-Inactive groups remain visible when you filter for **Inactive**, but you cannot add members or bulk assign members to an inactive group.
-
-<Warning>
-Deleting a group soft-deletes the group and closes active memberships. Use **Reassign All Members** first if you need to move the roster before deleting.
-</Warning>
+Deactivating a group does not cancel any upcoming close events linked to it. If you deactivate a group from its own page while its **Close Events** tab lists events under **Upcoming**, Bethel ChMS asks you to confirm first. Click **Deactivate** to continue.
 
 ## Close events
 
-The group detail page shows **Close Events** when events are linked to the group. It separates upcoming events from recent past events.
+A **close event** is an event for one group only, such as a cell meeting. An **open event** is for the whole branch. To make an event a close event, choose the group in the event's **Group (optional)** field. See [Managing events](/guides/managing-events).
 
-Use event setup to link an event to a group.
+The **Close Events** tab on the group page lists the events linked to the group, under **Upcoming** and **Recent Past**. It shows up to 10 events in each section. Click an event to open it.
+
+## Delete a group
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, and Branch Admin.
+</Info>
+
+You cannot delete a group while it is linked to a ministry. Unlink the ministry first, either with **Change** in the group's edit form or from the ministry's **Linked Groups** tab.
+
+<Steps>
+  <Step title="Start the deletion">
+    In the group list, click the **⋯** button on the group's row and choose **Delete**. Or, on the group page, open the **More actions** menu (⋮) and choose **Delete Group**.
+  </Step>
+  <Step title="Check what will change">
+    The confirmation tells you how many active memberships will end. From the group page, it also tells you if any events are linked to the group.
+  </Step>
+  <Step title="Confirm">
+    Click **Delete**. If you deleted the group from its own page, Bethel ChMS takes you back to the group list.
+  </Step>
+</Steps>
+
+<Warning>
+Deleting a group cannot be undone. All active memberships end. Events linked to the group are kept, but they become open events for the whole branch. Before you delete a group, move anyone who should stay in a group into another group.
+</Warning>
+
+## Change history
+
+The **Change History** tab shows changes to the group's **Name**, **Description**, and **Active** status. Changes to the group's ministry link are not listed there. See [Change history](/guides/change-history).

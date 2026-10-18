@@ -1,10 +1,12 @@
 ---
 title: "Feature availability by plan"
-description: "See what the Standard plan includes, what limits apply, and how feature availability messages work."
+description: "See what the Standard plan includes, the branch limit, Porter, and what to do if a feature is not available."
 sidebarTitle: "Feature availability"
 ---
 
-Bethel ChMS uses one Standard plan. Every product feature is included for every organisation.
+Bethel ChMS has one plan, called **Standard**. Every feature in the plan is included for every organisation, and the only limit is the number of branches you can create. Your **organisation** is your church network as a whole, and a **branch** is one of its churches or sites.
+
+Porter, the phone app for your service teams, is the one exception. It is not part of the plan, and the Bethel ChMS team switches it on for your church on request. See [Porter](#porter) below.
 
 ## Included features
 
@@ -12,56 +14,80 @@ The Standard plan includes:
 
 | Feature | Availability |
 | --- | --- |
-| Gifting and donations | Included |
-| CSV member import | Included |
+| [Gifting and donations](/guides/gifting-and-donations) | Included |
+| [CSV member import](/guides/importing-members) | Included |
 | Inline custom field creation | Included |
-| Member and visitor tags | Included |
-| Organisation dashboard | Included |
+| [Member and visitor tags](/guides/tags) | Included |
+| [Organisation dashboard](/guides/dashboards) | Included |
 | Branch performance comparison | Included |
-| Pastoral activity recording | Included |
+| [Pastoral activity recording](/guides/activity-log) | Included |
 | Pastoral activity reporting | Included |
-| Backsliders | Included |
-| Update campaigns | Included with no enforced cap |
+| [Care](/guides/care) (Member care, Visitor care and Pastoral care) | Included |
+| [Update campaigns](/guides/update-campaigns) | Included with no enforced cap |
 | Member QR code display | Included |
 | Occurrence QR scanning | Included |
 | Admin users | Included with no enforced cap |
-| Automations | Included with no enforced cap |
+| [Automations](/guides/automation-rules) | Included with no enforced cap |
 
-The app may still hide a feature from roles that do not have permission to use it. For example, branch admins and editors do not see **Gifting & Donations**.
+Being included in the plan does not mean everyone sees a feature. Bethel ChMS still hides features from roles that are not allowed to use them. For example, **Branch Admin** and **Editor** users do not see **Gifting & Donations** or **Update Campaigns**. See [Roles and permissions](/guides/roles-and-permissions).
 
 ## Branch limit
 
-Branches are the only enforced usage limit in the Standard plan.
+**Who can do this:** Org Owner, Org Admin.
 
-New organisations start with a branch limit of 1. The **Plan & Usage** card in **Organisation Settings** shows your current branch usage and branch limit.
+Branches are the only usage limit in the Standard plan. New organisations start with a limit of 1 branch, and the Bethel ChMS support team can raise it for you.
 
-When you reach the branch limit and try to create another branch, Bethel ChMS shows **Branch limit reached** with **Contact us**. No branch is created until the limit is increased.
+You can check your usage in two places:
+
+- The **Branches** page shows a meter such as **1 of 2 branches used**, with a **Standard** badge and a line telling you how many more branches are available.
+- The **Plan & Usage** card in **Organisation Settings** shows **Branches** as used against the limit, for example `1 / 2`.
+
+When you reach the limit, the meter on the **Branches** page turns amber and reads **You've reached your plan's branch limit. Contact us to create another branch.**, with a **Contact us** button.
+
+If you click **Create Branch** at the limit, Bethel ChMS shows **Branch limit reached** before the form opens. The message tells you how many branches your Standard plan includes and how many your church is using. It has two buttons:
+
+- **Dismiss** closes the message.
+- **Contact us** opens an email to `hello@bethelware.app` with the subject **Increase branches limit on Standard plan**, ready for you to send.
+
+No branch is created until your limit is raised.
 
 <Note>
-Billing is also branch-based. See [Billing and subscription](/guides/billing-and-subscription) for pricing and branch billing behavior.
+You pay for each branch. See [Billing and subscription](/guides/billing-and-subscription) for pricing and how adding or removing branches affects your bill.
 </Note>
 
-## Member portal access
+## Porter
 
-Member portal access is included in the Standard plan, but it is not available yet.
+[Porter](/guides/porter) is the part of Bethel ChMS for church workers and volunteers, used on a phone. Workers check in when they arrive, take out and return equipment, and report faults.
 
-If you open a portal-gated flow before rollout, Bethel ChMS shows **Member portal access is coming soon** with **Contact us**.
+Porter is switched off for every organisation to begin with. It is not part of the Standard plan, so you cannot switch it on yourself. To use it, contact `hello@bethelware.app` and ask the Bethel ChMS team to switch Porter on for your organisation.
+
+Until Porter is switched on:
+
+- The **Users** page shows no Porter options.
+- There is no **Porter** item in the sidebar.
+- If someone opens Porter, they are told **Porter isn't switched on for your church**.
+
+Once Porter is on, an **Org Owner** or **Org Admin** can give members Porter access from the **Users** page. See [User management](/guides/user-management) and [Porter](/guides/porter).
 
 ## Feature unavailable page
 
-Bethel ChMS keeps a shared feature availability page for gated routes.
+Bethel ChMS has a page for features that are not available to your organisation. Because every plan feature is included, you should rarely see it.
 
-Most features are included and should not send you there. If a feature is temporarily unavailable, the page explains that the feature is included in your Standard plan and asks you to contact support.
+If you do, the page names the feature, explains that it is included in your Standard plan but isn't available right now, and offers to help you get set up. It has two buttons:
+
+- **Go back** returns you to the page you came from.
+- **Contact us** opens your email app, addressed to `hello@bethelware.app`.
 
 ## What is not self-serve
 
-Some changes are handled by Bethel support instead of self-serve controls.
+Some changes are made by the Bethel ChMS support team rather than in the app.
 
 Contact support when you need to:
 
 - Increase your branch limit.
-- Resolve a feature availability message.
-- Ask about member portal rollout.
-- Update billing details for a manually managed account.
+- Switch Porter on for your organisation.
+- Have **Find by name** switched on for your church, if you do not see the **Quick Find** setting on your branch. See [Find by name (Quick Find)](/guides/quick-find).
+- Resolve a feature unavailable message.
+- Update billing details for an account that is billed manually.
 
-Support mail links use `hello@bethelware.app`.
+Support emails go to `hello@bethelware.app`.

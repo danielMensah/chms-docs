@@ -1,0 +1,141 @@
+---
+title: "Find by name (Quick Find)"
+sidebarTitle: "Find by name"
+description: "Let returning members check themselves in at a kiosk by typing their name and picking themselves from a short list."
+---
+
+**Find by name** lets returning members check themselves in at a [kiosk](/guides/kiosk-mode) without a QR code, email address or mobile number. They type their first name and the start of their surname, pick themselves from a short list, and confirm. In your settings, this feature is called **Quick Find**.
+
+Find by name is only on kiosks. It never appears when someone checks in on their own phone.
+
+<Note>
+Find by name shows member names, and for adults an age-group label, to anyone standing at the kiosk. Because of this, it stays off for your whole organisation until an Org Owner or Org Admin has read and accepted a safeguarding disclosure. See [Turn on Find by name](#turn-on-find-by-name).
+</Note>
+
+## Who it's for
+
+- **Returning members.** Find by name searches the members of the event's branch. It helps people who are already on file check in faster.
+- **Not visitors.** Visitors never appear in the list. First-time visitors register on the kiosk's **Visitor** tab, and returning visitors can scan the QR code from their welcome email.
+- **One person at a time.** Find by name checks in only the person who confirms. It never opens a household list. To check in a whole family, use a QR code or the **Manual** tab with an email address or mobile number.
+
+## How children are protected
+
+Children never appear in Find by name. Bethel ChMS leaves a member out of the list, and won't check them in by name, if:
+
+- their date of birth shows they are 12 or under, or
+- their age group is for children aged 12 or under.
+
+Children can still be checked in through a parent's QR code, email address or mobile number, which brings up the household list.
+
+An age-group label appears next to a name only when the person is clearly an adult: 18 or over by date of birth, or in an age group that starts at 18 or over. Teenagers and people with no age on their record show no label, so the kiosk never shows a young person's age group.
+
+<Tip>
+Bethel ChMS can only keep a child out of the list if it knows their age. Make sure every child has a date of birth or a children's age group on their member record. See [Age groups](/guides/age-groups).
+</Tip>
+
+## Turn on Find by name
+
+Turning on Find by name takes two steps: an Org Owner or Org Admin accepts the disclosure for the organisation, then each branch decides whether to use it.
+
+### Step 1: Accept the disclosure
+
+**Who can do this:** Org Owner, Org Admin.
+
+<Steps>
+  <Step title="Open a branch">
+    In the sidebar, open **Organisation** and click **Branches**, then open any branch.
+  </Step>
+  <Step title="Read the disclosure">
+    Find the **Quick Find** card and read the disclosure. It explains what becomes visible at the kiosk, that your organisation is responsible for how the feature is used, and what your organisation should check first, such as data protection, your privacy notice and safeguarding.
+  </Step>
+  <Step title="Accept it">
+    Tick **I have read and accept this on behalf of my organisation**, then click **Accept and enable Quick Find**.
+  </Step>
+</Steps>
+
+Bethel ChMS shows "Quick Find disclosure accepted". One acceptance covers every branch in your organisation, so you only need to do this once.
+
+Bethel ChMS keeps a record of who accepted, their role, the date and the version of the wording. This record can't be edited or withdrawn in the app.
+
+### Step 2: Choose which branches use it
+
+**Who can do this:** Org Owner, Org Admin.
+
+Each branch has its own **Quick Find** switch, and it starts on. This means that once the disclosure is accepted, Find by name is on at every branch unless you switch a branch off.
+
+To turn Find by name off, or back on, for one branch:
+
+1. In the sidebar, open **Organisation** and click **Branches**, then open the branch.
+2. On the **Quick Find** card, turn the **Quick Find** switch off or on.
+
+Bethel ChMS shows "Quick Find disabled" or "Quick Find enabled". The card also shows who accepted the disclosure and when.
+
+A kiosk checks the setting each time it loads. If a kiosk is already running, reload it or launch it again to pick up the change.
+
+<Note>
+If you do not see the Quick Find setting on your branch, or the **Find by name** tab doesn't appear at your kiosk after you have accepted the disclosure, contact support at hello@bethelware.app to have Find by name switched on for your church.
+</Note>
+
+### Check Quick Find across your branches
+
+Org Owners and Org Admins can see the status of Quick Find in one place. In the sidebar, open **Organisation** and click **Settings**, then find the **Quick Find** card.
+
+- The card shows **Disclosure accepted**, with who accepted it and when, or **Disclosure not accepted**.
+- **Read disclosure** opens the full wording.
+- **Quick Find by branch** lists every branch with **On**, **Off** or **On, waiting**. **On, waiting** means the branch switch is on but nobody has accepted the disclosure yet. Click a branch to open it and change its switch.
+
+## What members see at the kiosk
+
+<Steps>
+  <Step title="Choose Find by name">
+    The member taps the **Find by name** tab, or **Find by name** under **No code with you?** on the **Scan QR** screen.
+  </Step>
+  <Step title="Type their name">
+    They type their **First name** and start typing their **Surname**. Names appear once they have typed their first name and at least 2 letters of their surname. Up to 5 names show at a time.
+  </Step>
+  <Step title="Pick their name">
+    They tap their own name. Nobody is checked in yet.
+  </Step>
+  <Step title="Confirm">
+    The kiosk shows "Welcome back", their full name and the event. They tap **Check In** to check in, or **Not you?** to go back to the list.
+  </Step>
+</Steps>
+
+The kiosk then shows the usual confirmation screen with their first name and plays the check-in chime. See [Kiosk mode](/guides/kiosk-mode#when-someone-has-checked-in).
+
+While people type, the kiosk gives hints:
+
+| What happens | What the kiosk shows |
+| --- | --- |
+| Not enough typed yet | "Keep typing your last name…" |
+| More than 5 matches | A message asking them to keep typing their surname. |
+| No matches | A message asking them to check the spelling or keep typing. |
+| Two people with the same name | A message that two people share this name and a steward can help. |
+
+Under the list, **None of these** lets people ask a steward for help, and **Prefer email or QR?** takes them to the **Manual** tab.
+
+### How names are matched
+
+- The **first name** must match the first name on the member's record. Capital letters and extra spaces don't matter, but nicknames won't match. Someone recorded as "Robert" won't be found as "Bob".
+- The **surname** matches on its first letters, so "Ade" finds "Adebayo".
+- Only members of the event's branch are searched.
+- Names are listed by surname, then first name.
+
+## When nobody matches
+
+If a member can't find themselves, the kiosk shows "We couldn't find a match" and "Try again, or a steward can help." with three options:
+
+- **Try again** returns to the name search.
+- **Use email or QR** and **See a steward** both go to the **Manual** tab.
+
+People reach this screen if they tap **None of these**, if the check-in can't be completed, if they search too often in a short time, or after 3 searches in a row with no results. The screen looks the same whatever the reason, so it never reveals whether a particular name is on file.
+
+After 3 searches in a row with no results, or too many searches in a short time, the name boxes pause and the kiosk shows "A steward can help you from here." They come back when someone taps **Use email or QR** or **See a steward**, or when the kiosk resets itself after 30 seconds.
+
+<Tip>
+A steward can always check someone in from the occurrence's attendance page with **Record Attendance**. See [Take attendance as staff](/guides/recording-attendance#take-attendance-as-staff).
+</Tip>
+
+## Turn Find by name off
+
+To stop using Find by name at a branch, turn off its **Quick Find** switch, as described in [Step 2](#step-2-choose-which-branches-use-it). To stop using it everywhere, turn off the switch at every branch. The disclosure acceptance itself stays on record.

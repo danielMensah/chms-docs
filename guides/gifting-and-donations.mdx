@@ -1,140 +1,404 @@
 ---
 title: "Gifting and donations"
-description: "Record donations, manage gifting categories, and review giving reports in Bethel ChMS."
+description: "Record gifts and offerings for each branch, manage gifting categories, correct or restore entries and open the gifting report in Bethel ChMS."
 sidebarTitle: "Gifting & donations"
 ---
 
-Use **Gifting & Donations** to record financial contributions by branch and category. You can log one entry at a time, use bulk entry for faster data entry, review recent entries, and report on giving across the organisation.
+**Gifting & Donations** is where your finance team records the money given to each branch, such as tithes, offerings and building fund gifts.
+
+A few terms you'll see on this page:
+
+- An **entry** is one recorded gift: an amount, a category, a date and optional notes, saved to one branch.
+- A **category** groups entries, for example **Tithe** or **Missions**. Your organisation shares one list of categories, and each branch chooses which ones it uses.
+- A **branch** is an individual church or campus within your organisation.
 
 <Info>
-**Who can do this:** Organisation owners and organisation admins can work across branches. Treasurers can work only with their assigned branch. Branch admins and editors do not see **Gifting & Donations** in the sidebar.
+**Who can do this:** Org Owner, Org Admin, Treasurer. Branch Admins, Editors and Care Managers do not have access to **Gifting & Donations**.
 </Info>
 
-## Open gifting
+## Who can do what
 
-In the sidebar, click **Gifting & Donations**.
+| | Org Owner, Org Admin | Treasurer |
+| --- | --- | --- |
+| Branches | Any branch, chosen with the branch selector | Their own branch only |
+| Entry dates | Any date | Up to 90 days in the past |
+| Edit and delete entries | Any branch | Their own branch only |
+| See and restore deleted entries | Yes | No |
+| Filter entries by **Logged by** | Yes | No |
+| Manage gifting categories | Yes | No |
+| Gifting report | Any branch or several branches, with deleted entries if wanted | Their own branch only, without deleted entries |
 
-If you are org-scoped, choose a branch from the branch selector before logging entries. If you are a treasurer, Bethel ChMS uses your assigned branch automatically.
+A **Treasurer** is a finance role for the person who counts and records giving at a branch. Treasurers see only **Gifting & Donations**. They land on it when they sign in, and any page other than **Gifting & Donations** and the gifting report takes them back to it. See [Roles and permissions](/guides/roles-and-permissions).
 
-The page defaults to the last 30 days. Use the date range control to change the totals and recent entries list.
+## Open Gifting & Donations
+
+In the sidebar, open **Giving & outreach** and click **Gifting & Donations**.
+
+- **Tablet held upright:** tap **Gifting** in the rail down the left of the screen.
+- **Phone:** tap **More**, then **Gifting & Donations**. Treasurers have **Gifting** in the tab bar at the bottom of the screen.
+
+See [Find your way around](/getting-started/find-your-way-around) for how the sidebar, rail and tab bar work.
+
+{/* TODO: new screenshot: the Gifting & Donations page on a computer, showing the date range, the three summary tiles, the Log a single entry card and Recent entries */}
+
+### Choose a branch
+
+The page shows one branch at a time, and new entries are saved to that branch.
+
+- **Org Owner** and **Org Admin** users choose the branch with the branch selector: at the top of the sidebar on a computer, or the branch chip in the top bar on a tablet or phone. If you have never picked a branch, Bethel ChMS uses the first branch in alphabetical order.
+- **Treasurers** always work in their own branch. Each branch owns its own giving records, so a Treasurer only sees and records gifts for the branch they look after.
+
+If your organisation has no branches yet, the page shows "Select a branch above to start logging entries." Add a branch first. See [Branch management](/guides/branch-management).
+
+### What's on the page
+
+- **The date range.** It starts on the last 30 days and controls both the summary tiles and **Recent entries**. See [Change the dates](#change-the-dates).
+- **Gifting report**, next to the dates (**Report** on a phone). See [Open the gifting report](#open-the-gifting-report).
+- **Three summary tiles:**
+  - **Total**: the amount given in the date range, with the range shown underneath.
+  - **Entries**: how many entries fall in the range.
+  - **Top category**: the category with the most money in the range, and its amount. Until there are entries, it says "Log an entry to populate".
+- **Log a single entry**, for recording one gift. On a phone, this opens from the **Log entry** button. See [Log a single entry](#log-a-single-entry).
+- **Recent entries**, the list of entries for the branch and dates. See [Review recent entries](#review-recent-entries).
+
+The top bar has a **Bulk entry** button on computers and tablets, and a **⋮** menu (**More actions**) with **Bulk entry**, **Gifting categories** (Org Owner and Org Admin only) and **Gifting report**.
+
+The tiles and the list update as soon as you log an entry.
+
+### Change the dates
+
+The date control shows **Showing** with the name of the range, for example **Last 30 days**, and its dates. On a phone, it shows just the name of the range.
+
+- **On a computer or tablet:** click the date control. Choose a preset under **Range** (**Last 7 days**, **Last 30 days**, **Last 90 days**, **This month**, **Year to date**) or **Single day** (**Today**, **Yesterday**, **Last Sunday**), or pick dates on the calendar. Click **Apply**.
+- **On a phone:** tap the date control to open the **Date range** sheet. Tap a preset, or set the **From** and **To** dates. To see one day, pick the same day for both. Tap **Apply**.
+
+Future dates are not available. If you set a **From** date later than the **To** date, Bethel ChMS swaps them for you. A range that doesn't match a preset shows as **Custom range**, or **Single day** for one day.
 
 ## Set up categories
 
-Gifting categories define how donations are grouped, such as general offering, missions, or building fund.
+Categories decide how your giving is grouped on the page and in the report.
 
-Organisation owners and organisation admins can manage categories from **Gifting Categories**.
+### The categories every organisation starts with
 
-You can:
+Every organisation starts with eight **system categories**:
 
-- Click **Add Category** to create a category.
-- Use **Rename / Edit** to update a category name or description.
-- Drag categories to change their display order.
-- Use **Archive** when you no longer want a category available for new entries.
-- Use **Delete** only for categories with no entries.
+- Tithe
+- Offering
+- Thanksgiving
+- First Fruit
+- Building Fund
+- Missions
+- Benevolence
+- Special Offering
 
-System categories can be archived but not deleted. Categories that already have entries cannot be deleted.
+You can rename or archive a system category, but you cannot delete it. Categories you add yourself can be deleted while no entries use them.
 
-## Activate categories for a branch
+### Open Gifting Categories
 
-Each branch chooses which organisation categories it uses.
+**Who can do this:** Org Owner, Org Admin
+
+On **Gifting & Donations**, open the **⋮** menu in the top bar and choose **Gifting categories**. You can also click **Manage categories** under **Category** in the log form.
+
+The **Gifting Categories** page covers all branches. A line above the list shows how many categories you have and how many are active and archived. On a computer or tablet, the list has these columns:
+
+| Column | What it shows |
+| --- | --- |
+| **Name** | The category name and description. System categories have a **System** badge. |
+| **Status** | **Active** or **Archived**. |
+| **Entries** | How many entries use the category. |
+| **Branches** | How many branches have the category switched on, out of all your branches. |
+
+Each row has a **⋯** button (**Actions for** the category name) with **Rename / Edit**, **Archive** or **Unarchive**, **Move up**, **Move down** and **Delete**. On a phone, tap the row to open the same menu.
+
+### Add a category
+
+<Steps>
+  <Step title="Open the form">
+    On **Gifting Categories**, click **Add Category**. On a phone, tap the **+** button in the top bar.
+  </Step>
+  <Step title="Name the category">
+    Enter a **Name** of up to 100 characters. Each category needs its own name. If the name is taken, you see "A category with this name already exists".
+  </Step>
+  <Step title="Add a description">
+    Add a **Description (optional)** of up to 500 characters if it helps your team choose the right category.
+  </Step>
+  <Step title="Save">
+    Click **Create Category**.
+  </Step>
+</Steps>
+
+A new category is switched on for every branch straight away. To stop a branch from using it, see [Choose categories for each branch](#choose-categories-for-each-branch).
+
+### Rename or edit a category
+
+Open the row's **⋯** menu and choose **Rename / Edit**. In **Edit Category**, change the **Name** or **Description (optional)** and click **Save Changes**.
+
+The sheet shows how many entries use the category and how many branches have it switched on. Renaming a category updates every past entry and report, so old entries show the new name.
+
+### Archive a category
+
+Archive a category when you no longer want people to choose it. Open the row's **⋯** menu and choose **Archive**.
+
+Archived categories stay on past entries, but they are hidden from the entry forms and the report filters. To bring one back, choose **Unarchive**.
+
+### Delete a category
+
+You can only delete a category you added that no entries use. Open the row's **⋯** menu, choose **Delete**, then click **Delete** to confirm. This cannot be undone.
+
+- **System categories:** **Delete** is greyed out, with the note "System categories can be archived but not deleted."
+- **Categories with entries:** **Delete Category** tells you the category is in use and how many entries use it, and offers **Archive** instead. Click **Archive** to hide the category and keep its entries. If the category is already archived, there is nothing more to do.
+
+### Change the order of categories
+
+The order on **Gifting Categories** is the order every category picker uses, including the log form, bulk entry and the edit sheet.
+
+- **With a mouse:** drag a category by its handle.
+- **On any screen:** click **Reorder** (in the top bar on a computer or tablet, or next to the summary line on a phone). Use the **Move up** and **Move down** arrows to move categories. Each move is saved straight away. Click **Done** when you have finished.
+
+You can also choose **Move up** or **Move down** from a category's **⋯** menu.
+
+### Choose categories for each branch
+
+**Who can do this:** Org Owner, Org Admin
+
+Each branch chooses which of your organisation's categories it uses. New branches start with every category that isn't archived switched on.
 
 <Steps>
   <Step title="Open the branch">
-    Go to **Organisation** > **Branches** and open the branch.
+    In the sidebar, open **Organisation** and click **Branches**. Open the branch you want.
   </Step>
   <Step title="Find Gifting Categories">
-    In the branch details page, find **Gifting Categories**.
+    On the branch page, find the **Gifting Categories** card.
   </Step>
   <Step title="Turn categories on or off">
-    Use the switch beside each category. Changes apply immediately.
+    Use the switch next to each category. Changes apply immediately, and you see "Category activated" or "Category deactivated".
   </Step>
 </Steps>
 
-Only active, non-archived categories appear when you log entries for that branch.
+Only categories that are switched on for the branch, and not archived, appear when you log or edit entries for that branch. See [Branch management](/guides/branch-management).
 
 ## Log a single entry
 
-Use **Log a single entry** when you have one donation to record.
+**Who can do this:** Org Owner, Org Admin, Treasurer
+
+Use **Log a single entry** when you have one gift to record.
+
+- **On a computer or tablet:** the **Log a single entry** card sits on the page, below the tiles. Its subtitle names the branch the entry is saved to.
+- **On a phone:** tap the **Log entry** button at the bottom right of the screen. The **Log a single entry** sheet slides up, with the branch and today's date at the top.
 
 <Steps>
-  <Step title="Choose the date">
-    Enter the **Date** for the donation.
+  <Step title="Enter the amount">
+    Type the **Amount**, or tap a quick amount: 10, 25, 50, 100 or 250 in your organisation's currency, for example **£50**. The amount must be greater than 0.
   </Step>
   <Step title="Choose a category">
-    Select **Category**. Bethel ChMS remembers the last category you used for that branch.
+    Tap a category under **Category**. Only the categories switched on for the branch appear. Bethel ChMS selects the last category you used for this branch on this device, and tells you so, for example "Tithe was your last category, so it is pre-selected."
   </Step>
-  <Step title="Enter the amount">
-    Enter **Amount**, or use a quick amount button.
+  <Step title="Check the date">
+    The **Date** starts on today. Change it if the gift was given on another day.
   </Step>
   <Step title="Add notes">
-    Add **Notes** if you need extra context.
+    Add **Notes (optional)** if you need to record extra details, up to 500 characters.
   </Step>
   <Step title="Save the entry">
-    Click **Log entry**.
+    Click **Log entry**. On a phone, the button shows the amount, for example **Log entry · £50.00**.
   </Step>
 </Steps>
 
-Treasurers can backdate entries up to 90 days. Organisation owners and organisation admins can use any entry date.
+A message confirms the amount, the category, the date and your name. The date and category stay set and the amount and notes clear, so you can record the next gift straight away. On a phone, the sheet closes, and the next time you tap **Log entry** it opens with the same date and category.
 
-## Use bulk entry
+<Tip>
+Recording a whole service's giving at once? Click **Switch to Bulk entry** at the bottom of the card, or **Need to enter many at once?** in the phone sheet. See [Log many entries at once](#log-many-entries-at-once).
+</Tip>
 
-Use **Bulk entry** when you need to log several donations for the same branch and date.
+### Rules for entry dates
+
+- **Treasurers** can log entries dated up to 90 days in the past. An older date shows "Entry date is too far in the past". The same limit applies when a Treasurer edits an entry or uses bulk entry.
+- **Org Owners** and **Org Admins** can use any date, so they can record older giving if needed.
+
+## Log many entries at once
+
+**Who can do this:** Org Owner, Org Admin, Treasurer
+
+Use **Bulk entry** when you have several gifts for the same branch and date, such as the envelopes from a Sunday service.
 
 <Steps>
   <Step title="Open bulk entry">
-    From **Gifting & Donations**, click **Bulk entry**.
+    On **Gifting & Donations**, click **Bulk entry** in the top bar, choose **Bulk entry** from the **⋮** menu, or click **Switch to Bulk entry** in the log form. The **Bulk Entry** page opens.
   </Step>
-  <Step title="Confirm the branch">
-    Check the **Saving to** branch. Org-scoped users can use **Switch branch**.
+  <Step title="Check the branch">
+    The entries are saved to the branch you are working in. The **Entry date** card shows the branch, for example "Applied to every row · saving to Main Campus". Org Owners and Org Admins choose the branch with the branch selector, so pick the right branch before you start filling in rows. Treasurers always save to their own branch.
   </Step>
   <Step title="Set the entry date">
-    Choose **Entry date**. This date applies to every row.
+    Choose the **Entry date**. It starts on today and applies to every row.
   </Step>
-  <Step title="Fill in rows">
-    For each row, select **Category**, enter **Amount**, and add optional **Notes**.
+  <Step title="Fill in the rows">
+    For each gift, choose a **Category** and enter the **Amount**. Add **Notes (optional)** if you need to. On a phone, tap **Add note** to show the notes box.
+
+    - The first row starts on the category you last used in bulk entry for this branch, on this device.
+    - **Add row** adds a row at the end, with the same category as the last row.
+    - **Duplicate** (the copy button on a computer or tablet) adds a copy of the row below it, with the same category and notes and an empty amount.
+    - **Remove** (the bin button) deletes the row.
   </Step>
-  <Step title="Save valid rows">
-    Review the **Summary** panel and click **Save entries**.
+  <Step title="Check the rows">
+    The **Entries** heading shows how many rows you have and how many are valid or incomplete. See [Valid and incomplete rows](#valid-and-incomplete-rows).
+  </Step>
+  <Step title="Review the totals">
+    Once at least one row is valid, the **By category** card shows each category's total, its share of the whole and a bar, largest first. The bar fixed to the bottom of the screen shows the running total and how many rows will be saved or skipped.
+  </Step>
+  <Step title="Save">
+    Click **Save** followed by the number of entries, for example **Save 12 entries**. A message confirms how many entries were logged, the total and any rows that were skipped. You then return to **Gifting & Donations**, where the new entries appear in **Recent entries**.
   </Step>
 </Steps>
 
-The bulk grid shows the number of valid rows, a running total, and a category breakdown. Empty or invalid rows are not saved.
+### Valid and incomplete rows
 
-## Review and update entries
+- A **valid** row has a category and an amount greater than 0. Valid rows are saved.
+- An **incomplete** row has something missing. Incomplete rows are skipped when you save, and say what they need: "Needs a category", "Needs an amount", "Amount must be greater than 0" or "Invalid amount".
+- Empty rows are ignored.
 
-The **Recent entries** card lists entries for the selected branch and date range. It shows the date, category, amount, notes, who logged the entry, and status badges such as **Edited** or **Deleted**.
+On a phone, each row shows a **Valid** or **Incomplete** badge. On a computer or tablet, the left edge of the row turns green for valid and amber for incomplete.
 
-You can filter recent entries by category. Organisation owners and organisation admins can also filter by **Logged by** and turn on **Show deleted**.
+If two rows have the same category and amount, both show **Duplicate of row** and the other row's number. This is a reminder to check you haven't typed the same gift twice. Both rows are still saved if they are valid.
 
-Click an entry to open **Entry Detail**. From there:
+The **Save** button stays greyed out until at least one row is valid.
 
-- Use **Edit entry** to change the date, category, amount, or notes.
-- Use **Delete entry** to soft-delete the entry.
-- Review **Audit History** to see changes made to the entry.
+### Start again
 
-Deleted entries are reversible by an organisation owner or organisation admin. Treasurers can edit or delete non-deleted entries only in their assigned branch.
+To empty the grid, click **Clear all** next to the **Entries** heading. **Clear all rows?** asks you to confirm, because nothing on the grid has been saved yet and clearing can't be undone. Click **Clear all** to empty the grid, or **Keep rows** to go back. Entries you have already saved are not affected. They stay in **Recent entries** on the Gifting page.
 
-## Run gifting reports
+<Accordion title="Keyboard shortcuts for bulk entry">
+  With a keyboard on a computer or tablet:
 
-Go to **Organisation** > **Reports** > **Gifting & Donations Report** to review aggregated giving.
+  | Press | To |
+  | --- | --- |
+  | **Enter** in the **Notes** box of the last row | Add a row |
+  | **Cmd+D** on a Mac, **Ctrl+D** on Windows | Duplicate the row |
+  | **Esc** | Clear the row, or remove it if it is already empty |
+  | **Cmd+S** on a Mac, **Ctrl+S** on Windows | Save |
+</Accordion>
 
-The report includes:
+## Review recent entries
 
-- **Total Received** for the selected period.
-- **vs Prior Period** compared with the previous equivalent period.
-- **Number of Entries**.
-- **Top Category**.
-- **Category Breakdown** sorted by total received.
-- **Branch Comparison** when more than one branch is selected.
-- **Gifting Over Time** with daily, weekly, monthly, or yearly granularity.
-- **Entries** drill-down with pagination.
+The **Recent entries** card lists the branch's entries for the chosen dates, newest first, with the total number of entries at the top.
 
-Use the filters to choose date range, branches, categories, and granularity. Organisation owners and organisation admins can include deleted entries. Treasurers are locked to their assigned branch and cannot include deleted entries.
+On a computer or tablet, the list has the columns **Category · Notes**, **Date**, **Logged by**, **Status** and **Amount**. On a phone, each row shows the category, notes, the date and who logged it, and the amount.
 
-Click **Export CSV** to download the report entries for the selected filters.
+**Status** shows:
 
-## Feature and billing gates
+- **Edited** when someone has changed the entry, with the number of edits and who made the last one.
+- **Deleted** when the entry has been deleted. Deleted rows are greyed out, with the amount crossed through. They only appear when **Show deleted** is on.
 
-Gifting is included in the Standard plan. If a feature gate blocks access, Bethel ChMS sends you to the feature availability page instead of showing partial gifting screens. See [Feature availability by plan](/guides/feature-availability-by-plan).
+The list shows 50 entries at a time. Use **Previous** and **Next** to see more. If nothing matches, you see "No entries found."
 
-If your organisation is paused for billing, gifting mutations are blocked until billing is restored. See [Billing and subscription](/guides/billing-and-subscription).
+Click a row to [open the entry](#open-an-entry).
+
+### Filter the list
+
+Click **Filters** to open the filter sheet:
+
+- **Categories:** pick one or more categories.
+- **Logged by:** show the entries one person logged. Org Owner and Org Admin only.
+- **Deleted entries:** turn on **Show deleted** to include deleted entries. Deleted entries are not counted in the totals. Org Owner and Org Admin only.
+
+Click **Show** followed by the number of entries to close the sheet, or **Clear all** to remove every filter. The filters you choose appear as chips above the list. Click a chip to remove that filter.
+
+Org Owners and Org Admins also have a **Show deleted** chip above the list, to turn deleted entries on and off in one click. Treasurers can filter by category only.
+
+## Open an entry
+
+Click an entry in **Recent entries** to open its page. The page title is the category and amount, for example **Tithe · £50.00**. Click **Back to Gifting & Donations** to return to the list.
+
+The entry page shows:
+
+- **A summary** with the category, the amount, the date and branch, who logged the entry and when, and who last updated it. An **Edited** badge shows how many edits there have been, and a **Deleted** badge shows when the entry is deleted.
+- **Entry Information**, with **Date**, **Category**, **Amount**, **Currency**, **Created by**, **Last updated by** and **Notes**.
+- **Audit History**, newest first. Each line says whether the entry was created, updated, deleted or restored, by whom, and on which date and time. Edits list what changed, for example "changed amount from £20.00 to £25.00".
+
+Treasurers can only open entries from their own branch.
+
+### Edit an entry
+
+**Who can do this:** Org Owner, Org Admin, and Treasurers for their own branch. Deleted entries cannot be edited.
+
+<Steps>
+  <Step title="Open the entry">
+    Click the entry in **Recent entries**.
+  </Step>
+  <Step title="Start editing">
+    Click **Edit entry** in the top bar. On a phone, tap the pencil button.
+  </Step>
+  <Step title="Make your changes">
+    In **Edit Entry**, change the **Amount**, **Category**, **Date** or **Notes**.
+  </Step>
+  <Step title="Save">
+    Click **Save changes**. You see "Entry updated".
+  </Step>
+</Steps>
+
+Every change is recorded in **Audit History**, with the old and new values.
+
+### Delete an entry
+
+**Who can do this:** Org Owner, Org Admin, and Treasurers for their own branch
+
+<Steps>
+  <Step title="Open the entry">
+    Click the entry in **Recent entries**.
+  </Step>
+  <Step title="Delete it">
+    At the bottom of the page, click **Delete entry**.
+  </Step>
+  <Step title="Confirm">
+    **Delete Entry** shows the amount, category and date of the entry. Click **Delete**.
+  </Step>
+</Steps>
+
+You see "Entry deleted" and return to **Gifting & Donations**. A deleted entry is not counted in the totals or reports, but Bethel ChMS keeps it so an Org Owner or Org Admin can restore it. Its page shows who deleted it and when.
+
+### Restore a deleted entry
+
+**Who can do this:** Org Owner, Org Admin
+
+<Steps>
+  <Step title="Show deleted entries">
+    On **Gifting & Donations**, turn on the **Show deleted** chip above **Recent entries**, or turn on **Show deleted** in **Filters**.
+  </Step>
+  <Step title="Restore the entry">
+    On a computer or tablet, click the **Restore entry** button at the end of the row. Or open the entry and click **Restore** in the top bar.
+  </Step>
+</Steps>
+
+You see "Entry restored", and the entry counts towards the totals again. Treasurers cannot restore entries. Ask an Org Owner or Org Admin to do it.
+
+## Open the gifting report
+
+**Who can do this:** Org Owner, Org Admin, Treasurer
+
+The **Gifting & Donations Report** shows your giving over a period: totals, a comparison with the period before, a breakdown by category, a chart of giving over time and the list of entries. You can export the entries as a CSV file.
+
+To open it:
+
+- On **Gifting & Donations**, click **Gifting report** next to the dates (**Report** on a phone), or choose **Gifting report** from the **⋮** menu.
+- Org Owners and Org Admins can also open **Reports** and click **Gifting & Donations** under **Dashboards**.
+
+Treasurers cannot open **Reports**, so they always use the link on **Gifting & Donations**.
+
+What you see depends on your role:
+
+- **Org Owners** and **Org Admins** can report on all branches or pick branches in **Filters**. Pick two or more branches to see the **Branch Comparison**. They can also include deleted entries.
+- **Treasurers** see their own branch only, and the report never includes deleted entries.
+
+For the report's filters, sections and export, see [Reports](/guides/reports).
+
+## If you can't open gifting
+
+- Gifting is part of the Standard plan. If gifting isn't available for your organisation, Bethel ChMS shows a page that says **Gifting isn't available right now**, with **Go back** and **Contact us** buttons. See [Feature availability by plan](/guides/feature-availability-by-plan).
+- If your account is paused for billing, everyone is taken to the **Billing** page, so nobody can record gifts until billing is restored. See [Billing and subscription](/guides/billing-and-subscription).
+- Branch Admins and Editors who open a gifting link are taken to the **Dashboard**. If someone at a branch needs to record giving, an Org Owner or Org Admin can invite them as a **Treasurer** for that branch. See [User management](/guides/user-management).
+
+## Related guides
+
+- [Reports](/guides/reports)
+- [Roles and permissions](/guides/roles-and-permissions)
+- [Branch management](/guides/branch-management)
+- [Activity log](/guides/activity-log)

@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-Client-facing documentation for **Bethel ChMS** (Church Management System), hosted at `docs.bethelcj,s.com`. Built with Mintlify. Auto-deploys on push to `main` via the Mintlify GitHub App.
+Client-facing documentation for **Bethel ChMS** (Church Management System), hosted at `docs.bethelchms.com`. Built with Mintlify. Auto-deploys on push to `main` via the Mintlify GitHub App.
 
 For Mintlify conventions, components, and writing standards: use the installed Mintlify skills. They are authoritative — defer to them for all formatting, structure, and style decisions.
 

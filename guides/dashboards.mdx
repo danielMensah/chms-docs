@@ -1,66 +1,156 @@
 ---
 title: "Dashboards"
-description: "Understand the branch dashboard, organisation dashboard, and branch scope behavior in Bethel ChMS."
+description: "Use the branch Dashboard and the Organisation Dashboard in Bethel ChMS to see live events, check-ins, members and network-wide trends."
 sidebarTitle: "Dashboards"
 ---
 
-Bethel ChMS has two dashboard views:
+Bethel ChMS has two dashboards:
 
-- **Dashboard** shows one branch at a time.
-- **Organisation Dashboard** shows network-wide trends across branches.
+- **Dashboard** shows one branch at a time: what's happening today, who has checked in, and who your members are.
+- **Organisation Dashboard** shows trends across every branch in your organisation, so you can compare branches.
 
-## Branch dashboard
+A **branch** is an individual church or campus, and your **organisation** is the whole church network that contains them.
 
-The main **Dashboard** is branch-scoped. It shows activity for one branch, including:
-
-- Member status counts.
-- Gender demographics.
-- Age group demographics.
-- Nationality distribution.
-- Upcoming events.
-- Latest check-ins.
-- A member table with filters, including tags.
-
-Org-scoped users can use the branch selector in the page header to choose which branch to view. Branch-scoped users do not see the selector because they are locked to their assigned branch.
+## The branch Dashboard
 
 <Info>
-The branch dashboard uses the selected branch from the `branchId` URL parameter. If an org-scoped user opens the dashboard without a valid branch selected, Bethel ChMS falls back to the organisation's first active branch.
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor. Treasurers and Care Managers don't have a Dashboard. They go straight to their own pages instead.
 </Info>
 
-## Branch scope across pages
+**Dashboard** is the first item in the sidebar. On a phone, it's the first tab in the tab bar at the bottom of the screen.
 
-For org-scoped users, Bethel ChMS carries the selected branch through branch-level pages by adding `branchId` to links in the sidebar. The selected branch is also saved in the browser so future pages open in the same branch context.
+### Which branch you're looking at
 
-Branch-scoped users always use their assigned branch. They cannot switch to another branch.
+The Dashboard always shows one branch.
 
-Branch scope affects pages such as **Dashboard**, **Locations**, **Events**, **Ministries**, **Members**, **Visitors**, and **Attendance**.
+- **Branch Admins and Editors** always see their own branch.
+- **Org Owners and Org Admins** choose a branch with the branch selector. On a computer, it's at the top of the sidebar, under your organisation name. On a tablet or phone, tap the branch chip in the top bar. The first time you open Bethel ChMS, the first branch in alphabetical order is selected.
 
-## Organisation dashboard
+See [Choose a branch](/getting-started/find-your-way-around#choose-a-branch) for more about the branch selector.
 
-The **Organisation Dashboard** is available to **Org Owner** and **Org Admin** users. It shows organisation-wide analytics, including:
+### What's on the Dashboard
 
-- **Network Attendance**
-- **Network Growth**
-- **Branch Health**
-- **Network Gender Demographics**
-- **Network Age Group Demographics**
-- **Nationality Distribution**
-- **Branch Performance**
-- **Attendance Trends**
+{/* TODO: new screenshot: the redesigned branch Dashboard showing a Live now card, the member status strip, Latest check-ins, Demographics and Members */}
 
-Use the range controls to switch between **7d**, **30d**, **90d**, and **12mo**.
+The Dashboard has five sections.
 
-Branch-scoped users cannot access the **Organisation Dashboard**.
+#### Upcoming events
+
+The **Upcoming events** card gives you quick access to the QR code and kiosk for your events. Click **View all** to open the **Events** page.
+
+Events that are happening right now appear at the top as green **Live now** cards, up to three at a time. Each card shows the event name, start time and location, and how many people have checked in so far. It has two buttons:
+
+- **Take attendance** opens the attendance list for this occurrence, so you can mark people present. See [Recording attendance](/guides/recording-attendance).
+- **QR & kiosk** opens kiosk mode for the event in a new tab, ready for people to check themselves in at the door. If public check-in is switched off for the event, it opens the event page instead. See [Kiosk mode](/guides/kiosk-mode).
+
+Below the live cards is a list of events that haven't started yet, with each event's name, time and location, and when it starts (**Today**, or for example **In 3d** for three days' time). Click an event to open it. Click **Load more** to see more. If nothing is planned, the card reads **No upcoming events**.
+
+#### Member status
+
+The member status strip shows how many member records the branch has and splits them into **Active**, **Newcomer** and **Inactive**, with a count and percentage for each. Click a status to open the Member Directory report for that status. See [Reports](/guides/reports).
+
+#### Latest check-ins
+
+The **Latest check-ins** card lists everyone who has checked in at this branch in the last 7 days, newest first. Under the title you'll see the total, for example **48 in the last 7 days**.
+
+- Each row shows the person's name (visitors are marked **Visitor**), the event and location, when they checked in, and how they checked in.
+- Use **Search by name…** to find someone.
+- Click a person to see their details.
+- Click **Load more** to see older check-ins from the last 7 days.
+
+If nobody has checked in recently, the card reads **No check-ins in the last 7 days**. Click **Live view** to open the full page for today's check-ins (see [Live view](#live-view-of-todays-check-ins)).
+
+#### Demographics
+
+The **Demographics** card describes your active and newcomer members. Use the switch at the top to choose **Gender**, **Age group** or **Nationality**. Each view shows a chart with a count and share for each value.
+
+- **Gender** shows Male, Female, Other, Prefer not to say and Not set.
+- **Age group** shows each of your age groups. See [Age groups](/guides/age-groups).
+- **Nationality** shows the four most common nationalities. If there are more, click the extra row to see the full breakdown in Reports.
+
+Under the gender and age group charts, a note tells you what percentage of member records have that detail filled in. The note turns amber when fewer than 70% of records have it, which is a sign the chart may not tell the whole story. Click a gender or age group to open **Members** filtered to it.
+
+#### Members
+
+The **Members** card lists the branch's members, showing each person's **Name**, **Gender**, **Age Group**, **Nationality** and **Status**, 50 to a page.
+
+- Use **Search by name, email, or phone…** to find someone.
+- Click **Filters** to narrow the list by **Status**, **Gender**, **Age group**, **Nationality**, **Tags** or **Custom fields**. Bethel ChMS remembers your filters for each branch on that browser.
+- Org Owners, Org Admins, Branch Admins and Editors can click **Add Member** to add someone new. See [Managing members](/guides/managing-members).
+
+## Live view of today's check-ins
+
+**Live view** on the **Latest check-ins** card opens a full-page view of today's check-ins, titled **Latest check-ins**, with a **Live** label and a **Today** badge. Keep it open on a screen during a service to watch people arrive. New check-ins appear at the top as they happen, without refreshing the page.
+
+At the top are three summaries:
+
+- **Today**: the total number of check-ins today.
+- **Visitors today**: how many of those were visitors.
+- **By age group**: a chart of today's check-ins by age group.
+
+The list below shows each person, the time they checked in and how long ago, the event and location, their status (**Visitor**, **Active**, **Newcomer** or **Inactive**), their age group and how they checked in. Use **Search by name…** to find someone, and **Load more** to see more. Click a person to see their details, such as gender, email and mobile (and nationality for members), with quick links to call, message or email them.
+
+If nobody has checked in yet today, the page reads **No check-ins yet today**. To return to the Dashboard, click the back arrow at the top left of the page.
+
+Org Owners and Org Admins can switch branch on this page with the branch selector, just as on the Dashboard.
+
+## Your branch choice across pages
+
+When an Org Owner or Org Admin chooses a branch, that branch stays selected as you move between pages, whether you use the sidebar, the tablet rail, the phone tab bar or the **More** menu. Bethel ChMS also remembers it the next time you open the app on that browser.
+
+The selected branch applies to every page in the **People**, **Church life** and **Giving & outreach** groups, such as **Members**, **Households**, **Groups**, **Visitors**, **Care**, **Events**, **Attendance**, **Ministries**, **Activity Log**, **Locations** and **Gifting & Donations**, and to **Users** and **Import**.
+
+Branch Admins, Editors, Treasurers and Care Managers always work in their own branch and don't see a branch selector.
+
+## The Organisation Dashboard
+
+<Info>
+**Who can do this:** Org Owner, Org Admin
+</Info>
+
+In the sidebar, open the **Organisation** group and click **Organisation dashboard**. On a tablet or phone, tap **More**, then look under **Organisation**. The page is titled **Organisation Dashboard**, with **All branches** underneath, because it always covers your whole network.
+
+{/* TODO: new screenshot: the redesigned Organisation Dashboard showing the date range control, KPI row and Branch Performance card */}
+
+### Choose a date range
+
+Below the title, choose the period the dashboard covers: **7 days**, **30 days**, **90 days** or **12 months**. The dates covered are shown alongside. On a phone, tap the button showing the current range, for example **Last 30 days**, choose a range in the **Date range** sheet and tap **Apply**.
+
+The dashboard starts on 30 days. Next to the range you'll see when the figures were last updated, for example **Updated just now**.
+
+The range applies to the attendance totals, branch performance, branch health and attendance trends. **Network Growth** always shows the last 12 months, the weekly chart on **Network Attendance** always shows the last 12 weeks, and demographics always show your current members, so none of these change with the range.
+
+### Summary tiles
+
+Four tiles at the top give you the headline figures:
+
+- **Attendance**: total check-ins across all branches in the period, with the percentage change compared with the period of the same length just before it.
+- **Active members**: how many active members you have, compared with last month.
+- **Highest attendance** and **Lowest attendance**: the branches with the most and fewest check-ins in the period. Click one to open that branch's Dashboard.
+
+### Organisation Dashboard cards
+
+| Card | What it shows |
+| --- | --- |
+| **Network Attendance** | The total check-ins for the period and its percentage change, plus a chart of weekly check-ins across all branches for the last 12 weeks. |
+| **Network Growth** | The number of active members at the end of each month, for the last 12 months. |
+| **Branch Performance** | A row for each branch with its **Active Members**, **Weekly Avg Attendance**, **30-Day Growth (%)**, **Conversion Rate (%)** and **Ministry Participation (%)**. Click **Gender M/F %** to add a column showing each branch's gender split. Click a branch to open its Dashboard. |
+| **Branch Health Leaderboard** | Branches ranked by a combined score: attendance counts for 40%, growth 30%, conversion 20% and events 10%. The top branch is highlighted. Click a branch to see how it scores on each part. |
+| Demographics card | Use the switch to choose **Gender**, **Age group** or **Nationality**. The card's title changes to match: **Network Gender Demographics**, **Network Age Group Demographics** or **Nationality Distribution**. For gender and age group, choose **Network overview** for the whole network or **By branch** to compare branches. Nationality shows the four most common nationalities; the full breakdown is in Reports. |
+| **Attendance Trends** | Weekly check-ins for each branch as lines on a chart, starting with the five branches that had the most check-ins in the period, plus a dashed **Network Average** line. Click a branch to show or hide its line. A table underneath lists the weekly figures. |
 
 ## Choose the right dashboard
 
 | Use this dashboard | When you need to |
 | --- | --- |
-| **Dashboard** | Review one branch's members, events, check-ins, and demographics. |
-| **Organisation Dashboard** | Compare branches and monitor network-wide attendance, growth, and demographics. |
+| **Dashboard** | See today's live events, open the kiosk, watch check-ins come in, and look at one branch's members and demographics. |
+| **Organisation Dashboard** | Compare branches and follow network-wide attendance, growth and demographics over time. |
 
 ## Related pages
 
-- [Roles and permissions](/guides/roles-and-permissions)
+- [Find your way around](/getting-started/find-your-way-around)
+- [Kiosk mode](/guides/kiosk-mode)
+- [Recording attendance](/guides/recording-attendance)
+- [Reports](/guides/reports)
 - [Branch management](/guides/branch-management)
-- [Managing members and visitors](/guides/managing-members)
+- [Roles and permissions](/guides/roles-and-permissions)

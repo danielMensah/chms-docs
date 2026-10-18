@@ -1,0 +1,122 @@
+---
+title: "Porter alerts and return reminders"
+sidebarTitle: "Alerts and reminders"
+description: "See faults and missing items in Porter's Alerts tab, turn on phone notifications, and remind workers to return equipment before they leave."
+---
+
+[Porter](/guides/porter) helps you keep track of problems with your equipment as they happen, and reminds your team to bring everything back.
+
+- The **Alerts** tab lists every open fault and missing item, so Porter admins can deal with them in one place.
+- **Phone alerts** notify Porter admins about each fault and missing item as it happens.
+- **Return reminders** tell anyone still holding equipment to return it when the service is ending.
+
+A **Porter admin** is someone with **Porter · Admin** access. A **worker** has **Porter · Worker**. See [Porter access levels](/guides/porter#porter-access-levels).
+
+## Who gets which alert
+
+| Alert | Who gets it | When |
+| --- | --- | --- |
+| **Fault** | Every Porter admin in your organisation who has alerts on. | Someone reports a fault, or returns an item marked **Faulty**. |
+| **Missing** | Every Porter admin in your organisation who has alerts on. | Someone returns a set and marks one of its items **Absent**. |
+| **Return reminder** | Anyone, worker or Porter admin, who took equipment that day and still has it, if they have alerts on. | At the time you set for the event. See [Return reminders](#return-reminders). |
+
+The person who caused an alert doesn't get it. For example, a Porter admin who reports a fault isn't told about their own report. A Porter admin who uses **Mark missing** doesn't send an alert either.
+
+## Turn on alerts on your phone
+
+**Who can do this:** Porter · Admin, Porter · Worker (while they have equipment on loan)
+
+Alerts are set up on each device, so turn them on on every phone where you want them.
+
+<Steps>
+  <Step title="Find the Turn on alerts card">
+    Porter admins find it on **Home** and in **Setup**. Workers find it on **Home** while they have equipment on loan.
+  </Step>
+  <Step title="Turn alerts on">
+    Tap **Turn on alerts**, then allow notifications when your phone asks.
+  </Step>
+</Steps>
+
+Once alerts are on, the card disappears from **Home**. In **Setup**, Porter admins see **Alerts are on for this device.** with a **Turn off** button.
+
+<Note>
+**On iPhone and iPad**, alerts only work when Porter is opened from the Home Screen. In Safari, tap **Share**, choose **Add to Home Screen**, then open the app from the new "Bethel" icon. The **Turn on alerts** card then appears. On iPhone, until you do this, the card is titled **Add Porter to your Home Screen**. On iPad, follow the same steps even if you don't see the card. See [Install the app](/getting-started/install-the-app).
+</Note>
+
+If the card says **Alerts are blocked for Porter in your browser settings**, you said no to notifications earlier. Allow notifications for Bethel ChMS in your phone's or browser's settings, then come back to the card. If your browser can't show notifications at all, the card doesn't appear.
+
+**To turn alerts off:** Porter admins tap **Turn off** in **Setup**. Anyone can also turn off notifications for Bethel ChMS in their phone's settings.
+
+<Tip>
+Workers only see the card once they've taken equipment out. Turn alerts on then, so you get a reminder before you leave.
+</Tip>
+
+### What the alerts say
+
+- **Fault:** the title is **Fault:** and the item's name, followed by who reported it and what's wrong.
+- **Missing:** the title is **Missing:** and the item's name, followed by who returned the set without it, or who marked it absent.
+- **Return reminder:** the title is **Still with you:** and the number of items, followed by up to three item names, the event that's ending and a reminder to return them before you leave. A set counts once, by its name.
+
+Tap a fault or missing alert to open that item in Porter. Tap a return reminder to open Porter's **Home**, where your items are listed under **With you**.
+
+## The Alerts tab
+
+**Who can do this:** Porter · Admin
+
+Tap **Alerts** to see everything that needs a Porter admin. The red badge on the tab shows how many open faults and missing items there are, or **99+** if there are more than 99. When there's nothing to do, the tab says **Nothing needs your attention.**
+
+{/* TODO: new screenshot: the Porter Alerts tab with one fault card showing a photo and Resolve fault, and one missing item with Mark found */}
+
+**Faults** lists each item with an open fault, showing:
+
+- The item's name. Tap it to open the item.
+- What's wrong, whether it was **Found on return** or **Reported**, and who by and when.
+- Who had the item last and since when, with **(still on loan)** if they still have it.
+- The label code and any photos.
+- A **Resolve fault** button. Choose **Repaired** or **Retired**, add a note if you like, and tap **Resolve**.
+
+**Missing** lists each missing item, with who marked it missing and when, and a **Mark found** button for when it turns up.
+
+Resolving a fault or marking an item found clears it from **Alerts** and lowers the badge. For what each action does, see [Look after faulty and missing items](/guides/porter-equipment#look-after-faulty-and-missing-items).
+
+## Return reminders
+
+**Who can do this:** Porter · Admin
+
+Return reminders are set for each event in Porter's **Setup** tab, not in the event's settings in Bethel ChMS.
+
+<Steps>
+  <Step title="Open Return reminders">
+    In Porter, tap **Setup** and scroll to **Return reminders**. Every event in your organisation with an upcoming occurrence is listed, along with any event that already has a reminder. Each one shows its branch, when its next occurrence ends (or **No upcoming occurrence**), and its current reminder: **Off**, **At the end**, or a number of minutes before or after the end.
+  </Step>
+  <Step title="Choose when to remind">
+    For the event, choose **Before it ends** or **After it ends**, then enter the number of minutes. Minutes go up in steps of 5, from 0 to 720, so you can choose up to 12 hours either side. It starts at 10 minutes. To stop reminders for the event, choose **No reminder**.
+  </Step>
+  <Step title="Save">
+    Tap **Save**.
+  </Step>
+</Steps>
+
+For example, choose **Before it ends** and 10 minutes for your Sunday service, so your team is reminded 10 minutes before it finishes.
+
+If **Return reminders** says **No upcoming events. Add one in Bethel ChMS first.**, [create an event](/guides/managing-events) first.
+
+### How reminders are sent
+
+At the set time for each occurrence, everyone who took equipment that day and still has it gets one reminder for that occurrence. **That day** means the day of the occurrence, in the event's time zone.
+
+- People who took equipment out on an earlier day aren't reminded.
+- Cancelled occurrences never send a reminder.
+- If a reminder can't go out within 2 hours of its time, Porter doesn't send it late.
+- People only get reminders on devices where they've [turned on alerts](#turn-on-alerts-on-your-phone).
+
+### Equipment still out after a reminder
+
+For 12 hours after a reminder goes out, if anything is still on loan, Porter admins see an amber banner on **Home** saying how many items are still on loan after the reminder went out. Tap it to see the equipment list filtered to **On loan**, showing who has what.
+
+## Related pages
+
+- [Porter overview](/guides/porter)
+- [Equipment, loans and faults](/guides/porter-equipment)
+- [Check in with Porter](/guides/porter-check-in)
+- [Install the app](/getting-started/install-the-app)

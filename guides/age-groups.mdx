@@ -1,97 +1,109 @@
 ---
 title: "Age groups"
-description: "Configure organisation-wide age groups and understand how Bethel ChMS assigns members to age brackets."
+description: "Set up your organisation's age groups and understand how Bethel ChMS places members into them."
 ---
 
-Age groups define the age brackets Bethel ChMS uses for member demographics, member filters, group rosters, reports, imports, and related workflows.
+**Age groups** are the age brackets Bethel ChMS uses to sort members, for example Children, Youth, Young Adults and Adults. They appear in member records, member filters, group rosters, imports, reports and dashboards.
 
-Age groups are organisation-wide. They apply across all branches.
+Age groups are organisation-wide. One set of age groups applies across every branch, so reports compare like with like.
 
 <Info>
-**Who can do this:** Org-scoped roles can view age groups from the organisation sidebar. Only the Org Owner can edit age groups or restore defaults.
+**Who can do this:** Org Owner and Org Admin can open **Age Groups**. Only the Org Owner can change age groups or restore the defaults. Org Admins see the age groups read-only.
 </Info>
 
-## How age groups are assigned
+## How members are placed in age groups
 
-Bethel ChMS uses two assignment paths:
+Bethel ChMS places each member in an age group in one of two ways:
 
-- **Date of Birth provided:** Bethel ChMS derives the age group from the member's date of birth and your current age-group configuration.
-- **Date of Birth blank:** You can assign an age group manually on the member record or through import.
+- **From their date of birth:** when a member's record has a **Date of Birth**, Bethel ChMS works out their age group automatically and keeps it up to date. On the member form, the **Age Group** field is locked and marked **Derived from date of birth**.
+- **Set by hand:** when there is no date of birth, you can choose an age group yourself on the member form or in a CSV import. The age group is optional.
 
-If both **Date of Birth** and **Age Group** are present, **Date of Birth** takes precedence.
+If a member has both, the date of birth wins. On the member's page, the age group badge shows the member's age when it comes from their date of birth, or **Manually set** when it was chosen by hand.
 
 ## Default age groups
 
-The default configuration is:
+Every organisation starts with these four age groups:
 
 - `0-12`
 - `13-19`
 - `20-34`
 - `35+`
 
-You can restore these defaults from the age groups page.
+You can change them at any time, or [restore the defaults](#restore-the-defaults) later.
 
-## Configure age groups
+## Open Age Groups
 
-<Steps>
-  <Step title="Open Age Groups">
-    In the organisation section of the sidebar, click **Age Groups**.
-  </Step>
-  <Step title="Edit the brackets">
-    Update **From**, **To**, **Label**, or **Color** for each row.
-  </Step>
-  <Step title="Add or reorder rows">
-    Click **Add Age Group** to add a row, or drag rows to reorder them.
-  </Step>
-  <Step title="Save changes">
-    Click **Save Age Groups**.
-  </Step>
-</Steps>
+In the sidebar, open **Organisation** and click **Age Groups**. On a phone or a tablet held upright, tap **More**, then **Age Groups**.
 
-## Validation rules
+Each age group appears as a card showing its label and age range, and how many members are in it today.
 
-Age groups must meet these rules before you can save:
+## Change your age groups
 
-- You must have at least 1 age group.
-- You can have at most 12 age groups.
-- The first group must start at age `0`.
-- Groups must be contiguous with no gaps or overlaps.
-- Only the highest group can be open-ended.
-- The highest group must be open-ended.
-- **Label** is optional and can be up to 40 characters.
-- **Color** must use one of the app's supported colour tokens.
+**Who can do this:** Org Owner
 
-Leave **To** blank for the open-ended highest group.
+Every age group has four settings:
+
+- **From:** the youngest age in the group.
+- **To:** the oldest age in the group. Leave it blank on the highest group so it has no upper limit.
+- **Label:** an optional name, up to 40 characters, for example "Children".
+- **Colour:** the colour Bethel ChMS uses to show the age group in lists such as group rosters and attendance: **Blue**, **Green**, **Amber**, **Slate**, **Rose**, **Violet** or **Cyan**. New groups start as **Slate**.
+
+<Tabs>
+  <Tab title="Computer or tablet">
+    Edit **From**, **To**, **Label** and **Colour** directly on each age group's card. Cards you have changed are marked **Unsaved**.
+  </Tab>
+  <Tab title="Phone">
+    Tap the pencil button on an age group's card to open **Edit age group**. Change **From**, **To**, **Label** and **Colour**, then tap **Done**. If **From** does not carry on from the group above, a button such as **Set From to 13** appears that fixes it in one tap.
+  </Tab>
+</Tabs>
+
+Nothing changes for your members until you click **Save Age Groups** in the bar at the bottom of the page. The bar shows how many unsaved changes you have and how many members with a date of birth will be re-assigned when you save.
+
+### Add, delete or reorder age groups
+
+- **Add:** click **Add Age Group** below the list, or choose it from the **More actions** menu (⋮) in the top bar. The new group is added just above the open-ended highest group.
+- **Delete:** open the group's **⋯** menu and choose **Delete age group**. The group is removed from your draft only, and nothing changes until you save.
+- **Reorder:** with a mouse, drag a group by its handle. On a touch screen, tap **Reorder** and use the arrows to move groups up or down, then tap **Done**. You can also choose **Move up** or **Move down** from a group's **⋯** menu.
+
+After moving a group, check that **From** and **To** still follow on from each other.
+
+## Rules for age groups
+
+Bethel ChMS checks your age groups as you type and shows any problem on the card it affects. **Save Age Groups** stays unavailable until every problem is fixed, and the bar at the bottom shows how many are left.
+
+Your age groups must:
+
+- Include at least 1 and at most 12 groups.
+- Start at age `0` in the first group.
+- Follow on from each other with no gaps or overlaps. For example, if one group ends at 12, the next must start at 13.
+- End with an open-ended highest group, with **To** left blank. Only the highest group can be open-ended.
 
 ## What happens when you save
 
-When the Org Owner saves age groups, Bethel ChMS reassigns members across the organisation.
+When you click **Save Age Groups**, Bethel ChMS re-assigns members across the whole organisation:
 
-- Members with **Date of Birth** are re-bucketed from their date of birth.
-- Members with manually assigned age groups are preserved when their previous bracket maps clearly into the new configuration.
-- Members with manually assigned age groups are cleared to **Not Set** when their previous bracket cannot be uniquely mapped.
+- Members with a **Date of Birth** are placed in the right group for their age under the new set-up.
+- Members whose age group was set by hand keep it when the age range of their old group fits entirely inside one of the new groups.
+- Members whose age group was set by hand are moved to **Not Set** when their old group's age range does not fit inside exactly one new group.
 
-After saving, the confirmation panel shows how many members were re-bucketed, how many manual entries were preserved, and how many manual entries were cleared.
+A confirmation panel then shows how many members were re-assigned from their date of birth, how many hand-set age groups were kept and how many were cleared. If any were cleared, click **View affected members** to open the member list filtered to members with no age group, so you can set theirs again.
 
-If manual entries are cleared, click **View affected members** to open the member list filtered to **Age Group = Not Set**.
+## Restore the defaults
 
-## Restore defaults
+**Who can do this:** Org Owner
 
-Use **Restore Defaults** to replace your current age-group configuration with the default brackets.
+1. Open the **More actions** menu (⋮) in the top bar and choose **Restore Defaults**.
+2. Check the default age groups shown in **Restore default age groups?**.
+3. Click **Restore Defaults** to confirm.
 
 <Warning>
-Restoring defaults reassigns members with a date of birth and may clear manual entries that cannot be uniquely mapped. This cannot be undone from the page.
+Restoring the defaults replaces your current age groups straight away, including any labels and colours you set, and re-assigns every member with a date of birth. Hand-set age groups that cannot be clearly matched to a default group are cleared to **Not Set**. This cannot be undone.
 </Warning>
 
 ## Where age groups appear
 
-Age groups appear in several people workflows:
-
-- Member create and edit forms
-- Member detail tags
+- Member create and edit forms, and the age group badge on each member's page
 - Member list filters and sorting
-- Group rosters and bulk assignment dialogs
-- Member import mapping and validation
-- Demographics reports and dashboards
-
-Use [importing members](/guides/importing-members) when you need to set age groups during a CSV import.
+- Group rosters and bulk assignment
+- Member imports, see [Importing members](/guides/importing-members)
+- The [Membership demographics report](/guides/membership-demographics-report) and [dashboards](/guides/dashboards)

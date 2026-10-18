@@ -1,0 +1,711 @@
+---
+title: "Care: member, visitor and pastoral follow-up"
+sidebarTitle: "Care"
+description: "Follow up members who stop coming, new visitors and people with a pastoral need. Every case has an owner, a status, a due date and notes."
+---
+
+**Care** helps your team follow up the people who need it most: members who have stopped coming to church, first-time visitors, and anyone going through something your pastoral team should know about, such as a hospital stay or a bereavement.
+
+Each person you follow up has a **case**. A case is a record with a status, the person responsible for it, a due date and a timeline of notes. Cases make sure nobody is forgotten, and a weekly reminder email tells your team what is running late.
+
+<Note>
+Care replaces the old Backsliders page, and the Backslider Manager role is now called **Care Manager**. Old bookmarks and links open Care.
+</Note>
+
+Care has three tabs:
+
+| Tab | Who it follows up | How a case starts |
+| --- | --- | --- |
+| **Member care** | Members who have stopped coming to an event, such as your Sunday service | Automatically, every night, from your [absence rules](#set-up-absence-rules) |
+| **Visitor care** | New visitors | Automatically when a visitor is added, once you [switch Visitor care on](#switch-on-visitor-care-for-a-branch) for the branch. You can also add a visitor by hand. |
+| **Pastoral care** | Hospital visits, bereavements, new babies, prayer requests and any types you add | By hand, for a member or a visitor |
+
+Care never changes a member's **lifecycle status** (Newcomer, Active or Inactive) on its own. Setting a member inactive is always something a person chooses and confirms.
+
+Care is part of the Standard plan, so every church on Bethel ChMS has it. See [Feature availability by plan](/guides/feature-availability-by-plan).
+
+## Open Care
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager. Treasurers do not see Care.
+</Info>
+
+In the sidebar, open **People** and click **Care**. Care opens on the **Member care** tab.
+
+On a phone, or a tablet held upright, tap **More**, then **Care**. If **Care** is already one of the shortcuts in your tab bar or rail, as it is for Care Managers, tap it there instead. On phones, Care's confirmations and most of its menus slide up from the bottom of the screen.
+
+At the top of the page are the tabs **Member care**, **Visitor care** and **Pastoral care**, each with its number of open cases next to its name. Org Owners, Org Admins and Branch Admins also see a **Settings** button beside the tabs, which opens [Care settings](#care-settings).
+
+### Choose a branch
+
+Care shows one branch at a time.
+
+- **Org Owner** and **Org Admin** users choose the branch with the branch selector. Care opens on the branch you last picked, or on the first branch if you have never picked one. See [Find your way around](/getting-started/find-your-way-around).
+- **Branch Admin**, **Editor** and **Care Manager** users always work in their own branch.
+
+The open-case counts on the tabs are for the selected branch. On **Pastoral care**, the count only includes cases you are allowed to see, so [confidential cases](#confidential-cases) held by other people are not counted.
+
+## Who can do what
+
+| Role | Work cases on all three tabs | Absence rules | Care settings |
+| --- | --- | --- | --- |
+| **Org Owner**, **Org Admin** | Every branch | Create and change every rule | Every section |
+| **Branch Admin** | Own branch | Own branch's rules. Other rules are read-only. | **Visitor care** and **Workload** for their own branch |
+| **Editor** | Own branch | No access | No access |
+| **Care Manager** | Own branch | No access | No access |
+| **Treasurer** | No access | No access | No access |
+
+A few actions have their own rules:
+
+- Adding a visitor to Visitor care by hand: Org Owner, Org Admin, Branch Admin and Editor. Care Managers cannot.
+- Confidential pastoral cases can only be seen by the person assigned, the person who opened the case, and Org Owners and Org Admins. See [Confidential cases](#confidential-cases).
+- See [The Care Manager role](#the-care-manager-role) for everything a Care Manager can and cannot do.
+
+## How cases work
+
+All three tabs share the same building blocks.
+
+### Statuses
+
+Every case has a status. Some statuses keep the case **open**, and others **close** it. Closed cases leave the open list, but you can still find them with the status filters. Each tab has its own statuses, described in its section below.
+
+### Assigning cases
+
+You can give a case to a colleague from the case itself, or select several cases on the list and assign them together. Wherever you choose who to assign, each person is shown with how many open cases they already have, for example **Grace Owusu (4)**. The number covers open cases on all three tabs in that branch, including confidential cases.
+
+- Assigning a case to someone else sends them an email. Assigning a case to yourself, or removing an assignment, sends nothing. See [Emails Care sends](#emails-care-sends).
+- Treasurers cannot be assigned cases.
+
+### Due dates and overdue cases
+
+Every case gets a due date when it opens, worked out from [Care settings](#due-dates). You can change it on the case.
+
+When the due date passes, the case shows a red chip such as **Overdue 2 days**. Care's lists only use red for overdue cases, so they stand out. Every tab has an **Overdue only** button that shows only these cases.
+
+Bethel ChMS uses the time zone in the [weekly reminder settings](#weekly-reminder) to decide when a due date has passed.
+
+### Untouched cases
+
+An open case is **untouched** when nobody has changed its status, changed who it is assigned to, or added a note for 14 days. The **Last activity** column then shows the date with a grey line such as "untouched 15 days" underneath. Changing a due date does not count as activity.
+
+Org Owners and Org Admins can change the number of days in [Care settings](#due-dates). Untouched cases are also listed in the weekly reminder email.
+
+### Notes
+
+Each case has a notes timeline, newest first. Every note shows who wrote it and the day, date and time it was written.
+
+To add a note, type in the note box at the top of the timeline and click **Add note**. Notes can be up to 2,000 characters.
+
+To change a note, click its edit icon, make your change and click **Save note**. To remove one, click its delete icon and confirm with **Delete note**. Notes are never included in emails.
+
+<Accordion title="Who can edit and delete notes">
+  | Notes on | Edit | Delete |
+  | --- | --- | --- |
+  | **Member care** and **Visitor care** | The author, Org Owners and Org Admins | The author, Org Owners and Org Admins |
+  | **Pastoral care** | The author only | The author, Org Owners and Org Admins |
+</Accordion>
+
+### Workload limit
+
+A branch can set a limit on how many open cases one person carries. When cases are shared out automatically, anyone at the limit is skipped.
+
+Assigning by hand is never blocked. If the person is already at or over the limit, Bethel ChMS asks you to confirm, for example "Grace already has 15 open cases. Assign anyway?". Click **Assign anyway** to go ahead. The **New care case** and **Add to visitor care** forms show a warning instead.
+
+To set the limit, see [Workload](#workload).
+
+## Member care
+
+Member care follows up members who have stopped coming. **Absence rules** watch your recurring events, and each night Bethel ChMS opens a case for every member who has missed too many in a row.
+
+### How members are found
+
+Every night at 02:15 UTC, Bethel ChMS checks each enabled absence rule:
+
+- It counts how many of the event's scheduled occurrences a member has missed **in a row**. An **occurrence** is one date of a recurring event, such as this Sunday's service. Attending resets the count, and cancelled occurrences are not counted.
+- It only counts from the date the member was added to Bethel ChMS, or from the rule's **Only detect absences from** date if that is later.
+- When the count reaches the rule's threshold, the member gets a case.
+
+A member has only one open Member care case, even when they are missing from several events. The case shows the event they have missed most and lists the others under **Missing from**.
+
+Cases also close by themselves:
+
+- When the member attends again, that event's flag clears. Once no flags remain, the case closes as **Welcomed back**.
+- If the member no longer matches any enabled rule, for example because the rule was switched off or their lifecycle status changed, the case closes as **No concern** at the next nightly check.
+
+A new case is due 7 days after it opens, unless an Org Owner or Org Admin has changed the [due dates](#due-dates).
+
+### The Member care list
+
+Six tiles across the top give you a quick summary:
+
+| Tile | What it counts |
+| --- | --- |
+| **Open cases** | Every open Member care case |
+| **Needs follow-up** | Open cases with the status **Needs follow-up** |
+| **Assigned to me** | Open cases assigned to you |
+| **Welcomed back · 30d** | Members welcomed back in the last 30 days |
+| **Overdue** | Open cases past their due date, shown in red |
+| **Untouched 14+ days** | Open cases with no recent activity. The number follows your untouched setting. |
+
+The list has these columns: **Member**, **Status**, **Missed** (for example "3 Sundays", with "+1 event" when the member is missing from more than one event), **Last attendance**, **Assigned to**, **Due**, **Last activity** and, on wide screens, **Contact**. On tablets and computers, the line under each name shows the member's lifecycle status and the rule that found them.
+
+{/* TODO: new screenshot: Member care tab with the six tiles, the search box, the Assigned to me and Overdue only buttons, status chips, and rows showing Overdue chips and untouched text */}
+
+### Filter the Member care list
+
+- Use **Search members…** to find someone by name.
+- Click **Assigned to me** to see your own cases, or **Overdue only** to see late cases.
+- Click a status chip to show **All open** cases or a single status.
+- Click **Filters** (the filter icon on a phone) for everything else. Changes apply as you go. Click **Show N members** to close the sheet, or **Clear all** to start again.
+
+Each active filter shows as a chip you can remove. Filters are saved in the page address, so you can share a filtered view with a colleague who has access to Care.
+
+<Accordion title="Everything in the Filters sheet">
+  - **Follow-up status**: pick one or more of the six statuses. **Welcomed back** and **No concern** are closed cases.
+  - **Assignment**: **All**, **Assigned to me**, **Unassigned**, or one person under **Specific staff**. Only Org Owners, Org Admins and Branch Admins see this group. Editors and Care Managers can still use the **Assigned to me** button.
+  - **Missed occurrences in a row**: a **Min** and **Max**. Leave a field empty for no limit.
+  - **Rule**: the absence rule that found the member.
+  - **Age group**, including **Not set**.
+  - **Gender**.
+  - **Lifecycle**: **Newcomer** or **Active**.
+  - **Nationality**.
+  - **Tags**.
+  - One group for each member custom field that has options.
+  - **Order**: **Most missed** or **Due date**.
+</Accordion>
+
+When nobody is flagged, the list shows **No open cases**. If your filters hide everyone, click **Clear filters**.
+
+### Open a member's case
+
+Click a row to open the member's case. It shows:
+
+- The member's name, lifecycle status and age group.
+- **Call**, **Message**, **Email** and **Profile** buttons.
+- **Follow-up status**, **Assigned to** and **Due**. The due date saves when you click away from the field. Below it, a red chip shows if the case is overdue.
+- An attendance summary: missed occurrences in a row, **Last attendance**, **Missing from** (when the member is missing from several events), **Recent services · oldest first** (the last six dates, each marked attended or missed) and the rule that found them.
+- **Notes**, which belong to the member rather than the case. They stay after a case closes, and you see them again if the member is flagged later. Branch Admins, Editors and Care Managers only see notes written in their own branch, so notes from before a member moved branch are hidden from them.
+- **Contact** details.
+- A **Set member inactive** box.
+
+When a case is closed, its **Due** field is locked.
+
+### Change a member's follow-up status
+
+Member care has six statuses:
+
+| Open | Closed |
+| --- | --- |
+| **Needs follow-up**, **Reached out**, **Reconnecting**, **No response yet** | **Welcomed back**, **No concern** |
+
+Choose a status in **Follow-up status** on the case, or select several rows and use **Status** in the bar that appears.
+
+<Tabs>
+  <Tab title="Welcomed back">
+    Choosing **Welcomed back** opens the **Welcome back** dialog, which records when the member came back.
+
+    <Steps>
+      <Step title="Pick the date they came back">
+        For each event the member is missing from, choose a recent date from **Pick a date**. Bethel ChMS records an attendance for that date, so they are not flagged again unless they start missing services after it.
+      </Step>
+      <Step title="Check any warning">
+        If the date you pick still leaves them over the rule's threshold, the dialog warns you that they may be flagged again at the next nightly check.
+      </Step>
+      <Step title="Confirm">
+        Click **Welcome back**.
+      </Step>
+    </Steps>
+
+    If an event has no past dates to choose from, you can tick the box to close the case without recording an attendance. The member may then be flagged again at the next nightly check.
+  </Tab>
+  <Tab title="No concern">
+    Choosing **No concern** asks you to confirm in **Mark as no concern?**. Click **Mark as no concern**.
+
+    This only dismisses the current flag. If the member still meets the rule at the next nightly check, they are flagged again. To stop following someone up for good, change the rule or set the member inactive.
+  </Tab>
+  <Tab title="Reopening a case">
+    To reopen a closed case, open it and choose one of the open statuses in **Follow-up status**. The case gets a new due date, counted from today using the Member care due days.
+  </Tab>
+</Tabs>
+
+### Assign Member care cases
+
+**On one case:** open the case and choose someone in **Assigned to**, or choose **Unassigned**.
+
+**On several cases:**
+
+1. Select the rows.
+2. Click **Assign** in the bar that appears.
+3. Under **Assign selected to**, choose **Assign to me**, a colleague, or **Unassign**.
+
+Bulk assigning skips cases whose rule has **Manual assignment** turned off. The confirmation message tells you how many were skipped.
+
+### Set a member inactive
+
+Use this only when your team has decided the member's lifecycle status should change to Inactive.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager.
+</Info>
+
+1. Open the member's case and click **Set inactive** in the **Set member inactive** box.
+2. Confirm in **Set member inactive?**.
+
+Bethel ChMS changes the member's lifecycle status to Inactive, closes their open Member care case and records the change.
+
+To do this for several members, select their rows, click **⋯** in the bar that appears, choose **Set inactive**, then confirm with **Set N inactive**.
+
+<Warning>
+Setting a member inactive does not delete them, but it cannot be undone automatically. To make them active again, edit the member and change **Status**. See [Managing members](/guides/managing-members).
+</Warning>
+
+### Empty the list
+
+**Empty list** closes every open Member care case in the branch as **No concern** in one go. You might use it after setting up a new rule that flagged more people than you expected.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager.
+</Info>
+
+1. On the **Member care** tab, click **⋯** at the top of the page.
+2. Click **Empty list**. This only appears when there are open cases.
+3. Confirm in **Empty the Member care list?** by clicking **Empty list**.
+
+<Warning>
+**Empty list** closes every open case in the branch, whatever filters you have applied. It cannot be undone. Members who still meet a rule are flagged again at the next nightly check.
+</Warning>
+
+### Set up absence rules
+
+An **absence rule** tells Bethel ChMS which event to watch, how many missed occurrences in a row count as a concern, and which members to include.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin (rules for their own branch).
+</Info>
+
+To open your rules, go to the **Member care** tab and click **Absence rules**. On a phone, tap **⋯** at the top of the page, then **Absence rules**.
+
+The rules list shows each rule's event and threshold, its **Scope** (the branch, or **Org-wide**), the member **Statuses** it applies to, its **Conditions**, its **Follow-up** setting and an **Enabled** switch. If you have no rules yet, click **Create your first rule**.
+
+<Steps>
+  <Step title="Start a new rule">
+    Click **New rule**.
+  </Step>
+  <Step title="Name the rule">
+    Enter a **Name** and, if you like, a **Description**.
+  </Step>
+  <Step title="Choose the event">
+    Choose a **Recurring event**. The rule belongs to the event's branch. Branch Admins can only choose events in their own branch.
+  </Step>
+  <Step title="Set the threshold">
+    Set the **Missed-occurrence threshold**: how many of the event's occurrences a member must miss in a row before they are flagged. It starts at 3.
+  </Step>
+  <Step title="Choose a start date">
+    **Only detect absences from** is set to today for a new rule, so the rule does not flag everyone who was already away before you created it. Leave it empty to count from the date each member was added to Bethel ChMS.
+  </Step>
+  <Step title="Choose who it applies to">
+    Under **Applies to members who are**, choose **Newcomer**, **Active** or both. Both are selected to start with. Inactive members are never included.
+  </Step>
+  <Step title="Add conditions (optional)">
+    Under **Member conditions**, click **Add condition** to narrow the rule to certain members. See the conditions details below.
+  </Step>
+  <Step title="Check the rule is on">
+    **Enable rule** is on to start with. The rule is checked every night while it is on.
+  </Step>
+  <Step title="Choose how cases are assigned (optional)">
+    Turn on **Enable follow-up**, then choose **Manual assignment**, **Auto-assignment** or both. See the follow-up details below.
+  </Step>
+  <Step title="Save">
+    Click **Create rule**.
+  </Step>
+</Steps>
+
+{/* TODO: new screenshot: New absence rule sheet showing the recurring event, threshold, Only detect absences from date, member statuses, a condition row and the follow-up options */}
+
+<AccordionGroup>
+  <Accordion title="Member conditions">
+    Conditions limit a rule to certain members. A member must match **all** the conditions on a rule. With no conditions, the rule includes every member in scope.
+
+    You can add conditions on **Gender**, **Age group**, **Nationality**, **Tags** or any member custom field. The choices are **is any of**, **is not any of**, **is set** and **is not set**. **Gender** and **Age group** only offer **is any of** and **is not any of**. To match members with no age group, choose **Not set** in the **Age group** list.
+
+    For **Nationality**, and for custom fields without a list of options, type each value and click **Add**.
+
+    For example, a rule for your youth service could use **Age group** **is any of** Youth.
+  </Accordion>
+  <Accordion title="Follow-up and assignment">
+    Members a rule finds appear on the Member care list either way. The follow-up settings only control how their cases are assigned.
+
+    - **Manual assignment** lets staff claim cases for themselves or assign colleagues from the list. With it off, bulk assigning skips this rule's cases.
+    - **Auto-assignment** shares new cases out in turn across the staff you tick under **Distribute evenly across**. Each person's open-case count is shown. You need to tick at least one person.
+
+    Auto-assignment skips anyone at the branch [workload limit](#workload). If everyone is at the limit, the case waits unassigned.
+  </Accordion>
+  <Accordion title="Edit, switch off or delete a rule">
+    - To switch a rule off or on, use its **Enabled** switch. A message confirms the change and offers **Undo**.
+    - To change a rule, click **⋯** on its row, then **Edit rule**. Make your changes and click **Save rule**.
+    - To see who a rule has found, click **⋯**, then **View flagged members**. Member care opens filtered to that rule.
+    - To delete a rule, click **⋯**, then **Delete rule**, and confirm in **Delete rule?**. Members the rule has already found stay on the Member care list until the next nightly check, which closes their cases as **No concern** unless another rule still finds them. Deleting cannot be undone.
+  </Accordion>
+  <Accordion title="Rules for other branches">
+    Org Owners and Org Admins can change every rule.
+
+    Each branch owns its own rules. Branch Admins can see every rule in the organisation, but they can only change, switch on or off and delete their own branch's rules. Other branches' rules, and any organisation-wide rules, show **Read-only**.
+  </Accordion>
+</AccordionGroup>
+
+## Visitor care
+
+Visitor care gives each new visitor a case, so that every guest is welcomed and followed up after their first visit.
+
+### Switch on Visitor care for a branch
+
+Visitor care is switched on one branch at a time.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin (their own branch).
+</Info>
+
+<Steps>
+  <Step title="Open Care settings">
+    Open **Care** and click **Settings**. Org Owners and Org Admins choose the branch with the branch selector first.
+  </Step>
+  <Step title="Turn the switch on">
+    In the **Visitor care** section, turn the switch on.
+  </Step>
+  <Step title="Choose who gets new cases">
+    Under **Who gets new cases**, choose:
+
+    - **Assign by hand**: new cases wait, unassigned, for someone to pick them up.
+    - **Share between staff**: new cases are shared out in turn, skipping anyone at the [workload limit](#workload). Under **Staff in the rotation**, click **Add staff** to add each person. You need at least one.
+  </Step>
+  <Step title="Save">
+    Click **Save Changes**, then click **Turn on** in **Turn on Visitor care?**.
+  </Step>
+</Steps>
+
+The section then shows **On since** with the date and time you switched it on. Visitors added before then do not get a case automatically, but you can [add them by hand](#add-a-visitor-by-hand).
+
+To switch Visitor care off, turn the switch off and click **Save Changes**. Open cases stay on the list, and new visitors no longer get one.
+
+{/* TODO: new screenshot: Care settings showing the Visitor care section switched on with the On since line, Share between staff selected and two people in the rotation, and the Workload section */}
+
+### How visitor cases open and close
+
+While Visitor care is on, every visitor added to the branch gets one case, whether staff added them on the [Visitors](/guides/visitors) page, they registered at a [kiosk](/guides/kiosk-mode), or they checked in on their phone. A returning visitor does not get a second case.
+
+With **Share between staff**, each new case goes to the next person in the rotation who still works in that branch and is under the workload limit. If nobody qualifies, the case waits unassigned. When that happens because everyone is at the limit, Org Owners and Org Admins can see it as **Visitor care assignment** in **Execution History** on the **Automation** page.
+
+A new visitor case is due 7 days after it opens, unless an Org Owner or Org Admin has changed the [due dates](#due-dates).
+
+Cases also close by themselves:
+
+- When a visitor is converted to a member, from Care or from the Visitors page, their Visitor care case closes as **Became a member**. Any open pastoral cases move to the new member and stay open.
+- When a visitor who was never converted is deleted, their open Visitor care case and any open pastoral cases close as **No follow-up needed**.
+
+### The Visitor care list
+
+The list has these columns: **Visitor**, **First visit** (with how they registered: **Added by staff**, **Phone check-in** or **Kiosk**), **Visits**, **Status**, **Assigned to**, **Due**, **Last activity** and **Opened**. Above the list, a row of counts shows how many open cases have each open status, and how many are overdue. **Opened** only shows on wide screens.
+
+To narrow the list:
+
+- Use the status tabs: **All open**, each open status, **All closed**, each closed status, or **All**.
+- Click **Overdue only** to see late cases.
+- Click **Filters** to filter by **Assigned to** (**Assigned to me**, **Unassigned** or a person) and **Opened** dates (**From** and **To**), and to set the **Order** (**Due date**, the default, or **Newest**).
+
+To change several cases at once, select their rows and use **Assign** or **Status** in the bar that appears. Bulk assigning skips closed cases.
+
+<Note>
+Changing the status of several cases at once closes them straight away, without asking you to confirm.
+</Note>
+
+If Visitor care is off and there are no cases, the tab says **Visitor care is off for this branch**, with a **Settings** button for Org Owners, Org Admins and Branch Admins.
+
+### Open a visitor's case
+
+Click a row to open the visitor's case. It shows:
+
+- **Call**, **Text** and **Email** buttons.
+- The visitor's mobile, email, gender, nationality, first visit and how they registered, number of visits and last visit, and tags.
+- **Recent visits**: their last six check-ins, with event names.
+- **Status**, **Assigned to** and **Due**.
+- Notes.
+- **Open visitor record**, which opens the visitor on the Visitors page. Care Managers do not see this button.
+- **Convert to member**, while the case is open.
+
+When a case is closed, **Assigned to** and **Due** are locked.
+
+### Change a visitor case's status
+
+| Open | Closed |
+| --- | --- |
+| **Needs follow-up**, **Contacted**, **No response yet** | **Connected**, **No follow-up needed**, **Became a member** |
+
+When you choose a closed status on a single case, Bethel ChMS asks you to confirm in **Close this case?**. Click **Close case**.
+
+You cannot choose **Became a member** yourself. It is set when the visitor is converted, and a case closed this way cannot be reopened. It shows a **Became a member** banner with a **View member profile** link.
+
+To reopen any other closed case, choose an open status. This only works while the person is still a visitor. After reopening, check **Due** and change it if needed.
+
+### Convert a visitor to a member
+
+When a visitor is ready to become a member, you can convert them straight from their case.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager.
+</Info>
+
+1. Open the visitor's case and click **Convert to member**.
+2. Check the details in the form. It is the same form as on the Visitors page, filled in from the visitor's record.
+3. Click **Convert to Member**.
+
+The case closes as **Became a member**. Their Visitor care history appears on the new member's **Care** tab, and any open pastoral cases carry over to them.
+
+If a member with the same details already exists, Bethel ChMS tells you to check the name, email and mobile number. See [Duplicates and merging](/guides/duplicates-and-merging) if two records belong to the same person.
+
+### Add a visitor by hand
+
+Use this for visitors who were added before Visitor care was switched on, or for anyone you want to follow up yourself. It works whether the branch switch is on or off.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor.
+</Info>
+
+1. On the **Visitor care** tab, click **Add a visitor**. You can also click **Add to visitor care** in a visitor's details, or in the **⋯** menu on their row, on the [Visitors](/guides/visitors) page.
+2. Under **Find a visitor**, type a name and click **Search**, then click the visitor. Visitors who already have an open case show **Already in care** and cannot be picked. If you started from the Visitors page, the visitor is already chosen, so skip this step.
+3. Optionally, choose someone in **Assigned to**. They get an email unless you choose yourself.
+4. Click **Add to visitor care**.
+
+If the visitor already has an open case, the Visitors page shows **View care case** instead.
+
+## Pastoral care
+
+Pastoral care is for needs your team records by hand, such as a hospital visit, a bereavement, a new baby or a prayer request. A pastoral case can be for a member or a visitor.
+
+### Pastoral care types
+
+Every church starts with four types. Each has a number of days within which it should be followed up:
+
+| Type | Follow up within |
+| --- | --- |
+| **Hospital visit** | 2 days |
+| **Bereavement** | 3 days |
+| **New baby** | 7 days |
+| **Prayer request** | 7 days |
+
+Org Owners and Org Admins can rename these, add your own, change their order, change their days, and archive types you no longer use. See [Manage pastoral care types](#manage-pastoral-care-types) in Care settings.
+
+### Open a pastoral case
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager.
+</Info>
+
+<Steps>
+  <Step title="Start a new case">
+    On the **Pastoral care** tab, click **New case**. You can also click **Add a care case** on a member's profile or in a visitor's details.
+  </Step>
+  <Step title="Choose the person">
+    Under **Person**, search for a member or visitor in the branch.
+  </Step>
+  <Step title="Choose the type">
+    Pick the **Type**. Archived types are not offered.
+  </Step>
+  <Step title="Add details">
+    Add an **Opening note (optional)**, choose who it is **Assigned to**, and check **Follow up by**. The date is filled in from the type, and it cannot be in the past.
+  </Step>
+  <Step title="Mark it confidential if needed">
+    Tick **Confidential** if only a few people should see this case. See [Confidential cases](#confidential-cases).
+  </Step>
+  <Step title="Create the case">
+    Click **Create case**. If you assigned it to someone else, they get an email.
+  </Step>
+</Steps>
+
+A person can have only one open case of each type. If they already have one, Bethel ChMS offers **Open the case** so you can add to it instead. If the existing case is confidential and you cannot see it, you are asked to check with an Org Admin.
+
+{/* TODO: new screenshot: New care case sheet with a person selected, the type, opening note, assignee, Follow up by date and the Confidential checkbox with its explanation */}
+
+### Work the Pastoral care tab
+
+The list has these columns: **Person** (with a **Member** or **Visitor** badge, and a lock with **Confidential** on restricted cases), **Type**, **Status**, **Assigned to**, **Due**, **Last activity** and **Opened**.
+
+The filters work the same way as on [Visitor care](#the-visitor-care-list), with one more choice in **Filters**: **Type**. Archived types are listed there too, marked "(archived)", so you can still find their cases.
+
+Pastoral care has these statuses:
+
+| Open | Closed |
+| --- | --- |
+| **Needs follow-up**, **Contacted**, **Ongoing support** | **Closed**, **No follow-up needed** |
+
+When you choose a closed status on a single case, Bethel ChMS asks you to confirm. Click **Close case**. Changing the status of several cases at once closes them without asking. To reopen a case, choose an open status, then check **Follow up by** and change it if needed.
+
+Click a row to open the case. It shows the person's contact details, the **Type**, who opened it (**Opened by**), recent visits for a visitor, **Status**, **Assigned to**, **Follow up by**, the **Confidential** switch and notes. **Follow up by** saves when you click away from the field. At the bottom, **Open member profile** or **Open visitor record** takes you to the person's record. Care Managers do not see **Open visitor record**.
+
+### Confidential cases
+
+Some pastoral needs are private. A **confidential** case and its notes can only be seen by:
+
+- the person it is assigned to,
+- the person who opened it, and
+- Org Owners and Org Admins.
+
+Nobody else can see it, not even a Branch Admin of the same branch. A case you cannot see never appears in your lists or counts. Only pastoral cases can be confidential.
+
+Emails never name the person or the type of a confidential case. They show only "1 confidential case" (or the number of confidential cases). Pastoral cases never appear in reports.
+
+<AccordionGroup>
+  <Accordion title="Switch Confidential on or off">
+    Only the person assigned, the person who opened the case, or an Org Owner or Org Admin can change the **Confidential** switch on a case. Everyone else sees a line explaining who can change it.
+
+    Turning it off asks you to confirm in **Turn off Confidential?**, because everyone with Care access in the branch will then see the case and its notes. Click **Turn off** to go ahead.
+  </Accordion>
+  <Accordion title="Hand over a confidential case">
+    When you change who a confidential case is assigned to, and that changes who can see it, Bethel ChMS asks you to confirm in **Hand over this confidential case?** (or **Unassign this confidential case?**). The message explains that the new person will see the case and its notes, and that the previous person will not see it any more unless they opened it or are an Org Owner or Org Admin.
+
+    Assigning or unassigning several cases at once that include confidential ones asks **Hand over confidential cases?** (or **Unassign confidential cases?**).
+  </Accordion>
+</AccordionGroup>
+
+## Care settings
+
+**Care settings** control how follow-up works for your church. Open **Care** and click **Settings**.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin. Branch Admins see only the **Visitor care** and **Workload** sections, for their own branch.
+</Info>
+
+Each section shows whether it applies to one branch or the **Whole organisation**. Most sections have their own **Save Changes** button.
+
+| Section | What you set | Applies to | Who can change it |
+| --- | --- | --- | --- |
+| **Visitor care** | Whether new visitors get a case, and who gets new cases | One branch | Org Owner, Org Admin, Branch Admin |
+| **Workload** | The most open cases one person can be given automatically | One branch | Org Owner, Org Admin, Branch Admin |
+| **Due dates** | How soon each kind of case should be followed up, and when a case counts as untouched | Whole organisation | Org Owner, Org Admin |
+| **Weekly reminder** | Whether the reminder email is sent, and when | Whole organisation | Org Owner, Org Admin |
+| **Pastoral care types** | The types your team records | Whole organisation | Org Owner, Org Admin |
+
+At the bottom, a **Retention** line explains [how long care records are kept](#how-long-care-records-are-kept).
+
+### Visitor care
+
+See [Switch on Visitor care for a branch](#switch-on-visitor-care-for-a-branch).
+
+### Workload
+
+Set **Most open cases per person** to a whole number from 1 to 200, or leave it empty for no limit, then click **Save Changes**. Open cases from all three tabs count towards the limit. Below the field, you can see how many open cases each person has.
+
+Automatic sharing skips anyone at the limit. Assigning by hand shows a warning but is never blocked.
+
+### Due dates
+
+For **Member care**, **Visitor care** and each active pastoral type, set **Within** a number of days, from 0 to 90. You can also set **Mark a case as untouched after** a number of days with no change or note, from 7 to 60. Click **Save Changes**.
+
+| Setting | Starts at |
+| --- | --- |
+| **Member care** | 7 days |
+| **Visitor care** | 7 days |
+| Pastoral types | See [Pastoral care types](#pastoral-care-types) |
+| Untouched after | 14 days |
+
+Changes apply to new cases. Open cases keep the due date they already have.
+
+### Weekly reminder
+
+Choose whether to **Send the weekly reminder**, and pick the **Day**, the **Time** (on the hour) and the **Time zone**, then click **Save Changes**. The reminder starts switched on for **Monday** at **08:00**, **Europe/London** time.
+
+The section shows when the next reminder will go out, or says no reminders are sent while it is off. The time zone also decides when cases become overdue on every tab. See [Weekly reminder email](#weekly-reminder-email) for what people receive.
+
+### Manage pastoral care types
+
+Changes in this section save straight away.
+
+- **Add a type:** type a name in **New type, for example Unemployment support** (up to 60 characters) and click **Add type**. New types are followed up within 7 days until you change it.
+- **Change the days:** edit **Follow up within** on the type's row.
+- **Rename a type:** click the rename icon on its row.
+- **Change the order:** drag the types. On a touch screen, tap **Reorder**, move them, then tap **Done**.
+- **Archive a type:** click the archive icon. If the type has open cases, you are asked to confirm. Its open cases stay open and can still be worked, but no new cases can be opened with that type.
+- **Restore a type:** archived types show "archived" after their name. Click **Restore** to use the type again.
+
+## Emails Care sends
+
+Care sends two kinds of email. Notes are never included, and confidential cases appear only as "1 confidential case" with no name or type.
+
+### When a case is assigned to you
+
+You get one email for each batch of cases assigned to you, not one per person. This covers cases assigned by hand, in bulk, or shared out automatically. Assigning a case to yourself, or removing an assignment, sends nothing.
+
+- **Member care:** the email lists each member with their status, how many times they have missed, when they were last seen and the best way to contact them. **View my care list** opens Member care showing your cases.
+- **Visitor care and Pastoral care:** the subject is "New visitors to follow up at" your church's name when every case is a visitor, or "You've been asked to follow up" a number of people otherwise. Visitor cases are listed under **Visitor care**, with each visitor's first visit and how they registered. Pastoral cases are listed under their type, such as **Hospital visit**, with each person's name. **Open Visitor care** and **Open Pastoral care** open those tabs showing your cases.
+
+Cases assigned by hand are emailed straight away. Member care cases shared out by an absence rule usually arrive within a few minutes. New visitors shared out automatically are held for about an hour, so one Sunday's visitors arrive in a single email.
+
+### Weekly reminder email
+
+Once a week, on the day and time in your [weekly reminder settings](#weekly-reminder), everyone with overdue or untouched cases assigned to them gets one email. The subject reads, for example, "Your care list this week: 3 overdue".
+
+- Cases are grouped under **Member care**, **Visitor care** and **Pastoral care**, each showing how late it is, for example "Overdue 5 days · untouched 15 days".
+- **Open Member care**, **Open Visitor care** and **Open Pastoral care** open each tab showing your cases, and only your overdue ones when you have any.
+- Org Owners and Org Admins also see how many open cases have nobody assigned in each branch. Branch Admins see this for their own branch. They get the email for this even when none of their own cases are late. Confidential cases are not included in this count.
+- People with nothing to report get no email.
+
+If you change the day after this week's reminder has gone out, nobody gets a second one that week.
+
+## Care elsewhere in Bethel ChMS
+
+### On a member's profile
+
+A member's profile has a **Care** tab for Org Owners, Org Admins, Branch Admins, Editors and Care Managers. It shows:
+
+- **Member care**: what the member is missing from (for example "Sunday Service · missed 3 Sundays"), the status, who it is assigned to and the due date, with **Open in Member care**. If there is no open case, it says so.
+- **Pastoral care**: the pastoral cases you are allowed to see, each with when and by whom it was opened, the assignee, the due date and its status, plus an **Add a care case** button. On wider screens, **Add a care case** also appears at the top of the profile.
+- **Notes**: marked **Shared with Member care**. These are the same notes as in the member's Member care case, so a note added in either place appears in both. You can add and edit notes here. To delete a note, use the Member care case.
+- **Visitor care history**: if the member started as a visitor, this read-only card shows when their Visitor care case opened, how it ended and who had it. You can also show the notes from that case.
+
+See [Managing members](/guides/managing-members) for the rest of the profile.
+
+{/* TODO: new screenshot: member profile on the Care tab showing the Member care card, a pastoral case, the shared notes and the Visitor care history card */}
+
+### On the Visitors page
+
+For people who can use Care, a visitor's details on the [Visitors](/guides/visitors) page show their latest Visitor care status, who it is assigned to (or **Unassigned**), and an **Open in Visitor care** link.
+
+The visitor's details and the **⋯** menu on their row also offer **Add to visitor care**, or **View care case** if they already have one. The details also have **Add a care case** for a pastoral case.
+
+### In reports
+
+The **Visitor Follow-up List** report can include four care columns: **Care status**, **Assigned to**, **Care opened** and **Due date**. You can also filter it by **Care status**, including **No case** for visitors who have never had one.
+
+The values come from each visitor's latest Visitor care case. Pastoral cases never appear in reports. The care columns are only filled in for people who can use Care. See [Reports](/guides/reports).
+
+### When you merge duplicate members
+
+When you merge two member records, their care cases and notes move to the record you keep. If both records have an open case of the same kind, they become one case.
+
+Bethel ChMS will not merge two records that both have an open confidential case of the same type held by different people. Close one of the cases first. See [Duplicates and merging](/guides/duplicates-and-merging).
+
+## How long care records are kept
+
+Closed care cases and their notes are deleted 2 years after they close, on all three tabs. Bethel ChMS checks for these every night.
+
+- Open cases are never deleted, however old they are.
+- Notes on a member's Member care timeline are deleted once they are more than 2 years old, unless the member has an open Member care case.
+
+Org Owners and Org Admins can see each clean-up as **Care retention** in **Execution History** on the **Automation** page. See [Automation rules](/guides/automation-rules).
+
+## The Care Manager role
+
+A **Care Manager** is a branch-level role for people who follow up cases but do not need the rest of Bethel ChMS, such as a pastoral care volunteer. Care Managers see only **Members** and **Care** in the sidebar, and Care opens on **Member care** when they sign in. Any other page takes them back to Member care.
+
+In their own branch, a Care Manager can:
+
+- open all three Care tabs and work cases: change the status, assignee and due date, and add notes,
+- edit and delete their own notes,
+- set members inactive and use **Empty list**,
+- open pastoral cases with **New case** or **Add a care case**,
+- convert a visitor to a member from their Visitor care case,
+- view, edit and delete members, including the member profile **Care** tab, and
+- be assigned cases.
+
+A Care Manager cannot add members, open the Visitors page, add a visitor to Visitor care by hand, set up absence rules or open Care settings.
+
+Only Org Owners and Org Admins can give someone the Care Manager role, when inviting them or by editing an existing user, and they must choose a branch. See [User management](/guides/user-management) and [Roles and permissions](/guides/roles-and-permissions).

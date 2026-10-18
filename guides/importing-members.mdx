@@ -1,123 +1,190 @@
 ---
 title: "Importing members"
-description: "Import members from a CSV file, map columns, validate data, skip duplicates, and review import history in Bethel ChMS."
+description: "Import members into a branch from a CSV file: choose the file, map columns, review the data, and check import history in Bethel ChMS."
 ---
 
-Use **Import Members** to create member records from a CSV file. The import wizard guides you through upload, column mapping, validation, and final import.
+Use **Import Members** to add many members at once from a spreadsheet, instead of creating each record by hand. Save your spreadsheet as a **CSV file** (comma-separated values, a plain format that Excel, Google Sheets and Numbers can all export) and Bethel ChMS walks you through four steps: **Choose file**, **Map columns**, **Review** and **Done**.
+
+Every import goes into one branch. No members are added until you confirm the import at the end of the **Review** step.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, and Branch Admin can import members. Editors do not see **Import** in the sidebar.
+**Who can do this:** Org Owner, Org Admin, Branch Admin. Editors, Treasurers and Care Managers cannot import members.
 </Info>
 
 ## Before you import
 
-Prepare a `.csv` file with one row per member.
+Prepare a `.csv` file with a header row (the column names) and one row per member. The import accepts:
 
-The import wizard accepts:
+- Up to 700 rows per file
+- Files up to 5MB
+- The built-in member fields listed below
+- Your organisation's active member custom fields
 
-- Up to 700 rows
-- Files up to 5 MB
-- Built-in member fields
-- Active member custom fields
+**First Name** and **Last Name** are required. Every other field is optional.
 
-The required fields are **First Name** and **Last Name**. Other built-in fields are optional.
+| Field | What to put in it |
+| --- | --- |
+| **First Name** | Required. |
+| **Last Name** | Required. |
+| **Email** | Used to spot duplicates. |
+| **Mobile Number** | Used to spot duplicates. |
+| **Date of Birth** | A date such as `15/03/1990`, `1990-03-15` or `March 15, 1990`. Bethel ChMS works out the member's age group from it. |
+| **Age Group** | Only used when **Date of Birth** is blank. Use the name or the age range of one of your [age groups](/guides/age-groups), for example `Children`, `13-19` or `35+`. |
+| **Gender** | Male, female, other or prefer not to say. Short forms such as `m` and `f` also work. |
+| **Nationality** | A recognised nationality, for example `British`. |
+| **Address** | Free text. |
+| **Post Code** | Free text. |
+| **Status** | The member's lifecycle status: `newcomer`, `active` or `inactive`. `new` and `n` also mean Newcomer, `member`, `regular` and `a` mean Active, and `lapsed` and `i` mean Inactive. |
 
-## Download the template
+If you leave **Status** blank, or do not include it, the member is imported as **Newcomer**. See [Managing members](/guides/managing-members) for what each status means.
+
+For a custom field that holds a date, write the dates as `2026-03-15` or `March 15, 2026`, so the day and month are always read the right way round.
+
+<Tip>
+Start from the template so your column names match what Bethel ChMS expects. The template already includes a column for each of your member custom fields.
+</Tip>
+
+## Open Import Members
+
+In the sidebar, open **Organisation** and click **Import**. The page is titled **Import Members**. On a phone or a tablet held upright, tap **More**, then **Import**.
+
+You can also open it from the **Members** page: open the **⋯** menu and choose **Import members**.
+
+If you are an Org Owner or Org Admin, choose the branch you want to import into with the branch selector before you start. The wizard shows **To** followed by the branch name, so you can check where the members will go. See [Find your way around](/getting-started/find-your-way-around) for where the branch selector sits on each device.
+
+## Step 1: Choose your file
 
 <Steps>
-  <Step title="Open Import">
-    In the sidebar, click **Import**.
+  <Step title="Download the template (optional)">
+    In the **Start from the template** card, click **Download Template**. Fill in one row per member and save the file as CSV.
   </Step>
-  <Step title="Download the CSV template">
-    Click **Download Template**.
-  </Step>
-  <Step title="Fill in member rows">
-    Add your member data to the downloaded CSV file.
+  <Step title="Choose the file">
+    Click **Choose a CSV file** and select your file. On a computer, you can also drag the file onto the card.
   </Step>
 </Steps>
 
-The template includes built-in fields and your active member custom fields.
+Bethel ChMS checks the file straight away. If it is larger than 5MB, has more than 700 rows, or is not a valid CSV file, you see a message explaining the problem and nothing is imported. Fix the file and choose it again.
 
-## Upload the file
+## Step 2: Map columns
 
-1. In **Import**, drag your CSV file into the upload area or click the upload area to browse.
-2. If you are an org-scoped user, select the branch you want to import into.
-3. Wait for Bethel ChMS to parse the file.
+In **Map Columns**, you tell Bethel ChMS which member field each column in your file belongs to. Each column from your file appears as its own card, with a few sample values from that column and a **Maps to** list.
 
-If the file is too large, has too many rows, or is not a valid CSV file, the wizard shows an error before any records are imported.
+Bethel ChMS matches common column names for you, whatever their capitalisation. For example, `surname` maps to **Last Name**, `phone` to **Mobile Number** and `dob` to **Date of Birth**. A column named exactly like one of your custom fields maps to that custom field. Columns Bethel ChMS cannot match start as **Skip This Column**.
 
-## Map columns
+<Accordion title="Column names Bethel ChMS recognises">
+- **First Name:** first name, firstname, given name, fname, first
+- **Last Name:** last name, lastname, surname, family name, lname, last
+- **Email:** email, email address, e-mail
+- **Mobile Number:** mobile, mobile number, phone, phone number, cell, cell phone
+- **Date of Birth:** dob, date of birth, birth date, birthdate, birthday
+- **Age Group:** age group, agegroup, age cohort, age band
+- **Gender:** gender, sex
+- **Nationality:** nationality
+- **Address:** address, street address, home address
+- **Post Code:** post code, postcode, zip, zip code, postal code
+- **Status:** status, membership status, member status
 
-The **Map Columns** step matches each CSV column to a member field.
+The column names used in the template, such as `first_name`, `mobile_number` and `post_code`, are recognised too.
+</Accordion>
 
-Bethel ChMS auto-matches common column names such as:
+Check each card and change any mapping that is wrong:
 
-- `first name` to **First Name**
-- `surname` to **Last Name**
-- `phone` to **Mobile Number**
-- `dob` to **Date of Birth**
-- `age group` to **Age Group**
+- Choose a field under **Built-in Fields** or **Custom Fields**.
+- Choose **Skip This Column** for any column you do not want to import. Skipped columns are marked **Skipped** and are not imported.
 
-You can change each mapping manually. Choose **Skip This Column** for columns you do not want to import.
+Each field can be mapped to only one column. A field that is already in use is greyed out in the other columns' lists. To move it, set its current column to **Skip This Column** first.
+
+The page confirms **Required fields mapped: First Name, Last Name** when both required fields are mapped. If one is missing, you see which, and you cannot continue until you map it. Chose the wrong file? Click **Replace** on the file card to start again.
+
+When the mapping looks right, click **Continue to Validation**.
+
+### Create a custom field during import
+
+If your file has a column that does not match any existing field, an Org Owner or Org Admin can create a new member custom field without leaving the import.
+
+1. Open that column's **Maps to** list and choose **Create New Custom Field** under **Actions**.
+2. In **Create New Custom Field**, check the **Label**. It starts as your column name.
+3. Choose a **Field Type**: **Text**, **Number**, **Date**, **Yes / No** or **Single Select**. Bethel ChMS suggests a type based on the values in the column. A **Single Select** field needs at least two **Options**.
+4. Turn on **Required field** if the field should be required on member records.
+5. Click **Create Field**.
+
+The new field is added to your organisation's member custom fields, and the column is mapped to it. You can manage it later in [Organisation settings](/guides/organisation-settings).
 
 <Note>
-Each target field can only be mapped once. If you assign a field to a second column, Bethel ChMS unassigns it from the previous column.
+Branch Admins can map columns to existing custom fields, but cannot create new ones. Ask an Org Owner or Org Admin to add the field, then import again.
 </Note>
 
-Org Owner and Org Admin users may be able to create a custom field from the mapping step when the feature is available for the organisation. Branch Admin users can map to existing custom fields but cannot create new custom fields from the import wizard.
+## Step 3: Review your data
 
-## Validate the data
+### Confirm date formats
 
-The **Validation Preview** step shows the first 50 rows and summarizes:
+If the dates in your **Date of Birth** column could be read two ways, for example `03/04/1990`, Bethel ChMS asks you to confirm the format before you see the preview. Choose **DD/MM/YYYY** (day first, as used in the UK) or **MM/DD/YYYY** (month first, as used in the US).
 
-- Rows ready to import
-- Duplicates that will be skipped
-- Rows with errors
+### Check the validation preview
 
-Bethel ChMS normalises values before import. For example, it can normalise dates, gender values, nationalities, numbers, booleans, single-select values, and age group values.
+**Validation Preview** shows how each row will be imported. Bethel ChMS tidies values into a standard format, for example turning `m` into `male` or `lapsed` into `inactive`. Values it changed are highlighted in yellow so you can check them.
 
-If a date column is ambiguous, the wizard asks you to choose **DD/MM/YYYY** or **MM/DD/YYYY** before validation continues.
+At the top, three summary cards show how many rows are **Ready to import**, how many are **Duplicates** (these will be skipped) and how many have **Errors** (these block the import).
 
-## Duplicate handling
+Each row carries a badge:
 
-The import checks for duplicates in two places:
+- **OK**: the row is ready to import.
+- **OK · Note**: the row will import, with a note to read. This happens when a row has both a date of birth and an age group: the age group is worked out from the date of birth instead.
+- **Duplicate**: the row will be skipped.
+- **Error**: a value needs fixing.
 
-- Within the uploaded CSV file
-- Against existing members in the selected branch
+Use the chips **All rows**, **Errors**, **Duplicates** and **Notes** to show only one kind of row. The preview shows 50 rows at a time. Click **Show 50 more rows** to see the next ones. When fewer than 50 are left, the button shows how many remain.
 
-Rows are treated as duplicates when they share an email address or mobile number. Duplicate rows are skipped. They are not imported.
+### Fix errors
+
+You cannot import while any row has an error. Each error is shown on its row, for example a gender or status that is not recognised, a date that does not exist, a nationality that is not on the list, an age group that matches none of your age groups, or a **Single Select** value that is not one of the field's options.
+
+To fix errors, correct your CSV file and click **Upload fixed file**. This takes you back to **Choose file**, so you choose the corrected file and check the column mapping again. If a column was mapped to the wrong field, click **Back to Mapping** instead.
+
+### How duplicates are found
+
+A row counts as a duplicate when:
+
+- It has the same email address or mobile number as an earlier row in the same file. The row says which row it duplicates.
+- It has the same email address or mobile number as a member already in the branch. The row names the existing member it matches.
+
+Duplicate rows are skipped, so existing member records are never overwritten.
 
 <Tip>
-After the import, use [managing members and visitors](/guides/managing-members) to review possible duplicate member pairs and merge records when needed.
+After an import, open the **⋯** menu on the **Members** page and choose **Possible duplicates** to look for people who may have been added twice under slightly different details. See [Duplicates and merging](/guides/duplicates-and-merging).
 </Tip>
 
-## Age groups during import
+## Step 4: Import and finish
 
-The import supports both **Date of Birth** and **Age Group**.
+<Note>
+Each new member who has an email address is sent an email with their personal check-in QR code, just as when you add a member by hand. Check the email addresses in your file before you import.
+</Note>
 
-- If **Date of Birth** is present, Bethel ChMS derives the member's age group from the organisation configuration.
-- If **Date of Birth** is blank and **Age Group** is mapped, the wizard resolves the supplied age group to an existing age-group option.
-- If both are present, **Date of Birth** wins and the mapped age group is ignored.
+<Steps>
+  <Step title="Start the import">
+    At the bottom of the **Validation Preview**, click **Import** followed by the number of members, for example **Import 120 Members**. The button is available once there are no errors and at least one row is ready.
+  </Step>
+  <Step title="Confirm">
+    Bethel ChMS tells you how many new members will be added to the branch and how many duplicate rows will be skipped. Click **Import**.
+  </Step>
+</Steps>
 
-Rows where age group is ignored still import. The preview shows an informational note for those rows.
+The wizard moves to **Done** while Bethel ChMS imports the members.
 
-## Run the import
+When the import finishes, you see **Import Complete** with the number of members imported and any duplicates skipped. Click **View Members** to see them in the member list, or **Import Another File** to start again.
 
-When validation passes, click **Import Members**. Bethel ChMS creates the member records in one batch.
+If something goes wrong, you see **Import Failed**. No records are imported, so you never end up with half an import. The page shows the reason and, where available, a **Reference** you can quote to support at hello@bethelware.app. Click **Try Again** to start over.
 
-If the import succeeds, the result page shows the number of imported members and the number of skipped duplicates. Click **View Members** to open the member list for the selected branch.
+## Age groups and imported members
 
-If the import fails, no records are imported and the operation is rolled back. The result page shows the error and an import reference.
+You can include **Date of Birth**, **Age Group**, or both.
 
-## Review import history
+- When a row has a **Date of Birth**, Bethel ChMS works out the member's age group from it, using your [age groups](/guides/age-groups).
+- When **Date of Birth** is blank, Bethel ChMS uses the **Age Group** column instead.
+- When a row has both, the date of birth wins. The row still imports, marked **OK · Note**.
 
-Open the **Import History** tab to view recent imports for the selected branch. The history table shows:
+## Import History
 
-- File name
-- Date
-- Imported count
-- Skipped count
-- Status
-- Imported by
+**Who can do this:** Org Owner, Org Admin
 
-Bethel ChMS stores both completed and failed import jobs in history.
+Open the **Import History** tab on the **Import Members** page to see the 50 most recent imports into the branch you have selected, including failed ones. For each import you see the **File**, the **Date**, how many members were **Imported** out of the rows in the file, how many rows were **Skipped**, the **Status** (**Completed** or **Failed**) and who it was **Imported by**.

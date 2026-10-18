@@ -1,246 +1,298 @@
 ---
-title: "Managing members and visitors"
-description: "Add, edit, filter, export, and manage members and visitors in Bethel ChMS, including statuses, duplicate checks, and visitor conversion."
-sidebarTitle: "Members & visitors"
+title: "Managing members"
+description: "Find, add, edit, export and delete members in Bethel ChMS, and use the member page, member QR codes and lifecycle statuses."
+sidebarTitle: "Members"
 ---
 
-Bethel ChMS tracks two types of people in your church: **members** and **visitors**. Members belong to your congregation. Visitors have attended but have not joined yet.
+A **member** is someone who belongs to your congregation. Each member record lives in one **branch** (one of your church's locations or congregations), and holds their contact details, demographics, tags, attendance, ministry roles, household and group.
 
-Use **Members** for your member directory, demographics, household links, group links, portal access, and member QR codes. Use **Visitors** for first-time and returning visitors, follow-up, and conversion to member records.
+Use **Members** for your member directory: searching and filtering, adding and editing people, member QR codes for check-in, and exports. People who have attended but not joined yet are **visitors**, and have their own list. See [Visitors](/guides/visitors).
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can create and edit members and visitors in the app. Org Owner, Org Admin, and Branch Admin can delete them. Importing members is available to Org Owner, Org Admin, and Branch Admin. See [roles and permissions](/guides/roles-and-permissions) for your organisation's role model.
+**Who can do this:** Org Owner, Org Admin, Branch Admin and Editor can add and edit members. Care Manager (a role for people who follow up members in [Care](/guides/care)) can edit members but cannot add them. Org Owner, Org Admin, Branch Admin and Care Manager can delete members. Editors cannot delete members. See [Roles and permissions](/guides/roles-and-permissions).
 </Info>
 
-Related people-management guides:
+## Open the member list
 
-- [Households](/guides/households)
-- [Update campaigns](/guides/update-campaigns)
-- [Groups](/guides/groups)
-- [Importing members](/guides/importing-members)
-- [Age groups](/guides/age-groups)
-- [Tags](/guides/tags)
+In the sidebar, open **People** and click **Members**. On a phone or tablet, tap **Members** in the tab bar or rail.
 
-## Members
+The page shows your branch's members. If you are an Org Owner or Org Admin, the list shows the branch chosen in the branch selector. Switch branch to see another branch's members. See [Find your way around](/getting-started/find-your-way-around) for where the branch selector sits on each device.
 
-### Adding a member
+On a phone, each row shows the member's name, mobile number, tags and status. Tablets and computers add the email address under the name and columns such as **Mobile**, **Age** and **Status**, and wide screens also show **Nationality** and **Created**. A shield icon after a name means the member **Has app sign-in**, for example because they use [Porter](/guides/porter), the Bethel ChMS app for service teams.
+
+On wide screens, two cards above the list show **Age Group Distribution** and **Gender Distribution** for your Newcomer and Active members. Click a slice to filter the list to that age group or gender.
+
+## Find members
+
+### Search
+
+Type in **Search by name, email, or mobile…** to match a member's first name, last name, email address or mobile number.
+
+### Filter by status
+
+Under the search box, the status chips **All**, **Newcomer**, **Active** and **Inactive** each show a count. Tap a chip to show only members with that status.
+
+Gender, age group, tag and nationality filters you set in the Filters sheet also appear as chips, for example "Gender: Female". Tap the chip's remove button to clear that filter.
+
+### Use the Filters sheet
+
+Click **Filters** to open one sheet with every other filter. A badge on the button shows how many filters are on. Filters apply as you choose them.
+
+| Filter | What you can choose |
+| --- | --- |
+| **Sort by** | The field to sort by, and **A → Z** or **Z → A** |
+| **Gender** | **Male**, **Female**, **Other**, **Prefer not to say** or **Not set** |
+| **Age group** | One or more age groups, or **Not set** |
+| **Tags** | One or more member tags. The list shows members who have any of the chosen tags. |
+| **Nationality** | **All nationalities**, or one nationality from your branch |
+| **Custom fields** | A filter for each of your member custom fields |
+
+Click **Show N members** to close the sheet, or **Clear all** to remove every filter.
+
+<Accordion title="How custom field filters work">
+Each custom field opens as its own row, with a filter that suits the field type:
+
+- **Text** fields have a search box.
+- **Number** fields have **Min** and **Max**.
+- **Date** fields have a from and to date range.
+- **Yes/No** fields have **Any**, **Yes** and **No**.
+- **Single Select** fields have a checkbox for each option.
+
+Once you set a custom field filter, members with no value in that field are left out.
+</Accordion>
+
+### Sort the list
+
+You can sort by **First Name**, **Last Name**, **Email**, **Status**, **Gender**, **Age Group**, **Nationality**, **Date of Birth**, **Created At**, or any active member custom field. Use **Sort by** in the Filters sheet. On tablets and computers you can also click a column heading or use the sort menu next to the search box.
+
+The line above the list shows what you are looking at, for example "48 of 120 members · sorted by last name".
+
+### Move between pages
+
+The list shows 50 members per page by default. Use **Rows per page** to show 25, 50 or 100, and **Previous** and **Next** to move between pages. Changing a filter or the sort order takes you back to the first page.
+
+## Add a member
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
 
 <Steps>
   <Step title="Open the member list">
-    In the sidebar, click **Members** to open the member list for your branch.
+    In the sidebar, open **People** and click **Members**.
   </Step>
   <Step title="Click Add Member">
-    Click the **Add Member** button to open the new member dialog.
+    Click **Add Member** in the top bar. On a phone, tap the **Add Member** button that floats above the tab bar.
   </Step>
-  <Step title="Fill in the member details">
-    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Date of Birth**, **Age Group**, **Gender**, **Nationality**, **Email**, **Mobile Number**, **Address**, **Post Code**, **Tags**, and any configured custom fields.
+  <Step title="Fill in the member's details">
+    **First Name** and **Last Name** are required. You can also fill in **Date of Birth**, **Age Group**, **Gender**, **Nationality**, **Email**, **Mobile Number**, **Address**, **Post Code**, **Tags**, and any member custom fields your church has set up. Required custom fields are marked with an asterisk.
   </Step>
   <Step title="Save the member">
-    Click **Create Member**. The member is created with a **Newcomer** status.
+    Click **Create Member**. You see "Member created", and the new member starts with the **Newcomer** status. If you entered an email address, Bethel ChMS emails the member their personal check-in QR code.
   </Step>
 </Steps>
 
-<Frame>
-  <img src="/images/guides/add-member-dialog.png" alt="Add member dialog showing required and optional fields" />
-</Frame>
+{/* TODO: new screenshot: the Add Member side panel on a tablet or computer, showing the fields and the Create Member button */}
 
-### Email and mobile uniqueness
+On phones, the form opens as a sheet from the bottom of the screen. On tablets and computers, it opens as a panel from the right.
 
-When you add or edit a member, Bethel ChMS checks whether the email address or mobile number already belongs to another member in the same branch. If it finds a match, the form shows a warning with a link to the existing record.
+### Nationality
 
-<Tip>
-Use the warning to review the existing record before you save. For higher-confidence duplicate pairs, use the **Possible Duplicates** queue and merge workflow.
-</Tip>
+**Nationality** is a searchable list. Click **Select nationality**, start typing in **Search nationality…**, and pick a match. Use the clear button to remove a nationality you chose by mistake.
 
 ### Age groups on member records
 
-Age groups help you filter the member directory and report on demographics.
+Age groups help you filter the member list and report on demographics. Your organisation's age groups are set up in [Age groups](/guides/age-groups).
 
-- If you enter **Date of Birth**, Bethel ChMS derives the member's age group from your organisation's age-group configuration.
-- If you leave **Date of Birth** blank, you can choose **Age Group** manually.
-- If both are present, **Date of Birth** takes precedence.
-
-Use [age groups](/guides/age-groups) to configure the organisation-wide age brackets.
+- If you leave **Date of Birth** empty, you can choose an **Age Group** yourself. This is useful when someone prefers not to share their date of birth.
+- Once you enter a **Date of Birth**, Bethel ChMS works out the age group for you. The **Age Group** field locks and shows "Derived from date of birth". Any age group you chose by hand is replaced.
 
 ### Tags on member records
 
-Tags help you label members for flexible filtering and reporting. For example, you might tag members as **Student**, **Deacon**, or **Choir**.
+Tags are labels you attach to people, such as **Student**, **Deacon** or **Choir**, so you can filter and report on them. In the **Tags** field, click **Add tag**, search for the tags you want and tick as many as you need. Member forms only show tags that apply to members.
 
-Use [Tags](/guides/tags) to create organisation-wide tags. Member create and edit forms only show tags that apply to members.
+Tags are created and managed in [Tags](/guides/tags).
 
-### Editing a member
+### Duplicate email and mobile warning
+
+When you leave the **Email** or **Mobile Number** field, Bethel ChMS checks whether another member already uses that email address or mobile number. If one does, the form shows a warning, for example "A member with this email already exists: View member". Click **View member** to open that record in a new tab.
+
+Two members in the same branch can't share an email address or mobile number, so you can't save a second one. Check the existing record first. If the two records are the same person, see [Duplicates and merging](/guides/duplicates-and-merging).
+
+## The member page
+
+Click a member in the list to open their page. The page title is the member's full name, with **Back to Members** to return to the list.
+
+### Summary and quick actions
+
+The summary card at the top shows:
+
+- The member's name and status.
+- Their age group, either worked out from their date of birth (with their age) or marked "Manually set".
+- **Has app sign-in**, if the member has a sign-in.
+- All of their tags.
+
+Below it are quick actions: **Call**, **Message**, **Email** and **QR code**. **Call** and **Message** use the member's mobile number, and **Email** opens your email app. These buttons are greyed out when the member has no mobile number or email address. On wide screens, the summary stays on the left with a contact card showing **Mobile**, **Email** and **Address**.
+
+In the top bar, tablets and computers show **QR Code** and **Edit**. On phones, tap the pencil to edit. The **More actions** menu (⋮) has **Show QR code** and, for roles that can delete members, **Delete member**.
+
+### Tabs
+
+| Tab | What it shows |
+| --- | --- |
+| **Details** | Every field on the record, including **Status**, **Created** and a **Custom Fields** section. Members who use Porter also have an **App access** card here. |
+| **Attendance History** | Every check-in, with the event, date and time, and how they were checked in (for example Manual, QR Code, Kiosk or Porter). Use **From**, **To** and **Filter** to narrow the dates. For a member who was once a visitor, check-ins from before they became a member are included. |
+| **Ministry Assignments** | Each ministry and role, with when they joined and left. Current roles show an **Active** badge. |
+| **Household** | The member's household, whether they are the head, and the other people in it. Use **Assign to Household** or **Remove from Household** to change it. Care Managers can see this tab but can't change households. See [Households](/guides/households). |
+| Your group name | The member's group. This tab uses your branch's own name for groups, for example **Group** or **Cell**. Care Managers can see this tab but can't change the member's group. See [Groups](/guides/groups). |
+| **Care** | Care cases and notes for this member. See [The Care tab](#the-care-tab). |
+| **Change History** | A timeline of changes to the member's core details, such as name, date of birth, gender, contact details, address and status. See [Change history](/guides/change-history). |
+
+Removing someone from a household does not change their attendance history.
+
+### The Care tab
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager
+
+The **Care** tab brings together the follow-up your team is doing for this person. It shows:
+
+- **Member care**: their open follow-up case if they have been missing services, with its status, who it is assigned to and when it is due. Click **Open in Member care** to work the case.
+- **Pastoral care**: pastoral cases such as a hospital visit or a bereavement. Click **Add a care case** to open a new one. On wider screens, **Add a care case** is also in the page's top bar.
+- **Notes**: notes about the member, shared with Member care.
+- **Visitor care history**: for someone who started as a visitor, a read-only record of how they were followed up before they became a member.
+
+Confidential pastoral cases only appear for the people allowed to see them. To learn how cases, statuses, due dates and confidentiality work, see [Care](/guides/care).
+
+### App access
+
+If a member has been given access to Porter, the **Details** tab shows an **App access** card. It shows their Porter access level, **Porter · Worker** or **Porter · Admin**, their **Sign-in email**, and a **Status** of "Email confirmed" or "Invite pending". Their Porter check-ins and equipment loans are recorded against this member record. See [Porter](/guides/porter).
+
+## Edit a member
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, Care Manager
 
 <Steps>
-  <Step title="Open the member's profile">
-    Navigate to the member list and click on the member you want to edit.
+  <Step title="Open the edit panel">
+    On the member page, click **Edit** in the top bar, or tap the pencil on a phone. On tablets and computers, you can also open the **⋯** menu on the member's row in the list and choose **Edit**.
   </Step>
-  <Step title="Click Edit">
-    On the member detail page, click **Edit** to open the editing sheet.
+  <Step title="Update the details">
+    The **Edit member** panel has the same fields as **Add Member**, plus **Status**, where you choose **Newcomer**, **Active** or **Inactive**. If you change the email address or mobile number, the duplicate check runs again.
   </Step>
-  <Step title="Update fields and save">
-    Make your changes and click **Save Changes**. If you change the email or mobile number, duplicate detection runs again.
+  <Step title="Save your changes">
+    Click **Save Changes**. You see "Member updated", and the panel switches to a read-only view. Click **Edit details** if you need to change something else.
   </Step>
 </Steps>
 
-The member detail page also shows tags, attendance history, ministry assignments, household information, group information, custom fields, and change history where available.
+Clicking a member in a dashboard widget or a report opens the same **Edit member** panel, so you can update them without leaving the page.
 
-### Deleting a member
+## Lifecycle statuses
 
-<Warning>
-Editors cannot delete members.
-</Warning>
+Every member has one of three lifecycle statuses:
 
-Deleting a member is a soft delete. The record is hidden but not permanently removed immediately. Attendance history remains available for historical reporting.
+- **Newcomer**: set automatically when a member is first added.
+- **Active**: the member attends regularly.
+- **Inactive**: the member has stopped attending.
 
-<Note>
-When a member is deleted, active ministry assignments are closed.
-</Note>
+You can change a member's status yourself in the **Edit member** panel.
 
-<Frame>
-  <img src="/images/guides/delete-member-confirmation.png" alt="Delete member confirmation dialog showing active ministry assignments" />
-</Frame>
+<Accordion title="How automation rules can change statuses">
+Bethel ChMS can update lifecycle statuses for you based on attendance. With the default settings:
 
-### Lifecycle statuses
+- **Newcomer to Active** promotes a member to Active after 4 attendances within 90 days.
+- **Active to Inactive** marks a member Inactive after 30 days with no attendance.
 
-Every member in Bethel ChMS has one of three lifecycle statuses:
-
-- **Newcomer**, assigned automatically when a member is first created.
-- **Active**, indicates the member is regularly attending.
-- **Inactive**, indicates the member has stopped attending.
-
-You can manually change a member's status from the member edit form.
-
-<Accordion title="How automation rules work">
-Bethel ChMS can automatically update lifecycle statuses based on attendance patterns. Here's how the defaults work:
-
-- **Newcomer to Active:** A member is promoted to Active after 4 attendances within 90 days.
-- **Active to Inactive:** A member is moved to Inactive after 30 days of absence.
-
-These thresholds are configured at the organisation level, with optional per-branch overrides. Automation is disabled by default. To enable it, an Org Owner can go to **Organisation** > **Automation**. See [Automation rules](/guides/automation-rules).
+These rules are off until an Org Owner turns them on. Thresholds are set for the whole organisation, and each branch can override them. In the sidebar, open **Organisation** and click **Automation**. See [Automation rules](/guides/automation-rules).
 </Accordion>
 
-### Filtering and searching
+## Member QR codes
 
-Use the search bar at the top of the member list to find members by first name, last name, email, or mobile number.
+Each member has a personal QR code they can scan to check in at a kiosk. See [Recording attendance](/guides/recording-attendance) and [Kiosk mode](/guides/kiosk-mode).
 
-You can filter or sort by:
+### Show or email one member's code
 
-- **Status**
-- **Nationality**
-- **Age Group**
-- **Gender**
-- **Tags**
-- Active member custom fields
+On the member page, click **QR Code** in the top bar, tap the **QR code** quick action, or open the **More actions** menu (⋮) and choose **Show QR code**. The dialog shows the member's name and code, with "Scan this code to record attendance".
 
-Click **Clear all** to remove active filters. Click **Export CSV** to export the filtered list. Member exports include a **Tags** column.
+- Click **Full screen** to show the code edge to edge, so it is easy to scan from your screen. Click **Done** to go back.
+- Click **Email code** to send the code to the member's email address. Only Org Owners and Org Admins see this button, and it is greyed out if the member has no email address.
 
-### Merging duplicate members
+A member can only be emailed their code once an hour. If you try again sooner, you see "A QR code was emailed to this member in the last hour."
 
-Bethel ChMS can surface possible duplicate member pairs. When duplicates exist for the selected branch, the member list shows a banner with **Review pairs**.
+### Email codes to many members
+
+**Who can do this:** Org Owner, Org Admin
 
 <Steps>
-  <Step title="Open possible duplicates">
-    From **Members**, click **Review pairs** in the duplicate banner. You can also open `/organisation/members/duplicates` directly in the app.
+  <Step title="Open Email QR codes">
+    On the member list, open the **⋯** menu next to **Filters** and choose **Email QR codes**. To email only some members, select them first and click **Email QR codes** in the selection bar.
   </Step>
-  <Step title="Review the pair">
-    Compare the two records. Click **Not a duplicate** to dismiss the pair, or click **Merge members** to start the merge wizard.
+  <Step title="Choose who should receive a code">
+    Choose **Selected members**, **All members** (members across your whole organisation, not only the branch you are viewing), or **Filter** to narrow by status, age group and group. The dialog shows how many members will be considered. Click **Continue**.
   </Step>
-  <Step title="Choose the survivor record">
-    Choose which record to keep. For fields such as **Email**, **Mobile**, **Address**, **Date of birth**, and **Nationality**, choose whether to keep the survivor value or adopt the other record's value.
+  <Step title="Review before sending">
+    Check who will receive an email, and who will be skipped because they have no email address or were sent a code in the last hour. You can download each skipped list as a CSV file to follow up.
   </Step>
-  <Step title="Review and confirm">
-    Review the shared-attendance warning, type `MERGE`, and click **Merge permanently**.
+  <Step title="Send the emails">
+    Click **Send now**. **Send complete** shows how many were sent, skipped and failed.
   </Step>
 </Steps>
 
-<Warning>
-Merging members is permanent. If both records attended the same event, duplicate attendance rows for the discarded record are permanently deleted.
-</Warning>
+## Select members
 
-You can also select exactly two same-branch members in the member list and click **Merge**.
+To work with several members at once, select them in the list. On tablets and computers, tick the box on each row, or tick the box in the header row to select every member on the page. On a phone, tap **Select** first to show the checkboxes, and **Done** when you finish.
 
-When you merge duplicate members, Bethel ChMS keeps tags from both records on the survivor record.
+The selection bar shows how many members you have selected and offers:
 
-## Visitors
+- **Email QR codes**: email the selected members their codes (Org Owner and Org Admin only).
+- **Export**: download a CSV file of just the selected members.
+- **Merge**: merge two records for the same person (Org Owner, Org Admin and Branch Admin only). Select exactly two members from the same branch. See [Duplicates and merging](/guides/duplicates-and-merging).
 
-### What is a visitor?
+On tablets and computers, each row also has its own **⋯** menu with **Open member**, **Edit**, **Call** (when the member has a mobile number) and, for roles that can delete members, **Delete**.
 
-A **visitor** is someone who has attended your church but is not yet a member. Visitors are tracked separately so your team can follow up with them and, when the time is right, convert them into full members.
+## Export members
 
-### Adding a visitor
+Open the **⋯** menu next to **Filters** and choose **Export CSV**. The file includes every member that matches your current search and filters, so set your filters first. To export only certain members, select them and click **Export** in the selection bar instead.
+
+The file has the columns **First Name**, **Last Name**, **Email**, **Mobile**, **Date of Birth**, **Gender**, **Nationality**, **Address**, **Post Code**, **Status**, **Created At** and **Tags**, followed by a column for each member custom field. Custom fields that have since been removed still appear, marked "(removed)".
+
+On most phones and tablets, the share sheet opens so you can save the file or send it on. Otherwise, the file downloads.
+
+The same **⋯** menu also has **Possible duplicates** and, for Org Owners, Org Admins and Branch Admins, **Import members**. See [Importing members](/guides/importing-members).
+
+## Delete a member
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Care Manager
 
 <Steps>
-  <Step title="Open the visitor list">
-    In the sidebar, click **Visitors** to open the visitor list for your branch.
+  <Step title="Start the delete">
+    On the member page, open the **More actions** menu (⋮) and choose **Delete member**. On tablets and computers, you can also open the member's **⋯** menu in the member list and choose **Delete**.
   </Step>
-  <Step title="Click Add Visitor">
-    Click the **Add Visitor** button to open the new visitor dialog.
+  <Step title="Check what will close">
+    The **Delete Member** dialog lists any active ministry assignments that will be closed.
   </Step>
-  <Step title="Fill in visitor details">
-    Enter the required fields: **First Name** and **Last Name**. You can also fill in optional fields: **Gender**, **Nationality**, **Email**, **Mobile Number**, **Tags**, and any configured visitor custom fields.
-  </Step>
-  <Step title="Save the visitor">
-    Click **Create Visitor**. The visit count is set to 1, and the first and last visit dates are recorded automatically.
+  <Step title="Confirm">
+    Click **Delete**. You see "Member deleted". If you started on the member page, you return to the member list.
   </Step>
 </Steps>
 
-<Frame>
-  <img src="/images/guides/add-visitor-dialog.png" alt="Add visitor dialog" />
-</Frame>
+{/* TODO: new screenshot: the Delete Member dialog listing an active ministry assignment that will be closed */}
 
-### Visit tracking
+Deleting a member hides the record from your lists, but it is not removed straight away. Their past attendance records are kept.
 
-Bethel ChMS automatically tracks three fields for every visitor:
+## Duplicate members
 
-- **Visit count**, increments each time the visitor checks in to an event.
-- **Last visit date**, updates to the most recent check-in date.
-- **First visit date**, set when the visitor is created and never changes.
+If the same person has been added twice, you can merge the two records into one.
 
-These fields are system-managed. They update when the visitor is checked in through attendance or public check-in flows.
+- When Bethel ChMS finds likely duplicates in your branch, the member list shows a banner with the number of possible duplicates waiting for review and a **Review pairs** button.
+- You can open the queue at any time from the **⋯** menu next to **Filters** by choosing **Possible duplicates**.
+- You can also select exactly two members in the list and click **Merge**.
 
-### Finding visitors to follow up
+See [Duplicates and merging](/guides/duplicates-and-merging) for the full steps and what a merge changes.
 
-The visitor page includes stat cards for total visitors, new visitors this month, returning visitors, and visitors who are ready to convert. Click the **Ready to Convert** card to filter the list to visitors with at least 2 visits.
+## Related guides
 
-Use the search bar to find visitors by name, email, or mobile number. You can also filter by **Nationality**, **Tags**, and visitor custom fields. Click **Export CSV** to export the filtered list. Visitor exports include a **Tags** column.
-
-### Converting a visitor to a member
-
-When a visitor is ready to join your church as a member, you can convert their record directly.
-
-<Steps>
-  <Step title="Open the visitor's record">
-    In the visitor list, find the visitor you want to convert.
-  </Step>
-  <Step title="Click Convert to Member">
-    In the visitor row, click **Convert**. A dialog opens with the visitor's details pre-filled.
-  </Step>
-  <Step title="Review and add details">
-    Review the pre-filled fields and make any corrections. You can also add **Date of Birth**, **Address**, **Post Code**, and **Tags**.
-  </Step>
-  <Step title="Complete the conversion">
-    Click **Convert to Member**. Bethel ChMS creates a new member record with **Newcomer** status and soft-deletes the visitor record.
-  </Step>
-</Steps>
-
-<Info>
-The new member stores a link to the original visitor record through the conversion reference. On the member's dedicated profile page, the **Attendance** tab includes attendance recorded before conversion as visitor attendance, alongside attendance recorded after conversion as member attendance.
-
-Member-compatible tags from the visitor record are carried into the conversion dialog. Visitor-only tags are not added to the new member.
-</Info>
-
-<Tip>
-If the visitor's email or mobile number already belongs to an existing member in the same branch, you'll see a warning before the conversion completes. Check the existing member record to avoid creating a duplicate.
-</Tip>
-
-<Frame>
-  <img src="/images/guides/convert-visitor-to-member.png" alt="Convert visitor to member dialog with pre-filled fields" />
-</Frame>
-
-### Deleting a visitor
-
-<Warning>
-Editors cannot delete visitors.
-</Warning>
-
-Deleting a visitor is a soft delete. The visitor is hidden from active lists.
+- [Visitors](/guides/visitors)
+- [Care](/guides/care)
+- [Households](/guides/households)
+- [Groups](/guides/groups)
+- [Importing members](/guides/importing-members)
+- [Update campaigns](/guides/update-campaigns)
+- [Age groups](/guides/age-groups)
+- [Tags](/guides/tags)

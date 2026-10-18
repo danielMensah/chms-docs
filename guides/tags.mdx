@@ -1,110 +1,139 @@
 ---
 title: "Tags"
-description: "Create colour-coded tags for members and visitors, assign them to people, and use them in filters and reports."
+description: "Create colour-coded tags for members and visitors, assign them to people, and use them in filters, reports, Care and update campaigns."
 ---
 
-Tags are organisation-wide labels that help you group members and visitors outside formal households, groups, ministries, or lifecycle statuses. Use them for labels such as `Student`, `Deacon`, `Choir`, or `Follow-up priority`.
+**Tags** are short, coloured labels you can attach to members and visitors, such as `Student`, `Deacon`, `Choir` or `Follow-up priority`. They help you group people in ways that households, groups, ministries and lifecycle statuses do not cover.
 
-Tags appear as coloured chips on people records and lists. They are informational labels until you use them in filters, reports, or backslider rules.
+Tags are organisation-wide: one list of tags is shared by every branch. A tag is just a label until you use it, for example to filter a list, build a report, target an update campaign or narrow a Care absence rule.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, and Branch Admin can open **Tags**. These roles can create, edit, reorder, and archive tags. Editors and Treasurers do not see **Tags** in the sidebar.
+**Who can do this:** Org Owner, Org Admin and Branch Admin can open **Tags** and create, edit, reorder and archive tags. Editors, Treasurers and Care Managers do not see **Tags** in the sidebar.
 </Info>
 
-## Open tags
+## Open Tags
 
-In the sidebar, click **Tags**.
+In the sidebar, open **Organisation** and click **Tags**. On a phone or a tablet held upright, tap **More**, then **Tags**.
 
-The page lists your active tags in display order. Changes apply across the whole organisation, not only one branch.
+The page lists your active tags in display order. Each row shows the tag, a **System** badge on the built-in system tag, whether it **Applies to** **Members**, **Visitors** or **Both**, and how many people carry it. On a computer or tablet, the counts are split into **Members** and **Visitors** columns.
+
+Every change on this page, including edits, archiving and reordering, is saved straight away and applies across the whole organisation.
 
 ## Create a tag
 
 <Steps>
-  <Step title="Open the new tag dialog">
-    Click **New tag**.
+  <Step title="Open the new tag sheet">
+    Click the **+** button (**New tag**) in the top bar. If you have no tags yet, click **New tag** on the page.
   </Step>
   <Step title="Enter the label">
-    Enter a short **Label**, up to 32 characters.
+    Enter a short **Label**, up to 32 characters. A preview shows how the tag chip will look.
   </Step>
   <Step title="Choose a colour">
-    Pick the colour that should appear on the tag chip.
+    Pick a **Colour**: **Slate**, **Rose**, **Amber**, **Green**, **Teal**, **Cyan**, **Blue**, **Violet**, **Purple** or **Pink**. New tags start as **Slate**.
   </Step>
-  <Step title="Choose where it applies">
-    Set **Applies to** to **Members**, **Visitors**, or **Both**.
+  <Step title="Choose who it applies to">
+    Set **Applies to** to **Members**, **Visitors** or **Both**. New tags start as **Both**.
   </Step>
-  <Step title="Save the tag">
-    Add an optional description, then click **Save**.
+  <Step title="Add a description and save">
+    Optionally, add a **Description** of up to 200 characters explaining what the tag is for. Click **Save**.
   </Step>
 </Steps>
 
-The **Applies to** setting controls where the tag is offered. A member-only tag does not appear in visitor tag pickers. A visitor-only tag does not appear in member tag pickers.
+<Note>
+You can only add a description when you create a tag. It cannot be added or changed later.
+</Note>
 
-## Edit tags
+**Applies to** controls where the tag is offered. A member-only tag does not appear when you tag visitors, and a visitor-only tag does not appear when you tag members.
 
-Use the tag row actions to edit a tag's label, colour, or **Applies to** setting.
+## Edit a tag
 
-Drag tag rows to change their order. The new order saves immediately and controls how tags appear in pickers and chip lists.
+1. Open the tag's **⋯** menu and choose **Edit**.
+2. In **Edit tag**, change the **Label**, **Colour** or **Applies to** setting.
+3. Click **Save**.
 
-Bethel ChMS includes a system **Student** tag. You can change its colour and reorder it, but you cannot rename, remove, or change where it applies.
+The description is shown read-only.
+
+### Narrowing who a tag applies to
+
+If you narrow **Applies to** on a tag people already carry, for example from **Both** to **Members**, the visitors who carry it would no longer fit. The sheet warns you how many people still carry the tag. To go ahead, tick the box to remove the tag from those people when you save, then click **Save**.
+
+<Note>
+A Branch Admin cannot make this change when some of the people who would lose the tag are in other branches. Ask an Org Owner or Org Admin to make it instead.
+</Note>
+
+### The Student system tag
+
+Bethel ChMS includes a built-in **Student** tag, marked **System**. You can change its colour and move it, but you cannot rename it, change who it applies to, or archive it.
+
+## Reorder tags
+
+The order on the **Tags** page is the order tags appear in every picker and filter.
+
+- With a mouse, drag a tag by its handle.
+- On a touch screen, tap **Reorder** and use the arrows to move tags up or down, then tap **Done**.
+- You can also choose **Move up** or **Move down** from a tag's **⋯** menu.
+
+Each move is saved straight away.
 
 ## Archive a tag
 
-Click the archive action on a tag row, then confirm.
+1. Open the tag's **⋯** menu and choose **Archive**.
+2. Check how many people carry the tag, then click **Archive** to confirm.
 
-Archived tags are hidden from new pickers and filters. People who already have the tag keep that tag until you remove it from their record.
-
-<Note>
-Archived tags are not hard-deleted. This keeps existing person records and history understandable.
-</Note>
+Archived tags are hidden from pickers and filters, so nobody can add them to new records. People who already carry an archived tag keep it. Archiving does not delete the tag.
 
 ## Assign tags to people
 
-You can assign tags when you create or edit a member or visitor.
+You can add tags when you create or edit a member or visitor.
 
 1. Open the member or visitor form.
-2. Find **Tags**.
-3. Click **Add tag**.
-4. Search for and select one or more tags.
-5. Save the record.
+2. In **Tags**, click **Add tag**.
+3. Search for and select one or more tags.
+4. Save the record.
 
-The picker only shows tags that apply to the person type. For example, member forms show member and both-purpose tags.
+The picker only offers tags that apply to that kind of person. For example, a member form shows tags that apply to **Members** or **Both**.
 
-When you convert a visitor to a member, member-compatible tags are carried into the conversion dialog. Visitor-only tags are not added to the new member.
+When you [convert a visitor to a member](/guides/visitors), their member-compatible tags are carried over to the new member. Visitor-only tags are not.
+
+When you [merge two member records](/guides/duplicates-and-merging), the record you keep ends up with the tags from both.
 
 ## Use tags in lists and exports
 
-Member and visitor lists show tags as chips. Use the **Tags** filter to narrow each list to people with selected tags.
+The members and visitors lists show tags as chips on each person. To narrow a list, open **Filters** and choose one or more tags under **Tags**. The list shows people who carry any of the tags you chose, and each active tag filter appears as a chip you can remove.
 
-CSV exports for members and visitors include a **Tags** column. The export follows the current filters.
+CSV exports from the members and visitors lists include a **Tags** column. The export follows the filters you have applied.
+
+See [Managing members](/guides/managing-members) and [Visitors](/guides/visitors) for more about these lists.
 
 ## Use tags in reports
 
-Tags are available in reports where they apply to the report's people type.
+Tags are available in reports where they fit the kind of people the report covers.
 
 | Report | Tag support |
 | --- | --- |
 | **Member Directory** | Add **Tags** as a column and filter members by tag. |
 | **Visitor Follow-up List** | Add **Tags** as a column and filter visitors by tag. |
-| **Membership Demographics** | Filter counted members by tag. |
+| **Membership Demographics** | Filter the members counted by tag. |
 
 When you select two or more tags in the report builder, choose **Match any** or **Match all**:
 
-- **Match any** includes people who have at least one selected tag.
+- **Match any** includes people who have at least one of the selected tags.
 - **Match all** includes only people who have every selected tag.
 
-## Use tags in backslider rules
+See [Reports](/guides/reports) and the [Membership demographics report](/guides/membership-demographics-report).
 
-Backslider rules can use **Tags** as a member condition.
+## Use tags in Care
 
-Use tag conditions when a rule should only include or exclude members with certain labels. Supported operators include **is any of**, **is not any of**, **is set**, and **is not set**.
+[Care](/guides/care) is where your team follows up the people who need it, including members who have stopped attending. Tags work in two places there:
 
-You can also filter the backsliders list by **Tags** during follow-up.
+- **Absence rules** can use **Tags** as one of their member conditions, with **is any of**, **is not any of**, **is set** or **is not set**. Use this when a rule should only include, or should leave out, members with certain tags.
+- On the **Member care** tab, open **Filters** and choose tags under **Tags** to focus your follow-up list.
 
 ## Use tags in update campaigns
 
 [Update campaigns](/guides/update-campaigns) can use tags in two ways:
 
-- Add tags to the campaign audience to target members with those labels.
+- Add tags to the campaign audience to target members with those tags.
 - Add tags to **Fields & tags** so members can confirm whether a tag still describes them.
 
-Only member-compatible tags appear in update campaign audience and field selectors.
+Only tags that apply to members appear in update campaign audience and field selectors.

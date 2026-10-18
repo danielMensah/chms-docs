@@ -1,174 +1,346 @@
 ---
 title: "Record attendance"
 sidebarTitle: "Recording attendance"
-description: "Record attendance with manual entry, public check-in, member QR codes, kiosk mode, and attendance reports."
+description: "Set up public check-in, take attendance for a service, scan QR codes, enter a paper register in bulk and review attendance records in Bethel ChMS."
 ---
 
-Bethel ChMS records attendance against a specific event occurrence, not only the parent event. This keeps each service, meeting, or activity separate when you review attendance later.
+Bethel ChMS records attendance against an **occurrence**, which is one date and time of an event. A weekly Sunday service is one event with a new occurrence every Sunday, so each service keeps its own attendance list.
+
+Attendance can reach Bethel ChMS in several ways:
+
+- **Staff check people in** from the occurrence's attendance page, by searching for them, scanning their QR code or entering a paper register in bulk. See [Take attendance as staff](#take-attendance-as-staff).
+- **People check themselves in on their own phone** by scanning the event's QR code. See [Self check-in on a phone](#self-check-in-on-a-phone).
+- **People check themselves in at a kiosk**, a tablet or laptop at your entrance. See [Kiosk mode](/guides/kiosk-mode) and [Find by name (Quick Find)](/guides/quick-find).
+- **Service team workers check in with Porter**, the part of Bethel ChMS that workers and volunteers use on their phones. Their check-ins appear on the same attendance lists. See [Check in with Porter](/guides/porter-check-in).
 
 <Info>
-**Who can do this:** Organisation owners, organisation admins, branch admins, and editors can record individual attendance. **Bulk Entry** is available to organisation owners, organisation admins, and branch admins. Organisation-scoped users can switch branch context where the page supports it.
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor. **Bulk Entry** is for Org Owner, Org Admin and Branch Admin only.
 </Info>
+
+Org Owners and Org Admins see one branch at a time. Choose the branch whose events you want to work with in the branch selector. See [Find your way around](/getting-started/find-your-way-around#choose-a-branch).
 
 ## Set up public check-in
 
-Public check-in lets members and visitors check themselves in from an event QR code or check-in link.
+**Public check-in** lets members and visitors check themselves in with the event's QR code, either on their own phone or at a kiosk. You switch it on for each event.
 
-1. In the sidebar, click **Events**.
-2. Create or edit an event.
-3. Turn on **Public Check-in**.
-4. Choose the **Check-in Window**. The available windows are **30 minutes**, **1 hour**, **2 hours**, **3 hours**, **4 hours**, and **8 hours**.
-5. Save the event.
+<Steps>
+  <Step title="Open the event form">
+    In the sidebar, open **Church life** and click **Events**. On a phone, tap **Events** in the tab bar. Click **Add Event** (the **+** button on a phone) to create an event, or open an existing event and click **Edit** (the pencil on a phone).
+  </Step>
+  <Step title="Turn on public check-in">
+    In the **Check-in** section, turn on **Public Check-in**. It is already on for new events.
+  </Step>
+  <Step title="Choose the check-in window">
+    Under **Check-in Window**, choose **30 minutes**, **1 hour**, **2 hours**, **3 hours**, **4 hours** or **8 hours**. New events start with **2 hours**.
+  </Step>
+  <Step title="Save the event">
+    Click **Create Event** for a new event, or **Save Changes** for an existing one.
+  </Step>
+</Steps>
 
-When public check-in is enabled, the event detail page shows **Public Check-in QR**. The card includes the QR code, the **Check-in URL**, **Copy Link**, **Launch Kiosk Mode**, print/download options, and **Regenerate Token**.
+### How the check-in window works
 
-<Warning>
-Use **Regenerate Token** only when you need to replace the check-in link. Regenerating the token invalidates existing printed or shared QR codes immediately.
-</Warning>
+The check-in window opens that length of time before each occurrence starts, and closes the same length of time after the start. With a **30 minutes** window and a service at 10:00, people can check themselves in from 09:30 until 10:30. If people often arrive late, or your service runs long, choose a longer window.
+
+Bethel ChMS always uses the occurrence whose start time is closest to now. Cancelled occurrences are never offered for check-in.
+
+Outside the window, the check-in page and the kiosk show "There's no active check-in for this event right now. Please check with the welcome team." Staff can still record attendance from the occurrence's attendance page at any time.
 
 ## Share the event QR code
 
-Use the event QR code when you want attendees to check in on their own phones.
+Each event with public check-in has one QR code and one check-in link. People scan the code with their phone to check themselves in, kiosk mode runs on the same link, and Porter workers scan the same code to check in.
 
-1. Open **Events**.
-2. Select the event.
-3. Find the **Public Check-in QR** card.
-4. Click **Copy Link** to share the check-in URL, or use the print/download option to create a printable QR poster.
+<Steps>
+  <Step title="Open the event's settings">
+    Open **Events**, select the event and click the **Settings** tab.
+  </Step>
+  <Step title="Find the Public Check-in QR card">
+    The **Public Check-in QR** card shows the QR code, the **Check-in URL** with a **Copy** button, and the buttons **Copy Link**, **Launch Kiosk Mode**, **Print QR** and **Regenerate Token**.
+  </Step>
+  <Step title="Share or print the code">
+    Click **Copy Link** to copy the check-in link for a message or slide, or click **Print QR** to make a poster.
+  </Step>
+</Steps>
 
-The public check-in page opens only when public check-in is enabled and an occurrence is inside the event's check-in window.
+If public check-in is off, the card reads "Public check-in is disabled for this event. Enable it in the event settings to generate a QR code." Turn on **Public Check-in** first.
 
-## Use public check-in
+**Launch Kiosk Mode** opens the check-in page as a kiosk in a new browser tab. See [Kiosk mode](/guides/kiosk-mode).
 
-Attendees can use the check-in page without installing an app.
+<Note>
+Porter workers scan this same QR code to check in, so keep **Public Check-in** on for events your service team checks in to. See [Check in with Porter](/guides/porter-check-in).
+</Note>
 
-1. The attendee scans the event QR code or opens the shared check-in URL.
-2. They enter an identifier, such as an email address or mobile number.
-3. If Bethel ChMS finds a member or visitor, the attendee confirms and checks in.
-4. If no record is found, the attendee can register as a visitor.
-5. If the member belongs to a household, Bethel ChMS can show eligible household members so the attendee can check in others who are present.
+### Print a QR poster
 
-Visitor registration captures required name fields and optional contact details. Visitor records then appear in attendance and visitor workflows.
+1. On the **Public Check-in QR** card, click **Print QR**.
+2. In **Print QR Code**, check the **Live preview**. The **Branch**, **Event** and **Service time** are filled in for you from the event.
+3. Under **Customise**, edit the **Welcome line** and **Instructions** if you want different wording.
+4. Choose a **Page size**: **A4** or **A5**.
+5. Click **Download PDF**, then print the file.
 
-## Use kiosk mode
+### Replace the QR code
 
-Kiosk mode opens the public check-in page in a dedicated event mode for a tablet or laptop at your venue.
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor.
 
-1. Open the event detail page.
-2. In **Public Check-in QR**, click **Launch Kiosk Mode**.
-3. Place the device where attendees can use it.
+Replace the code only if it has been shared somewhere it shouldn't be, or you want old printed copies to stop working.
 
-Kiosk mode shows a **Manual**, **Scan QR**, and **Visitor** toggle. Use **Manual** for identifier lookup, **Scan QR** for member or household QR codes, and **Visitor** for new visitor registration.
+1. On the **Public Check-in QR** card, click **Regenerate Token**.
+2. In **Regenerate Check-in Token**, click **Regenerate**.
 
-## Record attendance from an occurrence
+Bethel ChMS creates a new QR code and check-in link and shows "Check-in token regenerated".
 
-Use the occurrence attendance page when a staff member records attendance.
+<Warning>
+Regenerating the token stops every printed or shared copy of the old code working straight away. People who open the old link see "Event not found". Porter workers who scan the old code are told it isn't today's check-in code. Print and display the new code before your next service.
+</Warning>
 
-1. In the sidebar, click **Events**.
-2. Select the event.
-3. In **Occurrences**, click **View Attendance** for the occurrence.
+## Self check-in on a phone
 
-The attendance page shows who has already checked in and the staff actions available for that occurrence.
+With public check-in on, people can check themselves in on their own phone without installing anything. They scan the event QR code with their phone's camera, or open the check-in link you shared.
 
-### Record a member or visitor manually
+1. They type their **Email or mobile number** and tap **Continue**.
+2. Bethel ChMS shows "Welcome back" with their first name and surname initial. They tap **Check In**, or **Back** to start again.
+3. A confirmation screen shows "Checked in" and their name. It stays on screen until they tap **Done**, so they can show it at the door.
 
-Manual entry works well when a staff member checks people in at the door or updates attendance during the service.
+If they are already checked in for this service, they see "Already checked in" instead.
 
-1. Click **Record Attendance**.
+### Household check-in
+
+If the person belongs to a household, Bethel ChMS asks who else from their household is here. Everyone is ticked to begin with, and anyone already checked in is marked "Already checked in".
+
+- **Check in selected** checks in the person and everyone ticked. The button shows how many people that is.
+- **Just me** checks in only the person.
+- **Back** returns to the start.
+
+If everyone else in the household is already in, the screen says so and offers **Continue**. Learn more about households in [Households](/guides/households).
+
+### First-time visitors
+
+If Bethel ChMS can't find the email address or mobile number, the screen shows **First time here?** with the details they typed. They can tap **Register & Check In**, or **Try a different email or number**. Visitors can also tap **First time here?** on the first screen.
+
+The registration form asks for:
+
+- **First Name** and **Last Name** (required)
+- **Email** or **Mobile Number** (at least one is required)
+- **Gender** (optional): **Male**, **Female**, **Other** or **Prefer not to say**
+- Any visitor custom fields your organisation has set up
+
+They tap **Register & Check In** to create their visitor record and check in at the same time. If the email or mobile number is already on file, they're asked to check in instead.
+
+Visitors who register with an email address are emailed straight away with a welcome message and their personal check-in QR code. They can scan that code at a kiosk next time. See [Visitors](/guides/visitors) for what happens to visitor records afterwards.
+
+<Tip>
+The phone check-in page doesn't scan QR codes or search by name. Those options are only on a [kiosk](/guides/kiosk-mode). The page reminds people that anyone on the welcome team can check them in at the door.
+</Tip>
+
+### Messages people might see
+
+| Message | What it means |
+| --- | --- |
+| "Check-in is not available for this event." | **Public Check-in** is off for the event. |
+| "There's no active check-in for this event right now. Please check with the welcome team." | No occurrence is inside the check-in window, or the occurrence was cancelled. |
+| "Event not found" | The link is wrong, or the QR code was replaced with **Regenerate Token**. |
+
+## Take attendance as staff
+
+Each occurrence has its own attendance page, where staff check people in, correct mistakes and see who is missing.
+
+### Open the attendance page
+
+Open **Events** and select the event, then use any of these:
+
+- Click **Take attendance** on the card for the next occurrence at the top of the event page.
+- On the **Occurrences** tab, click the occurrence's row, or open its **⋯** menu and choose **Take attendance**.
+- On the **Attendance** tab, click an occurrence that has already started.
+
+You can also click **Take attendance** on a **Live now** card on the **Dashboard** or the **Events** page, or choose **Take attendance** from an event's **⋯** menu in the events list.
+
+The page shows the event name and date, a green **Live** label while the occurrence is in progress, and how many people have checked in, split into members and visitors, with the time of the last check-in. Bethel ChMS keeps your screen awake while this page is open.
+
+For an event linked to a group, a banner reminds you that the absent list shows group members only.
+
+### Check people in with Record Attendance
+
+1. Click **Record Attendance**. On a phone, the button sits in a bar at the bottom of the screen.
 2. Choose **Member** or **Visitor**.
-3. Search by name, email, or mobile.
-4. Select the person.
-5. Click **Check In Member** or **Check In Visitor**.
+3. Search by name, email or mobile.
+4. Click **Check in** next to the person.
 
-If the selected member belongs to a household, Bethel ChMS can show household companions before you finish the check-in. You can check in companions or choose **Just this member**.
+Bethel ChMS records the check-in straight away and shows a "Checked in" card with the time, the person's name and **Undo**. The sheet stays open, so you can search for the next person. When you're finished, click **Done**. The footer shows how many people you have checked in this session.
 
-### Scan a member or household QR code
+Anyone who is already checked in shows an "In" label with the time they arrived, instead of a **Check in** button.
 
-Use **Scan QR** when members bring their personal or family QR codes.
+#### Check in the rest of a household
 
-1. Click **Scan QR**.
-2. Allow camera access if the browser asks.
-3. Point the camera at the member or household QR code.
-4. For a member QR code, Bethel ChMS records the member immediately or shows that they are already checked in.
-5. For a household QR code, choose who's here today, then click **Check In**.
+When you check in a member who belongs to a household, Bethel ChMS asks whether to check in the rest of the household too. Household members who aren't in yet are ticked. Anyone already checked in is shown ticked and marked "Already checked in".
 
-<Note>
-The **Scan QR** button appears only when occurrence QR scanning is enabled for your organisation.
-</Note>
+- Click **Check in selected** to check in everyone ticked.
+- Click **Not now** to carry on without them.
 
-### Use bulk entry
+### Add a first-time visitor while taking attendance
 
-Bulk entry works well when you enter attendance from a paper register after the event.
+If a visitor isn't on the list, you can create their record and check them in at once.
 
-1. Click **Bulk Entry**.
-2. Search by name if needed.
-3. Select members, or use **Select All** for the current filtered list.
-4. Click **Save**.
+1. In **Record Attendance**, scroll to **Not on the list?** and click **Add visitor**.
+2. Enter their **First Name** and **Last Name**. **Mobile Number** and **Email** are optional.
+3. Click **Add and check in**.
 
-Already checked-in members are disabled and labelled **Already checked in**.
+The "Checked in" card shows that this was their first visit. If you entered an email address, Bethel ChMS emails the visitor their personal check-in QR code. You can add more details later in [Visitors](/guides/visitors).
 
-## Use member QR codes
+### Scan QR codes
 
-Member QR codes identify a member during staff QR scanning or kiosk QR scanning.
+Use **Scan QR** when members bring their personal QR code, for example in the email Bethel ChMS sent them. See [Give members their QR code](#give-members-their-qr-code).
 
-Open a member profile and click **QR Code** to display that member's personal QR code. Members can also sign in to the member portal and open **QR Code**. If they belong to a household, the portal shows **My QR** and **Family QR**.
+1. Click **Scan QR**. The scanner opens full screen.
+2. Allow camera access if your browser asks.
+3. Point the camera at the QR code.
 
-Organisation owners and organisation admins can email member QR codes in bulk from the **Members** page.
+The scanner uses the rear camera. Use the flip button to switch cameras, and the torch button in a dark room (on devices that have one). The camera stays on between scans, so you can scan one person after another.
 
-1. In the sidebar, click **Members**.
-2. Click **Email QR codes**.
-3. Choose **Selected members**, **All members**, or **Filter**.
-4. If you choose **Filter**, narrow recipients by status, age group, or group.
-5. Click **Continue**.
-6. Review the preview and click **Send now**.
+- **A member's code** checks the member in straight away. The result card shows "Checked in", their name and **Undo**. If they're already in, you see "Already checked in" and the time they arrived.
+- **A code Bethel ChMS doesn't recognise** shows "Not recognised". Codes from another branch don't match.
 
-The preview separates recipients who will receive an email from members skipped because they have no email address or are inside the 1-hour send cool-down.
+The **Scanned** list, under the camera or beside it on a wide screen, shows everyone you have scanned this session, newest first. When you're finished, click **Done**.
 
-<Note>
-The **QR Code** button and QR email tools appear only when member QR codes are enabled for your organisation.
-</Note>
+### Check in from the Absent tab
+
+The attendance page has two tabs: **Attendees** and **Absent**. Each shows a count.
+
+**Absent** lists active members who haven't checked in yet, and updates after each check-in. Click **Check in** next to a member to record them, or use the row menu to **Call**, **Message** or **Email** them, or **Open member**. After a check-in, Bethel ChMS shows a message with **Undo**.
+
+**Attendees** lists everyone who has checked in, newest first. The 20 most recent show first. To see the rest, click the button under the list, for example **Show 12 earlier check-ins**.
+
+### Undo a check-in
+
+**Undo** appears on the "Checked in" card in **Record Attendance**, on the result card in **Scan QR**, and in the message after you check someone in from the **Absent** tab.
+
+Undo removes only the check-ins you have just made. Anyone who checked in another way in the meantime, for example at the kiosk or with another steward, keeps their check-in, even if they were part of the same household.
+
+### Enter attendance in bulk
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin.
+
+Bulk entry works well when you type up a paper register after the event.
+
+1. On the attendance page, click the **⋯** menu at the top and choose **Bulk Entry**.
+2. In **Bulk Attendance Entry**, search by name if needed.
+3. Tick members, or click **Select All**.
+4. Click the **Check In** button. It shows how many members you selected, for example **Check In 12 Members**.
+
+The list shows every member of the branch. Members who are already checked in can't be ticked and are marked "Already checked in". When you finish, Bethel ChMS tells you how many members were checked in and how many were skipped because they were already recorded.
+
+### Correct or remove a record
+
+On the **Attendees** tab, open the row menu for the person. On a phone, tap the row.
+
+- **Edit time** opens **Edit Attendance Time**. Change the **Date** or **Time** and click **Save Changes**.
+- **Remove** opens **Remove Attendance Record**. Click **Remove** to take the person off this attendance list. You can't undo this.
+- **Open member** opens the member's page. It isn't shown for visitors.
+
+### How each check-in is labelled
+
+The **Capture Method** column shows how each person was checked in.
+
+| Capture method | How the person was checked in |
+| --- | --- |
+| **Manual** | A staff member used **Record Attendance** or the **Absent** tab. |
+| **QR Code** | A staff member scanned the person's QR code with **Scan QR**. |
+| **Admin Entry** | A staff member used **Bulk Entry**, or ticked household members in **Record Attendance**. |
+| **Self Check-in**, **Kiosk**, **Kiosk QR** | The person checked themselves in, on their own phone or at a [kiosk](/guides/kiosk-mode). **Kiosk QR** means they scanned a QR code at a kiosk. |
+| **Porter** | A worker checked in with [Porter](/guides/porter-check-in), or a Porter admin checked them in. |
+
+If someone has already been checked in another way, a Porter check-in for the same occurrence keeps the existing record.
+
+## Give members their QR code
+
+Each member has a personal QR code that staff can scan with **Scan QR** and members can scan at a kiosk.
+
+To show a member's code, open their member page and use any of these:
+
+- On a tablet or computer, click **QR Code** in the top bar.
+- Tap **QR code** in the quick actions under the member's name.
+- Open the **More actions** menu (⋮) in the top bar and choose **Show QR code**.
+
+The code appears with the note "Scan this code to record attendance". Click **Full screen** to make it larger.
+
+Org Owners and Org Admins can also click **Email code** to send the member their code.
+
+### Email QR codes to many members
+
+**Who can do this:** Org Owner, Org Admin.
+
+1. In the sidebar, open **People** and click **Members**.
+2. Open the **⋯** menu and choose **Email QR codes**. To email particular people, tick them on the list first and use **Email QR codes** in the selection bar (it reads **QR** on a phone).
+3. Choose **Selected members**, **All members** or **Filter**. With **Filter**, narrow the recipients by status, age group or group.
+4. Click **Continue**.
+5. Review the preview and click **Send now**.
+
+The preview separates members who will receive an email from members who are skipped because they have no email address, or because a code was emailed to them in the last hour. You can download the skipped lists as a CSV file to follow up.
 
 ## Review attendance records
 
-Use the **Attendance** sidebar page to review attendance across events and dates.
+The **Attendance** page brings together attendance from every event in your branch.
 
-The **Records** tab shows attendance rows with:
+In the sidebar, open **Church life** and click **Attendance**. On a tablet, use the **Attendance** shortcut in the rail. On a phone, tap **More**, then **Attendance**.
 
-- **Date**
-- **Event**
-- **Branch**, when you are viewing all branches as an organisation-scoped user
-- **Attendee**
-- **Type**
-- **Capture Method**
+The page has two tabs, **Records** and **Member Frequency**, and starts with the last 30 days.
 
-Use the date range, **Event** filter, search box, and sortable columns to narrow the list.
+### Filter the list
 
-You can also review attendance from a member profile. Open the member and select the **Attendance** tab.
+- The date range button shows the dates you're looking at, for example **Last 30 days**. Click it to choose a preset. Under **Range**: **Last 7 days**, **Last 30 days**, **Last 90 days**, **This month** and **Year to date**. Under **Single day**: **Today**, **Yesterday** and **Last Sunday**. On a tablet or computer you can also pick dates on the calendar. On a phone, enter **From** and **To** dates instead. Click **Apply**.
+- **Name…** searches by name.
+- On the **Records** tab, the chips under the toolbar filter by event. Choose **All events** or a single event.
+- **Filters** opens a sheet with the same **Event** choice and the sort order.
 
-## Consolidate attendance patterns
+Your filters are saved in the page link, so you can bookmark the page or share the link with a colleague.
 
-Use **Attendance** > **Member Frequency** to find people who have stopped attending and update them in bulk.
+### Records
 
-The **Member Frequency** tab shows each member's attendance over the selected date range. It includes **Events Attended**, **Events Absent**, **Missed in a row**, **Attendance Rate**, and **Last Attended**.
+The **Records** tab lists each check-in with **Attendee**, **Event**, **Date**, **Type** and **Capture Method**. Visitors have a **Visitor** label.
 
-1. Open **Attendance**.
-2. Select **Member Frequency**.
-3. Choose a date range.
-4. Choose an **Event** if you want to measure attendance against one event.
-5. Use **Missed at least X in a row** to find members with a current absence streak.
-6. Sort by **Missed in a row** to bring the longest absence streaks to the top.
-7. Select members with the row checkboxes.
-8. Click **Set status** or **Set custom field**.
+Sort by **Attendance Date**, **Event**, **Attendee** or **Capture Method** in **Filters**. On a tablet or computer, you can also click a column heading. The list shows 50 records a page.
 
-Selections persist while you move through pages. You can select up to 100 members per bulk action. If you change filters while members are selected, Bethel ChMS asks whether to **Keep selection** or **Clear and apply filter**.
+Click **Export CSV** to download the records that match your current filters as a spreadsheet file.
+
+You can also see one member's attendance on their member page, on the **Attendance History** tab.
+
+## Find members who have stopped attending
+
+The **Member Frequency** tab shows how often each member attended in the date range. Use it to spot people who have stopped coming and update their records in bulk.
+
+The columns are **Member Name**, **Events Attended**, **Events Absent**, **Missed in a row**, **Attendance Rate** and **Last Attended**.
+
+<Steps>
+  <Step title="Open Member Frequency">
+    On the **Attendance** page, click **Member Frequency**.
+  </Step>
+  <Step title="Choose a date range and event">
+    Choose a date range. To measure attendance against one event, choose it in **Filters**.
+  </Step>
+  <Step title="Filter by missed services">
+    Use the chips **Any streak**, **Missed 2+ in a row**, **3+**, **4+** or **6+**. For a different number, enter it in **Missed at least X in a row** in **Filters**. This counts the member's most recent absences in a row, up to the end of the date range.
+  </Step>
+  <Step title="Check a member's history">
+    Click a member to see their 7 most recent occurrences, each marked **Attended** or **Absent**. Click **Show all occurrences** for the full list, or **Open member** to go to their member page.
+  </Step>
+  <Step title="Select members">
+    Tick the members you want to update. You can select up to 100 at a time.
+  </Step>
+  <Step title="Apply a change">
+    In the selection bar, click **Set status…** or **Set custom field…**. On a phone, these read **Status…** and **Custom field…**.
+  </Step>
+</Steps>
+
+- **Set status** changes the selected members to the **Target status** you choose: **Newcomer**, **Active** or **Inactive**. Enter a **Reason** (required, up to 500 characters) and click **Apply**. Bethel ChMS tells you how many members were updated and how many already had that status.
+- **Set custom field** sets a **Custom field** to the value you enter, or removes the field from the selected members if you tick **Clear value**. Enter a **Reason** and click **Apply**.
+
+Branch Admins and Editors can change only members in their own branch.
+
+If you change the filters while members are selected, Bethel ChMS asks **Clear your selection?** Choose **Keep selection** or **Clear and apply filter**.
 
 <Tip>
-Use attendance consolidation to update lifecycle status after review. Use [Backsliders](/guides/backsliders) when you want an ongoing follow-up workflow with rules, assignments, statuses, and notes.
+Member Frequency is for reviewing and updating records in one go. For ongoing pastoral follow-up of members who stop attending, with absence rules, assignments, statuses, due dates and notes, use **Member care** in [Care](/guides/care).
 </Tip>
 
-## Members and visitors
+## Visitors in attendance
 
-Both members and visitors appear in attendance records.
-
-- Members keep attendance history on their member profile.
-- Visitors update their visit count and last visit date when they check in.
-- When you convert a visitor to a member, their attendance history remains available through the linked journey.
+Visitors appear in attendance lists and records alongside members, with a **Visitor** label. Each check-in adds to their visit history. To see the visitor list, follow up with visitors or convert a visitor to a member, see [Visitors](/guides/visitors).

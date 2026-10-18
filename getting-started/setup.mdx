@@ -1,81 +1,148 @@
 ---
 title: "Set up your church"
 sidebarTitle: "Setup"
-description: "Create your Bethel ChMS account, set up your organisation, and add your first branch."
+description: "Create your Bethel ChMS account, set up your organisation, choose how you pay, and add your first branch."
 ---
 
-This guide walks you through the setup flow for a new church in Bethel ChMS. By the end, you'll have an organisation, a branch, a primary location, and a full year of Sunday services ready to go.
+This guide walks you through setting up a new church in Bethel ChMS. By the end, you'll have an organisation, a paid subscription, a branch, a primary location, and a full year of weekly Sunday services ready to go.
+
+<Info>
+**Who can do this:** Anyone setting up a new church. Whoever creates the organisation becomes its **Org Owner**, the highest level of access in Bethel ChMS, and is the only person who can complete the payment step.
+</Info>
+
+<Note>
+If someone has already set up your church and sent you an invitation, you don't need this guide. Open the invitation email and follow [What the invitee sees](/getting-started/invite-users#what-the-invitee-sees) instead.
+</Note>
+
+## Choose how to get started
+
+You can start in one of two ways:
+
+- **Sign up yourself.** Go to [app.bethelchms.com](https://app.bethelchms.com) and follow the steps below. This takes a few minutes.
+- **Talk to us first.** On the Bethel ChMS website, click **Get started**. Fill in the short form with your **Full name**, **Email address**, **Church or organisation** and **Number of branches**, add anything you'd like us to know, and click **Send message**. The team replies by email to help you get set up.
+
+## Set up step by step
+
+The setup wizard has four steps: **Create Organisation**, **Payment**, **Set Up Your First Branch** and **You're All Set**. A progress bar at the top shows where you are. On a phone it reads, for example, "Step 2 of 4" with the name of the next step. The **Back** and continue buttons stay pinned to the bottom of the screen.
 
 <Steps>
-  <Step title="Sign up for an account">
-    Go to [app.bethelware.com](https://app.bethelware.com) and select **Sign Up**.
+  <Step title="Create your account">
+    Go to [app.bethelchms.com](https://app.bethelchms.com). The **Welcome back** sign-in page opens. Next to **Don't have an account?**, click **Sign up**.
 
-    Enter your **email address** and choose a **password**. Your password must be at least 8 characters long.
+    On the **Create your account** page:
 
-    <Frame>
-      <img src="/images/getting-started/sign-up-form.png" alt="Sign-up form" />
-    </Frame>
+    1. Enter your **Email**.
+    2. Choose a **Password**. Make it at least 12 characters long, with upper-case and lower-case letters and at least one number, so it's accepted first time. Click the eye icon in the field if you want to check what you typed.
+    3. Tick **I agree to the Terms and Conditions and Privacy Policy**. You can open either document from the links, then use the back arrow to return.
+    4. Wait for the security check above the button to finish. It usually completes by itself.
+    5. Click **Sign up**.
 
-    After signing up, you'll be taken straight into the setup flow, no email verification needed.
+    {/* TODO: new screenshot: the redesigned Create your account page, showing Email, Password with the eye icon, the terms checkbox, the security check and the Sign up button */}
+
+    The page then shows **Check your email for a confirmation link.** If Bethel ChMS asks you to confirm your email address, open the link in that email by clicking **Confirm My Email**.
+
+    Then go to [app.bethelchms.com](https://app.bethelchms.com) and, if you're asked to, sign in with your new email and password. Because you haven't set up your church yet, Bethel ChMS opens the setup wizard.
   </Step>
 
   <Step title="Create your organisation">
-    An **organisation** is your church network: it contains all your branches, members, and settings. If you lead a single church, your organisation is that church. If you oversee multiple campuses, your organisation is the umbrella that holds them all together.
+    An **organisation** is your church network: it contains all your branches, members, and settings. If you lead a single church, your organisation is that church. If you oversee several campuses, your organisation is the umbrella that holds them all together.
 
     Fill in the following details:
 
     | Field | Required | Description |
     | --- | --- | --- |
-    | **Organisation Name** | Yes | The name of your church or network. |
+    | **Organisation Name** | Yes | The name of your church or network, at least 2 characters. |
     | **Email** | Yes | A contact email for the organisation. |
     | **Address** | No | The main address of your church or headquarters. |
-    | **Post Code** | No | The postal code for the address above. |
+    | **Post Code** | No | The postcode for the address above. |
 
-    <Frame>
-      <img src="/images/getting-started/create-organisation-form.png" alt="Create organisation form" />
-    </Frame>
+    Click **Create & Continue**.
+
+    {/* TODO: new screenshot: the Create Organisation step with the four-step progress bar and the pinned Create & Continue button */}
+
+    If you see **Organisation name already exists**, another organisation in Bethel ChMS already uses that name. Try a slightly different name, for example by adding your town.
 
     <Info>
-      You automatically become the organisation owner, the highest permission level in Bethel ChMS. You can manage everything across all branches, invite other users, and assign roles. See [Roles and permissions](/guides/roles-and-permissions) for details.
+      You automatically become the **Org Owner**. You can manage everything across all branches, invite other users, and assign roles. See [Roles and permissions](/guides/roles-and-permissions) for details.
     </Info>
   </Step>
 
-  <Step title="Create your first branch">
-    A **branch** is an individual church or campus within your organisation. Even if you only have one location, Bethel ChMS uses branches to organise your members, events, and attendance data.
+  <Step title="Choose a billing period and pay">
+    The **Payment** step sets up your subscription. The **Your plan** card shows the plan and its price per branch, with VAT included.
 
-    Fill in the following details:
+    1. Under **Billing period**, choose **Monthly** (£80 a month) or **Annual** (£880 a year, marked **1 month free**).
+    2. Check the **Monthly total** or **Annual total** line.
+    3. Click **Continue to payment**.
+    4. You're taken to Stripe, our secure payment provider. Enter your card details on Stripe's page, not in Bethel ChMS.
 
-    | Field | Required | Description |
-    | --- | --- | --- |
-    | **Branch Name** | Yes | The name of this church or campus, such as "Grace Chapel" or "Eastside Campus". |
-    | **Branch Email** | No | A contact email for this branch. |
-    | **Location Name** | Yes | The name of the venue or building where this branch meets, such as "Main Hall". |
-    | **Address** | No | The address for the primary location. |
-    | **Capacity** | No | The venue capacity. |
-    | **Start Time** | Yes | When your Sunday service begins. |
-    | **End Time** | Yes | When your Sunday service ends. |
-    | **Description** | No | Notes for the Sunday Service event. |
+    {/* TODO: new screenshot: the Payment step showing the Your plan card, the Monthly and Annual billing period cards and the Continue to payment button */}
 
-    <Frame>
-      <img src="/images/getting-started/create-branch-form.png" alt="Create branch form" />
-    </Frame>
+    After you pay, Stripe brings you back to a page that says **Confirming your payment…**. Keep this page open. It usually takes a moment, then shows **Payment confirmed!** and moves you on to the branch step. Your subscription starts as soon as payment is confirmed.
+
+    <Note>
+      If you see **This is taking longer than usual…**, your payment may still have gone through. Click **Refresh** to check again. If it keeps happening, use the **contact support** link or email [hello@bethelware.app](mailto:hello@bethelware.app).
+    </Note>
+
+    <Warning>
+      Your organisation is saved as soon as you click **Create & Continue** in the previous step, so don't create it again. If you leave the Stripe page without paying, or you end up back on the **Create Organisation** step, email [hello@bethelware.app](mailto:hello@bethelware.app) and we'll help you finish setting up.
+    </Warning>
+
+    To learn more about your subscription, see [Billing and subscription](/guides/billing-and-subscription).
+  </Step>
+
+  <Step title="Set up your first branch">
+    A **branch** is an individual church or campus within your organisation. Even if you only have one church, Bethel ChMS uses branches to organise your members, events, and attendance.
+
+    This step has three sections:
+
+    | Section | Field | Required | Description |
+    | --- | --- | --- | --- |
+    | **Branch** | **Branch Name** | Yes | The name of this church or campus, such as "Grace Chapel" or "Eastside Campus", at least 2 characters. |
+    | **Branch** | **Branch Email** | No | A contact email for this branch. |
+    | **Primary Location** | **Location Name** | Yes | The venue or building where this branch meets, such as "Main Hall". |
+    | **Primary Location** | **Address** | No | The address of that venue. |
+    | **Primary Location** | **Capacity** | No | How many people the venue holds. |
+    | **Sunday Service** | **Start Time** | Yes | When your Sunday service begins. It is filled in as 10:00, so change it if your service starts at a different time. |
+    | **Sunday Service** | **End Time** | Yes | When your Sunday service ends. It is filled in as 12:00 and must be after the start time. |
+    | **Sunday Service** | **Description** | No | Fills in as "Weekly Sunday Service at" followed by your branch name. Change it if you like. |
+
+    Click **Create & Continue**.
+
+    {/* TODO: new screenshot: the Set Up Your First Branch step showing the Branch, Primary Location and Sunday Service sections */}
 
     <Tip>
-      Bethel ChMS automatically creates a primary location for your branch, a Sunday Service event, and 52 weekly occurrences.
+      Bethel ChMS creates your branch, its primary location, and a **Sunday Service** event that repeats every week for the next 52 weeks. You can change the service or add more events later in [Managing events](/guides/managing-events), and add more venues in [Locations](/guides/locations).
     </Tip>
   </Step>
 
-  <Step title="You're in">
-    That's it, you land on your dashboard. From here you can see your selected branch at a glance, including member demographics, upcoming events, recent check-ins, and member lists.
+  <Step title="You're all set">
+    The **You're All Set** page confirms that your workspace is ready and shows the **Organisation** and **Branch** it created. When you're ready, click **Go to Dashboard**.
 
-    <Frame>
-      <img src="/images/getting-started/dashboard-after-setup.png" alt="Dashboard after completing setup" />
-    </Frame>
+    {/* TODO: new screenshot: the You're All Set page with the Organisation and Branch summary and the Go to Dashboard button */}
 
-    Here are a couple of things to do next:
-
-    - [Invite users](/getting-started/invite-users): Add pastors, admins, finance users, or volunteers to your team and assign them roles.
-    - [Add members](/guides/managing-members): Start building your church directory by adding members to your branch.
-    - [Review dashboards](/guides/dashboards): Understand the difference between branch and organisation dashboards.
+    Your dashboard shows your selected branch at a glance, including member demographics, upcoming events, recent check-ins, and member lists.
   </Step>
 </Steps>
+
+<Note>
+If you get stuck at any point during setup, email [hello@bethelware.app](mailto:hello@bethelware.app) and we'll help you finish.
+</Note>
+
+## What to do next
+
+<Columns cols={2}>
+  <Card title="Find your way around" icon="compass" href="/getting-started/find-your-way-around">
+    Learn the sidebar, the branch selector, and the menus on tablets and phones.
+  </Card>
+  <Card title="Invite your team" icon="user-plus" href="/getting-started/invite-users">
+    Add pastors, admins, finance users, and volunteers, and give each one a role.
+  </Card>
+  <Card title="Install the app" icon="download" href="/getting-started/install-the-app">
+    Add Bethel ChMS to your phone, tablet, or computer.
+  </Card>
+  <Card title="Add members" icon="users" href="/guides/managing-members">
+    Start building your church directory.
+  </Card>
+</Columns>
+
+To understand the difference between branch and organisation dashboards, see [Dashboards](/guides/dashboards). If you ever need to sign in again or reset your password, see [Sign in and reset your password](/getting-started/sign-in).

@@ -1,159 +1,429 @@
 ---
 title: "Update campaigns"
-description: "Ask members to review and update their own details, then track responses and review submitted changes."
+description: "Ask members to check and update their own details, then track responses and review the changes they send."
 sidebarTitle: "Update campaigns"
 ---
 
-Update campaigns help you refresh member records without editing every profile yourself. You choose the audience, select the fields and tags members can review, send each member a personalised link, and track responses from one dashboard.
+An **update campaign** asks a group of members to check the details your church holds for them and correct anything that is out of date. You choose who to ask and which fields and tags to include. Members get a personal link by email, or you can share one public link and QR code. They fill in a short form on their phone or computer, and you review their changes before they reach the member record, or let them apply automatically.
 
-Use update campaigns for periodic data refreshes, address checks, contact-detail updates, or tag confirmation.
+Use update campaigns for a yearly data refresh, an address check, collecting missing mobile numbers, or asking members to confirm tags such as a serving team.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, and Branch Admin can create, launch, share, stop, and delete campaigns. Editors can view campaign dashboards and review submitted changes. Treasurer users do not see Update Campaigns.
+**Who can do this:** Org Owner, Org Admin. Update campaigns are managed at organisation level. Branch Admins, Editors, Treasurers and Care Managers do not see **Update Campaigns** and cannot open campaign pages.
 </Info>
 
 <Note>
-The Update Campaigns feature is included in the Standard plan with no campaign limit. See [feature availability](/guides/feature-availability-by-plan).
+Update campaigns are included in the Standard plan with no limit on the number of campaigns. See [Feature availability by plan](/guides/feature-availability-by-plan).
 </Note>
 
 ## How campaigns work
 
-Each campaign moves through three statuses:
+Each campaign has one of three statuses:
 
 | Status | What it means |
 | --- | --- |
-| **Draft** | You can edit the name, message, audience, fields, dates, review mode, and reminders. |
-| **Open** | The audience is frozen, member links are active, and members can submit updates. |
-| **Closed** | Links stop working and no more responses are accepted. |
+| **Draft** | You are still setting the campaign up. You can change the name, message, audience, fields, conditions, dates and switches. |
+| **Open** | The campaign has launched. The audience is frozen, links work and members can send updates. |
+| **Closed** | The campaign was stopped or reached its close date. Links stop working and no more responses are accepted. |
 
-Launching a campaign freezes the audience. Members added to a matching group, ministry, age group, or tag after launch are not added automatically.
+A typical campaign runs like this:
+
+1. Build the campaign in the campaign builder and save it as a draft.
+2. [Test the form](/guides/campaign-test-the-form) to check your questions.
+3. Launch the campaign. This freezes the audience and opens it for responses.
+4. Share it: send the personalised emails, and use the public link and QR code if you like.
+5. Track responses, send reminders and review the changes members send.
+6. Stop the campaign, or let it close on its close date.
+
+Launching freezes the audience. Members who join a matching group, ministry, age group or tag after launch are not added to the campaign.
 
 <Warning>
-Launching does not send emails. After you launch, click **Share & send**, then click **Send personalised emails** on the Share page to email members.
+Launching does not send the personalised emails. After you launch, send them yourself from the **Share** page or the campaign page, ideally straight away. See [Send personalised emails](#send-personalised-emails).
 </Warning>
+
+## Open Update Campaigns
+
+In the sidebar, open **Giving & outreach** and click **Update Campaigns**. On a tablet held portrait, or on a phone, tap **More**, then **Update Campaigns**. If you are new to the menus, see [Find your way around](/getting-started/find-your-way-around).
+
+The **Campaigns** page lists every campaign, newest first. Use **Search campaigns** to find one by name, and the chips at the top to show **All**, **Open**, **Draft**, **Closed** or **Pending review** campaigns. Each chip shows how many campaigns it holds.
+
+For each campaign, the list shows:
+
+| Column | What it shows |
+| --- | --- |
+| **Name** | The campaign name. |
+| **Close date** | When the campaign closes or closed, or **No close date set**. |
+| **Targeted** | How many members were in the audience at launch. On smaller screens, drafts show **Not launched yet**. |
+| **Status** | **Draft**, **Open** or **Closed**. |
+| **Submitted** | How many members have sent updates. |
+| **Pending review** | How many members have changes waiting for you to approve or reject. |
+
+On a phone, campaigns with changes waiting show a **to review** chip with the number of members waiting.
+
+Click a campaign to open its campaign page. Each row also has a **⋯** menu with the actions that suit its status:
+
+| Status | Menu actions |
+| --- | --- |
+| **Draft** | **Continue setup**, **Test the form**, **Open campaign**, **Delete campaign** |
+| **Open** | **Open campaign**, **Review submissions** (when changes are waiting), **Share & send**, **Stop campaign** |
+| **Closed** | **Open campaign**, **Review submissions** (when changes are waiting), **Delete campaign** |
 
 ## Create a campaign
 
+Click **New campaign** to open the campaign builder. On a phone, the **New campaign** button floats above the tab bar. The builder has five numbered sections: **Details**, **Audience**, **Fields & tags**, **Conditions** and **Dates & behaviour**. A bar at the bottom of the screen holds **Save draft** and **Create & share**, plus **Test the form** once you have saved the draft.
+
 <Steps>
-  <Step title="Open Update Campaigns">
-    In the sidebar, click **Update Campaigns**, then click **New campaign**.
-  </Step>
-  <Step title="Name the campaign">
-    Enter a **Name** and an optional **Message to members**. The message appears in the email preview and on the member update form.
+  <Step title="Add the details">
+    In **Details**, enter a **Name** for the campaign, up to 150 characters. Add an optional **Message to members**, up to 2,000 characters. The message appears in the email and at the top of the member form, so write it the way you would speak to your congregation.
   </Step>
   <Step title="Choose the audience">
-    Choose **Org-wide** or **Segment**. Org-wide campaigns target everyone in scope and are available to org-scoped roles only. Segments can include specific members, ministries, groups, age groups, and tags. A member who matches any selected segment option is included.
+    In **Audience**, choose **Org-wide** to ask everyone across every branch, or **Segment** to ask specific people. See [Choose the audience](#choose-the-audience).
   </Step>
-  <Step title="Select fields and tags">
-    Choose at least one standard member field, member custom field, or tag. Members only see the items you select.
+  <Step title="Save the draft">
+    Click **Save draft**. Saving once lets you see the audience preview, add conditions and test the form.
+  </Step>
+  <Step title="Choose fields and tags">
+    In **Fields & tags**, click **Choose fields and tags** and pick what members should check. See [Choose fields and tags](#choose-fields-and-tags).
+  </Step>
+  <Step title="Add conditions (optional)">
+    In **Conditions**, add rules that show extra questions only when an earlier answer calls for them. See [Show follow-up questions with conditions](#show-follow-up-questions-with-conditions).
   </Step>
   <Step title="Set dates and behaviour">
-    Add optional **Open date** and **Close date** values. Choose whether updates require staff review before they apply, and whether to nudge non-responders.
+    In **Dates & behaviour**, choose the close date, whether changes need review, and whether to send automatic reminders. See [Set dates and behaviour](#set-dates-and-behaviour).
   </Step>
-  <Step title="Preview and save">
-    Click **Save draft** to save your work and load the audience preview. The preview shows the current matched audience count.
-  </Step>
-  <Step title="Launch the campaign">
-    Click **Create & share** or launch from the campaign dashboard. Launching freezes the audience and opens the campaign for responses, but it does not send the email. To email members, continue to the Share page and click **Send personalised emails**.
+  <Step title="Test, then launch">
+    Click **Save draft**, then **Test the form** to try the member form yourself. When you are happy, click **Create & share** to launch. See [Launch a campaign](#launch-a-campaign).
   </Step>
 </Steps>
 
-Standard fields include **First name**, **Last name**, **Date of birth**, **Gender**, **Nationality**, **Email**, **Mobile number**, **Address**, and **Post code**.
+<Note>
+Some parts of the builder save as you go and some do not. Once you have saved the draft once, the audience and the fields save automatically, and each condition saves when you click **Save condition**. The name, message, dates and the two switches save only when you click **Save draft**. If you leave the builder, for example to test the form, without clicking **Save draft**, changes to these are lost.
+</Note>
+
+### Choose the audience
+
+| Option | Who it includes |
+| --- | --- |
+| **Org-wide** | Every member across every branch. This is the default. |
+| **Segment** | Members you pick, plus everyone in the ministries, groups, age groups and tags you pick. |
+
+For a segment, use the **Members**, **Ministries**, **Groups**, **Age groups** and **Tags** pickers. A member who matches any one of your choices is included, so picking a ministry and a tag includes everyone in the ministry as well as everyone with the tag. To find a member, search by their first name or their last name. Ministries and groups count their current members only. Until you pick at least one item, a segment has no audience.
+
+The audience includes every matching member, whatever their membership status.
+
+After you save the draft, the **Audience preview** shows how many members match, how many have an email address, and how many cannot be contacted. It updates as you change the audience.
+
+### Choose fields and tags
+
+Click **Choose fields and tags** to open the **Fields & tags** sheet. Tick the items you want members to check, grouped under **Standard fields**, **Custom fields** and **Tags**, then click **Done**. Members see only the items you choose.
+
+The standard fields are **First name**, **Last name**, **Date of birth**, **Gender**, **Nationality**, **Email**, **Mobile number**, **Address** and **Post code**. On the member form, **Address** is labelled **Home address**. Custom fields are the extra member fields your organisation has set up. See [Custom fields](/guides/organisation-settings#custom-fields). Tags come from your organisation's member tags. If you have none yet, create them on the [Tags](/guides/tags) page first.
+
+Once fields are selected:
+
+- **Required or optional:** each selected standard field has a **Required** switch, which starts off. When it is on, members must fill the field in before they can save. **First name** and **Last name** are always required and show a lock. Custom fields follow the required setting they already have. Tags are never required.
+- **Order:** when you have more than one standard field or more than one custom field, you can change their order. With a mouse, drag a row by its handle. On a touch screen, click **Reorder**, use the move up and move down buttons, then click **Done**. The member form follows this order, with standard fields first, then custom fields, then tags.
+- **Remove an item:** click the **X** next to it, or untick it in the sheet.
+
+If you remove a field or tag that a condition uses, Bethel ChMS asks you to confirm. Click **Remove all** to remove the field together with the conditions or follow-up questions that depend on it, or **Keep field** to leave everything as it is.
 
 <Tip>
-Select only the fields you need members to check. Shorter forms are easier to complete and reduce review work for staff.
+Select only the fields you need members to check. Shorter forms are quicker to complete and leave you less to review.
 </Tip>
+
+### Set dates and behaviour
+
+| Setting | What it does |
+| --- | --- |
+| **Open date** | The date you plan to start the campaign. Optional. |
+| **Close date** | The last day members can respond. Links keep working until the end of that day. Optional. It must be on or after the open date. Leave it blank for a campaign that stays open until you stop it. |
+| **Require review before applying** | On by default. See [Review mode](#review-mode). |
+| **Nudge non-responders** | Off by default. When on, Bethel ChMS emails reminders to members who have not responded. See [Send reminders](#send-reminders). |
+
+<Info>
+A campaign opens for responses as soon as you launch it. Launch it on the day you want responses to start.
+</Info>
+
+### Check the email members will receive
+
+On a large screen, a preview of the campaign email sits beside the builder. On a smaller screen, click the eye icon (**Preview**) at the top to open the **Email preview** sheet. The preview shows your message in place, so you can check it reads well before you launch.
+
+## Show follow-up questions with conditions
+
+A **condition** shows extra questions only when they are relevant. For example, ask for a new home address only when a member says they have moved, or ask about access needs only when a member picks a particular option.
+
+Each condition is one rule: when a member answers a chosen question a certain way, the form reveals one or more follow-up questions.
+
+You can add and change conditions only while the campaign is a draft, and only after you have saved the draft once.
+
+### Add a condition
+
+<Steps>
+  <Step title="Open the condition sheet">
+    In the **Conditions** section, click **Add condition**. The sheet builds the rule as a sentence in three steps.
+  </Step>
+  <Step title="Choose the trigger question">
+    Under **Trigger question**, choose the question whose answer reveals the follow-ups. Only some question types can be triggers. See [Which questions can be triggers](#which-questions-can-be-triggers).
+  </Step>
+  <Step title="Choose the trigger answers">
+    Under **Fires when the answer is…**, choose the answer that reveals the follow-ups. For **Gender** and **Single Select** custom fields, tick one or more answers. If you tick several, any of them reveals the follow-ups. For **Yes/No** custom fields and tags, pick either **Yes / assigned** or **No**.
+  </Step>
+  <Step title="Pick the follow-up questions">
+    Under **Follow-up questions to show**, tick the questions to reveal. For each one, choose **Required when shown** (the default) or **Optional**. A required follow-up only has to be answered when the member can actually see it.
+  </Step>
+  <Step title="Save the condition">
+    Check the sentence at the bottom of the sheet, which starts with **Reads:**, then click **Save condition**. The button stays unavailable until you have chosen a trigger, at least one answer and at least one follow-up.
+  </Step>
+</Steps>
+
+### Which questions can be triggers
+
+Only these selected items can be trigger questions:
+
+- The standard **Gender** field
+- **Yes/No** custom fields
+- **Single Select** custom fields
+- Tags
+
+Text, number and date fields, and the other standard fields, cannot be triggers. One question can trigger more than one condition. A question that is already a follow-up appears greyed out.
+
+These cannot be follow-up questions:
+
+- Tags
+- **First name** and **Last name**
+- Custom fields that are already marked as required
+- The trigger question itself
+- Any question already used as a trigger or follow-up in another condition
+
+If nothing is left to choose, the sheet shows **No eligible follow-up questions yet**. Add more fields in **Fields & tags** first.
+
+### Edit or remove a condition
+
+Each saved condition appears as a card that reads as a sentence, for example **When Gender is Female or Other** followed by the number of questions it asks. For a tag, the card says whether the tag is **Assigned** or **Not assigned**. Under the sentence, each follow-up is listed as **Required when shown** or **Optional**.
+
+- Click **Edit** to change the condition.
+- Click **Remove**, then **Remove condition**, to delete it. Members are no longer asked its follow-up questions, but the fields stay selected in the campaign.
+
+A few rules keep conditions simple:
+
+- Conditions are one level deep. A follow-up question cannot reveal further follow-ups.
+- Each question can be the follow-up of only one condition.
+- Tags can trigger a condition but cannot be follow-ups.
+
+## Test the form before you launch
+
+Once you have saved the draft, click **Test the form** in the bar at the bottom of the builder (**Test** on a phone). The preview shows the form members will see, with every field blank, and nothing you enter is saved.
+
+See [Test the form](/guides/campaign-test-the-form) for details.
+
+## Launch a campaign
+
+You can launch in two ways:
+
+- In the builder, click **Create & share**. Bethel ChMS saves the draft, launches the campaign and takes you to the **Share** page.
+- On a draft's campaign page, open the **⋯** menu (**More campaign actions**), choose **Launch campaign**, then confirm with **Launch campaign**. You then land on the **Share** page.
+
+**Create & share** stays unavailable until the campaign is ready. The bar at the bottom of the builder lists what is missing, such as a campaign name, at least one field or tag, a saved draft, or an audience of at least one member. On larger screens it also shows **Ready to launch** or **Not ready to launch** and how many members are in the audience.
+
+When you launch:
+
+- The audience is frozen.
+- Members with an email address or a mobile number can respond. Those with an email address receive their personal link when you [send the emails](#send-personalised-emails). Those with only a mobile number can use the public link or QR code.
+- Members with neither are **Not contactable**. They get no personal link. On the public link and QR code, people confirm who they are with the email address or mobile number on their member record, so a member with neither cannot use those either.
+- Personal links, the public link and the QR code work straight away.
+
+After launch, a campaign can no longer be edited. **Continue setup** becomes **View setup**, which shows the builder read-only.
 
 ## Review mode
 
-The **Require review before applying** toggle controls personalised member links only.
+The **Require review before applying** switch decides what happens to changes members send through their personal link.
 
-| Review mode | What happens |
-| --- | --- |
-| **Requires review** | Submitted changes wait in the review queue until staff approve or reject them. |
-| **Auto-update** | Changes from personalised links apply after submission. |
+| Setting | Shown as | What happens |
+| --- | --- | --- |
+| On | **Requires review** | Changes wait in the review queue until you approve or reject them. |
+| Off | **Auto-update** | Changes from personal links apply to the member record as soon as the member saves. |
 
-Public link and QR submissions are always reviewed, even when the campaign uses auto-update. This protects member records because public links first identify the member by last name and email or mobile number.
+Changes sent through the public link or the QR code are always reviewed, even when review is off. Anyone can open the public link, so a person on staff checks those changes before they reach a member record.
 
 ## Share a campaign
 
-Open an active campaign and click **Share & send**.
+Open the campaign and click **Share & send**. The **Share** page has three sections, in this order: **QR code**, **Public link** and **Email**. It also shows a **Campaign launched** label, the close date and the review mode, and a **Review** button with the number of members whose changes are waiting.
 
-To email members, use the **Email** section and click **Send personalised emails**. This is the step that sends the campaign email. The earlier **Create & share** action only launches the campaign and takes you to the sharing screen.
-
-The Share page includes three options:
-
-| Option | Use it for |
+| Section | Use it for |
 | --- | --- |
-| **Email** | Send personalised update links to targeted members with email addresses. |
-| **Public link** | Share one reusable link in a bulletin, chat group, or announcement. Members identify themselves before seeing the form. |
-| **QR** | Print or display a scannable version of the public link. |
+| **QR code** | Display or print a code people scan with their phone camera, for example during a service or at the welcome desk. |
+| **Public link** | Share one link in a bulletin, a WhatsApp group or a text message. |
+| **Email** | Send every member with an email address their own personal link. This is the main way members respond. |
 
-Initial campaign emails are sent in batches. The send status tracks sent emails, members with no email address, and failed sends. If any sends fail, retry them or export the failed email list.
+The QR code and the public link open the same page. Anyone who uses them must first confirm who they are, and their changes are always reviewed.
 
-<Note>
-Org Owner and Org Admin users can send the initial email batch and download the QR PNG. Branch Admin users can open the Share page, copy the public link, and print the on-screen QR code.
-</Note>
+### Send personalised emails
+
+<Steps>
+  <Step title="Check the email">
+    In the **Email** section, look over the **Email preview** to make sure it says what you intend.
+  </Step>
+  <Step title="Start sending">
+    Click **Send personalised emails**.
+  </Step>
+  <Step title="Confirm">
+    The confirmation shows the subject line and the review mode. Click **Send emails**. Once sending starts, it cannot be undone.
+  </Step>
+</Steps>
+
+The page shows progress while the emails go out. Each member gets their own link.
+
+You can also send from the campaign page. While no emails have gone out, a banner at the top of an open campaign has its own **Send personalised emails** button.
+
+Sending again later only reaches members who have not been emailed yet, or whose email failed. Nobody gets the first email twice. If some emails fail, the **Email** section says how many. Click **Retry** to try them again, or **Export the list** to download the failed addresses as a CSV file.
+
+Members without an email address can still respond through the QR code or the public link, using their mobile number to confirm who they are.
+
+### Use the QR code
+
+In the **QR code** section:
+
+- **Show full screen** displays the code large and bright, with a short instruction to scan it, so you can hold it up during a service or leave it on the welcome desk. Click the **X** in the corner when you are done.
+- **Download PNG** saves the code as an image for slides or printed material.
+- **Print** prints the QR code section on its own.
+
+### Share the public link
+
+In the **Public link** section, the full link is shown. Click **Copy link** to copy it, or **Share…** to open your device's share options, for example to send it to a WhatsApp group. Where sharing is not available, **Share…** copies the link instead.
+
+### The email members receive
+
+The email has the subject **Help us keep your details up to date**. It greets the member by first name, names your organisation, includes your **Message to members**, and has an **Update My Details** button that opens their personal form.
+
+The **Email preview** in the **Email** section of the **Share** page shows the email. The preview uses "Friend" where each member will see their own first name. Reminders use the same email.
 
 ## What members see
 
-Members can open a campaign in two ways:
+Members open the form in one of two ways:
 
-| Link type | Member experience |
+| How they arrive | What happens |
 | --- | --- |
-| Personalised link | The form opens directly because the link is already tied to the member. |
-| Public link or QR code | The member enters **Last name** and **Email or mobile number** before the form opens. |
+| Personal link from the email | The form opens straight away, with a greeting by first name and their current details filled in. |
+| Public link or QR code | In **Step 1 of 2**, the member enters their **Last name** and their **Email or mobile number**, using the switch to choose email or mobile, then taps **Continue**. In **Step 2 of 2**, their form opens with their current details filled in. A **Start again** bar lets someone who is not that person go back. |
 
-The form shows only the fields and tags you selected. Existing values are prefilled where available. Members click **Save my details** to submit.
+The page shows the campaign name and your **Message to members** above the form. The form shows only the fields and tags you selected, in the order you set. Required fields are marked with an asterisk.
 
-If the member changes values, the confirmation page shows what they updated. If nothing changed, it confirms that nothing changed.
+The form is built for phones as well as computers:
+
+- Dates of birth and other dates use separate **Day**, **Month** and **Year** boxes.
+- **Gender**, Yes/No fields and short option lists show as buttons to tap.
+- **Nationality** opens a searchable list.
+- Email and mobile fields bring up the matching keyboard.
+- Tags appear under **Does this describe you?** (or **Do these describe you?** when there are several), each with a switch for **Yes, that's me** or **No, not me**. Switching a tag to **No, not me** asks for it to be removed from the member.
+- The **Save my details** button stays at the bottom of the screen. If something needs fixing, a message there links to each field to check.
+
+If the campaign has conditions, follow-up questions appear directly under the trigger question as soon as the member gives a matching answer. If the member changes their answer, the follow-ups hide again. Anything typed into a hidden follow-up is never sent or saved, so member records only reflect what the member actually saw and answered.
+
+After saving, the member sees a thank-you message with a **What you updated** list. When review applies, it adds that a staff member will review and confirm the changes shortly. If nothing changed, the page thanks them for checking. On the public link, a **Done** button clears the page so the next person can use the same phone or tablet.
+
+Each member can respond once per campaign, through either their personal link or the public link. If they submit again, their first set of changes is kept. If a member saves without changing anything, it does not count as a response, so they can come back later.
+
+When a link has expired, or the campaign has been stopped, closed or deleted, the member sees a message that the link is no longer active and is asked to contact the church office.
 
 <Info>
-For privacy, failed public identification attempts all show the same message. The page does not reveal whether a name, email, mobile number, campaign, or audience match failed.
+For privacy, every unsuccessful attempt on the public link shows the same message, asking the person to check their details or contact the church office. The page never reveals whether the name, email address or mobile number was the problem, whether the person is part of this campaign, or whether they have already responded. After too many attempts from the same device or network in a few minutes, successful or not, further attempts show the same message for a short while.
 </Info>
 
 ## Track responses
 
-Open a campaign dashboard to see delivery and response progress.
+Click a campaign on the **Campaigns** page to open its campaign page. At the top you see the campaign name, its status, its close date and review mode, and the number of recipients.
 
-The dashboard includes:
+A row of shortcut tiles takes you to the main tasks: **Review submissions** (with the number of members whose changes are waiting), **Share & send**, **Test the form** (drafts only) and **Continue setup** or **View setup**. On a phone the tiles use shorter labels, such as **Review** and **Share**. The **⋯** menu (**More campaign actions**) has the actions that suit the campaign's status, including **Launch campaign** for a draft, **Stop campaign** for an open campaign, and **Delete campaign** for a draft or closed campaign.
 
-- KPI tiles for targeted, sent, no-email, opened, review, submitted, approved, rejected, no-reply, expired, and not-contactable counts.
-- A recipient table with delivery status, response status, sent date, and opened date.
-- A **Remind non-responders** action for members who have not replied and have a reachable email address.
-- A submissions CSV export for campaign managers.
-- A delivery and response chart.
+The page has two tabs: **Overview** and **Recipients**.
 
-If **Nudge non-responders** is enabled, Bethel ChMS can send reminder emails to eligible non-responders on a seven-day cadence. You can also send reminders manually from the dashboard.
+### Overview tab
+
+The **Delivery & response** card shows tiles that update as members respond:
+
+| Group | Tiles |
+| --- | --- |
+| Journey | **Targeted** (frozen at launch), **Sent**, **Opened**, **Submitted** |
+| Outcomes | **Review** (members with changes waiting, click to open the review queue), **Approved**, **Rejected** |
+| No response | **No-email**, **No-reply**, **Expired**, **Not-contactable** |
+
+**Opened** is an estimate. It counts the first time each member opened their personal link, not the email itself.
+
+Below the tiles, a chart shows how many members reached each stage, from targeted to approved, with the same numbers in a table.
+
+The **Submissions export** card has an **Export CSV** button. The file lists every change members submitted, with the member, the field, the old value (**Was**), the new value (**Now**), the review status, who reviewed it and when, and any review note.
+
+### Recipients tab
+
+The **Recipients** tab lists everyone in the audience, 25 at a time, sorted by name. Before launch it is empty.
+
+- Use **Search recipients** to find someone by name.
+- Use the chips to show **All**, **Pending review**, **Not responded**, **Approved**, **Rejected**, **Expired** or **Not contactable** recipients.
+- Use the filters to narrow by response, by delivery (**Sent**, **Skipped (no email)**, **Send failed**, **Not sent**) or by whether the link was opened.
+- Click a name to open the member's record.
+
+The **Last activity** column shows when the member was sent the email and whether they opened their link.
+
+Each recipient's response status works like this:
+
+| Status | What it means |
+| --- | --- |
+| **Not responded** | The member has not sent any changes yet. |
+| **Pending review** | At least one of their changes is waiting for review. |
+| **Approved** | At least one of their changes was approved. |
+| **Rejected** | Every change they sent was rejected. |
+| **Expired** | The campaign closed before they responded. |
+| **Not contactable** | They had no email address or mobile number at launch. |
+
+### Send reminders
+
+**Manual reminders.** On the **Overview** tab, under the no-response tiles, or on the **Recipients** tab, click **Remind non-responders**. The button shows how many people will get a reminder. The confirmation shows the subject line. Click the send button, for example **Send 12 reminders**, to email each recipient who has not responded and has an email address. Members without an email address are skipped, and the result shows how many reminders were sent, skipped or failed. You can send manual reminders as often as you need.
+
+To remind only some people, select their rows on the **Recipients** tab, click **Remind**, then **Send reminders**. Anyone in your selection who has already responded is skipped.
+
+**Automatic reminders.** When **Nudge non-responders** is on, Bethel ChMS checks open campaigns every night and emails a reminder to members who have not responded and have an email address. Nobody gets an automatic reminder if they were reminded in the last seven days, whether automatically or by a manual reminder. Reminders stop when the member responds or the campaign closes.
 
 ## Review submissions
 
-When changes require review, open the campaign dashboard and click **Review submissions**.
+When changes need review, open the review queue from any of these:
 
-The review queue groups pending changes by member submission. Each field shows the previous value and the proposed value.
+- The **Review submissions** tile on the campaign page
+- The **Review** tile on the **Overview** tab, when changes are waiting
+- **Review submissions** in the campaign's **⋯** menu, or in the row menu on the **Campaigns** page
+- The **Review** button on the **Share** page
 
-You can:
+The **Review** page shows one card per member. The card shows the member's name (click it to open their record), whether they used their personal email link or the public link, and when they submitted. Each change shows the field, the old value under **Was** and the new value under **Now**.
 
-- Approve or reject one field.
-- Approve or reject all fields in a submission.
-- Select fields across submissions and approve or reject them in bulk.
+- Click **Approve** or **Reject** on a single change.
+- Click **Approve all** or **Reject all** on a card to handle every change from that member.
+- Tick changes or whole cards, then use **Approve** or **Reject** in the bar that appears to handle many at once. **Select all** ticks everything in the queue.
 
-Approved fields update the member record. Rejected fields are discarded.
+Approving writes the new value to the member's record straight away.
 
-<Note>
-Editors can review submitted campaign changes, even though they cannot create, launch, share, stop, or delete campaigns.
-</Note>
+Rejecting keeps the member's record as it is and discards the submitted value. Every rejection asks you to confirm. You can add an optional reason: choose **Couldn't confirm**, **Looks like a typo** or **Not this member**, type a note of up to 500 characters, or both. The reason is saved with the review history and appears in the submissions export. The member is not told that a change was rejected.
 
-## Stop or delete a campaign
+You can keep reviewing after a campaign has closed.
 
-Open campaigns can be stopped from the campaign dashboard. Stopping a campaign closes it and turns off member links.
+## Stop, close or delete a campaign
 
-Closed or draft campaigns can be deleted by campaign managers. Deleting archives the campaign and removes it from the list.
+**Stop a campaign.** To end an open campaign early, choose **Stop campaign** from the campaign's **⋯** menu or the row menu on the **Campaigns** page, then confirm with **Stop campaign**. Members who had not responded change to **Expired**, and personal links, the public link and the QR code stop working.
+
+**Let it close.** A campaign with a close date stops accepting responses at the end of that day. Bethel ChMS then marks it **Closed** and changes anyone who had not responded to **Expired**. A campaign without a close date stays open until you stop it.
+
+**Delete a campaign.** You can delete draft and closed campaigns. Choose **Delete campaign** from the **⋯** menu or the row menu, then confirm. The campaign is archived and removed from your list. To delete an open campaign, stop it first.
 
 <Warning>
-After a campaign is closed, old personal links, public links, and QR codes no longer accept responses.
+Once a campaign is closed, its personal links, public link and QR code no longer accept responses. If you printed the QR code, take it down.
 </Warning>
 
 ## Data retention
 
-Bethel ChMS keeps campaign response records for tracking and audit purposes. Submitted field values are redacted after the campaign has been closed for 12 months.
+Bethel ChMS keeps campaign response records for tracking and audit purposes. The old and new values members submitted are removed once the campaign has been closed for 12 months.
+
+## Related pages
+
+- [Test the form](/guides/campaign-test-the-form)
+- [Managing members](/guides/managing-members)
+- [Tags](/guides/tags)
+- [Organisation settings](/guides/organisation-settings)
+- [Roles and permissions](/guides/roles-and-permissions)

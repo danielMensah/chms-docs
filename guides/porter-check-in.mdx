@@ -1,0 +1,184 @@
+---
+title: "Check in with Porter"
+sidebarTitle: "Check-in"
+description: "Set where check-in works for each location, check in on arrival by scanning the event's QR code, check workers in by hand, and see check-in history in Porter."
+---
+
+[Porter](/guides/porter) lets your workers and volunteers check in when they arrive for a service. A worker scans the event's check-in QR code in Porter, and their phone confirms they're on site. The check-in then shows up as attendance in Bethel ChMS, just like a kiosk check-in.
+
+A few terms used on this page:
+
+- An **occurrence** is one date and time of an event, such as this Sunday's morning service.
+- A **check-in area** is the circle around a location where check-in works. You set its centre and its size, called the **radius**, in metres.
+- A **Porter admin** is someone with **Porter · Admin** access. A **worker** has **Porter · Worker**. See [Porter access levels](/guides/porter#porter-access-levels).
+
+## Before your first check-in
+
+Check these before your service team starts checking in:
+
+1. **The location exists in Bethel ChMS.** Porter uses the [locations](/guides/locations) you already have. If Porter's **Setup** says **Your church has no locations yet. Add one in Bethel ChMS first.**, add your building as a location first.
+2. **The event has a location.** Porter checks the worker's phone against the occurrence's own location, or the event's location if the occurrence doesn't have one. See [Managing events](/guides/managing-events).
+3. **Public Check-in is on for the event.** Workers scan the event's check-in QR code, and Bethel ChMS only shows that code while **Public Check-in** is on. See [Porter uses the same QR code](/guides/managing-events#porter-uses-the-same-qr-code).
+4. **The location has a check-in area.** A Porter admin sets this in Porter. See [Set a check-in area](#set-a-check-in-area).
+5. **The QR code is on display where workers arrive.** Print it from the event's **Public Check-in QR** card with **Print QR**. See [Share the event QR code](/guides/recording-attendance#share-the-event-qr-code).
+
+<Note>
+Members and visitors can also scan this same code to check themselves in, so keep it where you're happy for anyone to use it. The event's **Check-in Window** only applies to members and visitors. Workers can check in with Porter at any time on the day of the occurrence.
+</Note>
+
+<Warning>
+If you use **Regenerate Token** on the event's **Public Check-in QR** card, the old code stops working in Porter straight away. Workers who scan it see **That isn't today's check-in code**. Print and display the new code before your next service.
+</Warning>
+
+## Set a check-in area
+
+**Who can do this:** Porter · Admin
+
+<Steps>
+  <Step title="Open Setup">
+    In Porter, tap the **Setup** tab. Every location in your organisation is listed under its branch, with a badge showing **Check-in area set** and its radius, or **Not set**.
+  </Step>
+  <Step title="Open the location">
+    Tap the location you want to set up.
+  </Step>
+  <Step title="Set the centre of the area">
+    Stand at the building and tap **Use my current location**. Porter fills in the **Latitude** and **Longitude** and tells you roughly how accurate your phone's position is, in metres. You can also type the **Latitude** and **Longitude** yourself.
+
+    If Porter says **Couldn't get your location. Turn location on, allow it and try again.**, turn on location for your browser or the app, then tap the button again.
+  </Step>
+  <Step title="Set the radius">
+    Enter the **Radius (m)**, between 25 m and 2000 m. It starts at 150 m, which suits most buildings.
+  </Step>
+  <Step title="Save">
+    Tap **Save**. Porter confirms with **Check-in area saved for** and the location's name. Tap **Cancel** to close without saving.
+  </Step>
+</Steps>
+
+{/* TODO: new screenshot: Porter Setup on a phone with one location open, showing Use my current location, Latitude, Longitude and Radius (m) */}
+
+<Tip>
+Phones often struggle to get an accurate position indoors. If workers keep seeing **Couldn't confirm your location**, make that location's radius bigger.
+</Tip>
+
+## Check in when you arrive
+
+**Who can do this:** Porter · Worker, Porter · Admin
+
+<Steps>
+  <Step title="Tap Check in">
+    On Porter's **Home** tab, tap **Check in**. The camera opens, with the words **Scan the event's check-in code**.
+  </Step>
+  <Step title="Scan the event's QR code">
+    Point your camera at the QR code for today's event, usually shown at the entrance. To stop, tap the **X** at the top.
+  </Step>
+  <Step title="Share your location">
+    If your phone asks, allow Porter to use your location. Porter shows **Confirming your location…** while it checks that you're on site.
+  </Step>
+  <Step title="You're checked in">
+    Porter shows **You're checked in!** with the time, the event and location, and the date. Tap **Done** to go back to **Home**.
+  </Step>
+</Steps>
+
+You only need to check in once for each occurrence. If you scan again, Porter shows **You're already checked in** with the event and location you checked in to.
+
+Once you're checked in, you can [loan and return equipment](/guides/porter-equipment#loan-equipment).
+
+<Tip>
+Use the **Check in** button in Porter to scan the code. Your phone's own camera app opens the self check-in page for members and visitors instead, which doesn't check you in to Porter, so you couldn't loan equipment afterwards.
+</Tip>
+
+### Which occurrence your check-in counts for
+
+Porter works out which occurrence of the event you're checking in to:
+
+- **Today** means today in the event's time zone. Cancelled occurrences never count.
+- If an occurrence is in progress, your check-in goes to that one.
+- If not, it goes to the next occurrence later today.
+- If there are none left today, it goes to the most recent one earlier today.
+
+You can check in to any event in your organisation, not just events in your own branch.
+
+## If check-in doesn't work
+
+Each problem screen starts with **You're not checked in.** and offers **Try again** and **Back to home**. If your phone isn't working, ask a Porter admin to [check you in by hand](#check-workers-in-by-hand).
+
+| Screen | What it means | What to do |
+| --- | --- | --- |
+| **Location is turned off** | Porter couldn't use your phone's location. | Turn on location and allow Porter. On iPhone, go to **Settings**, **Privacy & Security**, **Location Services**. On Android, go to **Settings**, **Location**. Then scan again. |
+| **You're outside the check-in area** | Your phone is further from the location than its check-in area allows. | Move closer to the building and scan again. |
+| **Couldn't confirm your location** | Your phone's position isn't accurate enough yet, or it took too long to get one. | Step outside or stand near a window, wait a few seconds and scan again. |
+| **That isn't today's check-in code** | The code isn't a check-in code for one of your church's events, or it has been replaced. | Scan the QR code for today's event. |
+| **There's no event to check in to right now** | The event has nothing on today. | Check you're scanning the right event's code. |
+| **This location isn't set up yet** | The location has no check-in area. | Ask a Porter admin to [set the check-in area](#set-a-check-in-area). |
+| **No connection** | Your phone is offline. | Check-in needs mobile data or Wi-Fi. Reconnect and scan again. |
+| **Check-in didn't work** | Something else went wrong. | Tap **Try again**. If it keeps happening, ask a Porter admin to check you in by hand. |
+
+## Check workers in by hand
+
+**Who can do this:** Porter · Admin
+
+Use **Manual check-in** for workers who can't scan, for example when their phone is dead. It doesn't need a check-in area or the QR code. You can open it from **Home**, **Setup** or **History**.
+
+<Steps>
+  <Step title="Open Manual check-in">
+    Tap **Manual check-in**.
+  </Step>
+  <Step title="Choose the event">
+    Under **1. Event**, pick one of today's occurrences. Each shows the event, its start and end time, and its location. If nothing is on, Porter shows **No events today**.
+  </Step>
+  <Step title="Choose the workers">
+    Under **2. Workers**, tick everyone you want to check in. The list shows everyone in your organisation with Porter access who hasn't checked in to that occurrence yet. Use **Select all** or **Deselect all** to save time. If the list says **Everyone is checked in.**, there's nobody left to add.
+  </Step>
+  <Step title="Add a reason">
+    Under **3. Reason (optional)**, add a note such as "Phone dead", up to 200 characters.
+  </Step>
+  <Step title="Check them in">
+    Tap the **Check in** button, which shows how many workers you've chosen. Porter confirms how many were checked in, and how many were already checked in.
+  </Step>
+</Steps>
+
+The worker's **Home** then shows **Checked in by an admin**, and they can loan and return equipment as usual.
+
+## See check-in history
+
+Open the **History** tab. It shows the past two weeks to begin with. Use the date range picker to choose other dates.
+
+**History** has these tabs:
+
+- **Check-ins**: who checked in, to which event, when and where. Workers see only their own check-ins. Porter admins see everyone's, and can filter by **All workers** or one worker. Anyone can filter by **All events** or one event. Manual check-ins have a **manual** badge with who added them, and the reason if one was given.
+- **Equipment**: loans, returns, faults and status changes. See [Equipment history](/guides/porter-equipment#equipment-history).
+- **Rejected attempts**, for Porter admins only: check-ins that were refused.
+
+Lists show 25 rows at a time, with buttons to move between pages.
+
+### Rejected attempts
+
+**Who can do this:** Porter · Admin
+
+Each refused check-in shows the worker, the time, the event and location, and a reason:
+
+| Reason | What happened |
+| --- | --- |
+| **Wrong code** | The code wasn't a current check-in code for one of your events. |
+| **No event today** | The event had nothing on that day. |
+| **No location set** | The location had no check-in area. |
+| **Poor accuracy** | The phone's position wasn't accurate enough. |
+| **Outside the area** | The phone was outside the check-in area. |
+
+Where Porter knows them, the row also shows the distance from the location and the phone's accuracy, for example **Distance 240 m · Accuracy ±18 m**. This helps you decide whether a location's radius needs to be bigger.
+
+Some problems are caught on the worker's phone before anything is sent, so they don't appear here: location being turned off, no connection, a QR code that isn't a check-in code at all, and a phone that takes too long to find its position.
+
+## How Porter check-ins appear in Bethel ChMS
+
+Every Porter check-in, including a manual one, also records attendance for that member on that event occurrence in Bethel ChMS. On the member's **Attendance History** tab, the check-in method shows as **Porter**.
+
+If the member already has attendance for that occurrence, for example from the kiosk, Bethel ChMS keeps the existing record. See [Record attendance](/guides/recording-attendance).
+
+## Related pages
+
+- [Porter overview](/guides/porter)
+- [Equipment, loans and faults](/guides/porter-equipment)
+- [Managing events](/guides/managing-events)
+- [Locations](/guides/locations)
+- [Record attendance](/guides/recording-attendance)

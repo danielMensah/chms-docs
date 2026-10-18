@@ -1,119 +1,353 @@
 ---
 title: "Reports"
-description: "Build custom reports, export results, and save reusable report templates in Bethel ChMS."
+description: "Build reports on members, attendance, visitors, events and ministries, export them as CSV or PDF, save them as templates, and use the Gifting and Activity Log dashboards in Bethel ChMS."
 ---
 
-Reports help you answer questions across members, attendance, visitors, events, ministries, activity, and giving. You can choose a report type, configure columns and filters, preview the results, export them, and save the setup as a reusable template.
+Reports help you answer questions about your church: who your members are, who has been attending, which visitors need following up, how events are going and how your membership is growing. You choose a report type, pick the columns and filters you want, check the results on screen, then export them as a CSV or PDF file.
+
+A few terms you'll see on this page:
+
+- The **report builder** is the page where you set up a report: its columns, filters and grouping.
+- A **template** is a saved report setup that you, or others in your organisation, can load again later.
+- **Dashboards** are two ready-made summary reports, one for giving and one for activity counts. They are not the same as the **Dashboard** home page. See [Dashboards](/guides/dashboards) for that page.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, and Branch Admin can access the general **Reports** sidebar item. Editors do not see **Reports** in the sidebar, but the current app code does not block direct `/organisation/reports` access. Treasurers use finance-specific giving reports instead of the general report builder.
+**Who can do this:** Org Owner, Org Admin and Branch Admin can open **Reports**.
+
+- Editors don't have **Reports** in the sidebar. They open the Activity Log Report from the **Activity Log** page instead. See [Activity log](/guides/activity-log).
+- Treasurers can't open **Reports**. They open the Gifting & Donations Report from the **Gifting & Donations** page. See [Gifting and donations](/guides/gifting-and-donations).
+- Care Managers don't have access to reports.
 </Info>
 
-## Open reports
+## Open Reports
 
-1. In the sidebar, click **Reports**.
-2. Use the **Build Report** tab to create a report.
-3. Use the **Templates** tab to load a saved, shared, or system template.
+In the sidebar, open **Organisation** and click **Reports**. On a tablet held upright, tap **Reports** in the rail. On a phone, tap **More**, then **Reports** under **Organisation**. If you are new to the menus, see [Find your way around](/getting-started/find-your-way-around).
 
-## Report types
+The **Reports** page has two tabs:
 
-The **Select a report type** section shows the report cards available to your role and plan.
+- **Build Report**, where you choose a report type to start a new report.
+- **Templates**, where you load a saved report. See [Use templates](#use-templates).
 
-| Report type | Use it to |
+{/* TODO: new screenshot: the Reports page on the Build Report tab, showing the Build a report and Dashboards groups */}
+
+## Choose a report type
+
+On the **Build Report** tab, under **Select a report type**, report types are listed as rows in two groups. Click a row to open it.
+
+### Build a report
+
+These reports open in the report builder, where you choose your own columns, filters and grouping.
+
+| Report type | Use it to see |
 | --- | --- |
-| **Member Directory** | List members with contact details, status, branch, age group, tags, and custom fields. |
-| **Attendance Summary** | Review attendance records across events and services. |
-| **Visitor Follow-up List** | Track visitors, tags, contact details, visit counts, and last visit dates. |
-| **Event Performance** | Compare event dates, locations, attendee totals, and unique attendees. |
-| **Attendance Frequency** | See member attendance rates, absences, and last attended dates. |
-| **Growth Analysis** | Review membership growth trends and period comparisons. |
-| **Ministry Roster** | List ministry membership, roles, joined dates, and branch details. |
-| **Membership Demographics** | Build an age group and gender cross-tab. See [Membership demographics report](/guides/membership-demographics-report). |
-| **Activity Log** | Open the aggregate activity log report. See [Activity log and change history](/guides/change-history). |
-| **Gifting & Donations** | Open the dedicated giving report for finance roles. |
+| **Member Directory** | Members with contact details, status, branch, date of birth, age group, tags and member custom fields. |
+| **Attendance Summary** | Attendance records across events and services, with the event, date, time, how each person checked in and their branch. |
+| **Visitor Follow-up List** | Visitors with contact details, tags, visit counts and first and last visit dates. It can also show each visitor's follow-up status from Care. See [Visitor care columns](#visitor-care-columns). |
+| **Event Performance** | Events with their dates, locations, total attendees and unique attendees. |
+| **Attendance Frequency** | Each member's attendance: how many times they attended, how many times they were absent, their attendance rate and when they last attended. |
+| **Growth Analysis** | New members, members lost, net growth and total active members for each period, with a comparison to an earlier period. |
+| **Ministry Roster** | Ministry members with their roles, joined dates and branch. |
+| **Membership Demographics** | Your membership by age group and gender. This report has its own builder. See [Membership demographics report](/guides/membership-demographics-report). |
 
-<Note>
-Some report cards are feature-gated. For example, **Activity Log** requires pastoral activity reporting access. **Gifting & Donations** is only shown to finance roles.
-</Note>
+### Dashboards
 
-## Build a custom report
+These open a summary page with totals, a breakdown, a chart and a list of entries. See [Dashboards: gifting and activity reports](#dashboards-gifting-and-activity-reports).
+
+| Dashboard | What it shows | Who sees it |
+| --- | --- | --- |
+| **Gifting & Donations** | Giving totals, a breakdown by category and a comparison with the previous period. | Org Owner and Org Admin, when your plan includes gifting. |
+| **Activity Log** | Activity counts, a breakdown by activity type and a comparison with the previous period, across branches. | Org Owner, Org Admin and Branch Admin (and Editors from the Activity Log page), when your plan includes pastoral activity reporting. |
+
+## Build a report
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin
+
+When you choose a report type, its builder opens as its own page, titled with the report's name. Click **Back to Reports** (the back arrow in the top bar) to return to the list. To switch to a different report, click **⋯** in the top bar and choose **Change report type**.
+
+Three buttons sit above the results: **Columns**, **Filters** and **Group by**, numbered 1 to 3 on a tablet or computer. Each one shows what is currently set, such as "6 selected" or "No grouping", and opens a panel where you change it. On a phone, these panels slide up from the bottom of the screen.
 
 <Steps>
-  <Step title="Select a report type">
-    On the **Build Report** tab, click the report card you want to build.
+  <Step title="Choose a report type">
+    On the **Build Report** tab, click the report you want under **Build a report**. The builder opens with a sensible set of columns already chosen, and the preview loads straight away.
   </Step>
-  <Step title="Configure columns">
-    In **Configure Columns**, drag fields between the available and selected panels. The selected fields become the report columns.
+  <Step title="Choose your columns">
+    Click **Columns** and pick the fields you want. See [Choose columns](#choose-columns).
   </Step>
-  <Step title="Apply filters">
-    Open **Filters** and set the filters for the report. Available filters depend on the report type.
+  <Step title="Filter and sort">
+    Click **Filters** to narrow the results and choose a sort order. See [Filter and sort a report](#filter-and-sort-a-report).
   </Step>
-  <Step title="Choose grouping">
-    Use the grouping selector when the report supports grouped output, such as **By Status**, **By Branch**, or **By Age Group**.
+  <Step title="Group the rows (optional)">
+    Click **Group by** to group rows, for example by status or branch. See [Group rows](#group-rows).
   </Step>
-  <Step title="Review the preview">
-    Use **Preview** to check the data. You can search, sort, page through results, and click member rows in supported reports to open the member detail panel.
+  <Step title="Check the preview and export">
+    Review the rows under **Preview**, then click **Export PDF** or **Export CSV** at the bottom of the page. See [Export a report](#export-a-report).
   </Step>
 </Steps>
 
-## Filters and branch scope
+{/* TODO: new screenshot: the report builder for Member Directory, showing the Columns, Filters and Group by buttons, the search box, filter chips, the preview and the export bar */}
 
-Filters vary by report type. Common filters include **Date Range**, **Lifecycle Status**, **Nationality**, **Branch**, **Event**, **Ministry**, **Member Name**, **Event Scope**, **Age Group**, **Tags**, and custom fields.
+### Choose columns
 
-Member and visitor reports can include **Tags** as a selected column. When you filter by two or more tags, choose **Match any** to include people with at least one selected tag, or **Match all** to include only people with every selected tag.
+Click **Columns** to open **Configure Columns**. The panel has two lists:
 
-Org-scoped users can choose a branch when the report supports branch filtering. Branch-scoped users do not see the **Branch** filter because Bethel ChMS locks the report to their branch.
+- **Selected Fields** shows the columns in your report, numbered in the order they appear. Use the up and down arrows to change the order. If you are using a mouse, you can also drag a field by its handle. Click the remove button on a field to take it out. At least one column must remain, so the last column can't be removed.
+- **Available Fields** shows the fields you can add. Click (or tap) a field to add it to the end of your columns. For Member Directory and Visitor Follow-up List, your [custom fields](/guides/organisation-settings#custom-fields) appear under **Custom Fields**. When every field is in use, the list reads "All fields selected".
 
-For event and ministry filters, org-scoped users must select a branch first. This keeps the event and ministry lists scoped to the selected branch.
-
-## Export a report
-
-Use the buttons in the **Preview** toolbar to export field-based reports:
-
-- **Export PDF** downloads a PDF that uses the selected columns, filters, grouping, and sort order.
-- **Export CSV** downloads a CSV that uses the selected columns, filters, grouping, and sort order.
-
-CSV and PDF exports for field-based reports are capped at 50,000 rows.
+The preview and your exports follow the column order you set here. Click **Done** to close the panel.
 
 <Note>
-If no columns are selected, exports are disabled until you select at least one column.
+If a custom field you used in a report is later deleted, the builder shows a warning that some selected fields have been removed. That column shows as blank.
 </Note>
 
-## Save a report template
+### Filter and sort a report
 
-Templates save the current report configuration so you can reuse it later. A template stores selected columns, filters, grouping, and sorting. For the membership demographics report, it stores the demographics-specific settings instead.
+Click **Filters** to open the **Filters** panel. The top of the panel shows how many filters are active and how many rows match. Filters apply as soon as you change them, so the preview updates behind the panel.
+
+**Sort by** comes first. Choose **Default order** or any of your selected columns, then choose **A → Z** or **Z → A**.
+
+Below that are the filters for the report you are building. Each report has its own set:
+
+| Report type | Filters |
+| --- | --- |
+| **Member Directory** | **Date Range**, **Lifecycle Status**, **Nationality**, **Branch**, **Age Group**, **Tags**, plus member custom fields |
+| **Attendance Summary** | **Date Range**, **Lifecycle Status**, **Event**, **Branch**, **Age Group** |
+| **Visitor Follow-up List** | **Date Range**, **Nationality**, **Branch**, **Tags**, **Care status**, plus visitor custom fields |
+| **Event Performance** | **Date Range**, **Event**, **Branch**, **Age Group** |
+| **Attendance Frequency** | **Date Range**, **Event**, **Branch**, **Member Name**, **Event Scope**, **Age Group** |
+| **Growth Analysis** | **Date Range**, **Branch** |
+| **Ministry Roster** | **Ministry**, **Branch** |
+
+A few things to know about the filters:
+
+- **Date Range** has **From** and **To** date fields.
+- **Tags**: when you pick two or more tags, choose **Match any** to include people with at least one of the tags, or **Match all** to include only people with every tag. See [Tags](/guides/tags).
+- **Nationality** includes a **Not set** option, for people with no nationality recorded.
+- Yes/no custom fields offer **Not set** (never filled in), **Yes**, **No** and **No or Not Set**.
+- **Event Scope** (Attendance Frequency) lets you count **All events**, **Branch-wide only** or **Group events only** (shown with your branch's name for groups, such as **Cell events only**).
+- Each filter has a **Clear** button once it has a value.
+
+Click **Show** (for example, **Show 120 rows**) to close the panel, or **Clear All Filters** to remove every filter.
+
+Your active filters appear as chips above the preview. Click the cross on a chip to remove that filter, or click **Add filter** to open the **Filters** panel again.
+
+#### Branch filters
+
+Your branch is your church or campus. If you are an Org Owner or Org Admin, you can use the **Branch** filter to report on one branch, or leave it empty to report across your organisation.
+
+Branch Admins don't see a **Branch** filter. Bethel ChMS keeps their reports to their own branch, because each branch owns its data.
+
+The **Event** and **Ministry** filters list one branch's events and ministries at a time. If you are an Org Owner or Org Admin, choose a **Branch** first. Until you do, these filters read "Select a branch first to filter by event." or "Select a branch first to filter by ministry."
+
+### Group rows
+
+Click **Group by** and choose how to group the rows, or **No grouping**. The options depend on the report. For example, Member Directory offers **By Status**, **By Nationality**, **By Branch** and **By Age Group**.
+
+In a grouped preview, each group appears as a heading with its row count. Groups start collapsed. Click a group to open it and see its rows, 50 at a time. If a group has more rows, click the **Show more** button at the bottom of the group (for example, **Show 50 more**) to load the next set. For reports with number columns, the group heading also shows totals and averages, and Attendance Frequency shows each group's average attendance rate.
+
+Click **Done** to close the panel.
+
+### Search and read the preview
+
+Under the three buttons:
+
+- Type in **Search all results...** to search every row in the report, not just the current page.
+- The **Preview** heading shows how many rows there are, for example "Showing 1–50 of 230 rows", along with your search and sort.
+
+The preview shows 50 rows per page. On a tablet or computer, you can click a column heading to sort by that column. On a phone, each row shows only the first few columns, but every selected column is included in the PDF and CSV.
+
+In **Member Directory** and **Attendance Summary**, click a row to open that member's details in a side panel, where you can check or edit them without leaving the report. This works when the rows are not grouped.
+
+If nothing matches, the preview reads "No data matches your filters." Try widening your date range or removing some filters.
+
+### Export a report
+
+The export bar stays at the bottom of the builder as you scroll. It has two buttons, and on a tablet or computer it also shows how many rows and columns the report has:
+
+- **Export PDF** creates a formatted PDF.
+- **Export CSV** creates a spreadsheet file you can open in Excel, Numbers or Google Sheets.
+
+Both files use your selected columns, filters, grouping and sort order. Exports include up to 50,000 rows. Files are named after the report type and today's date.
+
+On a computer, the file downloads straight away. On a phone or tablet that can share files, your device's share options open instead, so you can save the file or send it by email or message.
+
+A message such as "member_directory-2026-10-17.csv is ready." then appears for a few seconds, in case you want the file again:
+
+- **Download** saves another copy to your device.
+- **Share** opens your device's share options. This button only appears on devices that can share files.
+
+<Note>
+The export bar is hidden while you have Member Directory rows selected. Clear your selection to export. See [Update or merge members from the Member Directory](#update-or-merge-members-from-the-member-directory).
+</Note>
+
+## Visitor care columns
+
+**Care** is where your team follows up visitors and looks after members. See [Care](/guides/care). When your plan includes Care, the **Visitor Follow-up List** can show each visitor's follow-up from Visitor care.
+
+In **Columns**, you can add:
+
+| Column | What it shows |
+| --- | --- |
+| **Care status** | The visitor's Visitor care status, such as **Needs follow-up** or **Connected**. Shows **No case** if the visitor has never had a Visitor care case. |
+| **Assigned to** | The person the case is assigned to. |
+| **Care opened** | The date the case was opened. |
+| **Due date** | The date the follow-up is due. |
+
+In **Filters**, the **Care status** filter lets you pick one or more of **Needs follow-up**, **Contacted**, **No response yet**, **Connected**, **No follow-up needed**, **Became a member** and **No case**. For example, pick **No case** to find visitors nobody has started following up yet.
+
+Good to know:
+
+- If a visitor has had more than one Visitor care case, the report uses their current open case. If none is open, it uses the most recent one.
+- Pastoral care and confidential cases never appear in reports.
+- If your plan doesn't include Care, these columns stay blank, and filtering by **Care status** shows no visitors.
+- The columns are included in your CSV and PDF when you select them.
+
+## Update or merge members from the Member Directory
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin
+
+In **Member Directory**, each row has a checkbox, whether or not the rows are grouped. On a phone, tap **Select** above the rows first to show the checkboxes. When you select rows, a bar appears with the number selected and two actions.
+
+### Update a field on several members
+
+Use **Update field…** to set one detail on many members at once, for example to set the nationality for a group of members who were imported without one.
+
+<Steps>
+  <Step title="Select the members">
+    Tick the members you want to change. You can update up to 100 members at a time.
+  </Step>
+  <Step title="Open Update field">
+    Click **Update field…**.
+  </Step>
+  <Step title="Choose the field and value">
+    Choose a **Field**. Under member fields you can choose **Status**, **Nationality**, **Age Group** or **Gender**, and any member custom fields appear below. Then choose the new value. To remove a value instead, tick **Clear value (remove this field from the selected members)** (not available for **Status**).
+  </Step>
+  <Step title="Give a reason">
+    Enter a **Reason**, up to 500 characters. The change is logged with your reason.
+  </Step>
+  <Step title="Apply the change">
+    Check the summary of who will be updated, then click **Apply**.
+  </Step>
+</Steps>
+
+Only the field you chose is changed. Everything else on each member's record stays as it was. If you set an age group, members who have a date of birth keep the age group worked out from it and are skipped. See [Age groups](/guides/age-groups).
+
+### Merge two members
+
+If two rows are the same person, select exactly two members from the same branch and click **Merge**. Both must be on the page you are viewing. If your selection can't be merged, Bethel ChMS tells you why, for example "Select exactly 2 members to merge" or "Members must be in the same branch". See [Duplicates and merging](/guides/duplicates-and-merging) for how merging works.
+
+## Save a report as a template
+
+Save a report you'll want to run again, so you don't have to set it up each time. A template keeps your selected columns, filters, grouping and sort order.
 
 1. Build the report you want to reuse.
-2. Click **Save as template** or **Save template**.
-3. Enter a **Name**.
-4. Add an optional **Description**.
+2. On a tablet or computer, click **Save as template** in the top bar. On a phone, tap **⋯**, then **Save as template**.
+3. In **Save Template**, enter a **Name** (up to 100 characters).
+4. Add a **Description (optional)** (up to 500 characters).
 5. Click **Save**.
 
-Each user can save up to 25 personal templates.
+A message confirms the template was saved, and it appears under **My Templates**.
 
-## Use saved templates
+Each person can save up to 25 templates. If you reach the limit, delete templates you no longer use to make room.
 
-Open the **Templates** tab to see three sections:
+### Update a template you loaded
+
+When you have loaded a template, the button in the top bar reads **Save template** and the dialog is called **Update Template**:
+
+- Click **Update** to save your changes over the loaded template. This only works for templates you created.
+- Click **Save as New** to keep the original and save your changes as a new template.
+
+System templates and templates shared by others can't be changed in place. To keep your changes, use **Save as New**, or **Clone** the template from the **Templates** tab.
+
+<Note>
+The [Membership Demographics](/guides/membership-demographics-report) report always saves a new template. It doesn't offer **Update**.
+</Note>
+
+## Use templates
+
+Open the **Templates** tab on the **Reports** page. Under **Report Templates**, templates are listed in three sections:
 
 | Section | What it contains |
 | --- | --- |
-| **System Templates** | Built-in templates provided by Bethel ChMS. |
-| **My Templates** | Templates you created. |
-| **Shared Templates** | Published templates created by other users in your organisation. |
+| **My Templates** | Templates you created. The heading shows how many of your 25 you have used, for example "3 of 25 saved". |
+| **Shared Templates** | Templates other people in your organisation have published. |
+| **System Templates** | Ready-made templates that come with Bethel ChMS, such as **This Month's Attendance**, **Member Directory** and **Mid & End of Year Membership Report**. |
 
-Use the template action menu to choose **Load** or **Clone**. For templates you own, you can also **Rename**, **Publish**, **Unpublish**, or **Delete**.
+Each row shows the template's name, its report type, when it was last updated and its description. Badges show **System** for built-in templates and **Published (Org)** or **Published (Branch)** for published ones.
 
-<Info>
-Org Owner, Org Admin, and Branch Admin can publish templates. Published templates count toward the organisation limit of 25 published templates.
-</Info>
+Click a template to load it. The matching report builder opens with the template's setup, and a message confirms which template was loaded.
 
-Published templates are marked as organisation-scoped for org-scoped publishers and branch-scoped for branch-scoped publishers. In the current app, shared templates are fetched across the organisation even when the template is marked as branch-scoped.
+### Template actions
 
-## Update an existing template
+Click **⋯** on a template row for more actions:
 
-When you load one of your templates, the save dialog lets you update it or save the current configuration as a new template.
+- **Load** opens the template in the report builder.
+- **Clone** makes your own copy under **My Templates**, named with "(copy)" at the end, which you can then change. A copy counts towards your 25 saved templates.
 
-- Click **Update** to overwrite the loaded template.
-- Click **Save as New** to create a separate template.
+On templates you created, you also get:
 
-System and shared templates cannot be edited in place. Clone them first if you want your own editable copy.
+- **Rename** opens **Rename Template**, where you enter a new name.
+- **Publish** shares the template with others in your organisation, and **Unpublish** stops sharing it. Only Org Owner, Org Admin and Branch Admin can publish.
+- **Delete** removes the template after you confirm in **Delete Template**. This can't be undone.
+
+Your organisation can have up to 25 published templates. If you reach the limit, you see "You have reached the maximum number of published templates for your organisation." Unpublish templates you no longer share to make room.
+
+## Dashboards: gifting and activity reports
+
+The two dashboards give you a summary of a period at a glance: totals, how they compare with the previous period, a breakdown, a chart over time and the list of entries behind the numbers. You open them from the **Dashboards** group on the **Build Report** tab, or from the page they report on.
+
+### Filter a dashboard
+
+Both dashboards share the same filters. They start on the last 30 days, with monthly totals in the chart, and every change applies straight away.
+
+**The date range button** at the top shows the period you are looking at, for example "Showing Last 30 days". Click it to choose a different period:
+
+- On a tablet or computer, a calendar opens beside a list of presets. Under **Range** are **Last 7 days**, **Last 30 days**, **Last 90 days**, **This month** and **Year to date**. Under **Single day** are **Today**, **Yesterday** and **Last Sunday**. Pick a preset or choose dates on the calendar, then click **Apply**. **Cancel** closes it without changes.
+- On a phone, a **Date range** panel slides up with the same presets as chips, plus **From** and **To** date fields. Tap **Apply** to use your choice.
+
+**This month** and **Year to date** run up to today. Future dates can't be chosen.
+
+**Quick chips** under the date range let you jump to a common period with one tap: **Last 30 days**, **This Week**, **This Month**, **This Quarter**, **This Year** and **Last Year**. **This Week** runs from Monday to Sunday. **This Month**, **This Quarter** and **This Year** cover the whole calendar month, quarter or year. Chips for any branches, categories or activity types you have picked, and **Including deleted** if you have turned that on, appear in the same row. Click the cross on a chip to remove it.
+
+**The Filters button** opens a panel with:
+
+- **Date range**: the same quick periods, plus **From** and **To** date fields for your own range.
+- **Branch**: pick one or more branches. If you pick none, the report covers all branches. Pick two or more to see the **Branch Comparison**. If your role is limited to one branch, this shows your branch name and can't be changed.
+- **Category** (gifting) or **Activity Type** (activity log): pick one or more to narrow the report.
+- **Granularity**: how the chart groups the period, **Daily**, **Weekly**, **Monthly** or **Yearly**.
+- **Options**: **Include deleted entries**, for the roles that can see deleted entries. Deleted entries are then listed with a **Deleted** badge and counted in the totals.
+
+Click **Show** (for example, **Show 42 entries**) to close the panel, or **Clear all** to go back to the last 30 days with monthly totals.
+
+### Gifting & Donations Report
+
+**Who can do this:** Org Owner, Org Admin, Treasurer, when your plan includes gifting
+
+- Org Owners and Org Admins open it from **Reports** > **Build Report** > **Gifting & Donations**, or from the **Gifting & Donations** page.
+- Treasurers open it from the **Gifting report** link on the **Gifting & Donations** page (**Report** on a phone). Treasurers only see their own branch, and don't see deleted entries or the Branch Comparison.
+
+See [Gifting and donations](/guides/gifting-and-donations) for logging gifts.
+
+The page is titled **Gifting & Donations Report**. The line underneath shows which branches you are looking at, such as "All branches". It shows:
+
+| Section | What it shows |
+| --- | --- |
+| **Total Received** | The total given in the period, with the dates underneath. |
+| **vs Prior Period** | The percentage change compared with the previous period of the same length. |
+| **Number of Entries** | How many gifts were logged, and whether deleted entries are included or excluded. |
+| **Top Category** | The category with the most giving, and its share of the period. |
+| **Category Breakdown** | Each category's number of entries, total, share of the period and change since the previous period, sorted with the highest total first. |
+| **Branch Comparison** | Appears when you pick two or more branches. Each branch's totals and its change since the previous period. |
+| **Gifting Over Time** | A chart of the total received for each day, week, month or year. Switch between **Chart** and **Table**. If you pick two or more categories, the chart splits the bars by category, with a key. Chart values are rounded, so switch to **Table** for exact amounts. |
+| **Entries** | The gifts behind the numbers, newest first, 50 at a time: category, date, amount, who logged it, who last updated it and when. **Edited** and **Deleted** badges mark changed entries. Click an entry to open it. |
+
+Click **Export CSV** in the top bar (the download button on a phone) to download the entries for your current filters. The file is named with your date range, and includes the entry date, category, amount, currency, notes, branch, who logged and last updated each entry and when, and who deleted it and when.
+
+### Activity Log Report
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor, when your plan includes pastoral activity reporting
+
+Org Owners, Org Admins and Branch Admins can open it from **Reports** > **Build Report** > **Activity Log**. Everyone with access, including Editors, can open it from the **Activity report** link on the **Activity Log** page (**Report** on a phone).
+
+The page is titled **Activity Log Report** and uses the same filters as the gifting report, with **Activity Type** instead of **Category**. Branch Admins and Editors see their own branch only, and Editors don't see deleted entries. It shows the total entries and total count, the change since the previous period, the top activity type, a breakdown by type, a chart of counts over time, a Branch Comparison for Org Owners and Org Admins when two or more branches are picked, and the entries behind the numbers. **Export CSV** in the top bar (the download button on a phone) downloads the entries.
+
+For the full details, see [Activity log](/guides/activity-log).

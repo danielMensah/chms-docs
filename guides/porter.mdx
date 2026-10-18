@@ -1,0 +1,256 @@
+---
+title: "Porter: the app for your service teams"
+sidebarTitle: "Porter overview"
+description: "What Porter is, how to get it switched on, how to give your workers access, and how workers install it, sign in and find their way around."
+---
+
+**Porter** is the part of Bethel ChMS that your church's workers and volunteers use on their phones. Stewards, ushers, the media team and anyone else on a service rota use it to:
+
+- **Check in** when they arrive, by scanning the event's check-in QR code. The check-in only counts when the phone is on the premises, and it shows up as attendance in Bethel ChMS. See [Check in with Porter](/guides/porter-check-in).
+- **Loan and return equipment**, such as microphones, cables and cameras, by scanning the QR labels you stick on them. See [Equipment, loans and faults](/guides/porter-equipment).
+- **Report faults** the moment they find them, with photos. See [Porter alerts and return reminders](/guides/porter-alerts).
+
+This page has two parts:
+
+- **For church admins:** [switching Porter on](#get-porter-switched-on), [giving people access](#give-someone-porter-access) and [setting it up](#set-up-porter-for-your-church).
+- **For workers:** [installing the app, signing in and finding your way around](#for-workers-get-started-with-porter).
+
+## Porter access levels
+
+Porter has its own two access levels, separate from the roles people have in Bethel ChMS. The **Users** page shows them as:
+
+- **Porter · Worker**: checks in, loans and returns equipment, and reports faults.
+- **Porter · Admin**: does everything a worker does, and also sets Porter up and looks after the equipment.
+
+On these pages, a **worker** is anyone with Porter · Worker, and a **Porter admin** is anyone with Porter · Admin.
+
+| What they can do in Porter | Porter · Worker | Porter · Admin |
+| --- | --- | --- |
+| Check in on arrival | Yes | Yes |
+| Loan and return equipment (after checking in) | Yes | Yes |
+| Report a fault, at any time | Yes | Yes |
+| Browse the equipment list and open an item | Yes | Yes |
+| See their own check-in and equipment history | Yes | Yes |
+| Set each location's check-in area, in **Setup** | No | Yes |
+| Check workers in by hand | No | Yes |
+| See everyone's history, including **Rejected attempts** | No | Yes |
+| Add and edit equipment, print labels, export the equipment list | No | Yes |
+| Manage equipment tags | No | Yes |
+| Mark items missing or found, resolve faults, retire items, delete sets | No | Yes |
+| See the **Alerts** tab and set return reminders | No | Yes |
+
+A Porter access level sits on the person's **member record**, not on a Bethel ChMS role. This means anyone can have it: a volunteer who never uses Bethel ChMS, or a staff member with any Bethel ChMS role. Someone with Porter only can't open Bethel ChMS. Someone with both uses one email and password for both. See [Porter access levels](/guides/roles-and-permissions#porter-access-levels).
+
+### Porter covers your whole organisation
+
+Your **organisation** is your church network, with all its branches, members and settings. In Bethel ChMS, each branch owns its own records. Porter works differently: it covers the whole organisation, so one team of Porter admins can look after check-in and equipment for every site.
+
+- **Setup** lists every location in your organisation, grouped by branch.
+- **Manual check-in** lists every worker in your organisation.
+- The equipment list, alerts and return reminders cover all branches.
+
+A Porter admin therefore works across every branch, whatever their Bethel ChMS role. For example, a Branch Admin who is also a Porter admin can set up check-in and manage equipment for all branches in Porter.
+
+## Get Porter switched on
+
+**Who can do this:** Org Owner, Org Admin
+
+Porter is off for every church until it's switched on. It isn't tied to your plan: the Bethel ChMS team switches it on for your church on request. To ask for it, email [hello@bethelware.app](mailto:hello@bethelware.app).
+
+While Porter is off:
+
+- The **Users** page has no Porter options.
+- The Bethel ChMS sidebar has no **Porter** link.
+- Anyone who opens Porter sees **Porter isn't switched on for your church**, with a message asking them to get their church admin to contact the Bethel ChMS team.
+
+If Porter is switched off again later, everything is kept, including your equipment, check-ins and who has which access level.
+
+## Give someone Porter access
+
+**Who can do this:** Org Owner, Org Admin, once Porter is switched on for your church
+
+You give Porter access in Bethel ChMS, on the **Users** page. In the sidebar, open **Organisation** and click **Users**. Branch Admins can see who has Porter on the **Users** page, but can't change it.
+
+<Info>
+Every Porter user must be linked to a **member record**, because their check-ins and equipment loans go on it. If the person isn't in Bethel ChMS as a member yet, [add them as a member](/guides/managing-members) first.
+</Info>
+
+### Someone new to Bethel ChMS
+
+<Steps>
+  <Step title="Open Add user">
+    On the **Users** page, click **Add user**.
+  </Step>
+  <Step title="Enter their email">
+    Enter the **Email** they'll sign in with.
+  </Step>
+  <Step title="Choose the app">
+    Under **Apps**, choose **Porter** for someone who only needs Porter, or **Both apps** if they also need Bethel ChMS. For **Both apps**, also fill in their Bethel ChMS **Name** and **Role**, and their **Branch** if the role needs one.
+  </Step>
+  <Step title="Choose their Porter role">
+    Under **Porter role**, choose **Worker** or **Admin**. **Worker** is selected to begin with.
+  </Step>
+  <Step title="Link their member record">
+    Under **Link to member record**, click **Search members…** and type a name or email. Each result shows the member's branch and email address, and **has sign-in** if they already have a sign-in. Pick the right person.
+
+    If the member record has a different email address from the one you entered, a warning tells you that saving replaces it.
+  </Step>
+  <Step title="Send the invitation">
+    Click **Create user**. The person gets an invitation email from Bethel ChMS.
+
+    If the member already has a sign-in (**has sign-in**), enter the email they already sign in with and choose **Porter**. Porter is linked to their existing sign-in as soon as you click **Create user**, and they keep their password.
+  </Step>
+</Steps>
+
+{/* TODO: new screenshot: the Add user sheet with Porter chosen under Apps, Worker selected and a member record linked */}
+
+The invitation email has an **Accept Invitation** button. The person opens it and sets a password. Someone invited to Porter only goes straight into Porter. Someone invited to **Both apps** starts in Bethel ChMS. Their check-ins and loans then go on the member record you linked.
+
+Invitation links expire. Until the person accepts, they appear under the **Invites** chip on the **Users** page as **Invite pending**, or **Invite expired** once the link has lapsed. Click **Resend** to send a fresh link. For a **Porter**-only invitation, you can also open the **⋯** menu and choose **Cancel invite** to stop the link working. See [Manage invitations](/guides/user-management#manage-invitations).
+
+### Someone who already uses Bethel ChMS
+
+Give them Porter from **Edit user** rather than adding them again:
+
+1. On the **Users** page, click **⋯** on their row and choose **Edit**.
+2. Under **Apps**, tick **Porter**.
+3. Choose a **Porter role** and use **Link to member record** to pick their member record. If their sign-in is already linked to a member record, it's shown and can't be changed.
+4. Click **Save changes**.
+
+Because they already have a sign-in, Porter works for them as soon as you save. No invitation is sent.
+
+<Tip>
+**Setting Porter up yourself?** Give yourself **Porter · Admin** this way, from **Edit** on your own row. Setup, equipment and alerts are all done inside Porter, so you need Porter admin access to reach them.
+</Tip>
+
+### Change or remove someone's Porter access
+
+| To | For a Bethel ChMS user | For someone with Porter only |
+| --- | --- | --- |
+| **Change their access level** | Open **Edit**, choose the other **Porter role** and click **Save changes**. | Click **Add user**, enter the email they sign in with, choose **Porter**, pick the new **Porter role** and link the same member record, then click **Create user**. Because they already sign in, the change applies straight away. |
+| **Remove Porter** | Open **Edit**, untick **Porter** and click **Save changes**. | Click **⋯** on their row and choose **Remove Porter**, then confirm with **Remove Porter**. |
+
+Removing Porter keeps the person's member record, past check-ins and sign-in, so you can give Porter back later. Deactivating a Bethel ChMS user also stops them using Porter, because they share one sign-in.
+
+On the **Users** page, people with Porter only appear after your Bethel ChMS users. Their role shows as **No ChMS role** with **Porter only** underneath. For more, see [Give or remove Porter access](/guides/user-management#give-or-remove-porter-access).
+
+## Set up Porter for your church
+
+Once Porter is switched on, work through these steps. Most of them are done inside Porter by a Porter admin.
+
+<Steps>
+  <Step title="Give yourself Porter admin access">
+    Give yourself, and anyone else who will run Porter, **Porter · Admin**. See [Someone who already uses Bethel ChMS](#someone-who-already-uses-bethel-chms).
+  </Step>
+  <Step title="Check your locations and events in Bethel ChMS">
+    Porter uses the [locations](/guides/locations) and [events](/guides/managing-events) you already have in Bethel ChMS. Make sure **Public Check-in** is on for every event your workers check in to, because they scan the event's check-in QR code.
+  </Step>
+  <Step title="Set each location's check-in area">
+    In Porter, open **Setup** and set where check-in works for each location. See [Set a check-in area](/guides/porter-check-in#set-a-check-in-area).
+  </Step>
+  <Step title="Register your equipment and print labels">
+    Add your equipment in Porter's **Equipment** tab, print the QR labels and stick them on. See [Equipment, loans and faults](/guides/porter-equipment).
+  </Step>
+  <Step title="Turn on alerts and set return reminders">
+    Turn on alerts on your phone, and choose when workers are reminded to return equipment. See [Porter alerts and return reminders](/guides/porter-alerts).
+  </Step>
+  <Step title="Give your workers access">
+    Add each worker with **Porter · Worker**. See [Give someone Porter access](#give-someone-porter-access).
+  </Step>
+</Steps>
+
+## For workers: get started with Porter
+
+### Install the app
+
+Porter is part of the Bethel ChMS app, so there's nothing to download from an app store. On your phone, open [app.bethelchms.com/porter/login](https://app.bethelchms.com/porter/login) and sign in. On browsers that can install apps, a bar at the top of Porter then invites you to **Add Porter to your home screen**. If you only use Porter, the installed app opens straight into Porter while you're signed in.
+
+On iPhone and iPad, install the app before you turn on alerts, because alerts only work when Porter is opened from the Home Screen. For step-by-step help, see [Install the app](/getting-started/install-the-app).
+
+### Sign in
+
+<Steps>
+  <Step title="Open the Porter sign-in page">
+    Go to [app.bethelchms.com/porter/login](https://app.bethelchms.com/porter/login). The page is headed **Porter**, with the line **Check-in and equipment for church workers**. If you open the installed app while signed out, it shows the main Bethel ChMS sign-in page instead, which works just as well (see below).
+  </Step>
+  <Step title="Enter your details">
+    Enter your **Email** and **Password**. Tap the eye icon to show or hide your password. Let the security check finish.
+  </Step>
+  <Step title="Sign in">
+    Tap **Sign in**. Porter opens on **Home**.
+  </Step>
+</Steps>
+
+If you already use Bethel ChMS, sign in with the same email and password. One account works for both. You can also sign in on the main Bethel ChMS sign-in page: if you only have Porter, it takes you straight to Porter. See [Sign in](/getting-started/sign-in).
+
+If the page says **This account doesn't have Porter access. Ask an admin at your church.**, ask a church admin to [give you Porter access](#give-someone-porter-access).
+
+**Forgotten your password?** Reset it from the main Bethel ChMS sign-in page, which takes you through choosing a new password. See [Reset a forgotten password](/getting-started/sign-in#reset-a-forgotten-password). Then sign in with your new password.
+
+### Find your way around Porter
+
+On a phone, Porter's tabs run along the bottom of the screen. On a tablet or computer, they're down the left. The bar at the top shows **Porter**, then **Worker** or **Admin**, then your initials.
+
+| Tab | Who sees it | What it's for |
+| --- | --- | --- |
+| **Home** | Everyone | Check in, see what's on loan to you, and report a fault. |
+| **Equipment** | Everyone | Loan and return equipment, and browse the equipment list. See [Equipment, loans and faults](/guides/porter-equipment). |
+| **Alerts** | Porter admins | Open faults and missing items. A red badge shows how many need attention. See [The Alerts tab](/guides/porter-alerts#the-alerts-tab). |
+| **History** | Everyone | Your check-ins and equipment history. Porter admins see everyone's. |
+| **Setup** | Porter admins | Check-in areas, equipment tags, alerts and return reminders. |
+
+If a worker opens a screen meant for Porter admins, Porter tells them it's only for Porter admins.
+
+{/* TODO: new screenshot: Porter Home for a worker on a phone, showing the check-in card, the With you card and the bottom tabs */}
+
+#### Home
+
+**Home** shows today's date and greets you by name. Then:
+
+- **Your check-in.** If you haven't checked in yet, the card reads **You're not checked in**, with a **Check in** button. Once you have, it shows the event, the time and the location. It says **Checked in by an admin** if a Porter admin checked you in by hand.
+- **With you.** The equipment on loan to you, with when you took it, and the **Loan** and **Return** buttons. Return everything before you leave.
+- **Report a fault**, for anything broken or not working.
+- **Turn on alerts**, for Porter admins, and for workers while they have equipment on loan. See [Porter alerts and return reminders](/guides/porter-alerts).
+
+Porter admins also get **Manual check-in** and **Setup** buttons on **Home**.
+
+## Move between Bethel ChMS and Porter
+
+If you use both, you don't need to sign in twice.
+
+- **To open Porter:** on a computer, click **Porter** at the bottom of the Bethel ChMS sidebar. It has a small **App** label. On a tablet or phone, tap **More** and find **Porter** under **Apps**.
+- **To go back:** tap **Back to ChMS**. Porter admins find it at the bottom of **Setup**. Workers find it on **Home**. It opens your Bethel ChMS **Dashboard**.
+
+The **Porter** link only appears when Porter is switched on for your church and your own member record has a Porter access level. Treasurers and Care Managers don't see it. **Back to ChMS** only appears for people who also have a Bethel ChMS account. See [Find your way around](/getting-started/find-your-way-around#porter).
+
+## If Porter won't open
+
+<AccordionGroup>
+  <Accordion title="You don't have access to Porter">
+    You're signed in, but your account has no Porter access. The screen explains that the account can sign in to Bethel ChMS only, and asks you to get an admin at your church to give you Porter access. Tap **Sign in with another account** to sign out and return to the Porter sign-in page.
+  </Accordion>
+  <Accordion title="Porter isn't switched on for your church">
+    Porter hasn't been switched on for your organisation yet. Ask your church admin to contact the Bethel ChMS team. See [Get Porter switched on](#get-porter-switched-on).
+  </Accordion>
+  <Accordion title="Service paused">
+    Your church's Bethel ChMS account is on hold for billing, so Porter isn't available for now. The page reads **This service is temporarily paused** and asks you to contact a church administrator. No action is needed from you, and everything comes back once billing is sorted. Your Org Owner can find out more in [Billing and subscription](/guides/billing-and-subscription#if-your-account-is-paused).
+  </Accordion>
+  <Accordion title="No connection">
+    When your phone loses its connection, a red **No connection** bar appears at the top of Porter. Scans aren't recorded until you're back online, so reconnect to mobile data or Wi-Fi and try again.
+  </Accordion>
+</AccordionGroup>
+
+## Privacy
+
+- **Location.** Porter uses your phone's location only to check that you're on site when you check in. Your phone shares its position once for each scan. Porter keeps only how far you were from the location and how accurate your phone's position was, never where you actually were.
+- **Photos.** Equipment and fault photos are stored privately. Only people signed in to your church's Porter can see them.
+- **Alerts.** Turning on alerts on a device lets Porter send notifications to it. Turn them off at any time. See [Porter alerts and return reminders](/guides/porter-alerts).
+
+## Related pages
+
+- [Check in with Porter](/guides/porter-check-in)
+- [Equipment, loans and faults](/guides/porter-equipment)
+- [Porter alerts and return reminders](/guides/porter-alerts)
+- [User management](/guides/user-management)
+- [Roles and permissions](/guides/roles-and-permissions)
+- [Install the app](/getting-started/install-the-app)

@@ -1,0 +1,138 @@
+---
+title: "Duplicates and merging"
+description: "Review possible duplicate members in Bethel ChMS, dismiss pairs that are different people, and merge two records for the same person."
+sidebarTitle: "Duplicates and merging"
+---
+
+Sometimes the same person ends up in Bethel ChMS twice, for example when they are added by hand and then again in an import. Bethel ChMS looks for likely duplicates and lists them in **Possible Duplicates**, so you can decide whether each pair is one person or two.
+
+When two records belong to the same person, you **merge** them. You choose the record to keep, bring across any details you want from the other one, and Bethel ChMS moves everything else onto the record you keep.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin and Branch Admin can dismiss pairs, run **Re-scan now** and merge members. Branch Admins can only merge members in their own branch. See [Roles and permissions](/guides/roles-and-permissions).
+</Info>
+
+<Warning>
+A merge is permanent. It can't be undone, so check both records carefully before you confirm.
+</Warning>
+
+## How Bethel ChMS finds possible duplicates
+
+Once a day, Bethel ChMS checks each branch for members who might be the same person. It looks for similar names, and gives extra weight when the dates of birth match or are close. New pairs appear in the queue on their own, so you don't need to do anything to start a check.
+
+Possible duplicates are found within one branch. Two records can only be merged when they are in the same branch.
+
+If you have just added or imported members and don't want to wait, click **Re-scan now** on the **Possible Duplicates** page to check the branch straight away.
+
+## Open Possible Duplicates
+
+You can reach the queue from the member list in two ways:
+
+- When your branch has pairs waiting, the member list shows a banner with the number of possible duplicates waiting for review. Click **Review pairs**. You can close the banner with its X button. It comes back when you switch branch or reload the page.
+- Open the **⋯** menu next to **Filters** and choose **Possible duplicates**. This is always there, even when there is no banner.
+
+The page is titled **Possible Duplicates**, with **Back to Members** to return to the list. If you are an Org Owner or Org Admin, it shows the branch chosen in the branch selector. Switch branch to review another branch's pairs.
+
+The line at the top shows how many pairs are waiting, for example "3 of 3 pairs pending review." When there is nothing to review, the page reads "No possible duplicates right now."
+
+## Review a pair
+
+Each pair is shown as a card with both names, for example "Kofi Adjei and Kofi Adjey".
+
+- **Matched on** lists why Bethel ChMS paired them, for example **DOB exact** (the same date of birth), **DOB ±3d** (dates of birth 3 days apart) or **name ~92%** (how similar the names are).
+- **Record A** and **Record B** show each person's **Email**, **Mobile** and **DOB**, with the matching values highlighted. A **Has app sign-in** badge means that person can sign in to Bethel ChMS, for example to use [Porter](/guides/porter), the app for service teams.
+
+A filled dot marks an **Exact match** and a ring marks a **Fuzzy match**, meaning close but not identical.
+
+Each card has two buttons: **Not a duplicate** and **Merge members**.
+
+## Dismiss a pair that isn't a duplicate
+
+If the two records are different people, for example a parent and child with the same name, dismiss the pair.
+
+<Steps>
+  <Step title="Click Not a duplicate">
+    On the pair's card, click **Not a duplicate**.
+  </Step>
+  <Step title="Give a reason">
+    In **Mark as not a duplicate**, enter a **Reason**, for example "Different people with similar names". A reason is required, so other admins can see why the records were kept apart.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm**. You see "Marked as not a duplicate", and the pair leaves the queue.
+  </Step>
+</Steps>
+
+A dismissed pair stays dismissed. If someone later changes the name, date of birth, email address or mobile number on either record, the pair can come back for review the next time Bethel ChMS checks the branch.
+
+## Merge two members
+
+You can start a merge from three places:
+
+- **Possible Duplicates:** click **Merge members** on a pair's card.
+- **The member list:** select exactly two members from the same branch and click **Merge** in the selection bar. On a phone, tap **Select** first to show the checkboxes. **Merge** only becomes available when exactly two members are selected.
+- **The Member Directory report:** select two members on the current page of results and click **Merge**. See [Reports](/guides/reports).
+
+The **Merge members** panel then takes you through two steps: **Choose and resolve**, then **Review and confirm**.
+
+<Steps>
+  <Step title="Choose the record to keep">
+    Under **Which record do you want to keep?**, pick the **Record A** or **Record B** card. **Record A** is chosen to start with, so make sure the right card is selected before you go on. Each card shows the person's name, their email address (or "No email") and **Has app sign-in** if they have a sign-in. The other record is the one that will be removed.
+  </Step>
+  <Step title="Resolve the fields">
+    Under **Resolve fields**, each of **Email**, **Mobile**, **Address**, **Date of birth** and **Nationality** shows either **Same on both**, or a choice between **Keep** (the value on the record you are keeping) and **Adopt** (the value from the other record). Where the record you are keeping has a blank field and the other has a value, **Adopt** is already chosen for you. The heading shows how many fields you are adopting.
+  </Step>
+  <Step title="Review the merge">
+    Click **Review merge**. Bethel ChMS checks which events both records were checked in to, which can take a moment.
+  </Step>
+  <Step title="Check what will happen">
+    The review shows which record is removed and which is kept, the fields you are adopting, and how the kept record will look after the merge, with **Adopted** next to each field you brought across. The **This can't be undone** box tells you how many attendance records will be deleted because both people were checked in to the same events. Click **Back** if you want to change anything.
+  </Step>
+  <Step title="Confirm the merge">
+    Type MERGE in the box under **Type MERGE to confirm** (capital letters are not required), then click **Merge permanently**. You see "Members merged".
+  </Step>
+</Steps>
+
+<Tip>
+If you want to bring across the other record's **Address** or **Nationality**, start the merge from the member list: select the two members and click **Merge**. That way the panel loads every field for both records.
+</Tip>
+
+{/* TODO: new screenshot: the Merge members panel at the Review and confirm step, showing the removed and kept records and the This can't be undone box */}
+
+## What a merge changes
+
+When you merge, the record you didn't keep is removed and its history moves onto the record you kept.
+
+| What | What happens |
+| --- | --- |
+| **Details** | The kept record keeps its own details, apart from the fields you chose to adopt. Only **Email**, **Mobile**, **Address**, **Date of birth** and **Nationality** can be adopted. Name, gender and post code always stay as they are on the kept record. Custom field values on the kept record stay, and values from the removed record are added only where the kept record has none. |
+| **Attendance** | Check-ins move to the kept record. Where both people were checked in to the same occurrence of an event (for example, the same Sunday's service), the removed record's check-in for that occurrence is deleted, so the kept record isn't counted twice. |
+| **Groups, ministries and notes** | Group membership, ministry assignments and notes move to the kept record. If both people were in the same group or ministry, the kept record's membership stays and the other one is closed. |
+| **Tags** | Tags from both records are kept. |
+| **Care** | Care cases move to the kept record. If both people had an open case of the same type, the two become one open case with the notes from both. |
+| **Porter** | Porter check-ins, equipment loans and fault reports move to the kept record. Where both people checked in to the same occurrence of an event through Porter, the removed record's check-in for that occurrence is deleted. Pending Porter invitations for the removed record are cancelled. The kept record keeps its own Porter access level, or takes the other record's if it has none. |
+| **QR code** | The removed record's personal QR code stops working. Use the kept record's code from now on. |
+| **Sign-in** | The kept record keeps its sign-in. The removed record's sign-in is deleted. |
+
+<Warning>
+If one record shows **Has app sign-in**, keep that record. The sign-in on the record you don't keep is deleted when you merge, and the person would lose access to anything they sign in to, such as Porter. Check the record cards in the first step before you choose.
+</Warning>
+
+<Note>
+The kept record stays in its own household. If the removed record was the head of a different household, that household has no head after the merge. Open it in [Households](/guides/households) and set a new head.
+</Note>
+
+## When a merge can't go ahead
+
+Bethel ChMS stops a merge in these cases. The message appears inside the **Merge members** panel, and nothing is changed.
+
+- **The records are in different branches.** Only members in the same branch can be merged. Branch Admins can only merge members in their own branch.
+- **Both people have an open confidential care case of the same type, held by different staff.** Org Owners and Org Admins see a message asking them to resolve one of the cases before merging. Branch Admins see "These records can't be merged yet. Ask an organisation admin to merge them." This protects confidential cases, which only certain people can see. See [Care](/guides/care).
+- **Both records have an app sign-in.** Only one sign-in can be kept, so the merge can't go ahead. Contact support at hello@bethelware.app for help.
+
+## Related guides
+
+- [Managing members](/guides/managing-members)
+- [Importing members](/guides/importing-members)
+- [Households](/guides/households)
+- [Care](/guides/care)
+- [Reports](/guides/reports)

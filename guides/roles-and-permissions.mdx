@@ -1,113 +1,189 @@
 ---
 title: "Roles and permissions"
 sidebarTitle: "Roles and permissions"
-description: "Understand the five roles in Bethel ChMS, what each one can do, and how org-scoped and branch-scoped access work."
+description: "Understand the six roles in Bethel ChMS, the separate Porter access levels, what each one can do, and how organisation-wide and branch access work."
 ---
 
-Bethel ChMS uses five roles to control what people can see and do. Each role operates at one of two scopes: **organisation-level** across all branches, or **branch-level** within a single branch.
+Bethel ChMS uses six roles to control what people can see and do. Each role works at one of two levels: across your whole **organisation**, or within a single **branch**.
 
-## The five roles
+Your **organisation** is your church network. It contains all your branches, members and settings. A **branch** is one congregation or site within it.
 
-### Organisation owner
+If your church uses **Porter**, people can also hold a separate Porter access level. Porter is the part of Bethel ChMS that church workers and volunteers use on their phones. See [Porter access levels](#porter-access-levels).
 
-There is one organisation owner per organisation. The owner has full control over the organisation, including settings, branches, users, billing, currency, ownership transfer, and organisation deletion.
+<Note>
+If you used Bethel ChMS before, the **Care Manager** role was previously called Backslider Manager, and the area it works in is now called **Care**.
+</Note>
 
-The organisation owner is the only person who can transfer ownership to someone else.
+## The six roles
 
-### Organisation admin
+| Role | Works across | In short |
+| --- | --- | --- |
+| **Org Owner** | The whole organisation | Full control, including billing, ownership and deleting the organisation |
+| **Org Admin** | The whole organisation | Headquarters oversight and administration across every branch |
+| **Branch Admin** | One branch | Runs one branch, including its members, events, attendance, visitors, care and users |
+| **Editor** | One branch | Adds and updates records in one branch, but cannot delete them |
+| **Treasurer** | One branch | **Gifting & Donations** only |
+| **Care Manager** | One branch | **Members** and **Care** only |
 
-Organisation admins have visibility across the entire organisation. They can view branch records across all branches and manage supported branch records after selecting a branch. They can manage users, branches, custom fields, tags, update campaigns, and organisation-wide reports.
+<Tip>
+On a computer, your own role is shown at the top of the sidebar, under your organisation's name.
+</Tip>
+
+### Org Owner
+
+There is one Org Owner per organisation. The owner has full control over the organisation, including settings, branches, users, billing, currency, ownership transfer and organisation deletion.
+
+The Org Owner is the only person who can transfer ownership to someone else. Nobody can be given the Org Owner role any other way.
+
+### Org Admin
+
+Org Admins have visibility across the entire organisation. They can view branch records across all branches and manage supported branch records after selecting a branch. They can manage users, branches, custom fields, tags, update campaigns, Care settings and organisation-wide reports. When Porter is switched on, they can also give people Porter access.
 
 Think of this role as headquarters oversight and administration. Most day-to-day branch data entry still happens at the branch level.
 
-### Branch admin
+### Branch Admin
 
-Branch admins have full control within their own branch. They can create, edit, and delete members, events, locations, attendance records, visitors, and branch update campaigns. They can also invite other branch admins and editors to their branch.
+Branch Admins have full control within their own branch. They can create, edit and delete members, events, locations, attendance records and visitors. They work Care cases, set up absence rules for their branch, and can invite other Branch Admins and Editors to their branch.
+
+Branch Admins do not see **Update Campaigns** or **Gifting & Donations**. Update campaigns are run by Org Owners and Org Admins, and giving records are kept by Org Owners, Org Admins and Treasurers. Branch Admins also cannot give Porter access.
 
 This is the right role for a local church administrator or branch pastor who manages their own congregation's data.
 
 ### Editor
 
-Editors can create and edit records within their branch, including members, events, locations, attendance, and visitors. They can view update campaign dashboards and review submitted campaign changes. They cannot delete records, manage campaigns, or manage users.
+Editors can create and edit records within their branch, including members, events, locations, attendance and visitors. They can also work Care cases in their branch: **Member care**, **Visitor care** and **Pastoral care**. They cannot delete records (apart from removing someone from an attendance list), manage users, set up absence rules or Care settings, or access update campaigns.
 
 Assign this role to volunteers or staff who need to enter data but should not remove anything or invite other users.
 
 ### Treasurer
 
-Treasurers are branch-scoped finance users. They can access **Gifting & Donations** and gifting reports for their assigned branch. They cannot access members, update campaigns, events, ministries, attendance, users, branch settings, or organisation settings.
+Treasurers are finance users who work in one branch. Their sidebar shows only **Gifting & Donations**, and that is where they land when they sign in. They can use **Gifting & Donations** and the gifting reports for their assigned branch.
+
+Treasurers cannot access members, Care, update campaigns, events, ministries, attendance, users, branch settings or organisation settings. They cannot be assigned Care cases.
+
+When you choose this role, the form shows: "Gifting & Donations only. Cannot access members, events, or other branch data."
 
 Assign this role to finance team members who need donation records without wider church management access.
 
-## Org-scoped vs branch-scoped
+### Care Manager
+
+Care Managers work in one branch and focus on following people up. Their sidebar shows only **Members** and **Care**, and they land on **Member care** when they sign in.
+
+In their branch, Care Managers can:
+
+- Work cases on all three Care tabs (**Member care**, **Visitor care** and **Pastoral care**): add notes, change the status, assignee and due date, and open new pastoral care cases.
+- Convert a visitor in Visitor care into a member.
+- View, edit and delete member records.
+- Be assigned Care cases, including automatically.
+
+Care Managers cannot add new members, open the **Visitors** page, add visitors to Visitor care by hand, set up **Absence rules** or open Care settings. If they try to open any other page, Bethel ChMS takes them back to **Member care**.
+
+When you choose this role, the form shows: "Care & Members only. Can view, edit and delete members in their branch. Cannot configure absence rules or access other pages."
+
+Assign this role to pastoral care team members who need to follow people up without wider access to church records. See [Care](/guides/care) for how follow-up works.
+
+## Organisation-wide and branch roles
 
 Roles fall into two groups based on what they can see:
 
-- **Org-scoped roles** (**Org Owner** and **Org Admin**) can see data across all branches. Branch-level pages let them select a branch and manage supported records in that branch.
-- **Branch-scoped roles** (**Branch Admin**, **Editor**, and **Treasurer**) only see their own branch. They work with the data they're responsible for and have no visibility into other branches.
+- **Organisation-wide roles** (**Org Owner** and **Org Admin**) can see data across all branches. Branch-level pages let them select a branch and manage supported records in that branch.
+- **Branch roles** (**Branch Admin**, **Editor**, **Treasurer** and **Care Manager**) only see their own branch. They work with the data they're responsible for and have no visibility into other branches' records.
+
+Every branch role must be given a branch. If you choose one of these roles without a branch, the form shows "Branch is required for this role".
+
+This split keeps each branch in charge of its own records, while headquarters keeps oversight of the whole network. Where a branch user can see something that belongs to the wider organisation, it is usually read-only to them. For example, a Branch Admin can see every absence rule in the organisation but can only change the rules for their own branch.
 
 <Info>
-Org-scoped roles use the branch selector for branch-level pages. Check each feature guide for the exact actions available.
+Organisation-wide roles use the branch selector for branch-level pages. Check each feature guide for the exact actions available.
 </Info>
 
-## Branch selector behavior
+## Choosing a branch
 
-Org-scoped users see a branch selector on branch-level pages such as **Dashboard**, **Members**, **Events**, **Locations**, **Attendance**, and **Visitors**. Selecting a branch adds a `branchId` value to the URL and saves the selection for future pages.
+Org Owners and Org Admins choose the branch they're working in with the branch selector. Pages show one branch at a time, and Bethel ChMS remembers your choice as you move between pages.
 
-Branch-scoped users do not see the branch selector. Bethel ChMS always uses their assigned branch.
+- **On a computer:** the branch selector sits at the top of the sidebar, under your organisation's name.
+- **On a tablet or phone:** tap the branch chip in the top bar of a branch-level page to open the **Branch** sheet, then pick a branch. Tablets also have the selector in the **More** menu.
+
+Branch Admins, Editors, Treasurers and Care Managers never see the branch selector. Bethel ChMS always uses their assigned branch. See [Find your way around](/getting-started/find-your-way-around) for more on the sidebar and menus.
+
+## What each role sees in the sidebar
+
+Everyone except Treasurers and Care Managers sees **Dashboard** at the top of the sidebar, followed by these groups:
+
+| Role | People | Church life | Giving & outreach | Organisation |
+| --- | --- | --- | --- | --- |
+| **Org Owner**, **Org Admin** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | Gifting & Donations, Update Campaigns | Organisation dashboard, Branches, Users, Reports, Automation, Import, Age Groups, Tags, Settings |
+| **Branch Admin** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | None | Users, Reports, Import, Tags, Organisation Settings |
+| **Editor** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | None | Organisation Settings |
+| **Treasurer** | None | None | Gifting & Donations | None |
+| **Care Manager** | Members, Care | None | None | None |
+
+For Branch Admins and Editors, **Groups** appears under the name their branch uses for groups. Some items, such as **Care**, **Gifting & Donations** and **Update Campaigns**, only appear if your plan includes them. See [Feature availability by plan](/guides/feature-availability-by-plan).
+
+When Porter is switched on and your own member record has a Porter access level, a **Porter** link also appears in the sidebar. Treasurers and Care Managers do not see this link.
 
 ## Per-role capabilities
 
 <AccordionGroup>
-  <Accordion title="Organisation owner">
+  <Accordion title="Org Owner">
     | Capability | Access |
     | --- | --- |
     | Manage org settings | Full access |
-    | Manage branches | Create, edit, duplicate, copy resources, and delete |
-    | Manage users | Invite and manage any role |
+    | Manage branches | Create, edit, duplicate, copy resources and delete |
+    | Manage users | Invite and manage Org Admin, Branch Admin, Editor, Treasurer and Care Manager users |
+    | Porter access | Give, change and remove Porter access when Porter is switched on |
     | Manage members | Full access through branch selector |
-    | Manage update campaigns | Create, launch, share, stop, delete, and review across branches |
+    | Manage visitors | Full access through branch selector |
+    | Care cases | All three Care tabs in every branch through branch selector, including confidential pastoral cases |
+    | Absence rules and Care settings | Every rule and every Care settings section |
+    | Manage update campaigns | Create, launch, share, stop, delete and review for the whole organisation |
     | Manage events | Full access through branch selector |
     | Manage locations | Full access through branch selector |
     | Record attendance | Full access through branch selector |
-    | Manage visitors | Full access through branch selector |
     | Manage custom fields | Full access |
     | Manage tags | Full access |
     | Manage billing and currency | Full access |
     | Gifting & Donations | Full access across branches |
-    | Delete records | Org-level records, branches, and supported branch records |
+    | Delete records | Org-level records, branches and supported branch records |
   </Accordion>
 
-  <Accordion title="Organisation admin">
+  <Accordion title="Org Admin">
     | Capability | Access |
     | --- | --- |
     | Manage org settings | Limited access |
-    | Manage branches | Create, edit, duplicate, and copy resources |
-    | Manage users | Invite and manage org admin, branch admin, editor, or treasurer |
+    | Manage branches | Create, edit, duplicate and copy resources |
+    | Manage users | Invite and manage Org Admin, Branch Admin, Editor, Treasurer and Care Manager users |
+    | Porter access | Give, change and remove Porter access when Porter is switched on |
     | Manage members | Full access through branch selector |
-    | Manage update campaigns | Create, launch, share, stop, delete, and review across branches |
+    | Manage visitors | Full access through branch selector |
+    | Care cases | All three Care tabs in every branch through branch selector, including confidential pastoral cases |
+    | Absence rules and Care settings | Every rule and every Care settings section |
+    | Manage update campaigns | Create, launch, share, stop, delete and review for the whole organisation |
     | Manage events | Full access through branch selector |
     | Manage locations | Full access through branch selector |
     | Record attendance | Full access through branch selector |
-    | Manage visitors | Full access through branch selector |
     | Manage custom fields | Full access |
     | Manage tags | Full access |
     | Manage billing and currency | View only |
     | Gifting & Donations | Full access across branches |
-    | Delete records | Supported branch records only |
+    | Delete records | Org-level records, such as custom fields and update campaigns, and supported branch records. Cannot delete branches or the organisation |
   </Accordion>
 
-  <Accordion title="Branch admin">
+  <Accordion title="Branch Admin">
     | Capability | Access |
     | --- | --- |
     | Manage org settings | Read-only where visible |
-    | Manage branches | Edit own branch details only |
-    | Manage users | Invite and manage branch admin or editor in own branch |
+    | Manage branches | No access. An Org Owner or Org Admin manages branches from **Branches** |
+    | Manage users | Invite and manage Branch Admin and Editor users in own branch |
+    | Porter access | No access. Can see who has Porter on the **Users** page |
     | Manage members | Full access in own branch |
-    | Manage update campaigns | Create, launch, share, stop, delete, and review in own branch |
+    | Manage visitors | Full access in own branch |
+    | Care cases | All three Care tabs in own branch |
+    | Absence rules and Care settings | Own branch's rules (other rules are read-only), and the **Visitor care** and **Workload** settings for own branch |
+    | Manage update campaigns | No access |
     | Manage events | Full access in own branch |
     | Manage locations | Full access in own branch |
     | Record attendance | Full access in own branch |
-    | Manage visitors | Full access in own branch |
     | Manage tags | Full access; changes apply organisation-wide |
     | Gifting & Donations | No access |
     | Delete records | Branch-level records only |
@@ -119,14 +195,17 @@ Branch-scoped users do not see the branch selector. Bethel ChMS always uses thei
     | Manage org settings | Read-only where visible |
     | Manage branches | No access |
     | Manage users | No access |
+    | Porter access | No access |
     | Manage members | Create and edit in own branch, no delete |
-    | Manage update campaigns | View dashboards and review submissions only |
+    | Manage visitors | Create and edit in own branch, no delete |
+    | Care cases | All three Care tabs in own branch, including adding visitors to Visitor care by hand |
+    | Absence rules and Care settings | No access |
+    | Manage update campaigns | No access |
     | Manage events | Create and edit in own branch, no delete |
     | Manage locations | Create and edit in own branch, no delete |
-    | Record attendance | Full access in own branch |
-    | Manage visitors | Create and edit in own branch, no delete |
+    | Record attendance | Full access in own branch, except **Bulk Entry** |
     | Gifting & Donations | No access |
-    | Delete records | No access |
+    | Delete records | No access, except removing someone from an attendance list |
   </Accordion>
 
   <Accordion title="Treasurer">
@@ -135,17 +214,70 @@ Branch-scoped users do not see the branch selector. Bethel ChMS always uses thei
     | Manage org settings | No access |
     | Manage branches | No access |
     | Manage users | No access |
+    | Porter access | No access |
     | Manage members | No access |
+    | Manage visitors | No access |
+    | Care cases | No access, and cannot be assigned Care cases |
+    | Absence rules and Care settings | No access |
     | Manage update campaigns | No access |
     | Manage events | No access |
     | Manage locations | No access |
     | Record attendance | No access |
-    | Manage visitors | No access |
-    | Gifting & Donations | Full access in own branch |
+    | Gifting & Donations | Log, edit and delete entries in own branch. Cannot restore deleted entries or manage gifting categories |
     | Gifting reports | Own branch |
     | Delete records | No access outside finance permissions |
   </Accordion>
+
+  <Accordion title="Care Manager">
+    | Capability | Access |
+    | --- | --- |
+    | Manage org settings | No access |
+    | Manage branches | No access |
+    | Manage users | No access |
+    | Porter access | No access |
+    | Manage members | View, edit and delete in own branch; cannot add members |
+    | Manage visitors | No access to the **Visitors** page |
+    | Care cases | All three Care tabs in own branch; cannot add visitors to Visitor care by hand |
+    | Absence rules and Care settings | No access |
+    | Manage update campaigns | No access |
+    | Manage events | No access |
+    | Manage locations | No access |
+    | Record attendance | No access |
+    | Gifting & Donations | No access |
+    | Delete records | Members in own branch |
+  </Accordion>
 </AccordionGroup>
+
+### Confidential pastoral care cases
+
+A pastoral care case can be marked **Confidential**. A confidential case is visible only to the person it's assigned to, the person who opened it, and Org Owners and Org Admins. Other users in the branch, including Branch Admins, do not see it. See [Care](/guides/care).
+
+## Porter access levels
+
+Porter is the part of Bethel ChMS for church workers and volunteers, used on a phone. Workers check in when they arrive for a service, loan and return equipment, and report faults. Porter has two access levels of its own, shown on the **Users** page as:
+
+- **Porter · Worker**
+- **Porter · Admin**
+
+Porter access works differently from the six roles above:
+
+- **It sits on the person's member record**, not on a Bethel ChMS role. Anyone can have it: a volunteer with no Bethel ChMS role at all, or a Bethel ChMS user of any role. On the **Users** page, people with Porter but no Bethel ChMS role show **No ChMS role** and **Porter only**.
+- **It covers the whole organisation**, not one branch. A Porter admin works across every branch, whatever their Bethel ChMS role. For example, a Branch Admin who is also a Porter admin can set up check-in and manage equipment for all branches in Porter.
+- **Only Org Owners and Org Admins can give, change or remove it**, and only once Porter is switched on for your church. Branch Admins can see who has Porter on the **Users** page, but cannot change it.
+
+| What they can do in Porter | Worker | Admin |
+| --- | --- | --- |
+| Check in on arrival | Yes | Yes |
+| Loan and return equipment (after checking in) | Yes | Yes |
+| Report a fault | Yes | Yes |
+| Browse the equipment register and see their own history | Yes | Yes |
+| Use **Setup** (check-in areas, equipment tags, return reminders) | No | Yes |
+| Check workers in by hand | No | Yes |
+| See **Alerts** | No | Yes |
+| Add and edit equipment, print labels and export the register | No | Yes |
+| See everyone's history and rejected check-in attempts | No | Yes |
+
+For switching Porter on, giving access and signing in, see [Porter](/guides/porter).
 
 ## Who can invite whom
 
@@ -153,48 +285,66 @@ Not every role can invite every other role. Here's how the invitation chain work
 
 | Your role | You can invite |
 | --- | --- |
-| Org Owner | Org Admin, Branch Admin, Editor, or Treasurer |
-| Org Admin | Org Admin, Branch Admin, Editor, or Treasurer |
+| Org Owner | Org Admin, Branch Admin, Editor, Treasurer or Care Manager |
+| Org Admin | Org Admin, Branch Admin, Editor, Treasurer or Care Manager |
 | Branch Admin | Branch Admin or Editor in your own branch only |
 | Editor | No one |
 | Treasurer | No one |
+| Care Manager | No one |
 
 <Note>
-Branch admins can only invite people into their own branch. They cannot invite **Org Admin** or **Treasurer** users.
+Branch Admins can only invite people into their own branch. They cannot invite **Org Admin**, **Treasurer** or **Care Manager** users, and they cannot give Porter access. Nobody can invite someone as **Org Owner**. Use [ownership transfer](#transferring-ownership) instead.
 </Note>
+
+To send an invitation, see [User management](/guides/user-management).
+
+{/* TODO: new screenshot: Edit user sheet with the Role list open, showing Org Admin, Branch Admin, Editor, Treasurer and Care Manager */}
 
 ## How role changes take effect
 
-When you change someone's role or branch assignment, Bethel ChMS refreshes their access token automatically. The new permissions apply almost immediately, so the person does not need to log out and back in.
+When you change someone's role or branch, the change is saved straight away. If the person has Bethel ChMS open at the time, ask them to sign out and sign back in, so their menu and pages match their new role.
 
-<Frame>
-  <img src="/images/guides/user-list-role-badges.png" alt="User list showing role badges" />
-</Frame>
+<Note>
+If your church's subscription is suspended, everyone in the organisation, whatever their role, sees a billing page instead of the usual app, and Porter shows a paused screen. See [Billing and subscription](/guides/billing-and-subscription).
+</Note>
+
+{/* TODO: new screenshot: Users page list showing role badges for each role, including Treasurer and Care Manager, with the Apps column */}
 
 ## Transferring ownership
 
-Only the current organisation owner can transfer ownership. You might do this when a senior pastor hands off leadership, or when a denominational office restructures how accounts are managed.
+**Who can do this:** Org Owner
+
+Only the current Org Owner can transfer ownership. You might do this when a senior pastor hands over leadership, or when a denominational office restructures how accounts are managed.
+
+The new owner must already be an **Org Admin**. If you don't have one yet, [edit the person's role](/guides/user-management#edit-a-user) to **Org Admin** first.
 
 <Steps>
   <Step title="Open organisation settings">
-    Go to **Organisation Settings** from the sidebar.
+    In the sidebar, open **Organisation** and click **Settings**.
   </Step>
-  <Step title="Select a new owner">
-    In the ownership section, choose an existing **Org Admin** to become the new owner. Only active org-scoped **Org Admin** users are eligible.
+  <Step title="Start the transfer">
+    In the **Ownership & Danger Zone** card, click **Transfer Ownership**.
+  </Step>
+  <Step title="Choose the new owner">
+    Under **New Owner**, choose an Org Admin from the list. If you have no Org Admins, the sheet shows "You must first promote a user to Org Admin before transferring ownership."
   </Step>
   <Step title="Confirm with your password">
-    Enter your password and complete the CAPTCHA challenge to confirm the transfer. Once confirmed, you become an **Org Admin** and the selected person becomes the **Org Owner**.
+    Enter your password under **Confirm Your Password**. Let the security check finish. It usually completes by itself, and occasionally asks you to tick a box. Then click **Transfer Ownership**.
   </Step>
 </Steps>
 
-<Frame>
-  <img src="/images/guides/role-selector-edit-form.png" alt="Role selector in user edit form" />
-</Frame>
+When the transfer succeeds, you see "Ownership transferred successfully". You become an **Org Admin** and the person you chose becomes the **Org Owner**. If your password is wrong, you see "Incorrect password" and nothing changes.
 
-<Frame>
-  <img src="/images/guides/transfer-ownership-dialog.png" alt="Transfer ownership confirmation dialog" />
-</Frame>
+{/* TODO: new screenshot: Transfer Ownership sheet with New Owner, Confirm Your Password and the security check */}
 
 <Warning>
 Ownership transfer is immediate and cannot be undone by you. The new owner would need to transfer it back. Make sure you're selecting the right person.
 </Warning>
+
+## Related pages
+
+- [User management](/guides/user-management)
+- [Invite your team](/getting-started/invite-users)
+- [Care](/guides/care)
+- [Porter](/guides/porter)
+- [Organisation settings](/guides/organisation-settings)

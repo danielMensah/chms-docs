@@ -1,0 +1,174 @@
+---
+title: "Locations"
+description: "Add the rooms and venues where your branch meets, choose a primary location, and see what is happening at each one in Bethel ChMS."
+sidebarTitle: "Locations"
+---
+
+A **location** is a place where your branch holds events, such as a main auditorium, a church hall, a youth room or an outdoor space. Each location belongs to one branch. Every event has a location, and each occurrence of an event either uses the event's location or one you choose for that day. See [Managing events](/guides/managing-events).
+
+Every branch has one **primary location**, created when the branch is set up. New events start on the primary location, so it is usually your main meeting place.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin and Editor can add and edit locations and choose the primary location. Only Org Owner, Org Admin and Branch Admin can delete a location. Treasurer and Care Manager users don't see Locations.
+</Info>
+
+## Open the Locations page
+
+In the sidebar, open **Church life** and click **Locations**. On a phone, or a tablet held upright, tap **More**, then **Locations**.
+
+Branch Admins and Editors see the locations for their own branch. Org Owners and Org Admins see the locations for the branch chosen in the branch selector. See [Find your way around](/getting-started/find-your-way-around).
+
+{/* TODO: new screenshot: Locations list with the primary location banner, a Primary badge and a row menu open */}
+
+### The locations list
+
+The list shows how many locations the branch has, for example "3 locations". Use the sort menu to order them by **Name**, **Capacity**, **Is Primary** or **Created At**.
+
+A banner above the list names your branch's primary location and reminds you that it can't be deleted until you set another location as primary.
+
+Each row shows:
+
+- the location's name, with a star and a **Primary** badge on the primary location
+- its address and post code, or **No address yet**
+- its capacity, if you have entered one
+- on wider screens, the **Post Code**, **Capacity** and **Created At** columns
+
+Tap a row to open the [location page](#the-location-page). Org Owners, Org Admins, Branch Admins and Editors also get a **⋯** menu on each row with **Open location**, **Edit**, **Set as Primary** and, for Org Owner, Org Admin and Branch Admin, **Delete**.
+
+## Add a location
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
+
+<Steps>
+  <Step title="Open the Add Location sheet">
+    On the **Locations** page, click **Add Location** in the top bar. On a phone it is the **+** button. The **Add Location** sheet opens.
+  </Step>
+  <Step title="Check the branch">
+    Branch Admins and Editors always add locations to their own branch. If you are an Org Owner or Org Admin, a locked **Branch** field shows the branch the location will belong to. To add a location to a different branch, switch branch first, then click **Add Location** again.
+  </Step>
+  <Step title="Enter the details">
+    Enter a **Name**, for example "Main Hall". You can also add an **Address**, a **Post Code** and a **Capacity**. Capacity must be a whole number from 1 to 100,000.
+  </Step>
+  <Step title="Save">
+    Click **Create Location**. Bethel ChMS confirms with a message such as **Location "Main Hall" created**. The new location is now available when you create or edit events.
+  </Step>
+</Steps>
+
+<Tip>
+Add an address and post code even for rooms in your main building. They power the **Directions** and **Copy** buttons on the location page, so your team can get directions or copy the address to send to visitors and volunteers.
+</Tip>
+
+{/* TODO: new screenshot: Add Location sheet with the locked Branch field and the Name, Address, Post Code and Capacity fields */}
+
+To copy locations from one branch to others, see [Branch management](/guides/branch-management).
+
+## Edit a location
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
+
+<Steps>
+  <Step title="Open the editor">
+    Open the row's **⋯** menu on the **Locations** page and click **Edit**. Or open the location and click **Edit**.
+  </Step>
+  <Step title="Make your changes">
+    The **Edit Location** sheet has the same fields as **Add Location**, already filled in. On the primary location, a note explains that to change the primary, you open another location and choose **Set as Primary**.
+  </Step>
+  <Step title="Save">
+    Click **Save Changes**.
+  </Step>
+</Steps>
+
+## Choose the primary location
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
+
+A branch always has exactly one primary location. When you create a new event, its **Location** starts on the primary location. Changing the primary doesn't move any existing events.
+
+<Steps>
+  <Step title="Choose Set as Primary">
+    Open the menu for the location you want to make primary, either the **⋯** menu on its row in the **Locations** list or the **⋮** menu on the location page, and click **Set as Primary**. On the current primary location this option is greyed out.
+  </Step>
+  <Step title="Confirm">
+    The **Set as Primary Location** confirmation names the location that will stop being primary. Click **Set as Primary**.
+  </Step>
+</Steps>
+
+Bethel ChMS confirms that the location is now the primary location.
+
+## The location page
+
+Open a location from the **Locations** list. The top bar shows the location's name, **Locations** with the branch name, and a back arrow that returns you to the **Locations** list. There is an **Edit** button and a **⋮** menu with **Edit**, **Set as Primary**, **Delete** (Org Owner, Org Admin and Branch Admin only) and, when the location has an address or post code, **Copy address**.
+
+The summary card shows the **Primary** badge for the primary location, the capacity if you have entered one, and the address, or **No address yet**. Below it are quick buttons:
+
+- **Directions** opens Google Maps at the address in a new tab.
+- **Copy** copies the address so you can paste it into a message or email.
+- **Events** jumps to the **Events** tab.
+- **Edit** opens the **Edit Location** sheet.
+
+**Directions** and **Copy** only appear when the location has an address or post code.
+
+{/* TODO: new screenshot: Location page with the summary card, quick buttons and the Details tab */}
+
+The page has three tabs: **Details**, **Events** and **Change History**.
+
+### Details tab
+
+The **Details** tab lists the location's **Name**, **Branch**, **Address**, **Post Code**, **Capacity**, whether it is the **Primary Location**, and when it was **Created**.
+
+The **Happening here** card shows the next two occurrences held at the location, today and next, with an **All events** button that opens the **Events** tab. If nothing is booked, it reads **Nothing scheduled here yet.**
+
+Org Owners, Org Admins and Branch Admins also see a **Delete location** card. If the location can't be deleted yet, the card explains why, for example because it is the primary location or is linked to future events. See [Delete a location](#delete-a-location).
+
+### Events tab
+
+The **Events** tab lists the events held at the location, in two sections:
+
+- **Today and upcoming**, soonest first
+- **Recent past**, most recent first
+
+Each section shows up to 10 occurrences. An occurrence is listed here when it takes place at this location, whether that comes from its event's **Location** or was set on the occurrence itself, for example with **Change Location**. Badges show **Live now** for an occurrence in progress and **Cancelled** for a cancelled one.
+
+Tap an upcoming occurrence to open its event. Tap one that is live or in the past to open its attendance page. See [Record attendance](/guides/recording-attendance).
+
+### Change History tab
+
+The **Change History** tab shows who changed the location and when. It records changes to the name, address, post code, capacity and primary location. See [Change history](/guides/change-history).
+
+## Delete a location
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin
+
+You can't delete a location while it is still needed:
+
+- **The primary location** can't be deleted. Set another location as primary first.
+- **A location linked to future events** can't be deleted. This counts every future occurrence held there, whether the location comes from the event's **Location** or was set on the occurrence itself, for example with **Change Location**.
+
+<Steps>
+  <Step title="Choose Delete">
+    Open the row's **⋯** menu on the **Locations** page and click **Delete**. Or open the location and click **Delete** in the **Delete location** card, or choose **Delete** from its **⋮** menu.
+  </Step>
+  <Step title="Confirm">
+    The **Delete Location** confirmation asks if you are sure you want to delete the location. Click **Delete**.
+  </Step>
+</Steps>
+
+If the location is still linked to future events, Bethel ChMS shows **Cannot Delete Location** instead, with a list of each future occurrence (the event name and date) that still uses it. Click **Close**, move those occurrences somewhere else, then try again.
+
+<Tip>
+To move a whole event to another venue, edit the event and change its **Location**. Occurrences that show the location's own name on the event's **Occurrences** tab, rather than **Same as event**, have their own location, so move those one at a time with **Change Location**. See [Managing events](/guides/managing-events#change-an-occurrences-location).
+</Tip>
+
+When the deletion goes through, Bethel ChMS confirms that the location has been deleted. If you delete a location by mistake, contact support at hello@bethelware.app.
+
+{/* TODO: new screenshot: Cannot Delete Location sheet listing the future occurrences that still use the location */}
+
+## Porter check-in areas
+
+If your church uses [Porter](/guides/porter), your service team checks in for each service by scanning the event's QR code, and Porter confirms they are on site. Each location needs a **check-in area**, a point on the map with a radius around it, before workers can check in there.
+
+You don't set check-in areas on the **Locations** page. A Porter admin sets them in Porter, under **Setup**, usually while standing at the venue. Porter lists every location in your organisation under its branch, so a location you add here appears in Porter **Setup** straight away. See [Porter check-in](/guides/porter-check-in).
+
+<Note>
+When you use **Change Location** on an occurrence, Porter checks workers against the new location's check-in area. Make sure that location has one set before the day.
+</Note>

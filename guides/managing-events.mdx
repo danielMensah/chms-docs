@@ -1,182 +1,344 @@
 ---
-title: "Managing events and locations"
-description: "Create one-off and recurring events, manage occurrences, and set up locations for your branch in Bethel ChMS."
-sidebarTitle: "Events & locations"
+title: "Managing events"
+description: "Create one-off and recurring events, manage each occurrence, and set up public check-in for your branch's services and meetings in Bethel ChMS."
+sidebarTitle: "Events"
 ---
 
-Events in Bethel ChMS represent scheduled activities like services, Bible studies, or outreach programs. Each event happens at a location, and every event has one or more occurrences that you can manage individually. This page covers how to create and manage both events and locations.
+An **event** is anything your branch schedules, such as a Sunday service, a midweek Bible study, a prayer meeting or an outreach day. Each event has one or more **occurrences**, one for each date it takes place. A one-off event has a single occurrence. A recurring event, such as a weekly service, has an occurrence for every date in its pattern.
+
+Attendance is always recorded against an occurrence, not the event as a whole. This means you can see who came to each individual service, even when it is part of a series that runs all year.
+
+Every event takes place at a **location**, a room or venue that belongs to your branch. To add or manage venues, see [Locations](/guides/locations).
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, Branch Admin, and Editor can create and edit events and locations. Org Owner, Org Admin, and Branch Admin can delete. Editors cannot delete.
+**Who can do this:** Org Owner, Org Admin, Branch Admin and Editor can create and edit events and manage occurrences. Only Org Owner, Org Admin and Branch Admin can delete events. Treasurer and Care Manager users don't see Events.
 </Info>
 
-Org-scoped users can switch branches before creating or editing branch records. Branch-scoped users work in their assigned branch.
+Events belong to one branch. Branch Admins and Editors always work in their own branch. Org Owners and Org Admins work in the branch chosen in the branch selector: at the top of the sidebar on a computer, or the branch chip in the top bar on a tablet or phone. See [Find your way around](/getting-started/find-your-way-around).
 
-## Events
+## Open the Events page
 
-### Creating a one-off event
+In the sidebar, open **Church life** and click **Events**. On a phone, tap **Events** in the tab bar at the bottom of the screen. On a tablet held upright, tap **Events** in the rail on the left.
 
-A one-off event is a single scheduled activity with exactly one occurrence, such as a guest speaker visit or a special community outreach day.
+{/* TODO: new screenshot: Events list with the All, Upcoming and Past chips, a Live now card and a few event rows */}
+
+### Find an event
+
+Under the page title are three quick chips, each with a count:
+
+- **All** shows every event in the branch.
+- **Upcoming** shows events that still have an occurrence that hasn't ended, including one in progress. Cancelled occurrences don't count.
+- **Past** shows events with no occurrences left to come.
+
+To narrow or reorder the list, click **Filters** (a filter icon on phones). In the filters sheet you can:
+
+- Choose a sort order: **Name**, **Next Occurrence Date** (the default), **Location** or **Created At**. When you sort by **Next Occurrence Date**, events with nothing left to come appear after the rest.
+- Choose what to **Show**: **All events**, **Branch-wide only** (events not linked to a group), or only events linked to a group. That last option uses your branch's name for groups, for example **Group only** or **Cell only**.
+
+Your choices apply straight away. The button at the bottom shows how many events match, for example **Show 12 events**, and closes the sheet. **Clear all** sets **Show** back to **All events**. An active **Show** filter appears as a chip next to **All**, **Upcoming** and **Past**, and you can remove it from there. On tablets and computers there is also a sort menu beside the chips.
+
+Each event row shows a date block for its next occurrence (or its last one, if none are left), the event name, when it next happens (for example "Today 10:30", or "Ended" with a date), and its location. Chips show **Live now** while an occurrence is in progress, the linked group and, on phones, the repeat pattern for recurring events. On tablets and computers, a **Recurring** column shows **Yes** or **No** instead. Tap a row to open the event.
+
+### Live now
+
+When one of your branch's events has an occurrence in progress, a green **Live now** card appears above the list. It shows the event name, start time and location, with two buttons:
+
+- **Take attendance** opens the attendance page for that occurrence. See [Record attendance](/guides/recording-attendance).
+- **QR & kiosk** opens [kiosk mode](/guides/kiosk-mode) in a new tab, so people can check themselves in. If public check-in is off for the event, it opens the event page instead.
+
+**Live now** cards also appear at the top of **Upcoming events** on your [Dashboard](/guides/dashboards).
+
+### The event menu
+
+Each row has a **⋯** menu with:
+
+- **Open**, to open the event page.
+- **Take attendance**, when the event has an occurrence that is in progress or still to come.
+- **QR & kiosk**, when public check-in is on for the event. It opens [kiosk mode](/guides/kiosk-mode).
+- **Edit**, to change the event's details.
+- **Delete**, for Org Owner, Org Admin and Branch Admin only.
+
+## Create an event
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
 
 <Steps>
-  <Step title="Open the events list">
-    In the sidebar, click **Events** to open the events list for your branch.
+  <Step title="Open the Add Event sheet">
+    On the **Events** page, click **Add Event** in the top bar. On a phone it is the **+** button. The **Add Event** sheet opens.
   </Step>
-  <Step title="Click Add Event">
-    Click the **Add Event** button to open the new event dialog.
+  <Step title="Name the event">
+    Enter a **Name**, for example "Sunday Service" or "Youth Night".
   </Step>
-  <Step title="Fill in the event details">
-    Enter the required fields: **Name**, **Location** (defaults to your branch's primary location), **Start Date**, **Start Time**, and **End Time**. You can also add an optional **Description**, **End Date**, and group link.
+  <Step title="Choose who it is for (optional)">
+    If your branch has active groups, a group field appears, labelled with your branch's name for groups, for example **Group (optional)**. Leave it as **None (open event)** for an event the whole branch can attend, or choose a group to make it an event for that group only. See [Groups](/guides/groups).
+  </Step>
+  <Step title="Choose the location">
+    Choose a **Location**. It starts on your branch's primary location, marked **(Primary)**. If the room you need isn't listed, use the **Add it in Locations** link under the field.
+  </Step>
+  <Step title="Set the schedule">
+    Under **Schedule**, enter the **Start Date**, **Start Time** and **End Time**. For a one-off event that runs over several days, also enter an **End Date**. If you leave **End Date** blank, the event ends on its start date.
+  </Step>
+  <Step title="Make it repeat (recurring events only)">
+    Under **Recurrence**, turn on **Recurring Event**. Choose a **Recurrence Pattern**: **Daily**, **Weekly**, **Bi-Weekly** or **Monthly**. Then enter a **Recurrence End Date**, which must be after the start date. The **End Date** field disappears, because every occurrence starts and ends on the same day.
+  </Step>
+  <Step title="Add a description (optional)">
+    Add a **Description** if it helps your team, for example who leads it or what to bring.
   </Step>
   <Step title="Choose check-in settings">
-    Leave **Public Check-in** turned on if people should check in through the event QR code. Choose a **Check-in Window** from 30 minutes to 8 hours.
+    Under **Check-in**, leave **Public Check-in** on if members and visitors should check themselves in with the event's QR code or a kiosk. Then choose a **Check-in Window**. See [Check-in settings](#check-in-settings) below.
   </Step>
-  <Step title="Save the event">
-    Click **Create Event**. Bethel ChMS creates the event with a single occurrence automatically.
+  <Step title="Create the event">
+    Click **Create Event**. Bethel ChMS creates the event and its occurrences, and confirms with a message such as **Event "Youth Night" created**.
   </Step>
 </Steps>
 
-If your branch has groups, you can link the event to a group by choosing the group in the optional group field. Leave it as **None (open event)** for branch-wide events.
+{/* TODO: new screenshot: Add Event sheet showing the Schedule, Recurrence and Check-in sections */}
 
-<Frame>
-  <img src="/images/guides/create-event-oneoff.png" alt="Create event dialog for a one-off event" />
-</Frame>
+<Accordion title="Messages you might see on the form">
+  - **Name is required**, **Location is required**, **Start date is required**, **Start time is required** or **End time is required**: fill in the field shown.
+  - **End time must be after start time**: check the times, and the end date for an event that runs over several days.
+  - **Recurrence pattern is required**: choose **Daily**, **Weekly**, **Bi-Weekly** or **Monthly**.
+  - **Recurrence end date must be after start date**: every recurring event needs a **Recurrence End Date** later than its **Start Date**.
+</Accordion>
 
-### Creating a recurring event
+### Check-in settings
 
-Recurring events are for activities that repeat on a regular schedule, such as weekly services or monthly prayer meetings.
+- **Public Check-in** is on by default. It gives the event a QR code that members and visitors scan to check themselves in, and lets you run a check-in kiosk at the door. If your church uses Porter, your service team scans the same code, so keep it on for any event where workers check in. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
+- **Check-in Window** sets how long before each occurrence starts that check-in opens: **30 minutes**, **1 hour**, **2 hours** (the default), **3 hours**, **4 hours** or **8 hours**. It only appears while **Public Check-in** is on. The window applies to members and visitors checking themselves in. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works). Porter workers can scan the code at any time on the day of the occurrence.
+
+To learn how people check in, see [Record attendance](/guides/recording-attendance) and [Kiosk mode](/guides/kiosk-mode).
+
+<Note>
+Equipment return reminders for Porter are not part of the event form. If your church uses Porter, a Porter admin sets a reminder for each event in Porter, under **Setup** and then **Return reminders**. See [Porter alerts and return reminders](/guides/porter-alerts).
+</Note>
+
+## How occurrences are created
+
+### One-off events
+
+A one-off event gets exactly one occurrence, with the same start and end as the event. To move it to a different date or time later, [reschedule its occurrence](#reschedule-an-occurrence).
+
+### Recurring events
+
+Every occurrence of a recurring event starts and ends at the same times as the first one. The pattern sets how often it repeats:
+
+| Pattern | Repeats |
+| --- | --- |
+| **Daily** | Every day |
+| **Weekly** | Every 7 days, on the same weekday as the start date |
+| **Bi-Weekly** | Every 14 days |
+| **Monthly** | On the same day of the month as the start date |
+
+When you create a recurring event, Bethel ChMS creates up to 52 occurrences straight away, or fewer if the **Recurrence End Date** comes first.
+
+After that, Bethel ChMS checks every recurring series once a week, early on Monday morning. When a series is running low, it adds more occurrences, up to 52 ahead, so the series never runs out before its **Recurrence End Date**. A daily prayer meeting or a weekly service that runs for several years keeps going without you having to recreate it.
+
+<Tip>
+Org Owners and Org Admins can see each top-up on the **Automation** page, in the **Execution History** tab, listed as **Occurrence Generation**. The **Occurrences Extended** total counts them. See [Automation rules](/guides/automation-rules).
+</Tip>
+
+### The Sunday Service created with your branch
+
+When a branch is created, Bethel ChMS adds a weekly **Sunday Service** event at the branch's primary location, with 52 weekly occurrences. Its **Recurrence End Date** is one year after the first service, so it stops after about 52 Sundays unless you extend it. See [Branch management](/guides/branch-management).
+
+To keep it going, follow the steps in [Edit an event](#edit-an-event): choose a later **Recurrence End Date**, click **Save Changes**, then choose **Yes, apply to future**. Bethel ChMS adds the extra Sundays, up to 52 ahead at a time, and the Monday top-up adds the rest as time goes on. Then open the **Occurrences** tab and check that the coming weeks look right.
+
+<Note>
+The Sunday Service's first 52 occurrences show the location's name in the **Location** column instead of **Same as event**. This means each one has its own location, so they are kept as they are when you edit the event:
+
+- If you change the event's **Location**, they stay where they are. To move one, use [Change Location](#change-an-occurrences-location) on that occurrence.
+- If you change the event's time and choose **Yes, apply to future**, they keep the old time, and Bethel ChMS adds new occurrences at the new time alongside them. Open the **Occurrences** tab and cancel the old-time ones you no longer need.
+- If you [end the series early](#end-a-recurring-event-early), they stay, so cancel any you no longer need.
+</Note>
+
+## Edit an event
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
 
 <Steps>
-  <Step title="Open the events list">
-    In the sidebar, click **Events** to open the events list for your branch.
+  <Step title="Open the editor">
+    On the **Events** page, open the row's **⋯** menu and click **Edit**. Or open the event and click **Edit** in the top bar, or choose **Edit event** from its **⋯** menu.
   </Step>
-  <Step title="Click Add Event">
-    Click the **Add Event** button to open the new event dialog.
+  <Step title="Make your changes">
+    The **Edit Event** sheet has the same fields as **Add Event**, already filled in.
   </Step>
-  <Step title="Fill in the event details">
-    Enter the required fields: **Name**, **Location**, **Start Date**, **Start Time**, and **End Time**. Add an optional **Description** if needed.
-  </Step>
-  <Step title="Enable recurrence">
-    Tick **Recurring Event**. Choose a **Recurrence Pattern**: **Daily**, **Weekly**, **Bi-Weekly**, or **Monthly**. Set the **Recurrence End Date**.
-  </Step>
-  <Step title="Choose check-in settings">
-    Leave **Public Check-in** turned on if people should check in through the event QR code. Choose a **Check-in Window** from 30 minutes to 8 hours.
-  </Step>
-  <Step title="Save the event">
-    Click **Create Event**. Bethel ChMS generates occurrences based on your chosen pattern.
+  <Step title="Save">
+    Click **Save Changes**. Bethel ChMS confirms with a message such as **Event "Youth Night" updated**.
   </Step>
 </Steps>
-
-<Frame>
-  <img src="/images/guides/create-event-recurring.png" alt="Create event dialog with recurring options expanded" />
-</Frame>
-
-<Info>
-Bethel ChMS generates up to 52 occurrences when it creates or regenerates a recurring event.
-</Info>
-
-The codebase does not currently register an automatic job that extends the series beyond those generated occurrences.
-
-### Filtering and sorting events
-
-Use the event list to sort events by **Name**, **Start Date**, **Location**, or **Created At**. You can also filter by scope:
-
-- **All events** shows every event for the selected branch.
-- **Branch-wide only** shows events that are not linked to a group.
-- **Group only** shows events linked to a group. The label uses your branch's configured group type name.
-
-### Understanding occurrences
-
-Every event in Bethel ChMS has one or more **occurrences**. A one-off event has exactly one occurrence, while a recurring event has many. Each occurrence has its own date, time, location, and status.
-
-Attendance is always recorded against a specific occurrence, not the event itself. This means you can track who attended each individual service or meeting, even when it's part of a recurring series.
 
 ### Editing a recurring event
 
-When you edit a recurring event, Bethel ChMS asks whether to **Yes, apply to future** or **No, this event only**. Use **Yes, apply to future** when the change should update future occurrences in the series.
+When you click **Save Changes** on a recurring event, the sheet asks **Apply changes to all future occurrences?**
 
-If you choose **No, this event only**, Bethel ChMS updates the event record but does not change any existing occurrence rows. Existing occurrence dates, times, statuses, cancellations, reschedules, and location overrides remain unchanged.
+- **Yes, apply to future** saves your changes and rebuilds the upcoming occurrences from the new schedule, up to 52 ahead and stopping at the **Recurrence End Date**. Past occurrences never change.
+- **No, this event only** saves the event's details and leaves the existing occurrences as they are for now. When Bethel ChMS later tops up the series, it works from the saved details, so upcoming occurrences may then be brought into line with them.
+- **Back** returns you to the form without saving.
 
-<Frame>
-  <img src="/images/guides/apply-to-future-occurrences.png" alt="Apply to all future occurrences confirmation prompt" />
-</Frame>
+When you choose **Yes, apply to future**, some upcoming occurrences are kept exactly as they are, so you don't lose work:
 
-### Managing a single occurrence
+- occurrences you have cancelled, rescheduled or moved with **Change Location**
+- occurrences that already have attendance, visitor attendance, a Porter check-in, a rejected Porter check-in attempt or a sent Porter return reminder
 
-You can manage individual occurrences without affecting the rest of the series. Open the occurrence from the event detail page to see the following actions:
+These occurrences don't move to the new schedule.
 
-- **Reschedule:** Change the date or time of the occurrence. The occurrence is marked as **Rescheduled** so your team can see it was moved.
-- **Change location:** Override the default location for this occurrence. Choose **Same as event** to revert back to the event's default location.
-- **Cancel:** Mark the occurrence as **Cancelled**. Once cancelled, attendance recording and other actions are disabled for that occurrence.
-- **View Attendance:** Open the attendance page for that occurrence.
+{/* TODO: new screenshot: Edit Event sheet showing the Apply changes to all future occurrences question */}
 
-<Frame>
-  <img src="/images/guides/occurrence-detail-actions.png" alt="Occurrence detail showing Reschedule, Change Location, and Cancel actions" />
-</Frame>
+<Tip>
+After you change the time or pattern of a recurring event with **Yes, apply to future**, open the **Occurrences** tab and check the next few weeks. If an occurrence you had changed is still sitting at the old time, cancel it if you no longer need it.
+</Tip>
 
-### Deleting an event
+### End a recurring event early
 
-<Warning>
-Org Owner, Org Admin, and Branch Admin can delete events. Editors do not have permission to delete.
-</Warning>
+To stop a recurring event, edit it, choose an earlier **Recurrence End Date**, click **Save Changes** and choose **Yes, apply to future**. Upcoming occurrences after the new date are removed, apart from the kinds listed above. Past occurrences and their attendance stay.
 
-Deleting an event removes the event and all of its occurrences from view. Any attendance records that were previously recorded against the event's occurrences are preserved and remain accessible in attendance reports.
+If you turn **Recurring Event** off on an existing recurring event instead, Bethel ChMS saves straight away without asking, and keeps every occurrence it has already created.
 
-## Public check-in
+## The event page
 
-Each event has a **Public Check-in QR** section on the event detail page when public check-in is enabled. Use it to display or print the event QR code for attendees. To learn more about attendance options, see [Record attendance](/guides/recording-attendance).
+Open an event from the **Events** list. The top bar shows the event name, **Event Details** with the branch name, and a back arrow that returns you to the **Events** list. Editors and above see an **Edit** button and a **⋯** menu with **Edit event** and, for Org Owner, Org Admin and Branch Admin, **Delete event**.
 
-## Change history
+The summary at the top shows:
 
-The event detail page includes a **Change History** tab. Use it to review changes to event details such as **Name**, **Description**, **Location**, date and time fields, recurrence settings, and group assignment.
+- the repeat pattern, for recurring events
+- **Public check-in on** or **Public check-in off**
+- the description, if there is one
+- a card for the next occurrence that hasn't ended, with its time, date and location, a **Live now** or **Next** badge, and a **Take attendance** button. Cancelled occurrences are skipped. If nothing is left to come, it reads **No upcoming occurrences.**
 
-## Locations
+Below the summary are four tabs: **Occurrences**, **Attendance**, **Settings** and **Change History**.
 
-### What is a location?
+{/* TODO: new screenshot: Event page with the summary card, next-occurrence card and the four tabs */}
 
-A **location** is a physical venue where your branch holds events, such as a main auditorium, a community hall, or an outdoor space. Every branch has a primary location that is created during initial setup.
+### Occurrences tab
 
-### Creating a location
+The **Occurrences** tab lists the event's occurrences, with a count. By default it shows the **Next 30 days**. Use the date range button to choose another range, such as **Today**, **Next Sunday**, **Next 90 days**, **All upcoming** or **Last 30 days**, or pick your own dates, then click **Apply**.
+
+Each row shows the date, time, location and status:
+
+- The location reads **Same as event** when the occurrence uses the event's location.
+- The status is **Scheduled**, **Rescheduled**, **Cancelled** (with the date struck through) or **Live now** while it is in progress.
+
+Tap a row to open that occurrence's attendance page. On tablets and computers each row also has a **Take attendance** button. To change one occurrence, use its **⋯** menu. See [Manage a single occurrence](#manage-a-single-occurrence).
+
+### Attendance tab
+
+The **Attendance** tab lists the occurrences that have started so far, newest first, leaving out cancelled ones. Each row shows **View attendance**, or **Live now** if it is in progress. Tap a row to open its attendance page. If nothing has started yet, the tab reads **No occurrences have started yet.** See [Record attendance](/guides/recording-attendance).
+
+### Settings tab
+
+The **Settings** tab shows the event's details:
+
+- **Location** and **Group** (a link to the group, or **None (open event)**)
+- **Start** and **End**
+- **Recurrence** and **Recurs until**, for recurring events
+- **Check-in Window**, for example "Opens 2 hours before each occurrence", or **Public check-in is off**
+
+Below the details is the **Public Check-in QR** card. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
+
+### Change History tab
+
+The **Change History** tab shows who changed the event and when. It records changes to the name, description, location, start and end dates, whether it repeats, the repeat pattern, the recurrence end date and the linked group. Changes to check-in settings are not listed here. See [Change history](/guides/change-history).
+
+## Manage a single occurrence
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
+
+You can change one occurrence without affecting the rest of the series. On the event page, open the **Occurrences** tab and click the **⋯** menu on the occurrence's row. On a phone, the menu sits beside the status badge. The menu has:
+
+- **Take attendance**, which opens the attendance page for that occurrence
+- **Reschedule**
+- **Change Location**
+- **Cancel Occurrence**
+
+{/* TODO: new screenshot: Occurrences tab with an occurrence's menu open showing Take attendance, Reschedule, Change Location and Cancel Occurrence */}
+
+### Reschedule an occurrence
 
 <Steps>
-  <Step title="Open the locations list">
-    In the sidebar, click **Locations** to open the locations list for your branch.
+  <Step title="Open Reschedule">
+    In the occurrence's **⋯** menu, click **Reschedule**. The **Reschedule Occurrence** dialog opens with the current **Start Date**, **Start Time**, **End Time** and **End Date** filled in.
   </Step>
-  <Step title="Click Add Location">
-    Click the **Add Location** button to open the new location dialog.
+  <Step title="Choose the new date and time">
+    Change the fields you need. The end must be after the start.
   </Step>
-  <Step title="Fill in the location details">
-    Enter the required field: **Name**. You can also fill in optional fields: **Address**, **Post Code**, and **Capacity**.
-  </Step>
-  <Step title="Save the location">
-    Click **Create Location**. The new location is now available when creating or editing events.
+  <Step title="Save">
+    Click **Reschedule**. The occurrence's status changes to **Rescheduled**, so your team can see it was moved.
   </Step>
 </Steps>
 
-<Frame>
-  <img src="/images/guides/create-location-dialog.png" alt="Create location dialog" />
-</Frame>
+### Change an occurrence's location
 
-### The primary location
+Use this when one service or meeting is held somewhere else, for example in the church hall while the main auditorium is being decorated.
 
-Each branch has exactly one primary location. When you create a new event, the location defaults to your branch's primary location. You can change which location is primary by selecting **Set Primary** on any other location.
+<Steps>
+  <Step title="Open Change Location">
+    In the occurrence's **⋯** menu, click **Change Location**.
+  </Step>
+  <Step title="Choose the location">
+    Choose one of your branch's locations, or **Same as event (default)** to go back to the event's own location.
+  </Step>
+  <Step title="Save">
+    Click **Update Location**. Bethel ChMS confirms with **Location updated**.
+  </Step>
+</Steps>
 
-<Note>
-You cannot delete the primary location. To delete it, first set another location as primary.
-</Note>
+If your church uses Porter, workers checking in for this occurrence need to be inside the new location's check-in area. See [Porter check-in](/guides/porter-check-in).
 
-### Deleting a location
+### Cancel an occurrence
 
-You cannot delete a location that is linked to future events, either directly or through event inheritance. If you attempt to delete a linked location, Bethel ChMS displays a list of the events that are still using it.
+<Steps>
+  <Step title="Open Cancel Occurrence">
+    In the occurrence's **⋯** menu, click **Cancel Occurrence**.
+  </Step>
+  <Step title="Confirm">
+    The dialog asks you to confirm the date. Click **Cancel Occurrence** to cancel it, or **Keep** to leave it as it is.
+  </Step>
+</Steps>
 
-<Tip>
-To delete a location that is linked to future events, first reassign those events to a different location.
-</Tip>
+A cancelled occurrence shows as **Cancelled**, with its date struck through. **Reschedule**, **Change Location** and **Cancel Occurrence** are no longer available for it. Cancelled occurrences are left out of the next-occurrence card, the **Upcoming** count, the **Attendance** tab, public check-in and the kiosk. Porter doesn't offer them for check-in, and no return reminders go out for them.
 
-<Frame>
-  <img src="/images/guides/delete-location-blocked.png" alt="Delete location blocked dialog showing linked events" />
-</Frame>
+<Warning>
+You can't undo a cancellation, so check the date in the dialog before you confirm.
+</Warning>
 
-### Viewing location details and history
+## Public check-in and the event QR code
 
-Open a location name from the **Locations** list to view its **Details** and **Change History** tabs. The details tab shows the branch, address, post code, capacity, and whether the location is primary.
+Each event's QR code is on its **Settings** tab, in the **Public Check-in QR** card.
+
+- If public check-in is off, the card says so and shows no code. To turn it on, edit the event and switch on **Public Check-in**.
+- If public check-in is on, the card shows the QR code, the **Check-in URL** with a **Copy** button, and the buttons **Copy Link**, **Launch Kiosk Mode**, **Print QR** and **Regenerate Token**.
+
+Use **Print QR** to make a poster for the door: it opens **Print QR Code**, where you can change the wording, choose **A4** or **A5** and click **Download PDF**. Use **Copy Link** to share the check-in page, and **Launch Kiosk Mode** to turn a tablet or laptop into a self check-in point. For step-by-step help, see [Print a QR poster](/guides/recording-attendance#print-a-qr-poster) and [Kiosk mode](/guides/kiosk-mode). You can also open kiosk mode with **QR & kiosk** from the event's row menu or a **Live now** card.
+
+<Warning>
+**Regenerate Token** replaces the event's QR code and link once you confirm with **Regenerate**. Any printed or shared copies stop working straight away, including the code your Porter workers scan. Only use it when you need to replace the code, then print and display the new one. See [Replace the QR code](/guides/recording-attendance#replace-the-qr-code).
+</Warning>
+
+### Porter uses the same QR code
+
+If your church uses [Porter](/guides/porter), your service team checks in by scanning this same QR code in Porter when they arrive. For this to work:
+
+- **Public Check-in** must be on for the event, so that Bethel ChMS shows the code.
+- Display the code where your workers arrive, as well as where members and visitors come in.
+- A Porter admin needs to set a check-in area for the location in Porter. Porter checks the occurrence's own location, or the event's location if the occurrence doesn't have one.
+
+See [Porter check-in](/guides/porter-check-in) for the full set-up.
+
+## Delete an event
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin
+
+<Steps>
+  <Step title="Choose Delete">
+    On the **Events** page, open the row's **⋯** menu and click **Delete**. Or open the event and choose **Delete event** from its **⋯** menu.
+  </Step>
+  <Step title="Confirm">
+    The **Delete Event** confirmation explains that the event and all its occurrences will be deleted, and that this can't be undone. Click **Delete**.
+  </Step>
+</Steps>
+
+Bethel ChMS confirms with **Event deleted**. If you deleted from the event page, you return to the **Events** list.
+
+<Warning>
+When you delete an event, its attendance also drops out of the attendance records on the **Attendance** page. If a recurring event is simply coming to an end, [end it early](#end-a-recurring-event-early) instead, so its past occurrences and attendance stay.
+</Warning>

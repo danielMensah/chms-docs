@@ -1,82 +1,123 @@
 ---
 title: "Invite your team"
 sidebarTitle: "Invite users"
-description: "Send invitations to pastors, branch admins, finance users, and editors so they can help manage your church in Bethel ChMS."
+description: "Invite pastors, branch admins, finance users, care teams, and editors so they can help manage your church in Bethel ChMS."
 ---
 
-Now that your church is set up, invite the people who'll help manage it. Each person you invite gets a specific role that controls what they can see and do in Bethel ChMS.
+Now that your church is set up, invite the people who'll help manage it. A **user** is someone on your team who signs in to Bethel ChMS. Each user has a **role** that controls what they can see and do.
+
+<Info>
+**Who can do this:** Org Owner, Org Admin, Branch Admin. Branch Admins can only invite Branch Admins and Editors to their own branch.
+</Info>
+
+## Send an invitation
 
 <Steps>
-  <Step title="Open user management">
-    In the sidebar, click **Users**. This opens the user management page where you can see everyone who has access to your organisation and send new invitations.
+  <Step title="Open the Users page">
+    In the sidebar, open **Organisation** and click **Users**. On a tablet held portrait, or a phone, open **More** and tap **Users** under **Organisation**.
+
+    The **Users** page lists everyone who can sign in to your organisation, along with anyone you've invited.
   </Step>
 
-  <Step title="Send an invitation">
-    Click **Invite User** and fill in the form:
-
-    | Field      | Required | Notes |
-    | ---------- | -------- | ----- |
-    | **Email**  | Yes      | The email address where the invitation will be sent. |
-    | **Name**   | Yes      | The person's display name in Bethel ChMS. |
-    | **Role**   | Yes      | Choose from **Org Admin**, **Branch Admin**, **Editor**, or **Treasurer**, depending on your own role. |
-    | **Branch** | Sometimes | Required when you select a branch-scoped role: **Branch Admin**, **Editor**, or **Treasurer**. |
-
-    <Frame>
-      <img src="/images/getting-started/invite-user-form.png" alt="Invite user form with role dropdown" />
-    </Frame>
-
-    Click **Send Invitation**. Bethel ChMS sends the invitee an email with a link they can use to accept.
+  <Step title="Open the Add user form">
+    Click **Add user** at the top of the page. On a narrow screen this button shows only a person icon with a plus sign. The **Add user** form opens.
   </Step>
 
-  <Step title="Choose the right role">
-    Not sure which role to pick? Here's a quick summary:
+  <Step title="Fill in the details">
+    | Field | Required | Notes |
+    | --- | --- | --- |
+    | **Email** | Yes | The email address the invitation is sent to. They'll sign in with this address. |
+    | **Name** | Yes | The person's name as it appears in Bethel ChMS. |
+    | **Role** | Yes | **Org Owners** and **Org Admins** can choose **Org Admin**, **Branch Admin**, **Editor**, **Treasurer**, or **Care Manager**. **Branch Admins** can choose **Branch Admin** or **Editor**. |
+    | **Branch** | Sometimes | Appears when you choose **Branch Admin**, **Editor**, **Treasurer**, or **Care Manager**, and is required for those roles. If you're a **Branch Admin**, it's set to your own branch and you can't change it. **Org Admins** work across every branch, so they don't need one. |
 
-    - **Org Admin:** Organisation-level access across every branch. Good for senior pastors or headquarters staff who oversee the whole network.
-    - **Branch Admin:** Manages members, attendance, and events for a specific branch. Ideal for local pastors or office managers.
-    - **Editor:** Can add and update records within a branch but cannot change settings or invite others.
-    - **Treasurer:** Can access **Gifting & Donations** for one branch, without access to members, events, or other branch data.
+    {/* TODO: new screenshot: the Add user form showing Email, Name, the Role list including Care Manager, and Branch */}
 
-    For a full breakdown of what each role can do, see [Roles and permissions](/guides/roles-and-permissions).
+    When you choose **Treasurer** or **Care Manager**, a short note under **Role** reminds you what that role can access.
   </Step>
 
-  <Step title="What the invitee sees">
-    The invitee receives an email with a magic link. When they click it, they land on the **Accept invitation** page, which shows:
-
-    - The name of your organisation
-    - The role they've been assigned
-    - The branch they belong to, if their role is branch-scoped
-
-    They set a password (minimum 8 characters) and they're in. No extra setup required on their end.
-
-    <Frame>
-      <img src="/images/getting-started/accept-invitation-page.png" alt="Accept invitation page" />
-    </Frame>
+  <Step title="Create the user">
+    Click **Create user**. Bethel ChMS emails the person an invitation, and a message confirms **Invitation sent to** their email address. They appear on the **Users** page under **Invites** until they open the link in their invitation email.
   </Step>
 </Steps>
 
+## Choose the right role
+
+Not sure which role to pick? Here's a quick summary:
+
+- **Org Admin:** Organisation-level access across every branch. Good for senior pastors or headquarters staff who oversee the whole network.
+- **Branch Admin:** Manages members, attendance, and events for one branch. Ideal for local pastors or office managers.
+- **Editor:** Can add and update records within a branch, but can't change settings or invite others.
+- **Treasurer:** Works only in **Gifting & Donations** for one branch, with no access to members, events, or other branch data.
+- **Care Manager:** Works only in **Care** and **Members** for one branch. They follow up people who need care, and can view, edit, and delete members in their branch, but can't set up the rules that spot absences or open any other pages.
+
+For a full breakdown of what each role can do, see [Roles and permissions](/guides/roles-and-permissions).
+
 <Info>
 **Who can invite whom:**
-- **Org Owner** can invite **Org Admin**, **Branch Admin**, **Editor**, and **Treasurer**.
-- **Org Admin** can invite **Org Admin**, **Branch Admin**, **Editor**, and **Treasurer**.
+- **Org Owner** can invite **Org Admin**, **Branch Admin**, **Editor**, **Treasurer**, and **Care Manager**.
+- **Org Admin** can invite **Org Admin**, **Branch Admin**, **Editor**, **Treasurer**, and **Care Manager**.
 - **Branch Admin** can invite **Branch Admin** and **Editor** within their own branch.
-- **Editor** cannot invite anyone.
-- **Treasurer** cannot invite anyone.
+- **Editor**, **Treasurer**, and **Care Manager** can't invite anyone.
 </Info>
 
-<Note>
-Invitations expire after 7 days. If someone misses theirs, go back to the **Users** page and resend it.
-</Note>
+## Give Porter access
+
+**Porter** is the Bethel ChMS phone app for service teams, such as workers and volunteers. When Porter is switched on for your church, Org Owners and Org Admins see an extra **Apps** choice below **Email** in the **Add user** form:
+
+- **Bethel ChMS:** Access to Bethel ChMS only, as described above.
+- **Porter:** Access to Porter only.
+- **Both apps:** Access to Bethel ChMS and Porter.
+
+When you include Porter, choose a **Porter role** (**Worker** or **Admin**) and use **Link to member record** to pick the person's member record. If you choose **Porter** on its own, the **Name**, **Role**, and **Branch** fields don't appear, because the person only needs Porter. One sign-in works for both apps, so someone with access to both uses the same email and password.
+
+For how Porter works and how to set it up, see [Porter](/guides/porter).
+
+## What the invitee sees
+
+The invitee receives an email inviting them to Bethel ChMS, with an **Accept Invitation** button. When they click it, Bethel ChMS checks the invitation and opens a **Welcome!** page that shows:
+
+- **Organisation:** The name of your organisation.
+- **Role:** The role you gave them, such as **Branch Admin** or **Care Manager**. For a Porter-only invitation, this shows **App** with **Porter** instead.
+- **Branch:** The branch they belong to, if their role has one.
+- **Email:** The email address they'll sign in with.
+
+To accept, they:
+
+1. Choose a **Password** of at least 12 characters, with upper-case and lower-case letters and at least one number.
+2. Type it again in **Confirm Password**.
+3. Tick **I agree to the Terms and Conditions and Privacy Policy**.
+4. Click **Set Password & Continue**.
+
+{/* TODO: new screenshot: the redesigned Welcome! invitation page with the Organisation, Role, Branch and Email summary and the password fields */}
+
+They're then signed in and taken to their starting page: the **Dashboard** for most roles, **Gifting & Donations** for a Treasurer, **Care** for a Care Manager, or Porter for someone with Porter access only. Next time, they sign in at [app.bethelchms.com](https://app.bethelchms.com). See [Sign in and reset your password](/getting-started/sign-in).
+
+If you gave someone access to both apps and their Porter access couldn't be added when they accepted, the page tells them, and they can continue into Bethel ChMS. Add their Porter access again from the **Users** page, using **Edit** on their row.
+
+## If an invitation expires
+
+Invitation links expire. If someone opens an old link, Bethel ChMS can't verify it, and they see a message such as **Could not verify invitation** or **This invitation has expired. Please contact your administrator for a new invite.**
+
+To send a new link:
+
+1. On the **Users** page, click **Invites**.
+2. Find the person and click **Resend**.
+
+Resending sends a fresh email with a new link. If you're a **Branch Admin**, you can resend invitations only to people in your own branch.
+
+If the person isn't listed under **Invites**, they've already opened their invitation link, so they don't need a new invitation. If they set a password, they can sign in. If they didn't, or they've forgotten it, they can click **Forgot password?** on the sign-in page to choose one.
 
 ## Manage invitations and users
 
-Use the **Users** page to search users, filter by role, filter by status, and resend pending invitations. Org-scoped users can also filter by **All Branches** or a specific branch.
+Use the **Users** page to search for users, filter by role (Org Owners and Org Admins can also filter by branch), and switch between **All**, **Active**, **Invites**, and **Deactivated**. From each user's menu you can edit their details, resend an invitation, or deactivate their access. Branch Admins can edit or deactivate only Branch Admins and Editors in their own branch.
 
 For the full user management workflow, see [User management](/guides/user-management).
 
 ## What to do next
 
-Your team has access, time to start adding the people your church serves.
+Your team has access, so it's time to start adding the people your church serves.
 
 <Card title="Manage your members" icon="users" href="/guides/managing-members">
-  Add members, organize them by branch, and keep your church directory up to date.
+  Add members, organise them by branch, and keep your church directory up to date.
 </Card>

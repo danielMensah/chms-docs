@@ -1,97 +1,263 @@
 ---
 title: "Organisation settings"
-description: "Manage organisation details, plan usage, billing, custom fields, currency, ownership, and deletion in Bethel ChMS."
+description: "Manage your organisation details, plan and billing status, custom fields, currency, Quick Find status, ownership and deletion in Bethel ChMS."
 sidebarTitle: "Organisation settings"
 ---
 
-Use **Organisation Settings** to view and manage account-level settings for your church network.
+**Organisation Settings** is where you look after the settings that apply to your whole church network. Your **organisation** is your church network: it contains all your branches, members and settings. Anything you change here affects every branch.
 
 <Info>
-Access depends on your role. **Org Owner** can manage organisation details, currency, billing, ownership, and deletion. **Org Admin** can manage custom fields and view organisation-level settings. Other roles may see read-only settings, but they cannot change owner-only controls.
+**Who can do this:** Org Owner, Org Admin, Branch Admin and Editor can open the page. What you can change depends on your role (see the table below). Treasurers and Care Managers can't open Organisation Settings.
 </Info>
+
+## Open Organisation Settings
+
+- **Org Owner and Org Admin:** in the sidebar, open the **Organisation** group and click **Settings**.
+- **Branch Admin and Editor:** in the sidebar, open the **Organisation** group and click **Organisation Settings**.
+
+On a tablet or phone, tap **More**, then look under **Organisation**. The page opens with the title **Organisation Settings** and your organisation's name underneath. See [Find your way around](/getting-started/find-your-way-around) for more on the sidebar, rail and tab bar.
+
+## What each role can see and change
+
+The page is made up of cards. Some cards are shown to everyone who can open the page, but only certain roles can make changes.
+
+| Card | Who sees it | Who can change it |
+| --- | --- | --- |
+| **Organisation Details** | Everyone who can open the page | Org Owner |
+| **Plan & Usage** | Org Owner, Org Admin, Branch Admin, Editor | Nobody (information only) |
+| **Billing** | Org Owner, Org Admin, Branch Admin, Editor | Org Owner |
+| **Custom Fields** | Everyone who can open the page | Org Owner, Org Admin |
+| **Currency** | Everyone who can open the page | Org Owner |
+| **Quick Find** | Org Owner, Org Admin | Nobody here (changes are made on each branch's page) |
+| **Ownership & Danger Zone** | Org Owner | Org Owner |
+
+Branch Admins and Editors see the organisation's details, plan, billing status, custom fields and currency so they know how things are set up, but those settings belong to the organisation as a whole, so they are managed centrally.
 
 ## Organisation details
 
-The **Organisation Details** section shows:
+The **Organisation Details** card shows your organisation's **Name**, **Email**, **Address**, **Post Code** and **Created At** date.
 
-- **Name**
-- **Email**
-- **Address**
-- **Post Code**
-- **Created At**
-
-Only the **Org Owner** can click **Edit** and update these fields.
-
-## Plan and usage
-
-The **Plan & Usage** section shows your current plan and branch usage. Bethel ChMS uses branch count as the enforced usage limit.
-
-If you reach your branch limit, you cannot create or duplicate more branches until your limit is raised.
-
-## Billing
-
-The **Billing** section shows your subscription status, branch count, and renewal or cancellation date.
-
-Only the **Org Owner** can click **Manage Billing**. Other users should contact the account owner to manage billing.
-
-## Custom fields
-
-Use **Custom Fields** to define additional fields for **Member Fields** and **Visitor Fields**.
-
-**Org Owner** and **Org Admin** can:
-
-- Add custom fields.
-- Edit custom field labels, required status, and single-select options.
-- Reorder fields.
-- Remove fields.
-
-Removed fields are hidden from forms, but existing values are preserved. Field keys stay reserved and cannot be reused.
-
-Each entity type supports up to 10 active custom fields.
-
-## Currency
-
-The **Currency** section sets the default currency for new gifting entries.
-
-Only the **Org Owner** can change the currency. Existing gifting entries keep their original currency and are never rewritten.
-
-Supported currencies are **GBP**, **USD**, **EUR**, **NGN**, **GHS**, **KES**, **ZAR**, **CAD**, and **AUD**.
-
-## Transfer ownership
-
-Only the current **Org Owner** can transfer ownership.
+**Who can do this:** Org Owner
 
 <Steps>
-  <Step title="Open Organisation Settings">
-    Go to **Organisation Settings**.
+  <Step title="Open the edit panel">
+    On the **Organisation Details** card, click **Edit**. The button is greyed out for everyone except the Org Owner.
   </Step>
-  <Step title="Click Transfer Ownership">
-    In **Ownership & Danger Zone**, click **Transfer Ownership**.
+  <Step title="Update the details">
+    In **Edit Organisation**, change the **Organisation Name**, **Email**, **Address (optional)** or **Post Code (optional)**.
   </Step>
-  <Step title="Choose the new owner">
-    Select an existing **Org Admin** from **New Owner**.
-  </Step>
-  <Step title="Confirm the transfer">
-    Enter your password, complete the CAPTCHA challenge, and click **Transfer Ownership**.
+  <Step title="Save">
+    Click **Save Changes**. Bethel ChMS confirms with **Organisation updated successfully**.
   </Step>
 </Steps>
 
-After the transfer, you become an **Org Admin** and the selected user becomes the **Org Owner**.
+Your organisation name must be unique in Bethel ChMS. If another organisation already uses it, you'll see **Organisation name already exists**.
+
+## Plan and usage
+
+The **Plan & Usage** card shows your current plan, which is labelled **Standard**, and how many branches you're using against your limit, for example **Branches 2 / 3**. **Features** reads **All features included**.
+
+Your number of branches is the only limit on your plan. When you reach it, you can't create or duplicate more branches until the limit is raised. See [Branch management](/guides/branch-management#branch-limit).
+
+## Billing
+
+The **Billing** card shows your subscription status as a badge, such as **Active**, **Past due** or **Suspended**.
+
+The Org Owner also sees:
+
+- **Branches**: how many branches you're being billed for.
+- **Renewal** (shown as **Renews** and a date) or, if the subscription has been cancelled, **Cancellation** (shown as **Access ends** and a date).
+- **Manage Billing**, which opens your billing page, where you can update your card and download invoices.
+
+Everyone else sees **Contact your account owner to manage billing.**
+
+See [Billing and subscription](/guides/billing-and-subscription) for more about payments and invoices.
+
+## Custom fields
+
+Custom fields let you record information that Bethel ChMS doesn't collect as standard, such as a baptism date or a preferred language. You set them up separately for members and visitors.
+
+**Who can do this:** Org Owner, Org Admin. Other roles see the list of fields but can't change it.
+
+The **Custom Fields** card has two tabs, **Member Fields** and **Visitor Fields**, with a count of active fields on each. Each tab shows:
+
+- The number of active fields, for example **4 active fields**.
+- The list of fields. Each row shows the field's label, its type and a **Required** badge if it's required.
+- **N of 10 fields used** and the **Add Field** button.
+
+If you haven't added any fields yet, the tab reads **No custom fields defined yet.**
+
+### Where custom fields appear
+
+Once you add a field, it appears:
+
+- In the add and edit forms for members or visitors. Required fields are marked with an asterisk.
+- On the member page under **Details**, and in the visitor details.
+- In list filters, under **Filters** > **Custom fields**, and in the sort options.
+- In CSV exports and when you map columns during an import.
+
+See [Managing members](/guides/managing-members), [Visitors](/guides/visitors) and [Importing members](/guides/importing-members).
+
+### Add a custom field
+
+<Steps>
+  <Step title="Choose the tab">
+    On the **Custom Fields** card, open **Member Fields** or **Visitor Fields**.
+  </Step>
+  <Step title="Click Add Field">
+    Click **Add Field**. The **Add Custom Field** panel shows how many of your 10 fields you've used.
+  </Step>
+  <Step title="Name the field">
+    Enter a **Label**, for example "Baptism Date". Below the form, Bethel ChMS shows the field key it will save from the label. The field key is the field's permanent internal name, and it can't be changed or reused later.
+  </Step>
+  <Step title="Choose the field type">
+    Under **Field Type**, choose **Text**, **Number**, **Date**, **Yes/No** or **Single Select**. For **Single Select**, click **Add Option** for each choice you want to offer and type it in. You need at least two options.
+  </Step>
+  <Step title="Decide if it's required">
+    Turn on **Required field** if forms can't be saved without a value.
+  </Step>
+  <Step title="Create the field">
+    Click **Create Field**.
+  </Step>
+</Steps>
+
+You can have up to 10 active fields for members and 10 for visitors. When a tab reaches 10, **Add Field** is greyed out. Remove a field you no longer need to make room.
+
+### Edit a custom field
+
+Click the **⋯** menu on a field and choose **Edit**. In **Edit Custom Field** you can change:
+
+- The **Label**.
+- The options of a **Single Select** field. Renaming an option updates every existing record that uses the old value.
+- Whether it's a **Required field**.
+
+The **Field Key**, **Field Type** and **Entity Type** (member or visitor) are shown for reference but can't be changed after the field is created. If you need a different type, remove the field and add a new one. Click **Save Changes** when you're done.
+
+### Change the order of fields
+
+The order of the list is the order fields appear in forms. You can change it in any of these ways:
+
+- On a computer, drag a field by its handle.
+- Click **Reorder**, then use the arrows on each row. Click **Done** when you've finished. This works on any screen, including phones and tablets.
+- Open a field's **⋯** menu and choose **Move up** or **Move down**.
+
+Changes save as you go. **Reorder** appears once a tab has two or more fields.
+
+### Remove a custom field
+
+<Steps>
+  <Step title="Open the field's menu">
+    Click the **⋯** menu on the field and choose **Remove**.
+  </Step>
+  <Step title="Confirm">
+    Read the confirmation and click **Remove Field**.
+  </Step>
+</Steps>
+
+When you remove a field:
+
+- It's hidden from all forms straight away.
+- Values already saved on records are kept. CSV exports of members and visitors still include them, with "(removed)" after the field's label.
+- Its field key stays reserved and can't be used again.
+
+To see removed fields, click **Show removed fields** on the tab. The button appears once a tab has at least one removed field, with the number of removed fields beside it. They're listed with a **Removed** badge. Click **Hide removed fields** to tidy them away again.
+
+## Currency
+
+The **Currency** card sets the default currency for gifting entries. Existing entries keep their original currency and are never rewritten.
+
+**Who can do this:** Org Owner. Everyone else sees **Only the organisation owner can change the currency.**
+
+<Steps>
+  <Step title="Choose a currency">
+    Under **Currency**, choose your currency. The **Currency symbol** fills in for you. You can change the symbol if you prefer, using up to 5 characters.
+  </Step>
+  <Step title="Save">
+    Click **Save Currency**.
+  </Step>
+  <Step title="Confirm the change">
+    If you chose a different currency, Bethel ChMS asks **Change organisation currency?** and explains that all new gifting entries will use it. Click **Change currency**. Bethel ChMS confirms with a message such as **Currency updated to GBP**.
+  </Step>
+</Steps>
+
+Supported currencies are **GBP**, **USD**, **EUR**, **NGN**, **GHS**, **KES**, **ZAR**, **CAD** and **AUD**. See [Gifting and donations](/guides/gifting-and-donations).
+
+## Quick Find status
+
+Quick Find lets people check in at a kiosk by finding their name, as well as by email, mobile or QR code. At the kiosk it appears as **Find by name**.
+
+**Who can see this:** Org Owner, Org Admin
+
+The **Quick Find** card gives you a summary of how Quick Find is set up across your organisation. You can't change anything on this card. It shows:
+
+- **Disclosure accepted**, with who accepted it, their role, the date and the version, or **Disclosure not accepted**. Before Quick Find can work at any kiosk, an Org Owner or Org Admin must read and accept a safeguarding disclosure on behalf of the organisation.
+- **Read disclosure**, which opens the disclosure so you can read it again. Click **Close** when you've finished.
+- **Quick Find by branch**, which lists every branch with its status.
+
+| Status | What it means |
+| --- | --- |
+| **On** | Quick Find is switched on for this branch and the disclosure has been accepted. |
+| **On, waiting** | The branch's switch is on, but nobody has accepted the disclosure yet, so Quick Find stays off at the kiosk. |
+| **Off** | Quick Find is switched off for this branch. |
+
+Click a branch in the list to open its page, where you accept the disclosure and turn Quick Find on or off. See [Find by name (Quick Find)](/guides/quick-find) and [Branch management](/guides/branch-management#quick-find).
+
+## Transfer ownership
+
+Every organisation has one **Org Owner**. You can hand this role to an existing **Org Admin**, for example when the person who set up Bethel ChMS for your church steps down.
+
+**Who can do this:** Org Owner
+
+<Note>
+The person you transfer to must already be an Org Admin. If there isn't one yet, change someone's role first in [User management](/guides/user-management).
+</Note>
+
+<Steps>
+  <Step title="Open Organisation Settings">
+    In the sidebar, open the **Organisation** group and click **Settings**.
+  </Step>
+  <Step title="Start the transfer">
+    In **Ownership & Danger Zone**, click **Transfer Ownership**.
+  </Step>
+  <Step title="Choose the new owner">
+    Under **New Owner**, select an Org Admin.
+  </Step>
+  <Step title="Confirm with your password">
+    Enter your password in **Confirm Your Password**, then wait for the security check to finish. It usually completes by itself. See [The security check](/getting-started/sign-in#the-security-check) if it doesn't.
+  </Step>
+  <Step title="Transfer">
+    Click **Transfer Ownership**. Bethel ChMS confirms with **Ownership transferred successfully**.
+  </Step>
+</Steps>
+
+After the transfer, you become an **Org Admin** and the person you chose becomes the **Org Owner**.
 
 <Warning>
-Ownership transfer is immediate. The new owner must transfer ownership back if you need to reverse it.
+Ownership transfer is immediate. To reverse it, the new owner has to transfer ownership back to you.
 </Warning>
 
 ## Delete an organisation
 
-Only the **Org Owner** can delete an organisation.
+Deleting your organisation deletes all its branches, users and records, including members, visitors, events and ministries.
 
-Deleting an organisation soft-deletes the organisation and all associated data, including branches, users, members, visitors, events, and ministries. You must type the organisation name to confirm deletion.
+**Who can do this:** Org Owner
 
-After deletion, Bethel ChMS signs you out and redirects you to sign up.
+<Steps>
+  <Step title="Start the deletion">
+    In **Ownership & Danger Zone**, click **Delete Organisation**.
+  </Step>
+  <Step title="Type the organisation name">
+    Type your organisation's name exactly as shown. Capital letters matter.
+  </Step>
+  <Step title="Confirm">
+    Click **Delete Organisation**.
+  </Step>
+</Steps>
+
+Bethel ChMS then signs you out and takes you to the page for creating a new account.
 
 <Warning>
-Deleted organisation data can be recovered within 30 days. After the recovery period, it may be permanently removed.
+Deleted organisation data can be recovered within 30 days. Contact support at hello@bethelware.app as soon as possible if you deleted your organisation by mistake.
 </Warning>
 
 ## Related pages
@@ -99,3 +265,5 @@ Deleted organisation data can be recovered within 30 days. After the recovery pe
 - [Set up your church](/getting-started/setup)
 - [Roles and permissions](/guides/roles-and-permissions)
 - [Branch management](/guides/branch-management)
+- [Billing and subscription](/guides/billing-and-subscription)
+- [Find by name (Quick Find)](/guides/quick-find)

@@ -1,103 +1,139 @@
 ---
 title: "Membership demographics report"
-description: "Use the Membership Demographics report to create an age group and gender cross-tab with filters, composite rows, completeness checks, and CSV or PDF export."
+description: "Use the Membership Demographics report in Bethel ChMS to count your members by age group and gender, add composite totals and a nationality breakout, fix missing details, and export to CSV or PDF."
 ---
 
-The **Membership Demographics** report shows your membership by age group and gender. Use it when you need board-ready totals for age groups, gender breakdowns, active members, or mid-year and end-of-year membership reporting.
+The **Membership Demographics** report counts your members by age group and gender in one table, called a cross-tab. Use it when you need board-ready totals: how many youth you have, your male and female split, how many active members attended recently, or the figures for a mid-year or end-of-year membership report.
+
+The report uses the [age groups](/guides/age-groups) your organisation has set up. A member's age group comes from their date of birth, or is set by hand when there is no date of birth.
 
 <Info>
-**Who can do this:** Org Owner, Org Admin, and Branch Admin can open **Reports** from the sidebar and use **Membership Demographics**. Editors can access the report by direct URL, but the **Reports** sidebar item is hidden for them. Treasurers cannot access this report.
+**Who can do this:** Org Owner, Org Admin and Branch Admin. Editors don't have **Reports** in the sidebar, and Treasurers and Care Managers can't open this report.
 </Info>
 
 ## Open the report
 
-1. In the sidebar, click **Reports**.
-2. On the **Build Report** tab, click **Membership Demographics**.
+1. In the sidebar, open **Organisation** and click **Reports**. On a tablet held upright, tap **Reports** in the rail. On a phone, tap **More**, then **Reports**.
+2. On the **Build Report** tab, under **Build a report**, click **Membership Demographics**.
 
-Bethel ChMS opens **Configure Report** and loads the preview automatically.
+The report opens as its own page, and the preview loads straight away. Click **Back to Reports** (the back arrow in the top bar) to return to the list, or click **⋯** and choose **Change report type** to open a different report.
+
+Three buttons sit above the preview: **Filters**, **Composite rows** and **Nationality breakout**, numbered 1 to 3 on a tablet or computer. Each shows what is currently set and opens a panel where you change it. On a phone, these panels slide up from the bottom of the screen.
+
+{/* TODO: new screenshot: the Membership Demographics builder showing the Filters, Composite rows and Nationality breakout buttons above the cross-tab preview */}
 
 ## Choose who is counted
 
-Use **Configure Report** to decide which members appear in the cross-tab.
+Click **Filters** to decide which members appear in the cross-tab. The top of the panel shows how many members match. Changes apply as you make them.
 
 | Filter | What it does |
 | --- | --- |
-| **Lifecycle Status** | Counts members with the selected statuses. New reports default to **Active** members. |
-| **Branch** | Counts members from **All branches** or one branch. Branch-scoped users do not see this filter. |
-| **Tags** | Counts members with selected tags. Use **Match any** or **Match all** when you select multiple tags. |
-| **Custom Fields** | Filters members by custom field values. Supported custom field filters include text, number range, date range, yes/no, and single select. |
-| **Attendance recency** | Counts only members who attended at least once in the last selected number of months. |
+| **Lifecycle Status** | Counts members with the statuses you tick: **Newcomer**, **Active** or **Inactive**. New reports start with **Active** only. If you untick every status, the report counts **Active** members. |
+| **Branch** | Counts members from **All branches** or one branch. Branch Admins don't see this filter, because their reports always cover their own branch. |
+| **Tags** | Counts members with the tags you pick. With two or more tags, choose **Match any** or **Match all**. See [Tags](/guides/tags). |
+| Custom fields | Filters by your member [custom fields](/guides/organisation-settings#custom-fields). Yes/no fields offer **Is true**, **Is false** and **Is false or not set**. |
+| **Attendance recency** | Turn this on to count only members who attended at least once in the last few months. Set **Months** between 1 and 24. It starts at 6. |
 
-The **Attendance recency** filter accepts 1 to 24 months and defaults to 6 months when enabled.
+Click **Show** (for example, **Show 312 members**) to close the panel, or **Clear All Filters** to remove every filter, including **Attendance recency**.
 
 ## Read the cross-tab
 
-The preview shows one row per age group and columns for gender totals.
+Under **Preview**, a line starting **Active filters:** lists the status, custom field and attendance recency filters in use. The table has one row for each age group, in your organisation's age group order, and these columns:
 
 - **Male** and **Female** always appear.
-- **Other**, **Prefer not to say**, and **Not specified** appear when matching members exist.
-- **Unknown** includes members whose age group cannot be determined.
-- **Total** shows the overall total across all displayed rows.
+- **Other**, **Prefer not to say** and **Not specified** appear only when at least one counted member falls into them. **Not specified** is for members with no gender recorded.
+- **Total** is the right-hand column, adding up each row.
 
-Active filter summaries appear above the table so exported and shared reports show the context behind the numbers.
+Below the age groups you may see:
+
+- An **Unknown** row, for members who have no age group. It only appears when there are such members.
+- A **Composite rows** section, if you have added any. See [Add composite rows](#add-composite-rows).
+- An **Overall Members** row at the bottom, with the totals for everyone counted.
+
+If no one matches your filters, the preview reads "No members match your filters."
 
 ## Add composite rows
 
-Composite rows combine age groups into named summary rows without changing your age group setup. For example, you can create **Total Youth (13-35)** or **Total Adults (13+)**.
+Composite rows add named totals that combine several age groups, without changing your age group setup. For example, you could add **Total Youth (13-35)** or **Total Adults (13+)**.
 
-1. Open **Composite rows**.
+1. Click **Composite rows**.
 2. Click **Add composite**.
-3. Enter a **Composite label**.
-4. Select the age groups to include.
+3. Type a label in the label box, for example "Total Youth".
+4. Tick the age groups to include.
+5. Click **Done**.
 
-An age group can appear in more than one composite row.
+An age group can be in more than one composite row. To remove a composite row, click the bin button next to its label.
 
 <Note>
-If a saved template references an age group that no longer exists, Bethel ChMS skips that age group and shows a non-blocking notice.
+If a composite row includes an age group that has since been deleted, Bethel ChMS skips that age group and shows a notice in the **Composite rows** panel. The rest of the report is not affected.
 </Note>
 
 ## Add a nationality breakout
 
-Use **Nationality breakout** to add a separate section for selected nationalities.
+A nationality breakout adds a second table that counts members of the nationalities you choose.
 
-1. Open **Nationality breakout**.
-2. Click **Select nationalities...**.
-3. Search for and select the nationalities you want to show separately.
+1. Click **Nationality breakout**.
+2. Click **Select nationalities...** and use **Search nationalities...** to find the ones you want. Only nationalities recorded on your members are listed.
+3. Pick each nationality you want to show. Your choices appear as chips, and you can click the cross on a chip to remove it.
+4. Click **Done**.
 
-Members outside the selected nationalities are counted under **Other nationalities**. Members without a nationality are counted under **Not set**.
+The **Nationality breakout** table appears below the cross-tab. Members of other nationalities are counted under **Other nationalities**, and members with no nationality recorded are counted under **Not set**.
 
-## Fix incomplete demographic data
+## Fix missing demographic details
 
-The report can show a data-completeness banner when matching members are missing demographic fields. The banner highlights missing **date of birth**, **gender**, or **nationality** data.
+When some counted members are missing an age group, gender or nationality, a banner appears above the preview: "Some members have incomplete demographic data." It shows a count for each missing detail, such as "12 missing age group", "3 missing gender" or "5 missing nationality". Members with no age group are counted in the **Unknown** row, members with no gender under **Not specified**, and members with no nationality under **Not set** in the nationality breakout.
 
-Click a count in the banner to open the matching member list. Each listed member links to the member profile so you can update the missing data.
+The counts follow all of your report filters, so a member you have filtered out is not counted as missing data. You can close the banner with its cross. It comes back when the preview reloads, for example after you change a filter, or when you next open the report.
+
+Click a count to open **Members missing age group** (or gender, or nationality). The list shows each member's name and branch, 25 at a time. From here you can fill in the gaps:
+
+- **One member at a time:** choose a value in the **Set** box on that member's row, for example **Set gender…**. It saves straight away and the row shows **Saved**.
+- **Several members at once:** tick the members, or tick the box at the top to select everyone on the page. Choose a value in the box that appears above the list, then click **Apply to** (for example, **Apply to 8**). You see a message such as "Updated 8 members".
+- **Open the full profile:** click a member's name. Their profile opens in a new tab, so you keep your place in the report.
+
+Bethel ChMS logs every change you make here, with the reason "Completeness fix from demographics report".
 
 <Note>
-Completeness counts follow the same filters as the report, including status, branch, tags, custom fields, and attendance recency.
+Members who have a date of birth get their age group from it, so you can't set it by hand here. They are skipped: the member's row says so, and after a change to several members the message tells you how many were skipped. To fix their age group, check their date of birth, or check your [age group ranges](/guides/age-groups).
 </Note>
 
 ## Export the report
 
-Export buttons activate after the preview loads and the report has at least one matching member.
+The export bar stays at the bottom of the page. It has two buttons, and on a tablet or computer it also shows how many members are counted:
 
-- **Export CSV** downloads the same cross-tab data shown in the preview. The CSV always includes all gender columns plus **Total** so files stay consistent over time.
-- **Export PDF** generates a formatted PDF using the same filters as the preview.
+- **Export CSV** creates a spreadsheet file with the same numbers as the preview. The CSV always includes all five gender columns plus **Total**, even ones the preview hides, so files from different months line up. Your nationality breakout is added below the cross-tab.
+- **Export PDF** creates a formatted PDF using the same filters as the preview, including the nationality breakout.
 
-Filenames include the export date, such as `membership_demographics-2026-06-13.csv` or `membership_demographics-2026-06-13.pdf`.
+The buttons are available once the preview has loaded and at least one member is counted. Files are named with today's date, such as `membership_demographics-2026-10-17.csv`.
 
-## Save demographics templates
+On a computer, the file downloads straight away. On a phone or tablet that can share files, your device's share options open instead, so you can save the file or send it by email or message. A message such as "membership_demographics-2026-10-17.pdf is ready." then appears for a few seconds with **Download**, to save another copy, and **Share** on devices that can share files.
 
-Click **Save as template** to save the current setup. The template stores lifecycle status, branch, tag filters, custom field filters, attendance recency, composite rows, and nationality breakout selections.
+## Save the report as a template
 
-You can load saved templates from **Reports** > **Templates**.
+Save your setup to run the same report again later. The template keeps your lifecycle status, branch, tag and custom field filters, attendance recency, composite rows and nationality breakout.
+
+1. On a tablet or computer, click **Save as template** in the top bar. On a phone, tap **⋯**, then **Save as template**.
+2. Enter a **Name** and, if you like, a **Description (optional)**.
+3. Click **Save**.
+
+This report always saves a new template. If you loaded a saved demographics template and changed it, saving creates a separate copy, and the original stays as it was.
+
+To load a saved template, open **Reports**, go to the **Templates** tab and click the template. See [Use templates](/guides/reports#use-templates).
 
 ## Use the built-in membership template
 
-Every organisation can use the system template named **Mid & End of Year Membership Report**. It is configured for active members across all branches and includes these composite rows:
+Every organisation has a system template called **Mid & End of Year Membership Report**. It counts active members across all branches (Branch Admins see their own branch) and includes two composite rows:
 
 - **Total Youth (13-35)**
 - **Total Adults (13+)**
 
-The system template resolves the composite rows against your organisation's age groups. If an age group only partly overlaps the template range, Bethel ChMS excludes it from that composite and shows a notice.
+These composite rows are set by age range rather than by named age groups, so they work with your own age groups. When you load the template, Bethel ChMS includes each of your age groups that falls entirely inside the range. If one of your age groups only partly overlaps a range, for example a 30 to 40 age group against the 13 to 35 youth range, it is left out of that composite and a notice in the **Composite rows** panel explains why.
 
-Clone the system template if you want to customise it.
+System templates can't be changed. To make your own version, **Clone** it from the **Templates** tab, or load it, adjust it and click **Save as template**.
+
+## Related pages
+
+- [Reports](/guides/reports)
+- [Age groups](/guides/age-groups)
+- [Managing members](/guides/managing-members)
+- [Change history](/guides/change-history)

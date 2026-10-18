@@ -1,80 +1,215 @@
 ---
 title: "User management"
-description: "Manage staff users, invitations, roles, branch assignments, and user access in Bethel ChMS."
+description: "Add users, manage invitations, roles, branches and app access, and deactivate or reactivate users in Bethel ChMS."
 sidebarTitle: "User management"
 ---
 
-Use the **Users** page to manage the people who can access the staff app. You can invite users, resend pending invitations, edit names, change roles, move users between branches, deactivate users, and reactivate users.
+Use the **Users** page to manage everyone who signs in to your organisation's apps. A **user** is someone with their own sign-in, such as a pastor, office administrator or finance volunteer. Your **organisation** is your church network, with all its branches, members and settings.
+
+From the **Users** page you can add users, resend invitations, edit names, change roles, move users between branches, and deactivate or reactivate users. If your church uses **Porter**, the part of Bethel ChMS that workers and volunteers use on their phones, Org Owners and Org Admins also give, change and remove Porter access here.
 
 <Info>
-**Who can do this:** **Org Owner** and **Org Admin** can manage users across the organisation. **Branch Admins** can manage **Branch Admin** and **Editor** users in their own branch. **Editors** and **Treasurers** cannot access user management.
+**Who can do this:** **Org Owner** and **Org Admin** can manage users across the organisation. **Branch Admins** can manage **Branch Admin** and **Editor** users in their own branch. Only **Org Owners** and **Org Admins** can give Porter access. **Editors**, **Treasurers** and **Care Managers** cannot open the **Users** page.
 </Info>
 
-## Open the users page
+## Open the Users page
 
-In the sidebar, click **Users**. The page shows each user's **Name**, **Email**, **Role**, **Branch**, **Status**, and available actions.
+In the sidebar, open **Organisation** and click **Users**. On a phone, tap **More** and find **Users** under **Organisation**.
 
-You can search by name or email. You can filter by **All Roles**, status, and branch. Org-scoped users can choose **All Branches** or a specific branch. Branch-scoped users only see users in their own branch.
+Users are organisation-wide, so the list shows everyone in your organisation. Each user's role decides which branches they see. The list shows:
+
+| Column | What it shows |
+| --- | --- |
+| **Name** | The person's name, with their email underneath. Your own row has a **You** badge. |
+| **Role** | Their role, with their branch underneath, or **All branches** for Org Owners and Org Admins. |
+| **Apps** | Which apps they use: **ChMS** for Bethel ChMS, and **Porter · Worker** or **Porter · Admin** when they have Porter. |
+| **Member record** | For people with Porter, the member record their check-ins and equipment loans go on. |
+| **Status** | Whether they are active, invited or deactivated. |
+
+The **Apps** and **Member record** columns appear on wider screens. Click anywhere on a row to open that user's page. On a tablet or computer, click the **⋯** button at the end of a row for actions. On a phone, rows have no **⋯** button, so tap the row and use the user's page instead. Deactivated users appear dimmed.
+
+<Note>
+Branch Admins see everyone in the organisation, but can only make changes to **Branch Admin** and **Editor** users in their own branch.
+</Note>
+
+### Search and filter
+
+- **Search:** type in **Search by name or email…** to find someone.
+- **Status:** use the chips **All**, **Active**, **Invites** and **Deactivated**. Each shows a count.
+- **Filters:** click **Filters** to filter by **Role**, and by **Branch** if you're an Org Owner or Org Admin. The button at the bottom shows how many users match, for example **Show 12 users**. Click it to see them, or click **Clear all** to start again.
+- **Branch:** Org Owners and Org Admins on a tablet or computer also have an **All Branches** dropdown next to the search box.
+
+Filters you've applied appear as chips next to the status chips. Click one to remove that filter.
 
 ## User statuses
 
 | Status | Meaning |
 | --- | --- |
-| **Pending** | The user has been invited but has not accepted the invitation yet. |
-| **Active** | The user has accepted the invitation and can sign in. |
-| **Deactivated** | The user cannot sign in until you reactivate them. |
+| **Invite pending** | The person has been invited but has not accepted the invitation yet. |
+| **Active** | The person has accepted the invitation and can sign in. |
+| **Deactivated** | The person cannot sign in until you reactivate them. |
+| **Invite expired** | Porter invitations only. The emailed link has expired. Resend the invitation to send a new link. |
 
-## Invite a user
+## Add a user
+
+**Who can do this:** Org Owner, Org Admin, Branch Admin
 
 <Steps>
-  <Step title="Open the invite form">
-    Click **Invite User**.
+  <Step title="Open the form">
+    On the **Users** page, click **Add user**. On a phone, the button shows just an icon.
   </Step>
-  <Step title="Enter user details">
-    Enter **Email**, **Name**, and **Role**.
+  <Step title="Enter their email">
+    Enter the person's **Email**. This is the address their invitation goes to, and the email they'll sign in with.
   </Step>
-  <Step title="Choose a branch when needed">
-    Select **Branch** for **Branch Admin**, **Editor**, or **Treasurer**. **Org Admin** users use **All branches** and do not need a branch.
+  <Step title="Choose the apps (when Porter is switched on)">
+    If your church uses Porter and you're an Org Owner or Org Admin, choose under **Apps**:
+
+    - **Bethel ChMS**: members, events and attendance on the web.
+    - **Porter**: worker check-in and equipment loans on the phone.
+    - **Both apps**: Bethel ChMS on the web and Porter on the phone.
+
+    One sign-in works for both apps, so someone with access to both uses the same email and password. If you don't see **Apps**, the form is for Bethel ChMS only.
+  </Step>
+  <Step title="Enter their Bethel ChMS details (when adding Bethel ChMS)">
+    If you chose **Bethel ChMS** or **Both apps**, or the form has no **Apps** choice, enter a **Name** (at least 2 characters) and choose a **Role**:
+
+    - Org Owners and Org Admins can choose **Org Admin**, **Branch Admin**, **Editor**, **Treasurer** or **Care Manager**.
+    - Branch Admins can choose **Branch Admin** or **Editor**.
+
+    Choose a **Branch** for **Branch Admin**, **Editor**, **Treasurer** or **Care Manager**. **Org Admin** users cover all branches and do not need one. If you're a Branch Admin, the **Branch** field is locked to your own branch.
+  </Step>
+  <Step title="Enter their Porter details (when adding Porter)">
+    If you chose **Porter** or **Both apps**, choose a **Porter role**, **Worker** or **Admin**, then use **Link to member record** to pick the person's member record. Every Porter user must be linked to a member record, so their check-ins and equipment loans go on their own record rather than a duplicate. See [Porter](/guides/porter) for the full flow.
   </Step>
   <Step title="Send the invitation">
-    Click **Send Invitation**. Bethel ChMS emails the invitation link to the user.
+    Click **Create user**. Bethel ChMS emails the person an invitation with an **Accept Invitation** button. They open it, set a password and they're in.
   </Step>
 </Steps>
 
-Branch admins cannot choose another branch. The **Branch** field is locked to their assigned branch.
+When you choose **Treasurer** or **Care Manager**, the form shows a short reminder of what that role can access. For what each role can do, see [Roles and permissions](/guides/roles-and-permissions).
 
-## Resend an invitation
+If the email is already in use, you'll see a message such as "A user with this email already exists" or "This user already exists in the organisation". To give Porter to someone who already uses Bethel ChMS, [edit their user](#edit-a-user) instead of adding them again.
 
-Pending users show a **Resend** action. Click **Resend** to send another invitation email.
+For what the invited person sees, see [Invite your team](/getting-started/invite-users).
 
-If the user's email has already been confirmed, Bethel ChMS sends a password reset email instead of a new invitation. This gives users a recovery path if they accepted an invite but did not finish setting their password.
+## Manage invitations
+
+Click the **Invites** chip to see every pending invitation, for both Bethel ChMS and Porter. Porter invitations appear here only for Org Owners and Org Admins. Each row shows the **Invited person**, the **Status** with the date it was sent, and a **Resend** button.
+
+### Resend an invitation
+
+Do one of the following:
+
+- In the **Invites** view, click **Resend** on the person's row.
+- In the main list, click **⋯** on a pending user and choose **Resend invitation**.
+- On the user's page, click **⋮** and choose **Resend invitation**.
+
+Bethel ChMS sends a fresh email with a new link and confirms with "Invitation resent to" followed by their email address. An expired Porter invitation needs to be resent before it can be accepted.
+
+Invitation links expire after a while. A Bethel ChMS invitation keeps showing **Invite pending** even after its link has expired, so if someone tells you their link no longer works, resend it.
+
+Once someone has opened their Bethel ChMS invitation link, they show as **Active** and you can no longer resend it. If they never finished setting a password, ask them to use **Forgot password?** on the sign-in page. See [Sign in](/getting-started/sign-in).
+
+### Cancel a Porter invitation
+
+**Who can do this:** Org Owner, Org Admin
+
+In the **Invites** view, click **⋯** on a Porter invitation and choose **Cancel invite**. The emailed link stops working. You can invite the person again later.
+
+## Give or remove Porter access
+
+**Who can do this:** Org Owner, Org Admin, once Porter is switched on for your church
+
+Porter access sits on the person's member record and covers the whole organisation. The **Users** page shows it in two ways:
+
+- **Bethel ChMS users with Porter** have a **Porter · Worker** or **Porter · Admin** chip in the **Apps** column.
+- **People with Porter only** appear as their own rows after the Bethel ChMS users. Their **Role** column shows **No ChMS role** with **Porter only** underneath, and clicking the row opens their member record. Filtering by any role hides these rows.
+
+To give Porter to someone new, [add a user](#add-a-user) and choose **Porter** or **Both apps**.
+
+To give Porter back to someone whose Porter access you removed earlier, [add a user](#add-a-user), choose **Porter**, link their member record and enter the email address they already sign in with. Their existing sign-in is linked as soon as you click **Create user**, so they keep their password.
+
+To give Porter to an active Bethel ChMS user, open **Edit user**, tick **Porter** under **Apps**, choose a **Porter role** and link their member record, then click **Save changes**. Because their email is already confirmed, Porter applies as soon as you save. If their sign-in is already linked to a member record, that link is shown and can't be changed.
+
+To remove Porter:
+
+- **For a Porter-only person:** on a tablet or computer, click **⋯** on their row and choose **Remove Porter**, then confirm with **Remove Porter**. Their member record, past check-ins and sign-in stay, and you can give Porter back later.
+- **For a Bethel ChMS user:** open **Edit user**, untick **Porter** and click **Save changes**. This also cancels a pending Porter invitation.
+
+For what Porter users can do, see [Porter access levels](/guides/roles-and-permissions#porter-access-levels) and [Porter](/guides/porter).
 
 ## Edit a user
 
-Click **Edit** on an active user to update their **Name**, **Role**, or **Branch**.
+**Who can do this:** Org Owner, Org Admin, Branch Admin (for Branch Admin and Editor users in their own branch)
+
+<Steps>
+  <Step title="Open the edit form">
+    Click **⋯** on an active user's row and choose **Edit**. Or open the user's page and click **Edit** (a pencil icon on a phone), or click **⋮** and choose **Edit role, branch and apps**.
+  </Step>
+  <Step title="Make your changes">
+    In the **Edit user** sheet, update their **Name**, **Role** or **Branch**. Org Owners and Org Admins also see **Apps** when Porter is switched on.
+  </Step>
+  <Step title="Save">
+    Click **Save changes**. Bethel ChMS confirms with "User updated successfully".
+  </Step>
+</Steps>
 
 The following restrictions apply:
 
-- You cannot change your own role or branch.
-- You cannot assign the **Org Owner** role from the user edit dialog. Use [ownership transfer](/guides/roles-and-permissions#transferring-ownership) instead.
-- **Branch Admins** can edit **Branch Admin** and **Editor** users in their own branch only.
-- **Branch Admins** cannot assign **Org Admin** or **Treasurer** roles.
-- **Treasurer** users must belong to one branch.
+- You can edit active users. **Edit** does not appear for pending or deactivated users.
+- You cannot change your own role or branch, but you can change your own name.
+- Nobody can change the **Org Owner**'s role, and only the Org Owner can change their own name. To hand over the organisation, use [ownership transfer](/guides/roles-and-permissions#transferring-ownership).
+- **Branch Admins** can edit **Branch Admin** and **Editor** users in their own branch only, and cannot move them to another branch.
+- **Branch Admins** cannot assign the **Org Admin**, **Treasurer** or **Care Manager** roles.
+- **Branch Admin**, **Editor**, **Treasurer** and **Care Manager** users must each belong to one branch.
+- Under **Apps**, **Bethel ChMS** is always ticked for a Bethel ChMS user. To remove their Bethel ChMS access, [deactivate them](#deactivate-or-reactivate-a-user).
+
+For when a role change reaches the person, see [How role changes take effect](/guides/roles-and-permissions#how-role-changes-take-effect).
 
 ## Deactivate or reactivate a user
 
-Deactivate a user when they should no longer access Bethel ChMS. Deactivation keeps the user record but blocks sign-in.
+**Who can do this:** Org Owner, Org Admin, Branch Admin (for Branch Admin and Editor users in their own branch)
+
+Deactivate a user when they should no longer have access. Deactivation keeps their user record but blocks their sign-in. Because one sign-in opens both apps, a deactivated user can't sign in to Porter either.
+
+To deactivate someone, click **⋯** on their row, or **⋮** on their user page, and choose **Deactivate**. Check the details in **Deactivate User** and click **Deactivate**. Bethel ChMS confirms with "User deactivated".
 
 You cannot deactivate yourself. You also cannot deactivate the **Org Owner**.
 
-To restore access, click **Reactivate** on a deactivated user. The user regains access with their current role and branch assignment.
+To restore access, click the **Deactivated** chip, click **⋯** on the user (or **⋮** on their user page) and choose **Reactivate**. Confirm in **Reactivate User** by clicking **Reactivate**. The user regains access with their current role and branch, and Bethel ChMS confirms with "User reactivated".
 
-## View user details and change history
+## Row actions
 
-Click a user's name to open their detail page. The **Details** tab shows their role, scope, and branch assignment. The **Change History** tab shows field-level changes to the user record.
+On a tablet or computer, the **⋯** menu on each row shows the actions available for that person:
+
+| Action | When it appears |
+| --- | --- |
+| **Open user** | Bethel ChMS users. Opens their user page. |
+| **Edit** | Active Bethel ChMS users. |
+| **Resend invitation** | Bethel ChMS users who haven't accepted their invitation yet. |
+| **Open member record** | When the person is linked to a member record. |
+| **Email** | When the person has an email address. Opens your email app. |
+| **Deactivate** | Active users, except yourself and the Org Owner. |
+| **Reactivate** | Deactivated users. |
+| **Resend** and **Cancel invite** | Porter-only people who haven't accepted their invitation yet. |
+| **Remove Porter** | Porter-only people whose Porter access is active. |
+
+Porter actions appear only for Org Owners and Org Admins.
+
+## View a user's details and change history
+
+Click anywhere on a user's row to open their page. The top of the page shows their role and status, their email address, and an **Email** button. A **Member** button also appears when they're linked to a member record.
+
+The **Details** tab has two cards:
+
+- **Account** shows their **Name**, **Email**, **Role**, **Scope** (organisation or branch), **Branch**, **Status** and **Member record**.
+- **App access** shows each app they can use. For Bethel ChMS, it shows their role and branch. For Porter, it shows their Porter access level, whose member record their check-ins and loans go on, and whether the Porter invitation is pending, expired or active.
+
+The **Change History** tab shows field-level changes to the user record. See [Change history](/guides/change-history).
 
 ## Related pages
 
 - [Invite your team](/getting-started/invite-users)
 - [Roles and permissions](/guides/roles-and-permissions)
+- [Porter](/guides/porter)
 - [Branch management](/guides/branch-management)

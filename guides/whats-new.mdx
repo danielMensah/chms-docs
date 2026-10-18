@@ -1,55 +1,94 @@
 ---
 title: "What's New"
-description: "Learn how Bethel ChMS announces new releases, improvements, and fixes in the app."
+description: "See the latest Bethel ChMS releases, and learn how the What's New popup and release history work."
 sidebarTitle: "What's New"
 ---
 
-**What's New** keeps you informed when Bethel ChMS ships updates. It shows release notes in the staff app so you can see new features, improvements, and fixes without leaving your workflow.
+**What's New** keeps you informed when Bethel ChMS ships updates. Each release comes with a short release note listing what is new, what has improved and what has been fixed, so you can catch up without leaving your work.
 
-Release notes are informational only. Dismissing them does not change records, settings, permissions, or billing.
+Release notes are informational only. Reading or dismissing them does not change any records, settings, permissions or billing.
 
-## Latest release: v0.8.0
+## Latest release: v0.12.0
 
-**Tag your people** adds colour-coded tags for members and visitors.
+**Porter: the new app for your service teams, plus check-in by name**
 
-- Create and manage custom tags from **Tags** in the sidebar.
-- Assign tags to members and visitors, then see them as coloured chips across lists, details, check-in, attendance, household rosters, and the member portal.
-- Filter member lists, visitor lists, reports, and demographics by tag.
-- Choose **Match any** or **Match all** when report filters include multiple tags.
-- Use tags in backslider rule conditions and backslider list filters.
-- Export members and visitors with a **Tags** column.
-- Merge duplicate members without losing tags from either record.
+- **Porter** is a phone app for your workers and volunteers. The Bethel ChMS team switches it on for your church on request. You give a member Porter access from the **Users** page, and they sign in and scan the QR code on site to check in for the day. Their check-ins show up as attendance on the event in Bethel ChMS. See [Porter](/guides/porter) and [Check in with Porter](/guides/porter-check-in).
+- **Equipment register**: list your church's equipment, print QR labels, group items into sets and tag them by department. Workers scan a label to take equipment out and scan it again to return it, marking anything faulty or missing on the way. See [Porter equipment](/guides/porter-equipment).
+- **Fault reports and alerts**: workers can report a fault with photos at any time. Porter admins get an **Alerts** tab and a push notification for every fault or missing item, and can resolve faults or mark items found from the same screen. See [Porter alerts](/guides/porter-alerts).
+- **Return reminders**: workers who took equipment that day get a reminder before the event ends, at a time you set for each event (for example, 10 minutes before Sunday service ends). See [Porter alerts](/guides/porter-alerts).
+- **Manual check-in and history**: Porter admins can check a worker in by hand and see a full history of check-ins and equipment, including scans that were rejected and why. See [Check in with Porter](/guides/porter-check-in).
+- **Find by name at the kiosk**: returning members can check themselves in by typing their name, with no email, mobile number or QR code needed. It is switched on per branch after an **Org Owner** or **Org Admin** accepts a safeguarding disclosure, and children never appear in the suggestions. See [Find by name (Quick Find)](/guides/quick-find).
+- **Fixed**: tighter security checks, so records can only ever be edited or deleted from within their own organisation.
 
-See [Tags](/guides/tags) for setup and usage.
+## Earlier releases
+
+### v0.11.0
+
+**Smarter campaign forms with follow-up questions and a safe preview**
+
+- Campaign questions can have conditions, so follow-up questions only appear when they are relevant. For example, only ask for a mobile number when a member answers a certain way.
+- Members filling in an update form see follow-up questions appear as they answer, so the form stays short.
+- **Test the form** lets you fill in a campaign form exactly as a member would before you send it. Nothing is saved to anyone's record.
+- Answers to questions hidden by a condition are never saved, so member records only reflect what the member actually saw and answered.
+
+Update campaigns are managed at organisation level by **Org Owner** and **Org Admin** users. **Branch Admin** and **Editor** users do not see **Update Campaigns**. See [Update campaigns](/guides/update-campaigns) and [Test the form](/guides/campaign-test-the-form).
+
+### v0.10.0
+
+**Redesigned campaign insights and a dedicated follow-up role**
+
+- A new role gives a team member access to just **Members** and **Care**, so you can delegate pastoral follow-up without granting full admin rights. The role was released as Backslider Manager and is now called **Care Manager**. See [Care](/guides/care) and [Roles and permissions](/guides/roles-and-permissions).
+- Check-in plays a confirmation sound when a scan succeeds, so greeters know a member has been checked in without watching the screen. See [The check-in chime](/guides/kiosk-mode#the-check-in-chime).
+- Campaign pages were redesigned with a clearer delivery and response overview and an easier-to-read recipient list.
+- Filtering by date is smoother across reports and lists, with an improved date range picker.
+
+### v0.9.0
+
+**Let members update their own details**
+
+- **Member update campaigns** ask members to review and update their own details, including custom fields and tags, through a personalised email link, a public link or a QR code. You review and approve what they submit, or apply it automatically, with reminders and a tracking dashboard. See [Update campaigns](/guides/update-campaigns).
+- Fixed: a member you marked as **Welcomed back** could be flagged again the next day. Welcoming someone back now records the date they actually returned, so the flag stays cleared.
+- Improved: marking a flagged member as **No concern** now shows a short explanation first. It clears the current flag, but the person can be flagged again later if they still meet the rule.
+
+The **What's New** page in the app holds the full history, including releases before v0.9.0.
 
 ## Where to find updates
 
-Bethel ChMS shows release updates in two places:
+Bethel ChMS shows release notes in two places:
 
-- A **What's New** popup that can appear after you sign in or load the staff app.
-- The **What's New** page at `/whats-new`, which lists release notes newest first.
+- The **What's New** popup, which can appear after you sign in or open the app.
+- The **What's New** page, which lists every release note, newest first.
 
-Open the full release history from the staff app sidebar footer by clicking **What's New**. You can also click **See all updates** in the popup.
+To open the **What's New** page:
 
-Treasurer users cannot open the **What's New** page. If a treasurer follows the footer link or visits `/whats-new` directly, Bethel ChMS redirects them to **Gifting & Donations**.
+- **On a computer**: click **What's New** in the sidebar footer, under your email address.
+- **On a tablet**: tap **More** at the bottom of the rail, then tap **What's New** under your account details.
+- **On a phone**: tap **More** in the tab bar, then tap the **What's New** tile under **Apps**, or the **What's New** link under your account details.
+- **From the popup**: click **See all updates**.
 
-Unauthenticated direct visits to `/whats-new` are not redirected by the current proxy. The page loads in the app shell, but release notes are only readable to authenticated users, so unauthenticated visitors do not receive release history content.
+See [Find your way around](/getting-started/find-your-way-around) for more on the sidebar, rail and tab bar.
+
+<Note>
+**Treasurers** and **Care Managers** see the popup when a new release comes out, but the full **What's New** page is outside the areas their roles can open. If they follow a **What's New** link or click **See all updates**, Bethel ChMS takes Treasurers to **Gifting & Donations** and Care Managers to **Care**.
+</Note>
+
+You need to be signed in to read release notes.
 
 ## What the popup shows
 
+On a phone, the popup slides up from the bottom of the screen as a sheet. On a tablet or computer, it slides in as a panel from the right.
+
 The popup includes:
 
-- A **What's New** title.
-- A version badge, such as `v0.8.0`.
-- A short release headline.
-- Release items grouped as **New**, **Improved**, and **Fixed**.
-- **See all updates** and **Got it** actions.
+- A **What's New** title, the release headline, a version badge such as `v0.12.0`, and a **Close** (X) button.
+- The release items, grouped as **New**, **Improved** and **Fixed**.
+- **See all updates** and **Got it** buttons at the bottom.
 
-Longer release notes scroll inside the popup.
+Longer release notes scroll inside the popup, while **See all updates** and **Got it** stay in view.
 
 ## When the popup appears
 
-The popup appears only when Bethel ChMS has a newer published release note for your account.
+The popup appears only when there is a newer release note you have not seen yet.
 
 Bethel ChMS does not show the popup when:
 
@@ -58,38 +97,36 @@ Bethel ChMS does not show the popup when:
 - You need to review updated terms first.
 - No release notes have been published.
 
-Only the latest release opens as a popup. If you miss several releases, Bethel ChMS shows the newest one instead of showing each missed release in sequence.
+Only the latest release opens as a popup. If you miss several releases, Bethel ChMS shows the newest one rather than each missed release in turn. You can read the others on the **What's New** page.
 
 <Info>
-If updated terms are pending, the terms flow takes priority. Review and accept the terms first. **What's New** can appear on a later app load if a release note still applies to your account.
+If updated terms are waiting for you, the terms take priority. Review and accept them first. **What's New** can then appear the next time you open the app, if a release note still applies to you.
 </Info>
 
 ## Dismiss a release note
 
-Any dismissal marks the release as seen for your account.
-
-You can dismiss the popup by:
+Any of these marks the release as seen:
 
 - Clicking **Got it**.
 - Clicking **See all updates**.
-- Closing the popup.
+- Clicking the **Close** (X) button.
 - Pressing **Escape**.
-- Clicking outside the popup.
+- Clicking or tapping outside the popup.
 
-After you dismiss a release, Bethel ChMS saves that dismissal to your account. The same release does not reappear when you reload, switch browser, or use another device.
+Bethel ChMS remembers the dismissal against your account, so the same release does not come back when you reload the page, switch browser or sign in on another device.
 
 ## Read all release notes
 
-The **What's New** page lists every published release note in reverse chronological order.
+The **What's New** page is headed **What's New**, with the line "Everything we've shipped, newest first." Releases appear as a timeline, newest at the top.
 
 Each release shows:
 
-- The version.
+- Its version badge.
 - The release headline.
-- The publication date.
-- The **New**, **Improved**, and **Fixed** groups that have items for that release.
+- The date it was published.
+- The **New**, **Improved** and **Fixed** groups that have items for that release.
 
-If no releases have been published, the page shows **No releases yet. Check back soon.**
+If no releases have been published yet, the page shows **No releases yet. Check back soon.**
 
 ## If you do not see What's New
 
@@ -98,6 +135,6 @@ You may not see a popup every time Bethel ChMS changes. This usually means one o
 - You already dismissed the latest release.
 - Your account was created after the release was published.
 - You need to review updated terms first.
-- The release does not include a published release note yet.
+- The change does not have a published release note yet.
 
-Use the **What's New** link in the sidebar footer to review release notes manually.
+You can always open the **What's New** page yourself: from the sidebar footer on a computer, or from **More** on a tablet or phone.

@@ -1,0 +1,284 @@
+---
+title: "Equipment, loans and faults"
+sidebarTitle: "Equipment"
+description: "Register your church's equipment in Porter, print QR labels, loan and return items by scanning them, report faults and look after faulty and missing items."
+---
+
+Porter keeps a list of your church's equipment, so every microphone, cable or camera used in a service is loaned to a named worker and returned by one. You stick a QR label on each item. Workers scan the label to take it out, and scan it again to bring it back, marking anything faulty or missing on the way.
+
+A few terms used on this page:
+
+- An **item** is a single piece of equipment, such as one microphone.
+- A **set** is a group of items that always go out together, such as a mic kit or a camera bag. Scanning the set's label loans everything in it.
+- A **label code** is the short code printed on each label, such as `EQ-7K3MP`. Every item and set gets its own, and it never changes.
+- The **owning department** is the [ministry](/guides/setting-up-ministries) in Bethel ChMS that the equipment belongs to, such as your media team.
+- A **Porter admin** is someone with **Porter · Admin** access. A **worker** has **Porter · Worker**. See [Porter access levels](/guides/porter#porter-access-levels).
+
+Like the rest of [Porter](/guides/porter), the equipment list covers your whole organisation, not one branch.
+
+## The Equipment tab
+
+Everyone with Porter can open the **Equipment** tab. At the top are the **Loan** and **Return** buttons. Porter admins also see **Add equipment**, a printer button (**Print labels**) and a download button (**Export CSV**).
+
+Below that is your equipment list. To narrow it:
+
+- Tap a tag to show only equipment with that tag, or **All** to show everything.
+- Type in **Search** to find equipment by name, label code, category, department or serial number.
+- Choose a status: **All statuses**, **Available**, **On loan**, **Faulty**, **Missing** or **Retired**. **All statuses** leaves out retired items, so choose **Retired** to see them.
+
+Each row shows the item's name, its status and its tags. The line under the name tells you more, for example who has it on loan and since when, what's wrong with a faulty item, or how many items are in a set. Tap a row to open the item.
+
+{/* TODO: new screenshot: the Porter Equipment tab on a phone with Loan and Return buttons, tag chips, the search box, the status filter and a few rows */}
+
+## Add equipment
+
+**Who can do this:** Porter · Admin
+
+### Add a single item
+
+<Steps>
+  <Step title="Start a new item">
+    On the **Equipment** tab, tap **Add equipment** and choose **Individual**.
+  </Step>
+  <Step title="Name it">
+    Enter a **Name**, for example "Lectern mic 1".
+  </Step>
+  <Step title="Choose the department">
+    Under **Owning department**, choose the ministry it belongs to, or **No department**. If Porter says **No active departments yet. Add a Ministry in Bethel ChMS first.**, [create a ministry](/guides/setting-up-ministries) first.
+  </Step>
+  <Step title="Add the details">
+    Optionally, add a **Category**, such as Microphone, Speaker or Cable. Porter suggests categories you've used before. You can also add a **Serial number**.
+  </Step>
+  <Step title="Add a photo">
+    Optionally, tap **Add photo** to take a picture of the item. Tap **Remove photo** to take it off again. Porter makes the photo smaller on your phone before uploading it.
+  </Step>
+  <Step title="Tag it">
+    Optionally, tap tags to add them, or tap **New tag**, type a name and tap **Add**. See [Equipment tags](#equipment-tags).
+  </Step>
+  <Step title="Create it">
+    Tap **Create equipment**. Porter gives the item its label code and opens its page, with the message **Equipment created. Print the label and stick it on, then workers can scan it to loan it.**
+  </Step>
+</Steps>
+
+If the item saves but its photo doesn't upload, Porter tells you. The item is kept, so don't create it again: find it in the equipment list, open it, tap **Edit equipment** and add the photo there.
+
+### Add a set
+
+Add the items first, then group them into a set.
+
+<Steps>
+  <Step title="Start a new set">
+    On the **Equipment** tab, tap **Add equipment** and choose **Equipment set**.
+  </Step>
+  <Step title="Name it and choose the department">
+    Enter a **Name**, choose the **Owning department** and add any tags.
+  </Step>
+  <Step title="Choose the items">
+    Under **Equipment in this set**, tick the items to include. Use **Search available items** to find them. A set needs at least 2 items.
+
+    Only available items that aren't already in another set are listed. If none are, Porter says so: items already in a set or out on loan don't show.
+  </Step>
+  <Step title="Create it">
+    Tap **Create set**. Porter opens the set's page with the message **Set created. Print the set label and put it on the case or bag. One scan loans everything in it.**
+  </Step>
+</Steps>
+
+### Edit equipment or a set
+
+**Who can do this:** Porter · Admin
+
+Open the item and tap **Edit equipment**, or **Edit set** for a set. Change what you need and tap **Save changes**. The label code stays the same, so the printed label still works.
+
+When editing a set, untick an item to take it out of the set. It goes back to the equipment list on its own. You can only change a set's items while every item in it is available. If part of the set is out, return everything first, then edit the set.
+
+## Equipment tags
+
+**Who can do this:** Porter · Admin
+
+Tags help you organise your equipment, for example by room or by use, such as "Main hall" or "Vocals". They're separate from the [tags you use for members and visitors](/guides/tags) in Bethel ChMS.
+
+You can create a tag while adding equipment, or manage your tags in Porter's **Setup** tab, under **Equipment tags**.
+
+- **Add a tag:** tap **New tag**, type a name of up to 40 characters, and tap **Add**. Two tags can't have the same name.
+- **Rename a tag:** tap the tag, change its **Name** and tap **Save changes**. The new name shows on every item that has it.
+- **Delete a tag:** tap the tag, then **Delete tag**, and confirm with **Delete tag**. The tag comes off every item that has it, but the equipment itself isn't changed. You can't undo this.
+
+## Print labels
+
+**Who can do this:** Porter · Admin
+
+Each label has a QR code, the equipment's name and its label code. An item's label also shows its department, and a set's label shows how many items it holds. Stick each label on the item, or on the set's case or bag.
+
+- **One label:** open the item and tap **Print label**. Porter opens **Print labels** with just that label, so tap **Print label** again.
+- **Many labels:** on the **Equipment** tab, tap the printer button to open **Print labels**. Narrow the list by department (**All departments** or one ministry), tick **Not yet labelled** to leave out ones you've already printed, or tap a tag (**All tags** or one tag). Check how many labels are shown, then tap **Print labels**.
+
+Porter opens your browser's print window and prints only the labels, two to a row. It also records when each label was printed, shown as **Label printed** on the item's page.
+
+{/* TODO: new screenshot: the Print labels screen with the department filter, Not yet labelled, and a grid of QR labels */}
+
+### Type a label code
+
+If a label won't scan, you can type its code instead. Capital letters don't matter, and Porter reads I and L as 1, and O as 0, so small mistakes still work.
+
+### Scan a label with your phone's camera
+
+Each label's QR code is a link. Scanning it with your phone's camera opens that item's page in Porter, so anyone with Porter can quickly see what it is, who has it, or report a fault. If you aren't signed in, Porter asks you to sign in first.
+
+If the code isn't in your church's equipment list, Porter shows **We don't know that label**. The label may belong to another church, or the item may have been deleted. Tap **Open equipment** to go to your equipment list.
+
+### Export the equipment list
+
+**Who can do this:** Porter · Admin
+
+On the **Equipment** tab, tap the download button to save your equipment list as a CSV file. It has the columns `code`, `name`, `category`, `department`, `tags` and `label_link`, and leaves out retired items. If your church has a label printer, you can use the `label_link` column to print QR labels with it.
+
+## The item page
+
+Tap any item to open its page. Workers can open item pages too. The page shows:
+
+- The name, status and tags, and **Equipment set** for a set.
+- Who has it, if it's on loan, and since when.
+- Any open fault: what's wrong, whether it was **Found on return** or **Reported**, who by and when, and any photos.
+- The item's photo and a preview of its label.
+- **Department**, **Label code** and **Label printed**. A single item also shows **Category** and **Serial number**, and **Part of** if it's in a set. A set lists its items under **In this set**.
+- Its history for the past 90 days. Workers see only their own history with the item.
+
+A single item's page also has **Report a fault** when the item can take a report. Porter admins also get **Edit equipment** (**Edit set** for a set) and the [admin actions](#look-after-faulty-and-missing-items). Only Porter admins can use **Print label** to print the label.
+
+## Loan equipment
+
+**Who can do this:** Porter · Worker, Porter · Admin
+
+You need to [check in](/guides/porter-check-in#check-in-when-you-arrive) for today's event before you can loan or return anything. This applies to Porter admins too. If you haven't, Porter shows **Check in first**, with a **Check in** button.
+
+<Steps>
+  <Step title="Open the scanner">
+    Tap **Loan** on **Home** or on the **Equipment** tab. The **Loan equipment** screen opens.
+  </Step>
+  <Step title="Scan each label">
+    Point the camera at each label. Scanning a set's label adds everything in it. If a label won't scan, type its code in the box (for example `EQ-7K3MP`) and tap **Add**.
+
+    Each scan beeps, vibrates if your phone can, and adds a line to the **Scanned** list. Scanning the same label twice only counts it once.
+  </Step>
+  <Step title="Confirm the loan">
+    Tap the **Loan** button, which shows how many items you're taking. Porter confirms, for example **Loaned 3 items**. Tap **Done**, or **Loan more** to scan something else.
+  </Step>
+</Steps>
+
+{/* TODO: new screenshot: the Loan equipment scanner with two scanned lines and the Loan button */}
+
+Equipment is always loaned to the person scanning it. The items then appear on your **Home** under **With you**.
+
+If something can't be loaned, Porter tells you why and leaves it off the list. For example, it may already be on loan to someone else (Porter says who, and since when), or be faulty, missing or retired. For a set, Porter names the item that's holding it up.
+
+Everything on the list is loaned together, or nothing is. If an item changes while you're scanning, for example someone else takes it, Porter takes it off your list and tells you why.
+
+## Return equipment
+
+**Who can do this:** Porter · Worker, Porter · Admin
+
+Anyone who is checked in can return any item, so one person can bring back equipment for the whole team.
+
+<Steps>
+  <Step title="Open the scanner">
+    Tap **Return** on **Home** or on the **Equipment** tab. The **Return equipment** screen opens.
+  </Step>
+  <Step title="Scan each label">
+    Scan each item's label. Scanning a set's label lists its items so you can mark each one.
+  </Step>
+  <Step title="Mark each item">
+    Choose **OK** or **Faulty** for each item. If you scanned a set's label, you can also choose **Absent** for any item that didn't come back with the set.
+
+    For a faulty item, describe the problem in **What's wrong with it?**. You can't finish the return until every faulty item has a description.
+  </Step>
+  <Step title="Confirm the return">
+    Tap the **Return** button. Porter confirms, for example **Returned 3 items**, and tells you how many were marked faulty or absent. Tap **Done**, or **Return more**.
+  </Step>
+</Steps>
+
+Items you mark **Faulty** get an open fault, and items you mark **Absent** become **Missing**. Porter admins are told about both. See [Porter alerts and return reminders](/guides/porter-alerts).
+
+If you scan something that isn't out on loan, Porter tells you there's nothing to return.
+
+## Equipment statuses
+
+| Status | What it means | How it gets there |
+| --- | --- | --- |
+| **Available** | Ready to loan. | Returned **OK**, marked found, or a fault resolved as repaired. |
+| **On loan** | Out with a named worker. | Loaned by scanning its label. |
+| **Faulty** | Has an open fault and can't be loaned. | Returned **Faulty**, or a fault was reported. |
+| **Missing** | Can't be found and can't be loaned. | Marked **Absent** on a return, or marked missing by a Porter admin. |
+| **Retired** | Out of use for good. It stays in history but can never be loaned again. | Retired by a Porter admin. |
+
+A set is **Available** only when every item in it is. Otherwise, it shows the most urgent problem among its items, in this order: **On loan**, **Faulty**, **Missing**, **Retired**.
+
+## Report a fault
+
+**Who can do this:** Porter · Worker, Porter · Admin
+
+Anyone with Porter can report a fault at any time. You don't need to be checked in.
+
+<Steps>
+  <Step title="Start a report">
+    On **Home**, tap **Report a fault**. Or open the item, for example by scanning its label with your phone's camera, and tap **Report a fault** there.
+  </Step>
+  <Step title="Choose the item">
+    Under **Which item?**, search by name or label code and pick the item. Tap **Change** to pick a different one. You can only report faults on single items, not on sets. Items that can't take a report are greyed out and marked **Fault already reported**, **Retired** or **Missing**.
+  </Step>
+  <Step title="Say what's wrong">
+    Under **What's wrong?**, describe the problem in a few words, for example "No sound from the left channel".
+  </Step>
+  <Step title="Add photos">
+    Optionally, tap **Add** under **Photos** to add up to 3 photos.
+  </Step>
+  <Step title="Send it">
+    Tap **Send report**. Porter shows its progress while it uploads the photos and sends the report. The item's page then shows **Fault reported. The admins have been told and will see it under Alerts.**
+  </Step>
+</Steps>
+
+{/* TODO: new screenshot: the Report a fault screen with an item chosen, a description and two photo thumbnails */}
+
+The item shows as **Faulty** straight away, even if it's out on loan.
+
+An item can have only one open fault at a time. If someone has already reported one, Porter says so and offers **See the fault**. A Porter admin needs to resolve it before a new report can be made. Retired items can't take a fault report, and missing items need to be marked found first.
+
+## Look after faulty and missing items
+
+**Who can do this:** Porter · Admin
+
+Open the item, or use the [Alerts tab](/guides/porter-alerts#the-alerts-tab), and use the action that fits. Each action asks you to confirm, and lets you add a **Note** so others know what happened.
+
+| Action | When you can use it | What it does |
+| --- | --- | --- |
+| **Mark missing** | The item is available or on loan. | Nobody can loan it until it's found. If it's on loan, the loan is closed as absent. |
+| **Mark found** | The item is missing. | It goes back to available and can be loaned again. |
+| **Resolve fault** | The item is faulty. | Choose **Repaired** to put it back in use, or **Retired** to take it out of use for good, then tap **Resolve**. To resolve as **Retired**, an item in a set must be taken out of the set first. |
+| **Retire** | The item is available. | Takes it out of use for good. It stays in history but can never be loaned again. If it's in a set, take it out of the set first. |
+| **Delete set** | The set is available. | Deletes the set and its label. The items stay in your equipment list with their history. You can't undo this. |
+
+<Warning>
+Retiring an item is final. Once retired, it can never be loaned again.
+</Warning>
+
+### Faults on equipment that's still out
+
+A fault can be reported while an item is on loan. The item shows **Faulty** straight away, and it stays on loan to the same worker.
+
+- While the fault is open, the item can't be returned by scanning it.
+- If you resolve the fault as **Repaired** while it's still out, the item goes back to **On loan**, and the worker returns it as usual.
+- You can't retire it, or resolve the fault as **Retired**, while it's still on loan.
+
+## Equipment history
+
+Open the **History** tab and tap **Equipment** to see loans, returns, faults, resolved faults and status changes. Use the date range picker to choose the dates.
+
+Workers see their own activity, such as their loans, returns and fault reports. Porter admins see everyone's, and can filter by worker. Anyone can filter by type: **All activity**, **Loans**, **Returns**, **Faults**, **Faults resolved** or **Status changes**.
+
+Each item's page also shows its history for the past 90 days.
+
+## Related pages
+
+- [Porter overview](/guides/porter)
+- [Check in with Porter](/guides/porter-check-in)
+- [Porter alerts and return reminders](/guides/porter-alerts)
+- [Setting up ministries](/guides/setting-up-ministries)

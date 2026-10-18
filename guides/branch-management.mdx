@@ -1,141 +1,248 @@
 ---
 title: "Branch management"
-description: "Create, duplicate, copy, edit, and manage branches across your multi-site church network in Bethel ChMS."
+description: "Create, duplicate, copy, edit and delete branches across your multi-site church network in Bethel ChMS, and manage each branch's Quick Find and category settings."
 sidebarTitle: "Branch management"
 ---
 
-Branch management is where org-level administrators set up and maintain the branches that make up a multi-site church network. From here you can create new branches, duplicate existing ones, copy resources between branches, and manage branch details.
+A **branch** is an individual church or campus within your organisation, and your **organisation** is the whole church network. Each branch owns its own members, visitors, events, locations and ministries.
+
+The **Branches** page is where organisation-level administrators set up and look after branches. From here you can create new branches, duplicate existing ones, copy resources between branches, and change each branch's settings.
 
 <Info>
-**Who can do this:** **Org Owner** and **Org Admin** can create, edit, duplicate, and copy branch resources. Only **Org Owner** can delete a branch. **Branch Admins** can edit their own branch's details but cannot create, duplicate, copy, or delete branches.
+**Who can do this:** Org Owner and Org Admin can create, duplicate, edit and copy resources between branches. Only the Org Owner can delete a branch. Branch Admins and Editors don't see **Branches** in the sidebar, so if a Branch Admin needs their branch's details or Quick Find setting changed, an Org Owner or Org Admin can do it from **Branches**.
 </Info>
 
-## Creating a new branch
+## Open the Branches page
+
+In the sidebar, open the **Organisation** group and click **Branches**. On a tablet or phone, tap **More**, then **Branches** under **Organisation**. See [Find your way around](/getting-started/find-your-way-around).
+
+The page shows:
+
+- A usage card, for example **2 of 3 branches used**, with your plan and a meter. See [Branch limit](#branch-limit).
+- Your branches, sorted by name, with their **Name**, **Email** (or **No email**) and **Created Date**.
+- A **⋯** menu on each branch with **View**, **Duplicate Branch** and **Copy Resources**.
+
+Click a branch to open its page, where you can change its details, Quick Find and categories.
+
+## Branch limit
+
+Your plan includes a set number of branches. The usage card on the **Branches** page shows how many you've used and how many more are available.
+
+When you reach the limit, the card turns amber and reads **You've reached your plan's branch limit. Contact us to create another branch.** Click **Contact us** to email the BethelWare Software Ltd team about raising your limit. Until it's raised:
+
+- Clicking **Create Branch** shows **Branch limit reached** instead of opening the form.
+- Duplicating stops at your limit, because each duplicate counts as a new branch.
+
+## Create a branch
+
+**Who can do this:** Org Owner, Org Admin
 
 <Steps>
-  <Step title="Open the Branches page">
-    In the **Organisation** section of the sidebar, click **Branches**, then click **Create Branch**.
+  <Step title="Start a new branch">
+    On the **Branches** page, click **Create Branch**. On a phone, the **Create Branch** button sits near the bottom of the screen.
   </Step>
-  <Step title="Fill in branch details">
-    Enter the **Branch Name**. It must be unique within your organisation. You can also enter an optional **Branch Email**.
+  <Step title="Fill in the branch details">
+    Under **Branch Details**, enter the **Branch Name**. It must be at least 2 characters and different from your other branch names. You can also add a **Branch Email (optional)**.
   </Step>
   <Step title="Fill in the primary location">
-    Enter the **Location Name**. You can also fill in optional fields: **Address** and **Capacity**.
+    Under **Primary Location**, enter the **Location Name**, for example "Main Hall". You can also add an **Address (optional)** and **Capacity (optional)**.
   </Step>
-  <Step title="Configure Sunday Service">
-    Set the **Start Time**, **End Time**, and optional **Description** for the branch's Sunday Service.
+  <Step title="Set up the Sunday Service">
+    Under **Sunday Service**, check the **Start Time** and **End Time**. They start at 10:00 and 12:00, so change them if your branch meets at a different time. The end time must be after the start time. The **Description (optional)** fills in from the branch name, and you can change it.
   </Step>
   <Step title="Create the branch">
-    Click **Create Branch**. Bethel ChMS provisions the branch with its primary location, a Sunday Service event, and 52 weekly occurrences.
+    Click **Create Branch**. Bethel ChMS confirms with **Branch created successfully**.
   </Step>
 </Steps>
+
+{/* TODO: new screenshot: the redesigned Create Branch page with the Branch Details, Primary Location and Sunday Service sections */}
 
 <Note>
-If your organisation uses annual billing, Bethel ChMS may show a **Confirm branch addition** dialog with the estimated prorated charge before it creates the branch.
+If your organisation pays annually, Bethel ChMS may show **Confirm branch addition** with the **Estimated charge:** for the extra branch before it creates it. Click **Confirm and add branch** to go ahead. If your subscription payment is still being processed, you can't add branches until it's confirmed.
 </Note>
 
-<Tip>
-Everything is set up in one step. You don't need to create the location or Sunday Service separately.
-</Tip>
+### What a new branch comes with
 
-<Frame>
-  <img src="/images/guides/create-branch-form.png" alt="Create branch form showing branch details, location, and Sunday Service sections" />
-</Frame>
+Everything is set up in one step, so you don't need to create the location or Sunday Service separately. A new branch gets:
 
-## Duplicating a branch
+- A **primary location**, the main place where the branch meets. See [Locations](/guides/locations).
+- A weekly **Sunday Service** event at that location, with 52 weekly occurrences. An **occurrence** is one date of a repeating event.
 
-Duplicating lets you create up to 10 new branches at once, using an existing branch as a template. This is useful when you're launching multiple new locations with a similar setup.
+The Sunday Service is set to repeat for one year from the first service. To keep it going after that, open the event, move its **Recurrence End Date** later, and save. Bethel ChMS then adds the extra Sundays for you. See [Managing events](/guides/managing-events).
+
+## Duplicate a branch
+
+Duplicating creates up to 10 new branches at once, using an existing branch as a template. This is useful when you're launching several new locations with a similar setup.
+
+**Who can do this:** Org Owner, Org Admin
 
 <Steps>
-  <Step title="Open the duplication wizard">
-    From the Branches list, open the context menu on the branch you want to use as a template and select **Duplicate Branch**.
+  <Step title="Open the wizard">
+    On the **Branches** page, open the **⋯** menu on the branch you want to copy and choose **Duplicate Branch**. The wizard has four steps: **Source**, **Details**, **Events** and **Review**.
   </Step>
-  <Step title="Choose how many copies">
-    Select the number of branches to create (1 to 10).
+  <Step title="Source: choose how many copies">
+    The **Source Branch** is shown for reference. Enter the **Number of Duplicates**, from 1 to 10.
   </Step>
-  <Step title="Configure each new branch">
-    For each copy, fill in the **Branch name** and location details: **Location name**, **Address**, and **Capacity**. You can also configure **Sunday Service** times and description for each branch.
+  <Step title="Details: set up each new branch">
+    Each new branch has its own card. Open a card and fill in the **Branch Name**, **Location Name** and **Address**. You can also add a **Capacity (optional)**. Every new branch needs a different name. Under **Sunday Service**, the **Start Time** and **End Time** start at 10:00 and 12:00 and the description fills in from the branch name. Change them if the new branch meets at a different time.
   </Step>
-  <Step title="Select additional events to clone">
-    Optionally, select which additional events from the source branch you'd like to clone into the new branches.
+  <Step title="Events: choose events to clone">
+    Under **Select Events to Clone**, tick any other events from the source branch that you'd like each new branch to have. You don't need to pick the Sunday Service here, because every new branch gets its own.
   </Step>
   <Step title="Review and duplicate">
-    Review the summary and click **Duplicate**.
+    Check the summary for each new branch, showing its location, Sunday Service, events and ministries, then click **Duplicate**.
   </Step>
   <Step title="Check the results">
-    The results screen shows the status of each branch (success or failure). If any branches failed to create, use the **Retry Failed** button to try again.
+    **Duplication Results** shows **Created** or an error for each new branch. If any failed, click **Retry Failed**. Click **Done** to finish.
   </Step>
 </Steps>
 
-<Frame>
-  <img src="/images/guides/duplicate-branch-wizard-step2.png" alt="Branch duplication wizard showing branch name and location configuration" />
-</Frame>
+{/* TODO: new screenshot: the Duplicate Branch sheet on the Details step, showing the stepper and one open branch card */}
 
-<Frame>
-  <img src="/images/guides/duplicate-branch-results.png" alt="Branch duplication results showing success or failure per branch" />
-</Frame>
+{/* TODO: new screenshot: the Duplication Results screen with Retry Failed and Done */}
 
 ### What gets duplicated
 
-**Included:** Primary location (with your configured details), Sunday Service event (if configured, with 52 occurrences), any additional events you selected (with their occurrences), and all active ministries (name, description, and status only).
+**Included:** a primary location with the details you entered, a weekly Sunday Service at the times you set, any other events you selected, with their occurrences, and all active ministries (name, description and status only). Cloned events take place at the new branch's primary location.
 
-**Not included:** Members, visitors, attendance records, user accounts, or ministry member assignments.
+**Not included:** the branch email, members, visitors, attendance records, user accounts and ministry member assignments.
 
 <Info>
-Duplicated branches start empty of people. You'll need to add members, invite users, and assign ministry rosters separately.
+Duplicated branches start with no people in them. You'll need to add members, invite users and assign ministry rosters separately.
 </Info>
 
-## Copying resources between branches
+## Copy resources between branches
 
-Copy events, locations, or ministries from one branch to one or more target branches without duplicating the entire branch.
+Copy individual events, locations or ministries from one branch into one or more other branches, without creating a new branch.
+
+**Who can do this:** Org Owner, Org Admin
 
 <Steps>
-  <Step title="Open the copy dialog">
-    From the Branches list, open the context menu on the source branch and select **Copy Resources**.
+  <Step title="Open Copy Resources">
+    On the **Branches** page, open the **⋯** menu on the branch you want to copy from and choose **Copy Resources**.
   </Step>
-  <Step title="Select target branches">
-    Choose the branches you want to copy resources into.
+  <Step title="Choose what to copy">
+    Tick the items you want under **Events** (each marked **Recurring** or **One-time**), **Locations** and **Ministries**.
   </Step>
-  <Step title="Choose which resources to copy">
-    Select the resource types you'd like to copy: **events**, **locations**, **ministries**, or any combination.
+  <Step title="Choose the target branches">
+    Under **Target Branches**, tick each branch you want to copy into.
   </Step>
-  <Step title="Review and confirm">
-    Review the summary and confirm to start the copy.
+  <Step title="Copy">
+    Click **Copy**. A results table shows each target branch, whether the copy worked, and how many events, locations and ministries were copied. Click **Done**.
   </Step>
 </Steps>
 
+{/* TODO: new screenshot: the Copy Resources sheet with Events, Locations, Ministries and Target Branches sections */}
+
 <Note>
-Copied events use the target branch's primary location. Copied locations are never set as the primary location. Copied ministries include name, description, and status only, with no member assignments.
+- A copied event keeps its location only if you copy that location in the same go. Otherwise the copied event has no location, so open it afterwards and choose one.
+- Copied locations are never set as the target branch's primary location.
+- Copied ministries include their name, description and status only, with no members. Only active ministries can be copied.
 </Note>
 
-<Frame>
-  <img src="/images/guides/copy-resources-dialog.png" alt="Copy resources dialog showing resource selection" />
-</Frame>
+## The branch page
 
-## Editing a branch
+To open a branch's page, click the branch on the **Branches** page, or choose **View** from its **⋯** menu.
 
-You can update a branch's **Name**, **Email**, and group label at any time. The branch name must remain unique within your organisation. **Branch Admins** can edit their own branch. **Org Owners** and **Org Admins** can edit any branch.
+At the top you'll see the branch name, a badge showing whether the branch's Quick Find switch is on, buttons for the branch's **Dashboard** and **Email** (if it has one), and the date it was created. The **More actions** menu (the three dots at the top right) has **Edit branch details**, **Branch dashboard** and, for the Org Owner, **Delete Branch**.
 
-Org-level users may also see branch-level settings for **Gifting Categories** and **Activity Types** on a branch detail page. These settings control which organisation-level categories or activity types are active for that branch.
+Below that are these cards:
 
-## Deleting a branch
+| Card | What it's for | Who sees it |
+| --- | --- | --- |
+| **Branch Details** | The branch name, email and what the branch calls its fellowship groups. | Everyone who opens the page |
+| **Quick Find** | Accepting the Quick Find disclosure and switching Quick Find on or off for this branch. | Org Owner, Org Admin |
+| **Gifting Categories** | Which gifting categories this branch uses. | Org Owner, Org Admin |
+| **Activity Types** | Which activity types this branch tracks. | Org Owner, Org Admin |
+| **Delete Branch** | Deleting the branch. | Org Owner |
+
+## Edit branch details
+
+**Who can do this:** Org Owner, Org Admin
+
+<Steps>
+  <Step title="Open the edit panel">
+    On the branch page, click **Edit** on the **Branch Details** card, or choose **Edit branch details** from the **More actions** menu.
+  </Step>
+  <Step title="Make your changes">
+    Update the **Branch Name** (at least 2 characters, and different from your other branches) or **Email (optional)**.
+  </Step>
+  <Step title="Name your fellowship groups">
+    Under **What do you call your fellowship groups?**, enter the name your branch uses, up to 50 characters, or tap a suggestion: **Homecell**, **Connect Group**, **Life Group** or **Group**. Bethel ChMS uses this name wherever it mentions groups at this branch. If you leave it blank, it uses "Group".
+  </Step>
+  <Step title="Save">
+    Click **Save Changes**. Bethel ChMS confirms with **Branch updated successfully**.
+  </Step>
+</Steps>
+
+See [Groups](/guides/groups) for more about fellowship groups.
+
+## Quick Find
+
+Quick Find lets people check in at a kiosk by finding their name, as well as by email, mobile or QR code. At the kiosk it appears as **Find by name**. There are two parts to switching it on: one acceptance for the whole organisation, then a switch on each branch.
+
+**Who can do this:** Org Owner, Org Admin
+
+<Steps>
+  <Step title="Open a branch page">
+    On the **Branches** page, click any branch.
+  </Step>
+  <Step title="Read and accept the disclosure">
+    If nobody has accepted it yet, the **Quick Find** card shows a safeguarding disclosure. Read it, tick **I have read and accept this on behalf of my organisation**, and click **Accept and enable Quick Find**. You only need to do this once: it covers every branch in your organisation.
+  </Step>
+  <Step title="Switch Quick Find on or off for each branch">
+    Once the disclosure is accepted, each branch's **Quick Find** card has a **Quick Find** switch, with a note of who accepted the disclosure and when. The switch starts on. Turn it off for any branch that shouldn't offer Find by name.
+  </Step>
+</Steps>
+
+You can see every branch's Quick Find status at once on the **Quick Find** card in [Organisation settings](/guides/organisation-settings#quick-find-status). See [Find by name (Quick Find)](/guides/quick-find) for how it works at the kiosk.
+
+<Note>
+If you do not see the Quick Find setting on your branch, contact support at hello@bethelware.app to have Find by name switched on for your church.
+</Note>
+
+## Gifting categories and activity types
+
+Gifting categories and activity types are created once for the whole organisation. On each branch page you choose which ones that branch uses.
+
+**Who can do this:** Org Owner, Org Admin
+
+- On the **Gifting Categories** card, turn each category's switch on or off.
+- On the **Activity Types** card, turn each activity type's switch on or off.
+
+Changes apply immediately. See [Gifting and donations](/guides/gifting-and-donations) and [Activity log](/guides/activity-log).
+
+## Delete a branch
+
+**Who can do this:** Org Owner
 
 <Warning>
-Only the Org Owner can delete a branch. This action affects all data within that branch.
+Deleting a branch deletes all of its data, including its users, members, visitors, events, locations and ministries.
 </Warning>
 
-Deleting a branch is a soft delete. The branch and all of its associated data are hidden, including members, visitors, events, locations, ministries, and user accounts. You must type the branch name to confirm the deletion. Deleted branches can be recovered within 30 days before the data is permanently removed.
+<Steps>
+  <Step title="Start the deletion">
+    On the branch page, click **Delete Branch** on the **Delete Branch** card, or choose **Delete Branch** from the **More actions** menu.
+  </Step>
+  <Step title="Type the branch name">
+    Type the branch's name exactly as shown.
+  </Step>
+  <Step title="Confirm">
+    Click **Delete Branch**. Bethel ChMS confirms with **Branch deleted successfully** and takes you back to the **Branches** page.
+  </Step>
+</Steps>
 
-You cannot delete your organisation's only branch. Create another branch first if you need to remove the original one.
+{/* TODO: new screenshot: the Delete Branch confirmation sheet with the typed-name field */}
 
-<Frame>
-  <img src="/images/guides/delete-branch-confirmation.png" alt="Delete branch confirmation dialog with name input" />
-</Frame>
+Deleted branch data can be recovered within 30 days. Your billing is updated automatically to reflect the new number of branches.
 
-## Maximum branches
+You can't delete your organisation's only branch. Create another branch first if you need to remove the original one.
 
-Your organisation has a branch limit. You cannot create or duplicate branches beyond this limit.
+## Related pages
 
-<Note>
-Contact BethelWare Software Ltd if you need to increase your branch limit.
-</Note>
+- [Organisation settings](/guides/organisation-settings)
+- [Dashboards](/guides/dashboards)
+- [Locations](/guides/locations)
+- [Managing events](/guides/managing-events)
+- [Find by name (Quick Find)](/guides/quick-find)
+- [Billing and subscription](/guides/billing-and-subscription)

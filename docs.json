@@ -3,9 +3,9 @@
   "theme": "luma",
   "name": "Bethel ChMS",
   "colors": {
-    "primary": "#284557",
-    "light": "#dfb160",
-    "dark": "#dfb160"
+    "primary": "#9A5B23",
+    "light": "#C98A3C",
+    "dark": "#9A5B23"
   },
   "appearance": {
     "default": "light"
@@ -21,6 +21,9 @@
             "pages": [
               "getting-started/introduction",
               "getting-started/setup",
+              "getting-started/sign-in",
+              "getting-started/find-your-way-around",
+              "getting-started/install-the-app",
               "getting-started/invite-users"
             ]
           },
@@ -40,17 +43,22 @@
             "group": "People",
             "pages": [
               "guides/managing-members",
-              "guides/update-campaigns",
+              "guides/visitors",
+              "guides/duplicates-and-merging",
+              "guides/care",
               "guides/households",
               "guides/importing-members",
-              "guides/age-groups"
+              "guides/age-groups",
+              "guides/update-campaigns",
+              "guides/campaign-test-the-form"
             ]
           },
           {
             "group": "Attendance and check-in",
             "pages": [
               "guides/recording-attendance",
-              "guides/backsliders"
+              "guides/kiosk-mode",
+              "guides/quick-find"
             ]
           },
           {
@@ -58,7 +66,8 @@
             "pages": [
               "guides/groups",
               "guides/setting-up-ministries",
-              "guides/managing-events"
+              "guides/managing-events",
+              "guides/locations"
             ]
           },
           {
@@ -66,7 +75,8 @@
             "pages": [
               "guides/reports",
               "guides/membership-demographics-report",
-              "guides/change-history"
+              "guides/change-history",
+              "guides/activity-log"
             ]
           },
           {
@@ -79,6 +89,15 @@
             "group": "Automation",
             "pages": [
               "guides/automation-rules"
+            ]
+          },
+          {
+            "group": "Porter",
+            "pages": [
+              "guides/porter",
+              "guides/porter-check-in",
+              "guides/porter-equipment",
+              "guides/porter-alerts"
             ]
           },
           {
@@ -115,7 +134,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.bethelware.com"
+      "href": "https://app.bethelchms.com"
     }
   },
   "contextual": {
@@ -135,5 +154,11 @@
       "x": "https://x.com/bethelware",
       "github": "https://github.com/bethelware"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/guides/backsliders",
+      "destination": "/guides/care"
+    }
+  ]
 }
