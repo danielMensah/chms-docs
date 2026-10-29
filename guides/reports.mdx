@@ -39,10 +39,10 @@ These reports open in the report builder, where you choose your own columns, fil
 | Report type | Use it to see |
 | --- | --- |
 | **Member Directory** | Members with contact details, status, branch, date of birth, age group, tags and member custom fields. |
-| **Attendance Summary** | Attendance records across events and services, with the event, date, time, how each person checked in and their branch. |
+| **Attendance Summary** | Attendance records for members and visitors across events and services, with the event, date, time, how each person checked in and their branch. The **Attendee** column shows whether each person is a member or a visitor. |
 | **Visitor Follow-up List** | Visitors with contact details, tags, visit counts and first and last visit dates. It can also show each visitor's follow-up status from Care. See [Visitor care columns](#visitor-care-columns). |
-| **Event Performance** | Events with their dates, locations, total attendees and unique attendees. |
-| **Attendance Frequency** | Each member's attendance: how many times they attended, how many times they were absent, their attendance rate and when they last attended. |
+| **Event Performance** | Events with their dates, locations, total attendees and unique attendees. The totals count members and visitors. |
+| **Attendance Frequency** | Each member's attendance: how many times they attended, how many times they were absent, how many services in a row they've missed since they last came, their attendance rate and when they last attended. |
 | **Growth Analysis** | New members, members lost, net growth and total active members for each period, with a comparison to an earlier period. |
 | **Ministry Roster** | Ministry members with their roles, joined dates and branch. |
 | **Membership Demographics** | Your membership by age group and gender. This report has its own builder. See [Membership demographics report](/guides/membership-demographics-report). |
@@ -109,20 +109,23 @@ Below that are the filters for the report you are building. Each report has its 
 
 | Report type | Filters |
 | --- | --- |
-| **Member Directory** | **Date Range**, **Lifecycle Status**, **Nationality**, **Branch**, **Age Group**, **Tags**, plus member custom fields |
-| **Attendance Summary** | **Date Range**, **Lifecycle Status**, **Event**, **Branch**, **Age Group** |
-| **Visitor Follow-up List** | **Date Range**, **Nationality**, **Branch**, **Tags**, **Care status**, plus visitor custom fields |
-| **Event Performance** | **Date Range**, **Event**, **Branch**, **Age Group** |
-| **Attendance Frequency** | **Date Range**, **Event**, **Branch**, **Member Name**, **Event Scope**, **Age Group** |
+| **Member Directory** | **Date Range**, **Lifecycle Status**, **Gender**, **Nationality**, **Branch**, **Age Group**, **Tags**, plus member custom fields |
+| **Attendance Summary** | **Date Range**, **Attendee**, **Lifecycle Status**, **Gender**, **Event**, **Branch**, **Age Group** |
+| **Visitor Follow-up List** | **Date Range**, **Gender**, **Nationality**, **Branch**, **Tags**, **Care status**, **Visit count**, plus visitor custom fields |
+| **Event Performance** | **Date Range**, **Attendee**, **Lifecycle Status**, **Gender**, **Event**, **Branch**, **Age Group** |
+| **Attendance Frequency** | **Date Range**, **Lifecycle Status**, **Gender**, **Event**, **Branch**, **Member Name**, **Event Scope**, **Age Group**, **Attended**, **Absent**, **Absent in a row** |
 | **Growth Analysis** | **Date Range**, **Branch** |
 | **Ministry Roster** | **Ministry**, **Branch** |
 
 A few things to know about the filters:
 
 - **Date Range** has **From** and **To** date fields.
+- **Attendee** (Attendance Summary and Event Performance) lets you include **Member** rows, **Visitor** rows or both. A **Lifecycle Status** or **Age Group** filter shows members only, because visitors don't have either.
 - **Tags**: when you pick two or more tags, choose **Match any** to include people with at least one of the tags, or **Match all** to include only people with every tag. See [Tags](/guides/tags).
 - **Nationality** includes a **Not set** option, for people with no nationality recorded.
 - Yes/no custom fields offer **Not set** (never filled in), **Yes**, **No** and **No or Not Set**.
+- **Visit count**, **Attended**, **Absent** and **Absent in a row** take a **Min** and a **Max** number. For example, set **Absent in a row** to a **Min** of 3 to find members who have missed each of their last three or more services.
+- **Attendance Frequency** shows **Newcomer** and **Active** members until you choose a **Lifecycle Status**, so inactive members don't fill every absence list. A member's absences only count from the day they were added to Bethel ChMS.
 - **Event Scope** (Attendance Frequency) lets you count **All events**, **Branch-wide only** or **Group events only** (shown with your branch's name for groups, such as **Cell events only**).
 - Each filter has a **Clear** button once it has a value.
 
@@ -155,7 +158,7 @@ Under the three buttons:
 
 The preview shows 50 rows per page. On a tablet or computer, you can click a column heading to sort by that column. On a phone, each row shows only the first few columns, but every selected column is included in the PDF and CSV.
 
-In **Member Directory** and **Attendance Summary**, click a row to open that member's details in a side panel, where you can check or edit them without leaving the report. This works when the rows are not grouped.
+In **Member Directory** and **Attendance Summary**, click a row to open that member's details in a side panel, where you can check or edit them without leaving the report. This works when the rows are not grouped. Visitor rows in Attendance Summary don't open a panel.
 
 If nothing matches, the preview reads "No data matches your filters." Try widening your date range or removing some filters.
 
@@ -251,12 +254,12 @@ Each person can save up to 25 templates. If you reach the limit, delete template
 
 ### Update a template you loaded
 
-When you have loaded a template, the button in the top bar reads **Save template** and the dialog is called **Update Template**:
+When you have loaded a template you created, the button in the top bar reads **Save template** and the dialog is called **Update Template**:
 
-- Click **Update** to save your changes over the loaded template. This only works for templates you created.
+- Click **Update** to save your changes over the loaded template.
 - Click **Save as New** to keep the original and save your changes as a new template.
 
-System templates and templates shared by others can't be changed in place. To keep your changes, use **Save as New**, or **Clone** the template from the **Templates** tab.
+System templates and templates shared by others can't be changed in place. For these, the button reads **Save as template** and saves your changes as a new template. You can also **Clone** the template from the **Templates** tab.
 
 <Note>
 The [Membership Demographics](/guides/membership-demographics-report) report always saves a new template. It doesn't offer **Update**.
@@ -269,7 +272,7 @@ Open the **Templates** tab on the **Reports** page. Under **Report Templates**, 
 | Section | What it contains |
 | --- | --- |
 | **My Templates** | Templates you created. The heading shows how many of your 25 you have used, for example "3 of 25 saved". |
-| **Shared Templates** | Templates other people in your organisation have published. |
+| **Shared Templates** | Templates other people in your organisation have published. A template published to a branch only shows to people in that branch, and to Org Owners and Org Admins. |
 | **System Templates** | Ready-made templates that come with Bethel ChMS, such as **This Month's Attendance**, **Member Directory** and **Mid & End of Year Membership Report**. |
 
 Each row shows the template's name, its report type, when it was last updated and its description. Badges show **System** for built-in templates and **Published (Org)** or **Published (Branch)** for published ones.

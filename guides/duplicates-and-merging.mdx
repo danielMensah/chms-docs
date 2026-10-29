@@ -73,14 +73,14 @@ A dismissed pair stays dismissed. If someone later changes the name, date of bir
 You can start a merge from three places:
 
 - **Possible Duplicates:** click **Merge members** on a pair's card.
-- **The member list:** select exactly two members from the same branch and click **Merge** in the selection bar. On a phone, tap **Select** first to show the checkboxes. **Merge** only becomes available when exactly two members are selected.
+- **The member list:** select exactly two members from the same branch and click **Merge** in the selection bar. On a phone, tap **Select** first to show the checkboxes. **Merge** only becomes available when exactly two members from the same branch are selected. Until then, a note beside it says why, for example "Select exactly 2 members to merge" or "Members must be in the same branch".
 - **The Member Directory report:** select two members on the current page of results and click **Merge**. See [Reports](/guides/reports).
 
 The **Merge members** panel then takes you through two steps: **Choose and resolve**, then **Review and confirm**.
 
 <Steps>
   <Step title="Choose the record to keep">
-    Under **Which record do you want to keep?**, pick the **Record A** or **Record B** card. **Record A** is chosen to start with, so make sure the right card is selected before you go on. Each card shows the person's name, their email address (or "No email") and **Has app sign-in** if they have a sign-in. The other record is the one that will be removed.
+    Under **Which record do you want to keep?**, pick the **Record A** or **Record B** card. **Record A** is chosen to start with, so make sure the right card is selected before you go on. Each card shows the person's name, their email address (or "No email") and **Has app sign-in** if they have a sign-in. The other record is the one that will be removed. If it has an app sign-in, its card warns that the sign-in will be deleted.
   </Step>
   <Step title="Resolve the fields">
     Under **Resolve fields**, each of **Email**, **Mobile**, **Address**, **Date of birth** and **Nationality** shows either **Same on both**, or a choice between **Keep** (the value on the record you are keeping) and **Adopt** (the value from the other record). Where the record you are keeping has a blank field and the other has a value, **Adopt** is already chosen for you. The heading shows how many fields you are adopting.
@@ -93,16 +93,12 @@ The **Merge members** panel then takes you through two steps: **Choose and resol
     Click **Review merge**. Bethel ChMS checks which events both records were checked in to, which can take a moment.
   </Step>
   <Step title="Check what will happen">
-    The review shows which record is removed and which is kept, the fields you are adopting, and how the kept record will look after the merge, with **Adopted** next to each field you brought across. The **This can't be undone** box tells you how many attendance records will be deleted because both people were checked in to the same events. Click **Back** if you want to change anything.
+    The review shows which record is removed and which is kept, the fields you are adopting, and how the kept record will look after the merge, with **Adopted** next to each field you brought across. The **This can't be undone** box tells you how many attendance records will be deleted because both people were checked in to the same events, and warns you if the removed record's app sign-in will be deleted. Click **Back** if you want to change anything.
   </Step>
   <Step title="Confirm the merge">
     Type MERGE in the box under **Type MERGE to confirm** (capital letters are not required), then click **Merge permanently**. You see "Members merged".
   </Step>
 </Steps>
-
-<Tip>
-If you want to bring across the other record's **Address** or **Nationality**, start the merge from the member list: select the two members and click **Merge**. That way the panel loads every field for both records.
-</Tip>
 
 ## What a merge changes
 
@@ -124,7 +120,7 @@ If one record shows **Has app sign-in**, keep that record. The sign-in on the re
 </Warning>
 
 <Note>
-The kept record stays in its own household. If the removed record was the head of a different household, that household has no head after the merge. Open it in [Households](/guides/households) and set a new head.
+The kept record stays in its own household. If the removed record was the head of a different household, that household has no head after the merge. Bethel ChMS warns you when this happens, with an **Open Households** button. Open the household in [Households](/guides/households) and set a new head.
 </Note>
 
 ## When a merge can't go ahead
@@ -133,6 +129,7 @@ Bethel ChMS stops a merge in these cases. The message appears inside the **Merge
 
 - **The records are in different branches.** Only members in the same branch can be merged. Branch Admins can only merge members in their own branch.
 - **Both people have an open confidential care case of the same type, held by different staff.** Org Owners and Org Admins see a message asking them to resolve one of the cases before merging. Branch Admins see "These records can't be merged yet. Ask an organisation admin to merge them." This protects confidential cases, which only certain people can see. See [Care](/guides/care).
+- **The record being removed is someone's staff login.** A record linked to a Bethel ChMS user account can't be merged away. Choose that record as the one to keep instead.
 - **Both records have an app sign-in.** Only one sign-in can be kept, so the merge can't go ahead. Contact support at hello@bethelware.app for help.
 
 ## Related guides

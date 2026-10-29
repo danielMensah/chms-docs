@@ -74,6 +74,7 @@
             "group": "Reports and activity",
             "pages": [
               "guides/reports",
+              "guides/rhema",
               "guides/membership-demographics-report",
               "guides/change-history",
               "guides/activity-log"
@@ -97,7 +98,9 @@
               "guides/porter",
               "guides/porter-check-in",
               "guides/porter-equipment",
-              "guides/porter-alerts"
+              "guides/porter-alerts",
+              "guides/porter-projects",
+              "guides/porter-rota"
             ]
           },
           {

@@ -77,7 +77,7 @@ Each row has a **⋯** menu with:
     Under **Schedule**, enter the **Start Date**, **Start Time** and **End Time**. For a one-off event that runs over several days, also enter an **End Date**. If you leave **End Date** blank, the event ends on its start date.
   </Step>
   <Step title="Make it repeat (recurring events only)">
-    Under **Recurrence**, turn on **Recurring Event**. Choose a **Recurrence Pattern**: **Daily**, **Weekly**, **Bi-Weekly** or **Monthly**. Then enter a **Recurrence End Date**, which must be after the start date. The **End Date** field disappears, because every occurrence starts and ends on the same day.
+    Under **Recurrence**, turn on **Recurring Event**. Choose a **Recurrence Pattern**: **Daily**, **Weekly**, **Bi-Weekly** or **Monthly**. If the series should stop on a set date, enter a **Recurrence End Date** after the start date. Leave it blank for a series that keeps going, such as a weekly service. The **End Date** field disappears, because every occurrence starts and ends on the same day.
   </Step>
   <Step title="Add a description (optional)">
     Add a **Description** if it helps your team, for example who leads it or what to bring.
@@ -98,13 +98,13 @@ Each row has a **⋯** menu with:
   - **Name is required**, **Location is required**, **Start date is required**, **Start time is required** or **End time is required**: fill in the field shown.
   - **End time must be after start time**: check the times, and the end date for an event that runs over several days.
   - **Recurrence pattern is required**: choose **Daily**, **Weekly**, **Bi-Weekly** or **Monthly**.
-  - **Recurrence end date must be after start date**: every recurring event needs a **Recurrence End Date** later than its **Start Date**.
+  - **Recurrence end date must be after start date**: if you enter a **Recurrence End Date**, it must be later than the **Start Date**.
 </Accordion>
 
 ### Check-in settings
 
 - **Public Check-in** is on by default. It gives the event a QR code that members and visitors scan to check themselves in, and lets you run a check-in kiosk at the door. If your church uses Porter, your service team scans the same code, so keep it on for any event where workers check in. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
-- **Check-in Window** sets how long before each occurrence starts that check-in opens: **30 minutes**, **1 hour**, **2 hours** (the default), **3 hours**, **4 hours** or **8 hours**. It only appears while **Public Check-in** is on. The window applies to members and visitors checking themselves in. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works). Porter workers can scan the code at any time on the day of the occurrence.
+- **Check-in Window** sets how long before each occurrence starts that check-in opens, and how long after the start it stays open: **30 minutes**, **1 hour**, **2 hours** (the default), **3 hours**, **4 hours** or **8 hours**. It only appears while **Public Check-in** is on. The window applies to members and visitors checking themselves in. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works). Porter workers can scan the code at any time on the day of the occurrence.
 
 To learn how people check in, see [Record attendance](/guides/recording-attendance) and [Kiosk mode](/guides/kiosk-mode).
 
@@ -116,7 +116,7 @@ Equipment return reminders for Porter are not part of the event form. If your ch
 
 ### One-off events
 
-A one-off event gets exactly one occurrence, with the same start and end as the event. To move it to a different date or time later, [reschedule its occurrence](#reschedule-an-occurrence).
+A one-off event gets exactly one occurrence, with the same start and end as the event. If you edit the event's date or time later, its occurrence moves with it, and any attendance already recorded stays. You can also [reschedule its occurrence](#reschedule-an-occurrence).
 
 ### Recurring events
 
@@ -129,9 +129,9 @@ Every occurrence of a recurring event starts and ends at the same times as the f
 | **Bi-Weekly** | Every 14 days |
 | **Monthly** | On the same day of the month as the start date |
 
-When you create a recurring event, Bethel ChMS creates up to 52 occurrences straight away, or fewer if the **Recurrence End Date** comes first.
+When you create a recurring event, Bethel ChMS creates up to 52 occurrences straight away, or fewer if the **Recurrence End Date** comes first. A series with no **Recurrence End Date** keeps going until you add one.
 
-After that, Bethel ChMS checks every recurring series once a week, early on Monday morning. When a series is running low, it adds more occurrences, up to 52 ahead, so the series never runs out before its **Recurrence End Date**. A daily prayer meeting or a weekly service that runs for several years keeps going without you having to recreate it.
+After that, Bethel ChMS checks every recurring series once a week, early on Monday morning. When a series is running low, it adds more occurrences, up to 52 ahead, so the series never runs out before its **Recurrence End Date**, or at all if it has none. A daily prayer meeting or a weekly service that runs for several years keeps going without you having to recreate it.
 
 <Tip>
 Org Owners and Org Admins can see each top-up on the **Automation** page, in the **Execution History** tab, listed as **Occurrence Generation**. The **Occurrences Extended** total counts them. See [Automation rules](/guides/automation-rules).
@@ -141,14 +141,10 @@ Org Owners and Org Admins can see each top-up on the **Automation** page, in the
 
 When a branch is created, Bethel ChMS adds a weekly **Sunday Service** event at the branch's primary location, with 52 weekly occurrences. Its **Recurrence End Date** is one year after the first service, so it stops after about 52 Sundays unless you extend it. See [Branch management](/guides/branch-management).
 
-To keep it going, follow the steps in [Edit an event](#edit-an-event): choose a later **Recurrence End Date**, click **Save Changes**, then choose **Yes, apply to future**. Bethel ChMS adds the extra Sundays, up to 52 ahead at a time, and the Monday top-up adds the rest as time goes on. Then open the **Occurrences** tab and check that the coming weeks look right.
+To keep it going, follow the steps in [Edit an event](#edit-an-event): choose a later **Recurrence End Date**, or clear it so the service keeps going with no end date, click **Save Changes**, then choose **Yes, apply to future**. Bethel ChMS adds the extra Sundays, up to 52 ahead at a time, and the Monday top-up adds the rest as time goes on. Then open the **Occurrences** tab and check that the coming weeks look right.
 
 <Note>
-The Sunday Service's first 52 occurrences show the location's name in the **Location** column instead of **Same as event**. This means each one has its own location, so they are kept as they are when you edit the event:
-
-- If you change the event's **Location**, they stay where they are. To move one, use [Change Location](#change-an-occurrences-location) on that occurrence.
-- If you change the event's time and choose **Yes, apply to future**, they keep the old time, and Bethel ChMS adds new occurrences at the new time alongside them. Open the **Occurrences** tab and cancel the old-time ones you no longer need.
-- If you [end the series early](#end-a-recurring-event-early), they stay, so cancel any you no longer need.
+In branches created before Bethel ChMS v2.2.0, the Sunday Service's first 52 occurrences show the location's name in the **Location** column instead of **Same as event**. This means each one has its own location, so if you change the event's **Location**, they stay where they are. To move one, use [Change Location](#change-an-occurrences-location) on that occurrence. A new time or an earlier end date applies to them like any other occurrence. See [Editing a recurring event](#editing-a-recurring-event).
 </Note>
 
 ## Edit an event
@@ -171,24 +167,23 @@ The Sunday Service's first 52 occurrences show the location's name in the **Loca
 
 When you click **Save Changes** on a recurring event, the sheet asks **Apply changes to all future occurrences?**
 
-- **Yes, apply to future** saves your changes and rebuilds the upcoming occurrences from the new schedule, up to 52 ahead and stopping at the **Recurrence End Date**. Past occurrences never change.
+- **Yes, apply to future** saves your changes and rebuilds the upcoming occurrences from the new schedule, up to 52 ahead and stopping at the **Recurrence End Date**, if there is one. Past occurrences never change.
 - **No, this event only** saves the event's details and leaves the existing occurrences as they are for now. When Bethel ChMS later tops up the series, it works from the saved details, so upcoming occurrences may then be brought into line with them.
 - **Back** returns you to the form without saving.
 
-When you choose **Yes, apply to future**, some upcoming occurrences are kept exactly as they are, so you don't lose work:
+When you choose **Yes, apply to future**, Bethel ChMS keeps the changes you've made and the check-ins you've recorded:
 
-- occurrences you have cancelled, rescheduled or moved with **Change Location**
-- occurrences that already have attendance, visitor attendance, a Porter check-in, a rejected Porter check-in attempt or a sent Porter return reminder
-
-These occurrences don't move to the new schedule.
+- Occurrences you have rescheduled stay at their new date and time, and Bethel ChMS doesn't add another occurrence in the place they moved from.
+- Occurrences that already have attendance, visitor attendance, a Porter check-in, a rejected Porter check-in attempt or a sent Porter return reminder stay exactly as they are, so their check-ins are never lost.
+- Occurrences you have cancelled or moved with **Change Location** move to the new time, and stay cancelled or keep their location. If the new schedule is a long way from the old one, for example a weekly service moving several days, they're removed and replaced with new occurrences instead.
 
 <Tip>
-After you change the time or pattern of a recurring event with **Yes, apply to future**, open the **Occurrences** tab and check the next few weeks. If an occurrence you had changed is still sitting at the old time, cancel it if you no longer need it.
+After you change the time or pattern of a recurring event with **Yes, apply to future**, open the **Occurrences** tab and check the next few weeks. An occurrence that already has check-ins stays at its old time, so if a new occurrence now sits beside it, cancel the one you no longer need.
 </Tip>
 
 ### End a recurring event early
 
-To stop a recurring event, edit it, choose an earlier **Recurrence End Date**, click **Save Changes** and choose **Yes, apply to future**. Upcoming occurrences after the new date are removed, apart from the kinds listed above. Past occurrences and their attendance stay.
+To stop a recurring event, edit it, choose a **Recurrence End Date** (or an earlier one than before), click **Save Changes** and choose **Yes, apply to future**. Upcoming occurrences after the new date are removed, apart from ones you have rescheduled or that already have check-ins. Past occurrences and their attendance stay.
 
 If you turn **Recurring Event** off on an existing recurring event instead, Bethel ChMS saves straight away without asking, and keeps every occurrence it has already created.
 
@@ -226,8 +221,8 @@ The **Settings** tab shows the event's details:
 
 - **Location** and **Group** (a link to the group, or **None (open event)**)
 - **Start** and **End**
-- **Recurrence** and **Recurs until**, for recurring events
-- **Check-in Window**, for example "Opens 2 hours before each occurrence", or **Public check-in is off**
+- **Recurrence**, for recurring events, and **Recurs until** if the series has an end date
+- **Check-in Window**, for example "Open from 2 hours before until 2 hours after each occurrence starts", or **Public check-in is off**
 
 Below the details is the **Public Check-in QR** card. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
 
@@ -263,6 +258,8 @@ You can change one occurrence without affecting the rest of the series. On the e
     Click **Reschedule**. The occurrence's status changes to **Rescheduled**, so your team can see it was moved.
   </Step>
 </Steps>
+
+Public check-in, the kiosk, Find by name and the **Live now** card all follow the new date and time.
 
 ### Change an occurrence's location
 
@@ -331,12 +328,12 @@ See [Porter check-in](/guides/porter-check-in) for the full set-up.
     On the **Events** page, open the row's **⋯** menu and click **Delete**. Or open the event and choose **Delete event** from its **⋯** menu.
   </Step>
   <Step title="Confirm">
-    The **Delete Event** confirmation explains that the event and all its occurrences will be deleted, and that this can't be undone. Click **Delete**.
+    The **Delete Event** confirmation explains that the event and all its occurrences will be deleted, that attendance already recorded stays in Attendance Records, and that this can't be undone. Click **Delete**.
   </Step>
 </Steps>
 
 Bethel ChMS confirms with **Event deleted**. If you deleted from the event page, you return to the **Events** list.
 
 <Warning>
-When you delete an event, its attendance also drops out of the attendance records on the **Attendance** page. If a recurring event is simply coming to an end, [end it early](#end-a-recurring-event-early) instead, so its past occurrences and attendance stay.
+When you delete an event, its check-ins stay on the **Records** tab of the **Attendance** page and in the Attendance Summary report, with "(deleted)" after the event name. They no longer count towards **Member Frequency** or the Attendance Frequency report. If a recurring event is simply coming to an end, [end it early](#end-a-recurring-event-early) instead, so its past occurrences and attendance stay everywhere.
 </Warning>

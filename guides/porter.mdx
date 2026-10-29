@@ -8,7 +8,10 @@ description: "What Porter is, how to get it switched on, how to give your worker
 
 - **Check in** when they arrive, by scanning the event's check-in QR code. The check-in only counts when the phone is on the premises, and it shows up as attendance in Bethel ChMS. See [Check in with Porter](/guides/porter-check-in).
 - **Loan and return equipment**, such as microphones, cables and cameras, by scanning the QR labels you stick on them. See [Equipment, loans and faults](/guides/porter-equipment).
-- **Report faults** the moment they find them, with photos. See [Porter alerts and return reminders](/guides/porter-alerts).
+- **Report faults** the moment they find them, with photos. See [Equipment, loans and faults](/guides/porter-equipment#report-a-fault).
+- **See when they're serving** on the service rota, say when they can't make it and swap with a teammate. See [Porter: service rota](/guides/porter-rota).
+- **Pick up and finish tasks** for a project, such as setting up for the Carol Service. See [Porter: projects and tasks](/guides/porter-projects).
+- **Hear what matters to them** in the **Notifications** tab, and on their phone. See [Porter notifications and return reminders](/guides/porter-alerts).
 
 This page has two parts:
 
@@ -31,13 +34,17 @@ On these pages, a **worker** is anyone with Porter · Worker, and a **Porter adm
 | Report a fault, at any time | Yes | Yes |
 | Browse the equipment list and open an item | Yes | Yes |
 | See their own check-in and equipment history | Yes | Yes |
+| See their own rota and tasks, and their **Notifications** | Yes | Yes |
 | Set each location's check-in area, in **Setup** | No | Yes |
 | Check workers in by hand | No | Yes |
 | See everyone's history, including **Rejected attempts** | No | Yes |
 | Add and edit equipment, print labels, export the equipment list | No | Yes |
 | Manage equipment tags | No | Yes |
 | Mark items missing or found, resolve faults, retire items, delete sets | No | Yes |
-| See the **Alerts** tab and set return reminders | No | Yes |
+| See open faults and missing items in **Notifications**, and set return reminders | No | Yes |
+| Plan projects and fill the service rota for every team | No | Yes |
+
+Team leaders and assistant leaders with Porter access can also fill the rota and plan projects for their own teams. See [Porter: service rota](/guides/porter-rota#who-can-do-what) and [Porter: projects and tasks](/guides/porter-projects#who-can-do-what).
 
 A Porter access level sits on the person's **member record**, not on a Bethel ChMS role. This means anyone can have it: a volunteer who never uses Bethel ChMS, or a staff member with any Bethel ChMS role. Someone with Porter only can't open Bethel ChMS. Someone with both uses one email and password for both. See [Porter access levels](/guides/roles-and-permissions#porter-access-levels).
 
@@ -47,7 +54,7 @@ Your **organisation** is your church network, with all its branches, members and
 
 - **Setup** lists every location in your organisation, grouped by branch.
 - **Manual check-in** lists every worker in your organisation.
-- The equipment list, alerts and return reminders cover all branches.
+- The equipment list, faults and missing items, and return reminders cover all branches.
 
 A Porter admin therefore works across every branch, whatever their Bethel ChMS role. For example, a Branch Admin who is also a Porter admin can set up check-in and manage equipment for all branches in Porter.
 
@@ -120,7 +127,7 @@ Give them Porter from **Edit user** rather than adding them again:
 Because they already have a sign-in, Porter works for them as soon as you save. No invitation is sent.
 
 <Tip>
-**Setting Porter up yourself?** Give yourself **Porter · Admin** this way, from **Edit** on your own row. Setup, equipment and alerts are all done inside Porter, so you need Porter admin access to reach them.
+**Setting Porter up yourself?** Give yourself **Porter · Admin** this way, from **Edit** on your own row. Setup, equipment, the rota and projects are all done inside Porter, so you need Porter admin access to reach them.
 </Tip>
 
 ### Change or remove someone's Porter access
@@ -146,13 +153,16 @@ Once Porter is switched on, work through these steps. Most of them are done insi
     Porter uses the [locations](/guides/locations) and [events](/guides/managing-events) you already have in Bethel ChMS. Make sure **Public Check-in** is on for every event your workers check in to, because they scan the event's check-in QR code.
   </Step>
   <Step title="Set each location's check-in area">
-    In Porter, open **Setup** and set where check-in works for each location. See [Set a check-in area](/guides/porter-check-in#set-a-check-in-area).
+    In Porter, open **Setup**, then **Locations** under **Check-in**, and set where check-in works for each location. See [Set a check-in area](/guides/porter-check-in#set-a-check-in-area).
   </Step>
   <Step title="Register your equipment and print labels">
     Add your equipment in Porter's **Equipment** tab, print the QR labels and stick them on. See [Equipment, loans and faults](/guides/porter-equipment).
   </Step>
-  <Step title="Turn on alerts and set return reminders">
-    Turn on alerts on your phone, and choose when workers are reminded to return equipment. See [Porter alerts and return reminders](/guides/porter-alerts).
+  <Step title="Turn on notifications and set return reminders">
+    Turn on notifications on your phone, and choose when workers are reminded to return equipment. See [Porter notifications and return reminders](/guides/porter-alerts).
+  </Step>
+  <Step title="Set up your rota teams">
+    If your teams serve on a rota, add each team's positions and how many people each service needs. See [Porter: service rota](/guides/porter-rota).
   </Step>
   <Step title="Give your workers access">
     Add each worker with **Porter · Worker**. See [Give someone Porter access](#give-someone-porter-access).
@@ -165,7 +175,7 @@ Once Porter is switched on, work through these steps. Most of them are done insi
 
 Porter is part of the Bethel ChMS app, so there's nothing to download from an app store. On your phone, open [app.bethelchms.com/porter/login](https://app.bethelchms.com/porter/login) and sign in. On browsers that can install apps, a bar at the top of Porter then invites you to **Add Porter to your home screen**. If you only use Porter, the installed app opens straight into Porter while you're signed in.
 
-On iPhone and iPad, install the app before you turn on alerts, because alerts only work when Porter is opened from the Home Screen. For step-by-step help, see [Install the app](/getting-started/install-the-app).
+On iPhone and iPad, install the app before you turn on notifications, because notifications only work when Porter is opened from the Home Screen. For step-by-step help, see [Install the app](/getting-started/install-the-app).
 
 ### Sign in
 
@@ -189,39 +199,52 @@ If the page says **This account doesn't have Porter access. Ask an admin at your
 
 ### Find your way around Porter
 
-On a phone, Porter's tabs run along the bottom of the screen. On a tablet or computer, they're down the left. The bar at the top shows **Porter**, then **Guide** (a book icon on a phone), which opens the guide for that screen, then **Worker** or **Admin**, then your initials.
+Porter is the same app on every device. Only the way around it changes with the size of the screen.
+
+- **On a phone**, the tabs run along the bottom of the screen. The bar at the top shows the page's name, a way back, **Guide** (a book icon), which opens the guide for that screen, and your initials, which open a menu with **Sign out**. Porter admins also get a gear there for **Setup**.
+- **On a tablet held upright**, a narrow rail of icons runs down the left, with **Setup** among them for Porter admins, and your initials and **Sign out** at the foot.
+- **On a tablet on its side or a computer**, the rail is wider and names each tab. At its foot are your name, **Back to ChMS** (if you also use Bethel ChMS) and **Sign out**. The bar along the top shows where you are, for example *Projects › Carol Service*, with the page's buttons on the right, **Guide**, and **?** for the [keyboard shortcuts](/guides/porter-projects#keyboard-shortcuts).
 
 | Tab | Who sees it | What it's for |
 | --- | --- | --- |
-| **Home** | Everyone | Check in, see what's on loan to you, and report a fault. |
+| **Home** | Everyone | What you need to do now: check in, your tasks and rota dates, and what's on loan to you. |
+| **Rota** | Everyone | When you're serving, and for team leaders and Porter admins, filling the rota. See [Porter: service rota](/guides/porter-rota). |
+| **Tasks** | Everyone | Your tasks under **My tasks**, and projects for those who plan them. See [Porter: projects and tasks](/guides/porter-projects). |
 | **Equipment** | Everyone | Loan and return equipment, and browse the equipment list. See [Equipment, loans and faults](/guides/porter-equipment). |
-| **Alerts** | Porter admins | Open faults and missing items. A red badge shows how many need attention. See [The Alerts tab](/guides/porter-alerts#the-alerts-tab). |
-| **History** | Everyone | Your check-ins and equipment history. Porter admins see everyone's. |
-| **Setup** | Porter admins | Check-in areas, equipment tags, alerts and return reminders. |
+| **Notifications** | Everyone | Everything Porter has sent you. Porter admins also see open faults and missing items. A number shows what's new. See [The Notifications tab](/guides/porter-alerts#the-notifications-tab). |
+| **Setup** | Porter admins | Check-in areas, manual check-in, equipment tags, return reminders, rota reminders and task settings. A gear at the top on a phone. |
 
-If a worker opens a screen meant for Porter admins, Porter tells them it's only for Porter admins.
+Your check-in and equipment history is on **Home**, under **Check-in and loan history**. If a worker opens a screen meant for Porter admins, Porter tells them it's only for Porter admins.
 
 <Frame>
-  <img src="/images/guides/porter-home-worker.png" alt="Porter Home on a phone for a worker, showing the checked-in card for Sunday Service, the With you card listing three items with Loan and Return buttons, Report a fault, the Turn on alerts card, and the Home, Equipment and History tabs along the bottom" width="320" />
+  <img src="/images/guides/porter-home-worker.png" alt="Porter Home on a phone for a worker, showing the You're not checked in card with the Check in button, With you listing three items each with a Return button, Check-in and loan history, Report a fault, Turn on notifications, and the Home, Rota, Tasks, Equipment and Notifications tabs along the bottom" width="320" />
 </Frame>
 
 #### Home
 
-**Home** shows today's date and greets you by name. Then:
+**Home** shows today's date and greets you by name. It opens on a card with the one thing you need to do now:
 
-- **Your check-in.** If you haven't checked in yet, the card reads **You're not checked in**, with a **Check in** button. Once you have, it shows the event, the time and the location. It says **Checked in by an admin** if a Porter admin checked you in by hand.
-- **With you.** The equipment on loan to you, with when you took it, and the **Loan** and **Return** buttons. Return everything before you leave.
-- **Report a fault**, for anything broken or not working.
-- **Turn on alerts**, for Porter admins, and for workers while they have equipment on loan. See [Porter alerts and return reminders](/guides/porter-alerts).
+- **On a day you're serving**, *You're serving at Sunday Service*, with your position, the time and place, and a **Check in** button.
+- **Once you've checked in**, the event, the time and the location, with **My rota** if you're on the rota. It says **By an admin** if a Porter admin checked you in by hand.
+- **When a team task is due and nobody has it**, the task with a **Claim** button.
+- **Otherwise**, **You're not checked in**, with a **Check in** button and *Can't scan? Ask the steward to check you in*.
 
-Porter admins also get **Manual check-in** and **Setup** buttons on **Home**.
+Under the card are:
+
+- **Needs you**: tasks due or overdue, team tasks to claim, and swap requests from teammates.
+- **Coming up**: your next tasks and serving dates.
+- **With you**: the equipment on loan to you, with when you took it, each with a **Return** button. Return everything before you leave.
+- **Check-in and loan history**, and **Report a fault**, for anything broken or not working.
+- **Turn on notifications**, for Porter admins, and for workers while they have equipment on loan, a slot on the rota or a task. See [Porter notifications and return reminders](/guides/porter-alerts).
+
+Porter admins also see **Notifications** on **Home** when there are open faults or missing items, and links to **Manual check-in** and **Setup**. Team leaders and Porter admins see **Not here yet** around service time. See [On the day](/guides/porter-rota#on-the-day).
 
 ## Move between Bethel ChMS and Porter
 
 If you use both, you don't need to sign in twice.
 
 - **To open Porter:** on a computer, click **Porter** at the bottom of the Bethel ChMS sidebar. It has a small **App** label. On a tablet or phone, tap **More** and find **Porter** under **Apps**.
-- **To go back:** tap **Back to ChMS**. Porter admins find it at the bottom of **Setup**. Workers find it on **Home**. It opens your Bethel ChMS **Dashboard**.
+- **To go back:** tap **Back to ChMS**. On a tablet on its side or a computer, it's at the foot of the rail down the left. Otherwise, Porter admins find it in **Setup** and workers find it on **Home**. It opens your Bethel ChMS **Dashboard**.
 
 The **Porter** link only appears when Porter is switched on for your church and your own member record has a Porter access level. Treasurers and Care Managers don't see it. **Back to ChMS** only appears for people who also have a Bethel ChMS account. See [Find your way around](/getting-started/find-your-way-around#porter).
 
@@ -246,13 +269,15 @@ The **Porter** link only appears when Porter is switched on for your church and 
 
 - **Location.** Porter uses your phone's location only to check that you're on site when you check in. Your phone shares its position once for each scan. Porter keeps only how far you were from the location and how accurate your phone's position was, never where you actually were.
 - **Photos.** Equipment and fault photos are stored privately. Only people signed in to your church's Porter can see them.
-- **Alerts.** Turning on alerts on a device lets Porter send notifications to it. Turn them off at any time. See [Porter alerts and return reminders](/guides/porter-alerts).
+- **Notifications.** Turning on notifications on a device lets Porter send notifications to it. Turn them off at any time. See [Porter notifications and return reminders](/guides/porter-alerts).
 
 ## Related pages
 
 - [Check in with Porter](/guides/porter-check-in)
 - [Equipment, loans and faults](/guides/porter-equipment)
-- [Porter alerts and return reminders](/guides/porter-alerts)
+- [Porter notifications and return reminders](/guides/porter-alerts)
+- [Porter: service rota](/guides/porter-rota)
+- [Porter: projects and tasks](/guides/porter-projects)
 - [User management](/guides/user-management)
 - [Roles and permissions](/guides/roles-and-permissions)
 - [Install the app](/getting-started/install-the-app)

@@ -113,7 +113,7 @@ Everyone except Treasurers and Care Managers sees **Dashboard** at the top of th
 | Role | People | Church life | Giving & outreach | Organisation |
 | --- | --- | --- | --- | --- |
 | **Org Owner**, **Org Admin** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | Gifting & Donations, Update Campaigns | Organisation dashboard, Branches, Users, Reports, Automation, Import, Age Groups, Tags, Settings |
-| **Branch Admin** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | None | Users, Reports, Import, Tags, Organisation Settings |
+| **Branch Admin** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | None | Branch settings, Users, Reports, Import, Tags, Organisation Settings |
 | **Editor** | Members, Households, Groups, Visitors, Care | Events, Attendance, Ministries, Activity Log, Locations | None | Organisation Settings |
 | **Treasurer** | None | None | Gifting & Donations | None |
 | **Care Manager** | Members, Care | None | None | None |
@@ -121,6 +121,8 @@ Everyone except Treasurers and Care Managers sees **Dashboard** at the top of th
 For Branch Admins and Editors, **Groups** appears under the name their branch uses for groups. Some items, such as **Care**, **Gifting & Donations** and **Update Campaigns**, only appear if your plan includes them. See [Feature availability by plan](/guides/feature-availability-by-plan).
 
 When Porter is switched on and your own member record has a Porter access level, a **Porter** link also appears in the sidebar. Treasurers and Care Managers do not see this link.
+
+When Rhema is switched on for your church, Org Owners and Org Admins also see **Rhema** above **Dashboard**. No other role sees it. Rhema lets you ask about your church's records in your own words. See [Rhema](/guides/rhema).
 
 ## Per-role capabilities
 
@@ -132,6 +134,7 @@ When Porter is switched on and your own member record has a Porter access level,
     | Manage branches | Create, edit, duplicate, copy resources and delete |
     | Manage users | Invite and manage Org Admin, Branch Admin, Editor, Treasurer and Care Manager users |
     | Porter access | Give, change and remove Porter access when Porter is switched on |
+    | Rhema | Ask questions and change Rhema settings, when Rhema is switched on |
     | Manage members | Full access through branch selector |
     | Manage visitors | Full access through branch selector |
     | Care cases | All three Care tabs in every branch through branch selector, including confidential pastoral cases |
@@ -154,6 +157,7 @@ When Porter is switched on and your own member record has a Porter access level,
     | Manage branches | Create, edit, duplicate and copy resources |
     | Manage users | Invite and manage Org Admin, Branch Admin, Editor, Treasurer and Care Manager users |
     | Porter access | Give, change and remove Porter access when Porter is switched on |
+    | Rhema | Ask questions and change Rhema settings, when Rhema is switched on |
     | Manage members | Full access through branch selector |
     | Manage visitors | Full access through branch selector |
     | Care cases | All three Care tabs in every branch through branch selector, including confidential pastoral cases |
@@ -173,9 +177,10 @@ When Porter is switched on and your own member record has a Porter access level,
     | Capability | Access |
     | --- | --- |
     | Manage org settings | Read-only where visible |
-    | Manage branches | No access. An Org Owner or Org Admin manages branches from **Branches** |
+    | Manage branches | Own branch only: edit its details and its Quick Find switch from **Branch settings**. An Org Owner or Org Admin adds and removes branches from **Branches** |
     | Manage users | Invite and manage Branch Admin and Editor users in own branch |
     | Porter access | No access. Can see who has Porter on the **Users** page |
+    | Rhema | No access |
     | Manage members | Full access in own branch |
     | Manage visitors | Full access in own branch |
     | Care cases | All three Care tabs in own branch |
@@ -196,6 +201,7 @@ When Porter is switched on and your own member record has a Porter access level,
     | Manage branches | No access |
     | Manage users | No access |
     | Porter access | No access |
+    | Rhema | No access |
     | Manage members | Create and edit in own branch, no delete |
     | Manage visitors | Create and edit in own branch, no delete |
     | Care cases | All three Care tabs in own branch, including adding visitors to Visitor care by hand |
@@ -215,6 +221,7 @@ When Porter is switched on and your own member record has a Porter access level,
     | Manage branches | No access |
     | Manage users | No access |
     | Porter access | No access |
+    | Rhema | No access |
     | Manage members | No access |
     | Manage visitors | No access |
     | Care cases | No access, and cannot be assigned Care cases |
@@ -235,6 +242,7 @@ When Porter is switched on and your own member record has a Porter access level,
     | Manage branches | No access |
     | Manage users | No access |
     | Porter access | No access |
+    | Rhema | No access |
     | Manage members | View, edit and delete in own branch; cannot add members |
     | Manage visitors | No access to the **Visitors** page |
     | Care cases | All three Care tabs in own branch; cannot add visitors to Visitor care by hand |
@@ -271,9 +279,11 @@ Porter access works differently from the six roles above:
 | Loan and return equipment (after checking in) | Yes | Yes |
 | Report a fault | Yes | Yes |
 | Browse the equipment register and see their own history | Yes | Yes |
-| Use **Setup** (check-in areas, equipment tags, return reminders) | No | Yes |
+| See their own rota, tasks and **Notifications** | Yes | Yes |
+| Use **Setup** (check-in areas, equipment tags, reminders, task settings) | No | Yes |
 | Check workers in by hand | No | Yes |
-| See **Alerts** | No | Yes |
+| See open faults and missing items in **Notifications** | No | Yes |
+| Fill the rota and plan projects for every team | No | Yes |
 | Add and edit equipment, print labels and export the register | No | Yes |
 | See everyone's history and rejected check-in attempts | No | Yes |
 
@@ -322,7 +332,7 @@ The new owner must already be an **Org Admin**. If you don't have one yet, [edit
     In the **Ownership & Danger Zone** card, click **Transfer Ownership**.
   </Step>
   <Step title="Choose the new owner">
-    Under **New Owner**, choose an Org Admin from the list. If you have no Org Admins, the sheet shows "You must first promote a user to Org Admin before transferring ownership."
+    Under **New Owner**, choose an Org Admin from the list. Only Org Admins who have accepted their invitation are listed. If you have no Org Admins, the sheet shows "You must first promote a user to Org Admin before transferring ownership."
   </Step>
   <Step title="Confirm with your password">
     Enter your password under **Confirm Your Password**. Let the security check finish. It usually completes by itself, and occasionally asks you to tick a box. Then click **Transfer Ownership**.
@@ -341,4 +351,5 @@ Ownership transfer is immediate and cannot be undone by you. The new owner would
 - [Invite your team](/getting-started/invite-users)
 - [Care](/guides/care)
 - [Porter](/guides/porter)
+- [Rhema](/guides/rhema)
 - [Organisation settings](/guides/organisation-settings)

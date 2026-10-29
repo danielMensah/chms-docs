@@ -23,14 +23,14 @@ Each campaign has one of three statuses:
 | Status | What it means |
 | --- | --- |
 | **Draft** | You are still setting the campaign up. You can change the name, message, audience, fields, conditions, dates and switches. |
-| **Open** | The campaign has launched. The audience is frozen, links work and members can send updates. |
+| **Open** | The campaign has launched. The audience is frozen, links work and members can send updates. If you set an **Open date**, links work and emails can be sent only from that date. |
 | **Closed** | The campaign was stopped or reached its close date. Links stop working and no more responses are accepted. |
 
 A typical campaign runs like this:
 
 1. Build the campaign in the campaign builder and save it as a draft.
 2. [Test the form](/guides/campaign-test-the-form) to check your questions.
-3. Launch the campaign. This freezes the audience and opens it for responses.
+3. Launch the campaign. This freezes the audience and opens it for responses, or on its **Open date** if that is later.
 4. Share it: send the personalised emails, and use the public link and QR code if you like.
 5. Track responses, send reminders and review the changes members send.
 6. Stop the campaign, or let it close on its close date.
@@ -111,7 +111,7 @@ Some parts of the builder save as you go and some do not. Once you have saved th
 | **Org-wide** | Every member across every branch. This is the default. |
 | **Segment** | Members you pick, plus everyone in the ministries, groups, age groups and tags you pick. |
 
-For a segment, use the **Members**, **Ministries**, **Groups**, **Age groups** and **Tags** pickers. A member who matches any one of your choices is included, so picking a ministry and a tag includes everyone in the ministry as well as everyone with the tag. To find a member, search by their first name or their last name. Ministries and groups count their current members only. Until you pick at least one item, a segment has no audience.
+For a segment, use the **Members**, **Ministries**, **Groups**, **Age groups** and **Tags** pickers. A member who matches any one of your choices is included, so picking a ministry and a tag includes everyone in the ministry as well as everyone with the tag. To find a member, search by their first name, their last name or both. Ministries and groups count their current members only. Until you pick at least one item, a segment has no audience.
 
 The audience includes every matching member, whatever their membership status.
 
@@ -139,13 +139,13 @@ Select only the fields you need members to check. Shorter forms are quicker to c
 
 | Setting | What it does |
 | --- | --- |
-| **Open date** | The date you plan to start the campaign. Optional. |
+| **Open date** | The first day members can respond. Before then, the links and QR code don't open the form, and you can't send emails or reminders. Optional. |
 | **Close date** | The last day members can respond. Links keep working until the end of that day. Optional. It must be on or after the open date. Leave it blank for a campaign that stays open until you stop it. |
 | **Require review before applying** | On by default. See [Review mode](#review-mode). |
 | **Nudge non-responders** | Off by default. When on, Bethel ChMS emails reminders to members who have not responded. See [Send reminders](#send-reminders). |
 
 <Info>
-A campaign opens for responses as soon as you launch it. Launch it on the day you want responses to start.
+Without an **Open date**, a campaign opens for responses as soon as you launch it. With one, you can launch early, for example to print the QR code, and responses start on the Open date.
 </Info>
 
 ### Check the email members will receive
@@ -283,6 +283,8 @@ The page shows progress while the emails go out. Each member gets their own link
 
 You can also send from the campaign page. While no emails have gone out, a banner at the top of an open campaign has its own **Send personalised emails** button.
 
+Before the campaign's **Open date**, the **Email** section and the banner say when the campaign opens instead, and you can send the emails from that date.
+
 Sending again later only reaches members who have not been emailed yet, or whose email failed. Nobody gets the first email twice. If some emails fail, the **Email** section says how many. Click **Retry** to try them again, or **Export the list** to download the failed addresses as a CSV file.
 
 Members without an email address can still respond through the QR code or the public link, using their mobile number to confirm who they are.
@@ -385,11 +387,11 @@ Each recipient's response status works like this:
 
 ### Send reminders
 
-**Manual reminders.** On the **Overview** tab, under the no-response tiles, or on the **Recipients** tab, click **Remind non-responders**. The button shows how many people will get a reminder. The confirmation shows the subject line. Click the send button, for example **Send 12 reminders**, to email each recipient who has not responded and has an email address. Members without an email address are skipped, and the result shows how many reminders were sent, skipped or failed. You can send manual reminders as often as you need.
+**Manual reminders.** On the **Overview** tab, under the no-response tiles, or on the **Recipients** tab, click **Remind non-responders**. The button shows how many people will get a reminder. The confirmation shows the subject line. Click the send button, for example **Send 12 reminders**, to email each recipient who has not responded and has an email address. Members without an email address are skipped, and the result shows how many reminders were sent, skipped or failed. You can send manual reminders as often as you need. Before the campaign's **Open date**, **Remind non-responders** is greyed out and says when it becomes available.
 
 To remind only some people, select their rows on the **Recipients** tab, click **Remind**, then **Send reminders**. Anyone in your selection who has already responded is skipped.
 
-**Automatic reminders.** When **Nudge non-responders** is on, Bethel ChMS checks open campaigns every night and emails a reminder to members who have not responded and have an email address. Nobody gets an automatic reminder if they were reminded in the last seven days, whether automatically or by a manual reminder. Reminders stop when the member responds or the campaign closes.
+**Automatic reminders.** When **Nudge non-responders** is on, Bethel ChMS checks open campaigns every night and emails a reminder to members who were sent the personalised email and have not responded. Members who were never emailed don't get automatic reminders, so send the personalised emails first. The first automatic reminder goes out at least seven days after a member's personalised email, and nobody gets one if they were reminded in the last seven days, whether automatically or by a manual reminder. Reminders stop when the member responds or the campaign closes.
 
 ## Review submissions
 
@@ -412,7 +414,7 @@ The **Review** page shows one card per member. The card shows the member's name 
 
 Approving writes the new value to the member's record straight away.
 
-Rejecting keeps the member's record as it is and discards the submitted value. Every rejection asks you to confirm. You can add an optional reason: choose **Couldn't confirm**, **Looks like a typo** or **Not this member**, type a note of up to 500 characters, or both. The reason is saved with the review history and appears in the submissions export. The member is not told that a change was rejected.
+Rejecting keeps the member's record as it is and discards the submitted value. Every rejection asks you to confirm. You can add an optional reason: choose **Couldn't confirm**, **Looks like a typo** or **Not this member**, type a note, or both. Together they can be up to 500 characters, and a counter under the note shows how many you've used. The reason is saved with the review history and appears in the submissions export. The member is not told that a change was rejected.
 
 You can keep reviewing after a campaign has closed.
 

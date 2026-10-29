@@ -9,7 +9,7 @@ A **branch** is an individual church or campus within your organisation, and you
 The **Branches** page is where organisation-level administrators set up and look after branches. From here you can create new branches, duplicate existing ones, copy resources between branches, and change each branch's settings.
 
 <Info>
-**Who can do this:** Org Owner and Org Admin can create, duplicate, edit and copy resources between branches. Only the Org Owner can delete a branch. Branch Admins and Editors don't see **Branches** in the sidebar, so if a Branch Admin needs their branch's details or Quick Find setting changed, an Org Owner or Org Admin can do it from **Branches**.
+**Who can do this:** Org Owner and Org Admin can create, duplicate, edit and copy resources between branches. Only the Org Owner can delete a branch. Branch Admins and Editors don't see **Branches** in the sidebar. Instead, a Branch Admin has a **Branch settings** link in the **Organisation** group that opens their own branch's page, where they can edit its details and switch Quick Find on or off.
 </Info>
 
 ## Open the Branches page
@@ -66,7 +66,7 @@ Everything is set up in one step, so you don't need to create the location or Su
 - A **primary location**, the main place where the branch meets. See [Locations](/guides/locations).
 - A weekly **Sunday Service** event at that location, with 52 weekly occurrences. An **occurrence** is one date of a repeating event.
 
-The Sunday Service is set to repeat for one year from the first service. To keep it going after that, open the event, move its **Recurrence End Date** later, and save. Bethel ChMS then adds the extra Sundays for you. See [Managing events](/guides/managing-events).
+The Sunday Service is set to repeat for one year from the first service. To keep it going after that, open the event, move its **Recurrence End Date** later, or clear it so the service has no end date, and save. Bethel ChMS then adds the extra Sundays for you. See [Managing events](/guides/managing-events).
 
 ## Duplicate a branch
 
@@ -82,7 +82,7 @@ Duplicating creates up to 10 new branches at once, using an existing branch as a
     The **Source Branch** is shown for reference. Enter the **Number of Duplicates**, from 1 to 10.
   </Step>
   <Step title="Details: set up each new branch">
-    Each new branch has its own card. Open a card and fill in the **Branch Name**, **Location Name** and **Address**. You can also add a **Post Code (optional)** and **Capacity (optional)**. Every new branch needs a different name. Under **Sunday Service**, the **Start Time** and **End Time** start at 10:00 and 12:00 and the description fills in from the branch name. Change them if the new branch meets at a different time.
+    Each new branch has its own card. Open a card and fill in the **Branch Name**, **Location Name** and **Address**. You can also add a **Post Code (optional)** and **Capacity (optional)**. Every new branch needs a different name. Under **Sunday Service**, the **Start Time** and **End Time** start at 10:00 and 12:00 and the description fills in from the branch name. Change them if the new branch meets at a different time. If you leave the times blank, the Sunday Service runs from 10:00 to 12:00.
 
     <Frame>
       <img src="/images/guides/branches-duplicate-details-step.png" alt="The Duplicate Branch sheet on step 2 of 4, Details, with the first new branch card open showing Branch Name, Location Name, Address, Post Code, Capacity and Sunday Service times, and a second branch card collapsed" width="480" />
@@ -92,7 +92,7 @@ Duplicating creates up to 10 new branches at once, using an existing branch as a
     Under **Select Events to Clone**, tick any other events from the source branch that you'd like each new branch to have. You don't need to pick the Sunday Service here, because every new branch gets its own.
   </Step>
   <Step title="Review and duplicate">
-    Check the summary for each new branch, showing its location, Sunday Service, events and ministries, then click **Duplicate**.
+    Check the summary for each new branch, showing its location, Sunday Service times, events and ministries, then click **Duplicate**.
   </Step>
   <Step title="Check the results">
     **Duplication Results** shows **Created** or an error for each new branch. If any failed, click **Retry Failed**. Click **Done** to finish.
@@ -138,23 +138,25 @@ Copy individual events, locations or ministries from one branch into one or more
 
 ## The branch page
 
-To open a branch's page, click the branch on the **Branches** page, or choose **View** from its **⋯** menu.
+To open a branch's page, click the branch on the **Branches** page, or choose **View** from its **⋯** menu. Branch Admins click **Branch settings** in the **Organisation** group of the sidebar to open their own branch's page.
 
-At the top you'll see the branch name, a badge showing whether the branch's Quick Find switch is on, buttons for the branch's **Dashboard** and **Email** (if it has one), and the date it was created. The **More actions** menu (the three dots at the top right) has **Edit branch details**, **Branch dashboard** and, for the Org Owner, **Delete Branch**.
+At the top you'll see the branch name, a badge that says **Quick Find on**, **Quick Find off** or **Quick Find waiting**, buttons for the branch's **Dashboard** and **Email** (if it has one), and the date it was created. The **More actions** menu (the three dots at the top right) has **Edit branch details**, **Branch dashboard** and, for the Org Owner, **Delete Branch**.
+
+**Quick Find waiting** means the branch's switch is on, but Find by name can't appear at the kiosk yet. A line under the badge says why, for example "Waiting for an org admin to accept the disclosure."
 
 Below that are these cards:
 
 | Card | What it's for | Who sees it |
 | --- | --- | --- |
 | **Branch Details** | The branch name, email and what the branch calls its fellowship groups. | Everyone who opens the page |
-| **Quick Find** | Accepting the Quick Find disclosure and switching Quick Find on or off for this branch. | Org Owner, Org Admin |
+| **Quick Find** | Accepting the Quick Find disclosure and switching Quick Find on or off for this branch. | Org Owner, Org Admin, and a Branch Admin on their own branch |
 | **Gifting Categories** | Which gifting categories this branch uses. | Org Owner, Org Admin |
 | **Activity Types** | Which activity types this branch tracks. | Org Owner, Org Admin |
 | **Delete Branch** | Deleting the branch. | Org Owner |
 
 ## Edit branch details
 
-**Who can do this:** Org Owner, Org Admin
+**Who can do this:** Org Owner, Org Admin, and a Branch Admin for their own branch
 
 <Steps>
   <Step title="Open the edit panel">
@@ -177,7 +179,7 @@ See [Groups](/guides/groups) for more about fellowship groups.
 
 Quick Find lets people check in at a kiosk by finding their name, as well as by email, mobile or QR code. At the kiosk it appears as **Find by name**. There are two parts to switching it on: one acceptance for the whole organisation, then a switch on each branch.
 
-**Who can do this:** Org Owner, Org Admin
+**Who can do this:** Org Owner, Org Admin. A Branch Admin can't accept the disclosure, but once it's accepted they can switch Quick Find on or off for their own branch.
 
 <Steps>
   <Step title="Open a branch page">

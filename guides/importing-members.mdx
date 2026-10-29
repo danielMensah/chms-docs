@@ -28,7 +28,7 @@ Prepare a `.csv` file with a header row (the column names) and one row per membe
 | **Last Name** | Required. |
 | **Email** | Used to spot duplicates. |
 | **Mobile Number** | Used to spot duplicates. |
-| **Date of Birth** | A date such as `15/03/1990`, `1990-03-15` or `March 15, 1990`. Bethel ChMS works out the member's age group from it. |
+| **Date of Birth** | A date such as `15/03/1990`, `1990-03-15`, `15 March 1990` or `March 15, 1990`. Bethel ChMS works out the member's age group from it. |
 | **Age Group** | Only used when **Date of Birth** is blank. Use the name or the age range of one of your [age groups](/guides/age-groups), for example `Children`, `13-19` or `35+`. |
 | **Gender** | Male, female, other or prefer not to say. Short forms such as `m` and `f` also work. |
 | **Nationality** | A recognised nationality, for example `British`. |
@@ -38,7 +38,7 @@ Prepare a `.csv` file with a header row (the column names) and one row per membe
 
 If you leave **Status** blank, or do not include it, the member is imported as **Newcomer**. See [Managing members](/guides/managing-members) for what each status means.
 
-For a custom field that holds a date, write the dates as `2026-03-15` or `March 15, 2026`, so the day and month are always read the right way round.
+Dates in a custom field that holds a date can be written in the same ways as **Date of Birth**.
 
 <Tip>
 Start from the template so your column names match what Bethel ChMS expects. The template already includes a column for each of your member custom fields.
@@ -122,7 +122,7 @@ Branch Admins can map columns to existing custom fields, but cannot create new o
 
 ### Confirm date formats
 
-If the dates in your **Date of Birth** column could be read two ways, for example `03/04/1990`, Bethel ChMS asks you to confirm the format before you see the preview. Choose **DD/MM/YYYY** (day first, as used in the UK) or **MM/DD/YYYY** (month first, as used in the US).
+If the dates in your **Date of Birth** column, or in a custom date field, could be read two ways, for example `03/04/1990`, Bethel ChMS asks you to confirm the format before you see the preview. Choose **DD/MM/YYYY** (day first, as used in the UK) or **MM/DD/YYYY** (month first, as used in the US).
 
 ### Check the validation preview
 
@@ -145,7 +145,7 @@ Use the chips **All rows**, **Errors**, **Duplicates** and **Notes** to show onl
 
 ### Fix errors
 
-You cannot import while any row has an error. Each error is shown on its row, for example a gender or status that is not recognised, a date that does not exist, a nationality that is not on the list, an age group that matches none of your age groups, or a **Single Select** value that is not one of the field's options.
+You cannot import while any row has an error. Each error is shown on its row, for example a blank first or last name, a gender or status that is not recognised, a date that does not exist, a nationality that is not on the list, an age group that matches none of your age groups, or a **Single Select** value that is not one of the field's options.
 
 To fix errors, correct your CSV file and click **Upload fixed file**. This takes you back to **Choose file**, so you choose the corrected file and check the column mapping again. If a column was mapped to the wrong field, click **Back to Mapping** instead.
 
@@ -193,6 +193,6 @@ You can include **Date of Birth**, **Age Group**, or both.
 
 ## Import History
 
-**Who can do this:** Org Owner, Org Admin
+**Who can do this:** Org Owner, Org Admin, Branch Admin
 
-Open the **Import History** tab on the **Import Members** page to see the 50 most recent imports into the branch you have selected, including failed ones. For each import you see the **File**, the **Date**, how many members were **Imported** out of the rows in the file, how many rows were **Skipped**, the **Status** (**Completed** or **Failed**) and who it was **Imported by**.
+Open the **Import History** tab on the **Import Members** page to see the 50 most recent imports into the branch you have selected, including failed ones. Branch Admins see the imports into their own branch. For each import you see the **File**, the **Date**, how many members were **Imported** out of the rows in the file, how many rows were **Skipped**, the **Status** (**Completed** or **Failed**) and who it was **Imported by**.

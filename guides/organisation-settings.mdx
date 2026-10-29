@@ -1,6 +1,6 @@
 ---
 title: "Organisation settings"
-description: "Manage your organisation details, plan and billing status, custom fields, currency, Quick Find status, ownership and deletion in Bethel ChMS."
+description: "Manage your organisation details, plan and billing status, custom fields, currency, Quick Find status, Rhema settings, ownership and deletion in Bethel ChMS."
 sidebarTitle: "Organisation settings"
 ---
 
@@ -29,6 +29,7 @@ The page is made up of cards. Some cards are shown to everyone who can open the 
 | **Custom Fields** | Everyone who can open the page | Org Owner, Org Admin |
 | **Currency** | Everyone who can open the page | Org Owner |
 | **Quick Find** | Org Owner, Org Admin | Nobody here (changes are made on each branch's page) |
+| **Rhema** | Org Owner, Org Admin, while Rhema is switched on for your church | Org Owner, Org Admin |
 | **Ownership & Danger Zone** | Org Owner | Org Owner |
 
 Branch Admins and Editors see the organisation's details, plan, billing status, custom fields and currency so they know how things are set up, but those settings belong to the organisation as a whole, so they are managed centrally.
@@ -201,10 +202,25 @@ The **Quick Find** card gives you a summary of how Quick Find is set up across y
 | Status | What it means |
 | --- | --- |
 | **On** | Quick Find is switched on for this branch and the disclosure has been accepted. |
-| **On, waiting** | The branch's switch is on, but nobody has accepted the disclosure yet, so Quick Find stays off at the kiosk. |
+| **On, waiting** | The branch's switch is on, but Quick Find stays off at the kiosk. Either nobody has accepted the disclosure yet, or Find by name isn't available for your organisation yet. |
 | **Off** | Quick Find is switched off for this branch. |
 
 Click a branch in the list to open its page, where you accept the disclosure and turn Quick Find on or off. See [Find by name (Quick Find)](/guides/quick-find) and [Branch management](/guides/branch-management#quick-find).
+
+## Rhema
+
+[Rhema](/guides/rhema) lets you ask about your church's records in your own words. The **Rhema** card appears, with an **On** badge, only while the Bethel ChMS team has switched Rhema on for your church.
+
+**Who can do this:** Org Owner, Org Admin
+
+The card has four rows:
+
+- **Who can use Rhema**: Org Owners and Org Admins. Rhema only answers from reports the person can already see.
+- **Send tag and custom field names to Rhema**: a switch, on to begin with, that lets Rhema understand questions like "members tagged Choir" or "baptised members". Switch it off if any tag, custom field or custom field choice is sensitive. It applies to your whole church.
+- **Chat history**: **Delete all my chats** deletes your own Rhema chats, with **Undo**. It doesn't touch anyone else's.
+- **Switching Rhema off**: **contact support** to have Rhema switched off. Your saved reports are kept.
+
+See [Rhema settings](/guides/rhema#rhema-settings) for what each setting changes.
 
 ## Transfer ownership
 
@@ -271,3 +287,4 @@ Deleted organisation data can be recovered within 30 days. Contact support at he
 - [Branch management](/guides/branch-management)
 - [Billing and subscription](/guides/billing-and-subscription)
 - [Find by name (Quick Find)](/guides/quick-find)
+- [Rhema](/guides/rhema)

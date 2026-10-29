@@ -1,73 +1,99 @@
 ---
-title: "Porter alerts and return reminders"
-sidebarTitle: "Alerts and reminders"
-description: "See faults and missing items in Porter's Alerts tab, turn on phone notifications, and remind workers to return equipment before they leave."
+title: "Porter notifications and return reminders"
+sidebarTitle: "Notifications and reminders"
+description: "See everything Porter has sent you in the Notifications tab, deal with faults and missing items, turn on phone notifications, and remind workers to return equipment before they leave."
 ---
 
-[Porter](/guides/porter) helps you keep track of problems with your equipment as they happen, and reminds your team to bring everything back.
+[Porter](/guides/porter) keeps everyone told about what matters to them, and reminds your team to bring everything back.
 
-- The **Alerts** tab lists every open fault and missing item, so Porter admins can deal with them in one place.
-- **Phone alerts** notify Porter admins about each fault and missing item as it happens.
+- The **Notifications** tab lists everything Porter has sent you: tags in comments, tasks, rota changes and reminders. Porter admins also see every open fault and missing item there, so they can deal with them in one place.
+- **Phone notifications** let Porter tell you about each of these as it happens.
 - **Return reminders** tell anyone still holding equipment to return it when the service is ending.
 
 A **Porter admin** is someone with **Porter · Admin** access. A **worker** has **Porter · Worker**. See [Porter access levels](/guides/porter#porter-access-levels).
 
-## Who gets which alert
+<Note>
+**Notifications** used to be called **Alerts**, and only Porter admins had it. Now everyone with Porter has a Notifications tab, and old links to Alerts still open it.
+</Note>
 
-| Alert | Who gets it | When |
+## Who hears about what
+
+| Notice | Who gets it | When |
 | --- | --- | --- |
-| **Fault** | Every Porter admin in your organisation who has alerts on. | Someone reports a fault, or returns an item marked **Faulty**. |
-| **Missing** | Every Porter admin in your organisation who has alerts on. | Someone returns a set and marks one of its items **Absent**. |
-| **Return reminder** | Anyone, worker or Porter admin, who took equipment that day and still has it, if they have alerts on. | At the time you set for the event. See [Return reminders](#return-reminders). |
+| **Fault** | Every Porter admin in your organisation. | Someone reports a fault, or returns an item marked **Faulty**. |
+| **Missing** | Every Porter admin in your organisation. | Someone returns a set and marks one of its items **Absent**. |
+| **Return reminder** | Anyone, worker or Porter admin, who took equipment that day and still has it. | At the time you set for the event. See [Return reminders](#return-reminders). |
+| **Rota** | People on the [service rota](/guides/porter-rota). | They're given a slot, a slot changes, a teammate asks them to swap, and before each service they serve at. |
+| **Tasks** | People with [tasks](/guides/porter-projects). | They're given a task, reminded about one, or someone comments on it. Planners also hear when a task is done. |
+| **Tag** | Anyone tagged in a task comment. | Straight away, when the comment is posted. See [Tag someone in a comment](/guides/porter-projects#tag-someone-in-a-comment). |
 
-The person who caused an alert doesn't get it. For example, a Porter admin who reports a fault isn't told about their own report. A Porter admin who uses **Mark missing** doesn't send an alert either.
+The person who caused a notice doesn't get it. For example, a Porter admin who reports a fault isn't told about their own report. A Porter admin who uses **Mark missing** doesn't send a notice either.
 
-## Turn on alerts on your phone
+Every notice is listed in the person's **Notifications** tab. It also goes to their phone if they've [turned on notifications](#turn-on-notifications-on-your-phone). Rota and task notices go by email instead when notifications aren't on for any of the person's devices.
 
-**Who can do this:** Porter · Admin, Porter · Worker (while they have equipment on loan)
+## Turn on notifications on your phone
 
-Alerts are set up on each device, so turn them on on every phone where you want them.
+**Who can do this:** Porter · Admin, Porter · Worker
+
+Notifications are set up on each device, so turn them on on every phone where you want them.
 
 <Steps>
-  <Step title="Find the Turn on alerts card">
-    Porter admins find it on **Home** and in **Setup**. Workers find it on **Home** while they have equipment on loan.
+  <Step title="Find Turn on notifications">
+    Everyone finds it at the top of the **Notifications** tab. It's also on **Home** for Porter admins, and for workers while they have equipment on loan, a slot on the rota or a task. Porter admins also find it in **Setup**.
   </Step>
-  <Step title="Turn alerts on">
-    Tap **Turn on alerts**, then allow notifications when your phone asks.
+  <Step title="Turn notifications on">
+    Tap **Turn on notifications**, then allow notifications when your phone asks.
   </Step>
 </Steps>
 
-Once alerts are on, the card disappears from **Home**. In **Setup**, Porter admins see **Alerts are on for this device.** with a **Turn off** button.
+Once notifications are on, **Turn on notifications** disappears from **Home** and **Notifications**. In **Setup**, Porter admins see **Notifications are on for this device** with a **Turn off** button.
 
 <Note>
-**On iPhone and iPad**, alerts only work when Porter is opened from the Home Screen. In Safari, tap **Share**, choose **Add to Home Screen**, then open the app from the new "Bethel" icon. The **Turn on alerts** card then appears. On iPhone, until you do this, the card is titled **Add Porter to your Home Screen**. On iPad, follow the same steps even if you don't see the card. See [Install the app](/getting-started/install-the-app).
+**On iPhone and iPad**, notifications only work when Porter is opened from the Home Screen. In Safari, tap **Share**, choose **Add to Home Screen**, then open the app from the new "Bethel" icon. **Turn on notifications** then appears. On iPhone, until you do this, Porter shows **Add Porter to your Home Screen** instead. On iPad, follow the same steps even if you don't see it. See [Install the app](/getting-started/install-the-app).
 </Note>
 
-If the card says **Alerts are blocked for Porter in your browser settings**, you said no to notifications earlier. Allow notifications for Bethel ChMS in your phone's or browser's settings, then come back to the card. If your browser can't show notifications at all, the card doesn't appear.
+If Porter says **Notifications are blocked for Porter in your browser settings**, you said no to notifications earlier. Allow notifications for Bethel ChMS in your phone's or browser's settings, then come back. If your browser can't show notifications at all, **Turn on notifications** doesn't appear.
 
-**To turn alerts off:** Porter admins tap **Turn off** in **Setup**. Anyone can also turn off notifications for Bethel ChMS in their phone's settings.
+**To turn notifications off:** Porter admins tap **Turn off** in **Setup**. Anyone can also turn off notifications for Bethel ChMS in their phone's settings.
 
 <Tip>
-Workers only see the card once they've taken equipment out. Turn alerts on then, so you get a reminder before you leave.
+Workers who only borrow equipment see **Turn on notifications** on Home once they've taken something out. Turn notifications on then, so you get a reminder before you leave.
 </Tip>
 
-### What the alerts say
+### What the equipment notices say
 
 - **Fault:** the title is **Fault:** and the item's name, followed by who reported it and what's wrong.
 - **Missing:** the title is **Missing:** and the item's name, followed by who returned the set without it, or who marked it absent.
 - **Return reminder:** the title is **Still with you:** and the number of items, followed by up to three item names, the event that's ending and a reminder to return them before you leave. A set counts once, by its name.
 
-Tap a fault or missing alert to open that item in Porter. Tap a return reminder to open Porter's **Home**, where your items are listed under **With you**.
+Tap a fault or missing notice to open that item in Porter. Tap a return reminder to open Porter's **Home**, where your items are listed under **With you**.
 
-## The Alerts tab
+## The Notifications tab
+
+**Who can do this:** Porter · Admin, Porter · Worker
+
+Tap **Notifications** to see what Porter has sent you.
+
+**For you** lists your notices, newest first: being tagged in a comment, tasks you were given, comments on your tasks, reminders, rota changes and, for Porter admins, faults and missing items. Each row shows the title, the first line of the message and how long ago it came. Tap a row to open the task, rota or item it's about.
+
+- Notices that arrived since you last opened Notifications have a dot and **New**.
+- If the comment a notice was about has since been removed, the row says **Comment removed.** instead.
+- The tab shows your 50 most recent notices. Older ones aren't deleted, they just aren't listed.
+- Until anything arrives, it says **Nothing yet. When someone tags you, assigns you a task or changes your rota, it shows here.**
+
+The number on the **Notifications** tab counts the notices sent to you since you last opened it, or **99+** if there are more than 99. Opening Notifications clears it.
+
+### Faults and missing items
 
 **Who can do this:** Porter · Admin
 
-Tap **Alerts** to see everything that needs a Porter admin. The red badge on the tab shows how many open faults and missing items there are, or **99+** if there are more than 99. When there's nothing to do, the tab says **Nothing needs your attention.**
+Below **For you**, Porter admins see every open fault and missing item in your organisation, under **Faults** and **Missing**. The number on the tab also counts these, and they stay counted until each one is dealt with. When there's nothing open, Notifications says **No open faults or missing items.**
 
 <Frame>
-  <img src="/images/guides/porter-alerts-tab.png" alt="The Porter Alerts tab on a phone with a fault on Lectern mic 2 showing what's wrong, who reported it, who had it last and a Resolve fault button, and a missing Clip-on mic 4 with a Mark found button" width="320" />
+  <img src="/images/guides/porter-alerts-tab.png" alt="Open faults and missing items in Porter Notifications on a phone, with the search box and the All, Faults and Missing filter, a fault on Lectern mic 2 showing what's wrong, its code, who reported it and who still has it, with a Resolve fault button, and a missing Clip-on mic 4 with a Mark found button" width="320" />
 </Frame>
+
+Use the search box to find an item by name, tag or fault. Choose **All**, **Faults** or **Missing** to narrow the list. When the items come from more than one department, you can also pick a department.
 
 **Faults** lists each item with an open fault, showing:
 
@@ -79,17 +105,17 @@ Tap **Alerts** to see everything that needs a Porter admin. The red badge on the
 
 **Missing** lists each missing item, with who marked it missing and when, and a **Mark found** button for when it turns up.
 
-Resolving a fault or marking an item found clears it from **Alerts** and lowers the badge. For what each action does, see [Look after faulty and missing items](/guides/porter-equipment#look-after-faulty-and-missing-items).
+Resolving a fault or marking an item found takes it off the list and lowers the number on the tab. For what each action does, see [Look after faulty and missing items](/guides/porter-equipment#look-after-faulty-and-missing-items).
 
 ## Return reminders
 
 **Who can do this:** Porter · Admin
 
-Return reminders are set for each event in Porter's **Setup** tab, not in the event's settings in Bethel ChMS.
+Return reminders are set for each event in Porter's **Setup**, not in the event's settings in Bethel ChMS.
 
 <Steps>
   <Step title="Open Return reminders">
-    In Porter, tap **Setup** and scroll to **Return reminders**. Every event in your organisation with an upcoming occurrence is listed, along with any event that already has a reminder. Each one shows its branch, when its next occurrence ends (or **No upcoming occurrence**), and its current reminder: **Off**, **At the end**, or a number of minutes before or after the end.
+    In Porter, open **Setup**, then **Return reminders** under **Equipment**. Every event in your organisation with an upcoming occurrence is listed, along with any event that already has a reminder. Each one shows its branch, when its next occurrence ends (or **No upcoming occurrence**), and its current reminder: **Off**, **At the end**, or a number of minutes before or after the end.
   </Step>
   <Step title="Choose when to remind">
     For the event, choose **Before it ends** or **After it ends**, then enter the number of minutes. Minutes go up in steps of 5, from 0 to 720, so you can choose up to 12 hours either side. It starts at 10 minutes. To stop reminders for the event, choose **No reminder**.
@@ -110,15 +136,17 @@ At the set time for each occurrence, everyone who took equipment that day and st
 - People who took equipment out on an earlier day aren't reminded.
 - Cancelled occurrences never send a reminder.
 - If a reminder can't go out within 2 hours of its time, Porter doesn't send it late.
-- People only get reminders on devices where they've [turned on alerts](#turn-on-alerts-on-your-phone).
+- People only get reminders on their phone on devices where they've [turned on notifications](#turn-on-notifications-on-your-phone).
 
 ### Equipment still out after a reminder
 
-For 12 hours after a reminder goes out, if anything is still on loan, Porter admins see an amber banner on **Home** saying how many items are still on loan after the reminder went out. Tap it to see the equipment list filtered to **On loan**, showing who has what.
+For 12 hours after a reminder goes out, if anything is still on loan, Porter admins see a line on **Home** saying how many items are still on loan after the reminder went out. Tap it to see the equipment list filtered to **On loan**, showing who has what.
 
 ## Related pages
 
 - [Porter overview](/guides/porter)
 - [Equipment, loans and faults](/guides/porter-equipment)
 - [Check in with Porter](/guides/porter-check-in)
+- [Porter: service rota](/guides/porter-rota)
+- [Porter: projects and tasks](/guides/porter-projects)
 - [Install the app](/getting-started/install-the-app)
