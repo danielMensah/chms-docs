@@ -26,6 +26,7 @@ A **Porter admin** is someone with **Porter · Admin** access. A **worker** has 
 | **Rota** | People on the [service rota](/guides/porter-rota). | They're given a slot, a slot changes, a teammate asks them to swap, and before each service they serve at. |
 | **Tasks** | People with [tasks](/guides/porter-projects). | They're given a task, reminded about one, or someone comments on it. Planners also hear when a task is done. |
 | **Tag** | Anyone tagged in a task comment. | Straight away, when the comment is posted. See [Tag someone in a comment](/guides/porter-projects#tag-someone-in-a-comment). |
+| **Report** | Every Porter admin in your organisation, also by email, except an admin the report is about. The person who made the report is told once an admin has looked at it. | Someone reports a comment or a person. See [Review a report](/guides/porter-projects#review-a-report). |
 
 The person who caused a notice doesn't get it. For example, a Porter admin who reports a fault isn't told about their own report. A Porter admin who uses **Mark missing** doesn't send a notice either.
 
@@ -62,11 +63,13 @@ Workers who only borrow equipment see **Turn on notifications** on Home once the
 
 ### What the equipment notices say
 
-- **Fault:** the title is **Fault:** and the item's name, followed by who reported it and what's wrong.
-- **Missing:** the title is **Missing:** and the item's name, followed by who returned the set without it, or who marked it absent.
+To keep the details private, fault and missing notices never name the item, the person or what's wrong. You see the details when you open Porter.
+
+- **Fault:** the title is **Porter equipment update**, with **Open Porter to view the details.** Tap it to open the item, where the fault is shown.
+- **Missing:** the title is **Porter equipment update**, with **Open Porter and verify your sign-in to view the details.** Tap it to open **Notifications**. Porter asks for your [two-step verification](/guides/account-security) code first if you haven't entered it on that device recently.
 - **Return reminder:** the title is **Still with you:** and the number of items, followed by up to three item names, the event that's ending and a reminder to return them before you leave. A set counts once, by its name.
 
-Tap a fault or missing notice to open that item in Porter. Tap a return reminder to open Porter's **Home**, where your items are listed under **With you**.
+Tap a return reminder to open Porter's **Home**, where your items are listed under **With you**.
 
 ## The Notifications tab
 
@@ -85,9 +88,9 @@ The number on the **Notifications** tab counts the notices sent to you since you
 
 ### Faults and missing items
 
-**Who can do this:** Porter · Admin
+**Who can do this:** Porter · Admin, after entering their [two-step verification](/guides/account-security) code
 
-Below **For you**, Porter admins see every open fault and missing item in your organisation, under **Faults** and **Missing**. The number on the tab also counts these, and they stay counted until each one is dealt with. When there's nothing open, Notifications says **No open faults or missing items.**
+Below **For you**, Porter admins see every open fault and missing item in your organisation, under **Faults** and **Missing**. The number on the tab also counts these, and they stay counted until each one is dealt with. When there's nothing open, Notifications says **No open faults or missing items.** Until you've entered your two-step verification code on that device, Notifications shows only **For you**, and the number on the tab doesn't count faults and missing items. Open **Setup** to enter your code.
 
 <Frame>
   <img src="/images/guides/porter-alerts-tab.png" alt="Open faults and missing items in Porter Notifications on a phone, with the search box and the All, Faults and Missing filter, a fault on Lectern mic 2 showing what's wrong, its code, who reported it and who still has it, with a Resolve fault button, and a missing Clip-on mic 4 with a Mark found button" width="320" />
@@ -109,7 +112,7 @@ Resolving a fault or marking an item found takes it off the list and lowers the 
 
 ## Return reminders
 
-**Who can do this:** Porter · Admin
+**Who can do this:** Porter · Admin, after entering their [two-step verification](/guides/account-security) code
 
 Return reminders are set for each event in Porter's **Setup**, not in the event's settings in Bethel ChMS.
 

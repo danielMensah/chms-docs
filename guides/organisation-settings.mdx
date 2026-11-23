@@ -1,6 +1,6 @@
 ---
 title: "Organisation settings"
-description: "Manage your organisation details, plan and billing status, custom fields, currency, Quick Find status, Rhema settings, ownership and deletion in Bethel ChMS."
+description: "Manage your organisation details, plan and billing status, custom fields, currency, Quick Find status, Rhema settings, wallet pass logo, ownership and deletion in Bethel ChMS."
 sidebarTitle: "Organisation settings"
 ---
 
@@ -30,6 +30,7 @@ The page is made up of cards. Some cards are shown to everyone who can open the 
 | **Currency** | Everyone who can open the page | Org Owner |
 | **Quick Find** | Org Owner, Org Admin | Nobody here (changes are made on each branch's page) |
 | **Rhema** | Org Owner, Org Admin, while Rhema is switched on for your church | Org Owner, Org Admin |
+| **Wallet pass logo** | Org Owner, Org Admin | Org Owner, Org Admin |
 | **Ownership & Danger Zone** | Org Owner | Org Owner |
 
 Branch Admins and Editors see the organisation's details, plan, billing status, custom fields and currency so they know how things are set up, but those settings belong to the organisation as a whole, so they are managed centrally.
@@ -222,6 +223,39 @@ The card has four rows:
 
 See [Rhema settings](/guides/rhema#rhema-settings) for what each setting changes.
 
+## Wallet pass logo
+
+Members can add their check-in QR code to Apple Wallet or Google Wallet from their QR code email. See [Member QR codes](/guides/member-qr-codes#add-the-code-to-a-phone-wallet). The **Wallet pass logo** card puts your church's own logo and colour on those wallet cards, in place of the Bethel ChMS logo.
+
+**Who can do this:** Org Owner, Org Admin
+
+Until you upload a logo, the card says there is no logo yet, and passes show only the Bethel ChMS logo.
+
+### Upload your logo
+
+<Steps>
+  <Step title="Choose your logo">
+    On the **Wallet pass logo** card, click **Upload logo** and choose an image. It must be a PNG, JPEG or WebP file, no bigger than 5 MB, and at least 270 pixels wide or tall. A logo on a transparent or white background works best, because Bethel ChMS trims that border away.
+  </Step>
+  <Step title="Check the preview">
+    When you see "Logo saved", the card shows a preview of a wallet card: your logo with your church's name beside it, and a member's name below, on your pass colour.
+  </Step>
+  <Step title="Adjust the pass colour (optional)">
+    Bethel ChMS picks the pass colour from your logo. To use a different colour, click the **Pass colour** swatch and choose one, then click **Save colour**. You see "Pass colour saved". Click **Cancel** to go back to the saved colour.
+  </Step>
+</Steps>
+
+Wallet cards show white text on your pass colour. If you choose a very light colour, the text turns dark so it stays easy to read.
+
+### Replace or remove your logo
+
+- To use a different logo, click **Replace logo** and choose a new image. It replaces the old one straight away.
+- To go back to the Bethel ChMS logo, click **Remove**, then **Remove** again to confirm.
+
+### Cards members have already added
+
+Your logo and colour appear on wallet cards members add from now on. A card already in a member's wallet keeps the look it had when they added it, so if you remove your logo, cards added before may still show it. To get the new look, the member adds the card again from their QR code email or **View my code** page. The new card replaces the old one, and they don't end up with two.
+
 ## Transfer ownership
 
 Every organisation has one **Org Owner**. You can hand this role to an existing **Org Admin**, for example when the person who set up Bethel ChMS for your church steps down.
@@ -288,3 +322,4 @@ Deleted organisation data can be recovered within 30 days. Contact support at he
 - [Billing and subscription](/guides/billing-and-subscription)
 - [Find by name (Quick Find)](/guides/quick-find)
 - [Rhema](/guides/rhema)
+- [Member QR codes](/guides/member-qr-codes)

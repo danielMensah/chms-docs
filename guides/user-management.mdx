@@ -6,10 +6,10 @@ sidebarTitle: "User management"
 
 Use the **Users** page to manage everyone who signs in to your organisation's apps. A **user** is someone with their own sign-in, such as a pastor, office administrator or finance volunteer. Your **organisation** is your church network, with all its branches, members and settings.
 
-From the **Users** page you can add users, resend invitations, edit names, change roles, move users between branches, and deactivate or reactivate users. If your church uses **Porter**, the part of Bethel ChMS that workers and volunteers use on their phones, Org Owners and Org Admins also give, change and remove Porter access here.
+From the **Users** page you can add users, resend invitations, edit names, change roles, move users between branches, and deactivate or reactivate users. Org Owners and Org Admins can also reset someone's two-step verification or sign them out of all their devices. If your church uses **Porter**, the part of Bethel ChMS that workers and volunteers use on their phones, Org Owners and Org Admins also give, change and remove Porter access here.
 
 <Info>
-**Who can do this:** **Org Owner** and **Org Admin** can manage users across the organisation. **Branch Admins** can manage **Branch Admin** and **Editor** users in their own branch. Only **Org Owners** and **Org Admins** can give Porter access. **Editors**, **Treasurers** and **Care Managers** cannot open the **Users** page.
+**Who can do this:** **Org Owner** and **Org Admin** can manage users across the organisation. **Branch Admins** can manage **Branch Admin** and **Editor** users in their own branch. Only **Org Owners** and **Org Admins** can give Porter access, reset two-step verification and sign someone out of all devices. **Editors**, **Treasurers** and **Care Managers** cannot open the **Users** page.
 </Info>
 
 ## Open the Users page
@@ -29,7 +29,7 @@ Users are organisation-wide, so the list shows everyone in your organisation. Ea
 The **Apps** and **Member record** columns appear on wider screens. Click anywhere on a row to open that user's page. On a tablet or computer, click the **⋯** button at the end of a row for actions. On a phone, rows have no **⋯** button, so tap the row and use the user's page instead. Deactivated users appear dimmed.
 
 <Frame>
-  <img src="/images/guides/users-list-row-menu.png" alt="The Users page showing the search box, the All, Active, Invites and Deactivated chips, and a list of users with role badges, Apps chips for ChMS and Porter, and an open row menu with Open user, Edit, Open member record, Email and Deactivate" />
+  <img src="/images/guides/users-list-row-menu.png" alt="The Users page showing the search box, the All, Active, Invites and Deactivated chips, and a list of users with role badges, Apps chips for ChMS and Porter, and an open row menu with Open user, Edit, Open member record, Email, Reset two-step verification, Sign out all devices and Deactivate" />
 </Frame>
 
 <Note>
@@ -51,7 +51,7 @@ Filters you've applied appear as chips next to the status chips. Click one to re
 | --- | --- |
 | **Invite pending** | The person has been invited but has not accepted the invitation yet. |
 | **Active** | The person has accepted the invitation and can sign in. |
-| **Deactivated** | The person cannot sign in until you reactivate them. |
+| **Deactivated** | The person cannot use Bethel ChMS until you reactivate them. If they also have Porter, they can still sign in to Porter. |
 | **Invite expired** | Porter invitations only. The emailed link has expired. Resend the invitation to send a new link. |
 
 ## Add a user
@@ -137,8 +137,8 @@ To give Porter to an active Bethel ChMS user, open **Edit user**, tick **Porter*
 
 To remove Porter:
 
-- **For a Porter-only person:** on a tablet or computer, click **⋯** on their row and choose **Remove Porter**, then confirm with **Remove Porter**. Their member record, past check-ins and sign-in stay, and you can give Porter back later.
-- **For a Bethel ChMS user:** open **Edit user**, untick **Porter** and click **Save changes**. This also cancels a pending Porter invitation.
+- **For a Porter-only person, or a deactivated Bethel ChMS user who still has Porter:** on a tablet or computer, click **⋯** on their row and choose **Remove Porter**, then confirm with **Remove Porter**. They're signed out on every device and can't sign in until you give them access back, by giving them Porter again or, for a deactivated user, choosing **Reactivate**. Their member record and past check-ins stay.
+- **For an active Bethel ChMS user:** open **Edit user**, untick **Porter** and click **Save changes**. This also cancels a pending Porter invitation. They're signed out on every device, but keep Bethel ChMS and can sign in again. If you untick your own Porter, your other devices are signed out and the one you're using stays signed in.
 
 For what Porter users can do, see [Porter access levels](/guides/roles-and-permissions#porter-access-levels) and [Porter](/guides/porter).
 
@@ -174,13 +174,29 @@ For when a role change reaches the person, see [How role changes take effect](/g
 
 **Who can do this:** Org Owner, Org Admin, Branch Admin (for Branch Admin and Editor users in their own branch)
 
-Deactivate a user when they should no longer have access. Deactivation keeps their user record but blocks their sign-in. Because one sign-in opens both apps, a deactivated user can't sign in to Porter either.
+Deactivate a user when they should no longer use Bethel ChMS. Deactivation keeps their user record, removes their Bethel ChMS access and signs them out on every device straight away.
+
+One sign-in opens both apps, so what happens next depends on whether they also have Porter:
+
+- **They don't have Porter:** they can't sign in at all until you reactivate them.
+- **They have Porter:** they keep Porter and can sign in to it again. To remove Porter as well, click **⋯** on their row and choose **Remove Porter**.
 
 To deactivate someone, click **⋯** on their row, or **⋮** on their user page, and choose **Deactivate**. Check the details in **Deactivate User** and click **Deactivate**. Bethel ChMS confirms with "User deactivated".
 
 You cannot deactivate yourself. You also cannot deactivate the **Org Owner**.
 
 To restore access, click the **Deactivated** chip, click **⋯** on the user (or **⋮** on their user page) and choose **Reactivate**. Confirm in **Reactivate User** by clicking **Reactivate**. The user regains access with their current role and branch, and Bethel ChMS confirms with "User reactivated".
+
+## Reset two-step verification or sign someone out
+
+**Who can do this:** Org Owner, Org Admin
+
+Everyone who uses Bethel ChMS signs in with a password and a 6-digit code from an authenticator app on their phone. When someone in your church needs help with their sign-in, click **⋯** on their row, or **⋮** on their user page, and choose:
+
+- **Reset two-step verification** when they've lost their phone. They're signed out everywhere and set up two-step verification again at their next sign-in.
+- **Sign out all devices** when they've left a church phone or computer signed in, or lost a device. Their access doesn't change, and they can sign in again with their password.
+
+Both ask for the 6-digit code from **your own** authenticator app before they run. Neither is available on your own row or the Org Owner's. For the full steps, see [Reset someone's two-step verification](/guides/account-security#reset-someones-two-step-verification) and [Sign someone out of all devices](/guides/account-security#sign-someone-out-of-all-devices).
 
 ## Row actions
 
@@ -193,10 +209,12 @@ On a tablet or computer, the **⋯** menu on each row shows the actions availabl
 | **Resend invitation** | Bethel ChMS users who haven't accepted their invitation yet. Branch Admins see it only for invitations to their own branch. |
 | **Open member record** | When the person is linked to a member record. |
 | **Email** | When the person has an email address. Opens your email app. |
+| **Reset two-step verification** | People who have set up two-step verification. Org Owners and Org Admins only, and never on your own row or the Org Owner's. |
+| **Sign out all devices** | Anyone except you and the Org Owner, unless their invitation is still pending. Org Owners and Org Admins only. |
 | **Deactivate** | Active users you can manage, except yourself and the Org Owner. |
 | **Reactivate** | Deactivated users you can manage. |
 | **Resend** and **Cancel invite** | Porter-only people who haven't accepted their invitation yet. |
-| **Remove Porter** | Porter-only people whose Porter access is active. |
+| **Remove Porter** | Porter-only people whose Porter access is active, and deactivated Bethel ChMS users who still have Porter. |
 
 Porter actions appear only for Org Owners and Org Admins. "Users you can manage" means everyone except the Org Owner for Org Owners and Org Admins, and Branch Admin and Editor users in their own branch for Branch Admins.
 

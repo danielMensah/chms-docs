@@ -28,23 +28,32 @@ Org Owners and Org Admins see one branch at a time. Choose the branch whose even
     In the sidebar, open **Church life** and click **Events**. On a phone, tap **Events** in the tab bar. Click **Add Event** (the **+** button on a phone) to create an event, or open an existing event and click **Edit** (the pencil on a phone).
   </Step>
   <Step title="Turn on public check-in">
-    In the **Check-in** section, turn on **Public Check-in**. It is already on for new events.
-  </Step>
-  <Step title="Choose the check-in window">
-    Under **Check-in Window**, choose **30 minutes**, **1 hour**, **2 hours**, **3 hours**, **4 hours** or **8 hours**. New events start with **2 hours**.
+    In the **Check-in** section, turn on **Public Check-in**. It is already on for new events. There is no time to choose: check-in stays open all day on the day of the event.
+
+    <Frame>
+      <img src="/images/guides/events-form-public-check-in.png" alt="The Check-in section of the Add Event sheet, with Public Check-in switched on and the note that members and visitors check themselves in all day on the day of the event." width="480" />
+    </Frame>
   </Step>
   <Step title="Save the event">
     Click **Create Event** for a new event, or **Save Changes** for an existing one.
   </Step>
 </Steps>
 
-### How the check-in window works
+### How long check-in stays open
 
-The check-in window opens that length of time before each occurrence starts, and closes the same length of time after the start. With a **30 minutes** window and a service at 10:00, people can check themselves in from 09:30 until 10:30. If people often arrive late, or your service runs long, choose a longer window.
+Check-in is open all day on the day of the event. A service from 10:00 to 13:00 accepts check-ins at 08:00 and at 15:00, on a phone or at a kiosk. There is nothing to set.
 
-Bethel ChMS always uses the occurrence whose start time is closest to now. Cancelled occurrences are never offered for check-in.
+<Note>
+Events used to have a **Check-in Window** setting that closed check-in a set time after the start. That setting has gone. Your existing events now stay open all day on the day of each occurrence, and you don't need to change anything.
+</Note>
 
-Outside the window, the check-in page and the kiosk show "There's no active check-in for this event right now. Please check with the welcome team." Staff can still record attendance from the occurrence's attendance page at any time.
+The day is the calendar day in the event's own time zone. An event that runs past midnight, or over several days, is open on every date from its start to its end. Each person counts once for an occurrence.
+
+If an event has more than one occurrence on the same day, Bethel ChMS uses the one in progress. If none is in progress, it uses the next to start. If they have all ended, it uses the one that ended last. Cancelled occurrences are never offered for check-in.
+
+Two services on one day are usually two events, and each has its own QR code. Someone who scans the 09:00 service's code at 11:00 is checked in to the 09:00 service, so put up the right code for each service. A kiosk asks staff when it's time to move on. See [Move the kiosk to the next service](/guides/kiosk-mode#move-the-kiosk-to-the-next-service).
+
+On any other day, the check-in page and the kiosk show "There's no check-in for this event today. Please check with the welcome team." Staff can still record attendance from the occurrence's attendance page at any time.
 
 ## Share the event QR code
 
@@ -141,7 +150,10 @@ The phone check-in page doesn't scan QR codes or search by name. Those options a
 | Message | What it means |
 | --- | --- |
 | "Check-in is not available for this event." | **Public Check-in** is off for the event. |
-| "There's no active check-in for this event right now. Please check with the welcome team." | No occurrence is inside the check-in window, or the occurrence was cancelled. |
+| "There's no check-in for this event today. Please check with the welcome team." | The event has no occurrence today, or today's occurrence was cancelled. |
+| "Check-in for this service has closed. Please speak to the welcome team." | The page was left open and the day of the occurrence has ended. Reload the page, or check in with the welcome team. |
+| "Check-in is turned off for this service. Please speak to the welcome team." | **Public Check-in** was switched off while the page was open. |
+| "We couldn't find your record at this church. Please speak to the welcome team." | The record could not be found for this church. A steward can check the person in from the attendance page. |
 | "Event not found" | The link is wrong, or the QR code was replaced with **Regenerate Token**. |
 
 ## Take attendance as staff
@@ -152,11 +164,11 @@ Each occurrence has its own attendance page, where staff check people in, correc
 
 Open **Events** and select the event, then use any of these:
 
-- Click **Take attendance** on the card for the next occurrence at the top of the event page.
+- Click **Take attendance** on the card at the top of the event page. Until the day ends it offers today's occurrence, including one that has already finished. After that it offers the next occurrence.
 - On the **Occurrences** tab, click the occurrence's row, or open its **⋯** menu and choose **Take attendance**.
-- On the **Attendance** tab, click an occurrence that has already started.
+- On the **Attendance** tab, click today's occurrence or one that has already started.
 
-You can also click **Take attendance** on a **Live now** card on the **Dashboard** or the **Events** page, or choose **Take attendance** from an event's **⋯** menu in the events list.
+You can also click **Take attendance** on any of today's service cards on the **Dashboard**, on a **Live now** card on the **Events** page, or from an event's **⋯** menu in the events list. These all go to today's occurrence until the day ends, so at 15:00 after a service that finished at 13:00, you still reach today's attendance and not next week's.
 
 The page shows the event name and date, a green **Live** label while the occurrence is in progress, and how many people have checked in, split into members and visitors, with the time of the last check-in. Bethel ChMS keeps your screen awake while this page is open.
 
@@ -208,13 +220,15 @@ The scanner uses the rear camera. Use the flip button to switch cameras, and the
 - **A visitor's code from their welcome email** checks the visitor in straight away. The result card shows "Checked in", their name, **Visitor** and **Undo**.
 - **A code Bethel ChMS doesn't recognise** shows "Not recognised". Codes from another branch don't match.
 
+At a [kiosk](/guides/kiosk-mode), if a scan doesn't work, the person can hold up the same code again after about two seconds.
+
 The **Scanned** list, under the camera or beside it on a wide screen, shows everyone you have scanned this session, newest first. When you're finished, click **Done**.
 
 ### Check in from the Absent tab
 
 The attendance page has two tabs: **Attendees** and **Absent**. Each shows a count.
 
-**Absent** lists active members who haven't checked in yet, and updates after each check-in. Click **Check in** next to a member to record them, or use the row menu to **Call**, **Message** or **Email** them, or **Open member**. After a check-in, Bethel ChMS shows a message with **Undo**.
+**Absent** lists active members who haven't checked in yet, and updates after each check-in. Check-ins from other devices, such as a kiosk, appear shortly after your next check-in on this page, or when you reload it. In a very large branch, the tab shows the first part of the list with a line such as "Showing the first 1,000 of 1,240. Search to find anyone else." Use **Search absent members...** to find anyone else. Click **Check in** next to a member to record them, or use the row menu to **Call**, **Message** or **Email** them, or **Open member**. After a check-in, Bethel ChMS shows a message with **Undo**.
 
 **Attendees** lists everyone who has checked in, newest first. The 20 most recent show first. To see the rest, click the button under the list, for example **Show 12 earlier check-ins**.
 
@@ -235,7 +249,11 @@ Bulk entry works well when you type up a paper register after the event.
 3. Tick members, or click **Select All**.
 4. Click the **Check In** button. It shows how many members you selected, for example **Check In 12 Members**.
 
-The list shows the branch's newcomer and active members, with a **Newcomer** label on newcomers. Inactive members aren't listed. Members who are already checked in can't be ticked and are marked "Already checked in". When you finish, Bethel ChMS tells you how many members were checked in and how many were skipped because they were already recorded.
+The list shows all of the branch's newcomer and active members, however many there are, with a **Newcomer** label on newcomers. Inactive members aren't listed. The list shows up to 1,000 people at a time. In a larger branch it reads, for example, "Showing 1,000 of 1,240. Search by name to find others." **Select All** ticks only the people shown.
+
+You can check in up to 1,000 people in one go. If you select more, Bethel ChMS asks you to search to narrow the list and submit again.
+
+Members who are already checked in can't be ticked and are marked "Already checked in". When you finish, Bethel ChMS tells you how many members were checked in and how many were skipped because they were already recorded.
 
 ### Correct or remove a record
 
@@ -279,11 +297,16 @@ Org Owners and Org Admins can also click **Email code** to send the member their
 
 1. In the sidebar, open **People** and click **Members**.
 2. Open the **⋯** menu and choose **Email QR codes**. To email particular people, tick them on the list first and use **Email QR codes** in the selection bar (it reads **QR** on a phone).
-3. Choose **Selected members**, **All members** or **Filter**. With **Filter**, narrow the recipients by status, age group or group.
+3. Choose **Selected members**, **All members of this branch** or **Filter**. For the last two, choose the **Branch**. With **Filter**, narrow the recipients by **Status**, **Age groups** or **Groups**.
 4. Click **Continue**.
-5. Review the preview and click **Send now**.
+5. In **Review before sending**, check the recipients. You can **Add a message (optional)**, for example where to scan or what to bring, and enter an email address in **Replies go to** so that replies reach your office. Leave it blank for no reply address.
+6. Click **Send now**.
 
-The preview separates members who will receive an email from members who are skipped because they have no email address, or because a code was emailed to them in the last hour. You can download the skipped lists as a CSV file to follow up.
+The review separates members who will receive an email from members who are skipped because they have no email address, or because a code was emailed to them in the last hour. Tick **Send again anyway** to include the second group. You can download the skipped lists as a CSV file to follow up.
+
+If the dialog says "Branch-wide emails are not switched on yet", choose **Selected members** and tick up to 25 people at a time.
+
+Bethel ChMS records each email as it goes, so nobody is sent a code twice. If a send is interrupted, the next time you open **Email QR codes** it shows **An earlier send has not finished**, with **Resume** and **Stop this send**. **Past sends** lists earlier sends, so you can open one to see what happened.
 
 ## Review attendance records
 
@@ -317,6 +340,8 @@ You can also see one member's attendance on their member page, on the **Attendan
 The **Member Frequency** tab shows how often each member attended in the date range. Use it to spot people who have stopped coming and update their records in bulk.
 
 The columns are **Member Name**, **Events Attended**, **Events Absent**, **Missed in a row**, **Attendance Rate** and **Last Attended**.
+
+A service only counts as an absence once it has finished. A service that is still to come or under way doesn't count against anyone, so on a Sunday morning nobody has an extra absence for today's service. Cancelled services never count as absences. If a member did attend a service, it always counts as attended.
 
 <Steps>
   <Step title="Open Member Frequency">

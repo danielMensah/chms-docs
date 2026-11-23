@@ -44,14 +44,14 @@ When one of your branch's events has an occurrence in progress, a green **Live n
 - **Take attendance** opens the attendance page for that occurrence. See [Record attendance](/guides/recording-attendance).
 - **QR & kiosk** opens [kiosk mode](/guides/kiosk-mode) in a new tab, so people can check themselves in. If public check-in is off for the event, it opens the event page instead.
 
-**Live now** cards also appear at the top of **Upcoming events** on your [Dashboard](/guides/dashboards).
+This card appears only while the service is in progress. Your [Dashboard](/guides/dashboards) shows a card for each of today's services, with the same two buttons, until the day ends.
 
 ### The event menu
 
 Each row has a **⋯** menu with:
 
 - **Open**, to open the event page.
-- **Take attendance**, when the event has an occurrence that is in progress or still to come.
+- **Take attendance**, when the event has an occurrence today or still to come. It stays on today's occurrence until the day ends.
 - **QR & kiosk**, when public check-in is on for the event. It opens [kiosk mode](/guides/kiosk-mode).
 - **Edit**, to change the event's details.
 - **Delete**, for Org Owner, Org Admin and Branch Admin only.
@@ -83,7 +83,7 @@ Each row has a **⋯** menu with:
     Add a **Description** if it helps your team, for example who leads it or what to bring.
   </Step>
   <Step title="Choose check-in settings">
-    Under **Check-in**, leave **Public Check-in** on if members and visitors should check themselves in with the event's QR code or a kiosk. Then choose a **Check-in Window**. See [Check-in settings](#check-in-settings) below.
+    Under **Check-in**, leave **Public Check-in** on if members and visitors should check themselves in with the event's QR code or a kiosk. See [Check-in settings](#check-in-settings) below.
   </Step>
   <Step title="Create the event">
     Click **Create Event**. Bethel ChMS creates the event and its occurrences, and confirms with a message such as **Event "Youth Night" created**.
@@ -91,7 +91,7 @@ Each row has a **⋯** menu with:
 </Steps>
 
 <Frame>
-  <img src="/images/guides/events-add-event-sheet.png" alt="The Add Event sheet filled in for a weekly Youth Night, showing the Name, Group and Location fields, the Schedule section with start date and times, the Recurrence section with Weekly selected and an end date, and the Check-in section with Public Check-in on and a 2 hours window." width="480" />
+  <img src="/images/guides/events-add-event-sheet.png" alt="The Add Event sheet filled in for a weekly Youth Night, showing the Name, Group and Location fields, the Schedule section with start date and times, the Recurrence section with Weekly selected and an end date, and the Check-in section with Public Check-in on." width="480" />
 </Frame>
 
 <Accordion title="Messages you might see on the form">
@@ -104,7 +104,7 @@ Each row has a **⋯** menu with:
 ### Check-in settings
 
 - **Public Check-in** is on by default. It gives the event a QR code that members and visitors scan to check themselves in, and lets you run a check-in kiosk at the door. If your church uses Porter, your service team scans the same code, so keep it on for any event where workers check in. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
-- **Check-in Window** sets how long before each occurrence starts that check-in opens, and how long after the start it stays open: **30 minutes**, **1 hour**, **2 hours** (the default), **3 hours**, **4 hours** or **8 hours**. It only appears while **Public Check-in** is on. The window applies to members and visitors checking themselves in. See [How the check-in window works](/guides/recording-attendance#how-the-check-in-window-works). Porter workers can scan the code at any time on the day of the occurrence.
+- While **Public Check-in** is on, members and visitors can check themselves in all day on the day of the event. There is no time to set. See [How long check-in stays open](/guides/recording-attendance#how-long-check-in-stays-open). Porter workers can also scan the code at any time on the day of the occurrence.
 
 To learn how people check in, see [Record attendance](/guides/recording-attendance) and [Kiosk mode](/guides/kiosk-mode).
 
@@ -196,7 +196,7 @@ The summary at the top shows:
 - the repeat pattern, for recurring events
 - **Public check-in on** or **Public check-in off**
 - the description, if there is one
-- a card for the next occurrence that hasn't ended, with its time, date and location, a **Live now** or **Next** badge, and a **Take attendance** button. Cancelled occurrences are skipped. If nothing is left to come, it reads **No upcoming occurrences.**
+- a card for today's occurrence until the day ends, or otherwise the next occurrence, with its time, date and location and a **Take attendance** button. Its badge reads **Live now**, **Today** or **Ended** for an occurrence today, and **Next** for one on a later date. Cancelled occurrences are skipped. If nothing is left to come, it reads **No upcoming occurrences.**
 
 Below the summary are four tabs: **Occurrences**, **Attendance**, **Settings** and **Change History**.
 
@@ -213,7 +213,7 @@ Tap a row to open that occurrence's attendance page. On tablets and computers ea
 
 ### Attendance tab
 
-The **Attendance** tab lists the occurrences that have started so far, newest first, leaving out cancelled ones. Each row shows **View attendance**, or **Live now** if it is in progress. Tap a row to open its attendance page. If nothing has started yet, the tab reads **No occurrences have started yet.** See [Record attendance](/guides/recording-attendance).
+The **Attendance** tab lists the occurrences that have started so far, and today's occurrence even if it hasn't started yet, newest first, leaving out cancelled ones. Each row shows **View attendance**, or **Live now** if it is in progress. Tap a row to open its attendance page. If nothing has started yet, the tab reads **No occurrences have started yet.** See [Record attendance](/guides/recording-attendance).
 
 ### Settings tab
 
@@ -222,7 +222,7 @@ The **Settings** tab shows the event's details:
 - **Location** and **Group** (a link to the group, or **None (open event)**)
 - **Start** and **End**
 - **Recurrence**, for recurring events, and **Recurs until** if the series has an end date
-- **Check-in Window**, for example "Open from 2 hours before until 2 hours after each occurrence starts", or **Public check-in is off**
+- **Check-in**, which reads **Open all day on the day of the event** or **Public check-in is off**
 
 Below the details is the **Public Check-in QR** card. See [Public check-in and the event QR code](#public-check-in-and-the-event-qr-code).
 

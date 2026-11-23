@@ -75,6 +75,8 @@ The line above the list shows what you are looking at, for example "48 of 120 me
 
 The list shows 50 members per page by default. Use **Rows per page** to show 25, 50 or 100, and **Previous** and **Next** to move between pages. Changing a filter or the sort order takes you back to the first page.
 
+The member list holds up to 5,000 members from the branch. Search, filters, counts and **Export CSV** work across all of them, not only the page you're on. If a branch has more than 5,000 members, a notice above the list gives the branch's full count and explains that search, filters, counts, **Select all** and **Export CSV** only cover the first 5,000.
+
 ## Add a member
 
 **Who can do this:** Org Owner, Org Admin, Branch Admin, Editor
@@ -90,7 +92,7 @@ The list shows 50 members per page by default. Use **Rows per page** to show 25,
     **First Name** and **Last Name** are required. You can also fill in **Date of Birth**, **Age Group**, **Gender**, **Nationality**, **Email**, **Mobile Number**, **Address**, **Post Code**, **Tags**, and any member custom fields your church has set up. Required custom fields are marked with an asterisk.
   </Step>
   <Step title="Save the member">
-    Click **Create Member**. You see "Member created", and the new member starts with the **Newcomer** status. If you entered an email address, Bethel ChMS emails the member their personal check-in QR code.
+    Click **Create Member**. You see "Member created", and the new member starts with the **Newcomer** status. If you entered an email address, Bethel ChMS emails the member their personal check-in QR code. See [Member QR codes](/guides/member-qr-codes).
   </Step>
 </Steps>
 
@@ -176,7 +178,7 @@ Each occurrence shows its date and time and is marked **Attended**, **Absent** o
 - **Check a member in:** on an occurrence marked **Absent**, click **Check in**.
 - **Remove a check-in made in error:** on an occurrence marked **Attended**, click **Remove**, then **Remove** again to confirm. This cannot be undone.
 
-These are manual corrections, so they work whether or not the occurrence's check-in window is open. You can't check anyone in to a cancelled occurrence. For a member who was once a visitor, check-ins from before they became a member are listed as **Recorded as a visitor** and can't be removed here.
+These are manual corrections, so you can make them at any time, not only on the day of the service. You can't check anyone in to a cancelled occurrence. For a member who was once a visitor, check-ins from before they became a member are listed as **Recorded as a visitor** and can't be removed here.
 
 ### The Care tab
 
@@ -234,35 +236,11 @@ These rules are off until an Org Owner turns them on. Thresholds are set for the
 
 ## Member QR codes
 
-Each member has a personal QR code they can scan to check in at a kiosk. See [Recording attendance](/guides/recording-attendance) and [Kiosk mode](/guides/kiosk-mode).
+Each member has a personal QR code they can scan to check in at a kiosk or at the door. On the member page, click **QR Code** in the top bar, tap the **QR code** quick action, or open the **More actions** menu (⋮) and choose **Show QR code**.
 
-### Show or email one member's code
+Org Owners and Org Admins can email codes to one member with **Email code**, or to many members at once with **Email QR codes** on the member list. The email links to the member's own **View my code** page, where they can add the code to Apple Wallet or Google Wallet.
 
-On the member page, click **QR Code** in the top bar, tap the **QR code** quick action, or open the **More actions** menu (⋮) and choose **Show QR code**. The dialog shows the member's name and code, with "Scan this code to record attendance".
-
-- Click **Full screen** to show the code edge to edge, so it is easy to scan from your screen. Click **Done** to go back.
-- Click **Email code** to send the code to the member's email address. Only Org Owners and Org Admins see this button, and it is greyed out if the member has no email address.
-
-A member can only be emailed their code once an hour. If you try again sooner, you see "A QR code was emailed to this member in the last hour."
-
-### Email codes to many members
-
-**Who can do this:** Org Owner, Org Admin
-
-<Steps>
-  <Step title="Open Email QR codes">
-    On the member list, open the **⋯** menu next to **Filters** and choose **Email QR codes**. To email only some members, select them first and click **Email QR codes** in the selection bar.
-  </Step>
-  <Step title="Choose who should receive a code">
-    Choose **Selected members**, **All members** (members across your whole organisation, not only the branch you are viewing), or **Filter** to narrow by status, age group and group. The dialog shows how many members will be considered. Click **Continue**.
-  </Step>
-  <Step title="Review before sending">
-    Check who will receive an email, and who will be skipped because they have no email address or were sent a code in the last hour. You can download each skipped list as a CSV file to follow up.
-  </Step>
-  <Step title="Send the emails">
-    Click **Send now**. **Send complete** shows how many were sent, skipped and failed.
-  </Step>
-</Steps>
+See [Member QR codes](/guides/member-qr-codes) for showing and emailing codes, following up past sends, and wallet cards.
 
 ## Select members
 
@@ -270,7 +248,7 @@ To work with several members at once, select them in the list. On tablets and co
 
 The selection bar shows how many members you have selected and offers:
 
-- **Email QR codes**: email the selected members their codes (Org Owner and Org Admin only).
+- **Email QR codes**: email the selected members their codes (Org Owner and Org Admin only). See [Email codes to many members](/guides/member-qr-codes#email-codes-to-many-members).
 - **Export**: download a CSV file of just the selected members.
 - **Merge**: merge two records for the same person (Org Owner, Org Admin and Branch Admin only). Select exactly two members from the same branch. See [Duplicates and merging](/guides/duplicates-and-merging).
 
@@ -317,6 +295,7 @@ See [Duplicates and merging](/guides/duplicates-and-merging) for the full steps 
 ## Related guides
 
 - [Visitors](/guides/visitors)
+- [Member QR codes](/guides/member-qr-codes)
 - [Care](/guides/care)
 - [Households](/guides/households)
 - [Groups](/guides/groups)

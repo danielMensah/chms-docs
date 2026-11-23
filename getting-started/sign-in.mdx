@@ -1,10 +1,10 @@
 ---
 title: "Sign in and reset your password"
 sidebarTitle: "Sign in"
-description: "Sign in to Bethel ChMS, get past the security check, reset a forgotten password, and sign out."
+description: "Sign in to Bethel ChMS with your password and a code from your phone, get past the security check, reset a forgotten password, and sign out."
 ---
 
-Everyone on your team signs in to Bethel ChMS at [app.bethelchms.com](https://app.bethelchms.com) with their email address and password. This page covers signing in, what to do if you forget your password, and how to sign out.
+Everyone on your team signs in to Bethel ChMS at [app.bethelchms.com](https://app.bethelchms.com) with their email address, their password and a 6-digit code from an authenticator app on their phone. This page covers signing in, what to do if you forget your password, and how to sign out.
 
 <Info>
 **Who can do this:** Anyone with a Bethel ChMS account. If you don't have one yet, ask your church administrator to [invite you](/getting-started/invite-users), or [set up your church](/getting-started/setup) if you're the first person to use Bethel ChMS.
@@ -25,7 +25,24 @@ Everyone on your team signs in to Bethel ChMS at [app.bethelchms.com](https://ap
   <Step title="Sign in">
     Click **Sign in**.
   </Step>
+  <Step title="Enter the code from your phone">
+    The **Enter your code** page opens. Open your authenticator app, type the 6-digit code it shows into **6-digit code** and click **Verify**.
+
+    The first time you sign in, the **Set up two-step verification** page opens instead, so you can connect your authenticator app. See [Two-step verification and devices](/guides/account-security#set-up-two-step-verification).
+
+    <Frame>
+      <img src="/images/getting-started/two-step-enter-code.png" alt="The Enter your code page showing the partly hidden email address, the 6-digit code field, the Verify button and what to do if you've lost your phone" />
+    </Frame>
+  </Step>
 </Steps>
+
+### Two-step verification
+
+Bethel ChMS protects your church's data with **two-step verification**: after your password, you enter a 6-digit code from an authenticator app on your phone, such as Google Authenticator or Microsoft Authenticator. Everyone who uses Bethel ChMS needs it, whatever their role. Each computer or phone asks for a code again every 30 days.
+
+Porter workers don't need a code for everyday Porter work. Porter admins need one for **Setup** and the other admin screens.
+
+For setting it up, signing in on more than one device, and what to do if you lose your phone, see [Two-step verification and devices](/guides/account-security).
 
 ### Show or hide your password
 
@@ -79,6 +96,8 @@ You may also see one of these messages under a field:
 | **Password is required** | Enter your password. |
 | **Password must be at least 8 characters** | Bethel ChMS passwords are always at least 8 characters, so check what you typed. |
 
+If your 6-digit code isn't accepted, you'll see **That code didn't work. Check the time on your phone and try again.** Codes depend on your phone's clock, so make sure its date and time are set automatically. If you've lost your phone, ask your church's Org Owner or an Org Admin to reset your two-step verification. See [Lost your phone?](/guides/account-security#lost-your-phone)
+
 If you open an old or broken link from a Bethel ChMS email, you land back on the sign-in page with a message such as **Invalid confirmation link**, or one that says the link has expired and what to do next. Sign in with your email and password. An old invitation link opens the **Invitation Error** page instead. See [Problems with an invitation link](#problems-with-an-invitation-link).
 
 ## Reset a forgotten password
@@ -99,8 +118,14 @@ If you open an old or broken link from a Bethel ChMS email, you land back on the
     The link opens **Reset your password** with the message **Choose a new password.** Enter a **New password** of at least 12 characters, with upper-case and lower-case letters and at least one number, type it again in **Confirm password**, and click **Reset password**.
 
     When your new password is saved, you're signed in. For your security, Bethel ChMS signs you out on any other devices, so you'll need to sign in there with your new password.
+
+    Resetting your password doesn't change your two-step verification.
   </Step>
 </Steps>
+
+<Warning>
+If you've already set up two-step verification, the reset form can't save your new password. Instead it shows **AAL2 session is required to update email or password when MFA is enabled.** Ask your church's Org Owner or an Org Admin to [reset your two-step verification](/guides/account-security#reset-someones-two-step-verification), then ask for a new reset link and choose your password. Bethel ChMS then asks you to set up two-step verification again. If you're the Org Owner, contact Bethel ChMS support as described in [Lost your phone?](/guides/account-security#lost-your-phone)
+</Warning>
 
 If the two passwords don't match, you'll see **Passwords do not match**. If you leave the second box empty, you'll see **Please confirm your password**.
 
@@ -128,8 +153,11 @@ Sign out when you've finished, especially on a shared or church office computer.
 
 Bethel ChMS signs you out and opens the sign-in page, so you or the next person can sign in again.
 
+**Sign out** signs you out on every device where you're signed in with your account, not just the one you're using. Any other browser or app, including Porter, asks you to sign in again at its next step. To see where you're signed in, or to sign out just one other device, open **Sign-in and security**. See [See and sign out your devices](/guides/account-security#see-and-sign-out-your-devices).
+
 ## Related pages
 
+- [Two-step verification and devices](/guides/account-security)
 - [Find your way around](/getting-started/find-your-way-around)
 - [Install the app](/getting-started/install-the-app)
 - [Invite your team](/getting-started/invite-users)

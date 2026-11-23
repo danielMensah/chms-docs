@@ -32,6 +32,7 @@
             "pages": [
               "guides/roles-and-permissions",
               "guides/user-management",
+              "guides/account-security",
               "guides/organisation-settings",
               "guides/branch-management",
               "guides/tags",
@@ -43,6 +44,7 @@
             "group": "People",
             "pages": [
               "guides/managing-members",
+              "guides/member-qr-codes",
               "guides/visitors",
               "guides/duplicates-and-merging",
               "guides/care",
@@ -162,6 +164,14 @@
     {
       "source": "/guides/backsliders",
       "destination": "/guides/care"
+    },
+    {
+      "source": "/guides/two-step-verification",
+      "destination": "/guides/account-security"
+    },
+    {
+      "source": "/guides/bethel-connect-app",
+      "destination": "/getting-started/install-the-app"
     }
   ]
 }

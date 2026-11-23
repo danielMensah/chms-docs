@@ -43,8 +43,16 @@ On these pages, a **worker** is anyone with Porter · Worker, and a **Porter adm
 | Mark items missing or found, resolve faults, retire items, delete sets | No | Yes |
 | See open faults and missing items in **Notifications**, and set return reminders | No | Yes |
 | Plan projects and fill the service rota for every team | No | Yes |
+| Report a comment or a person, and block someone | Yes | Yes |
+| Review reports and remove comments | No | Yes |
 
 Team leaders and assistant leaders with Porter access can also fill the rota and plan projects for their own teams. See [Porter: service rota](/guides/porter-rota#who-can-do-what) and [Porter: projects and tasks](/guides/porter-projects#who-can-do-what).
+
+### Two-step verification for Porter admins
+
+Porter admin screens hold your church's equipment, check-in history and reports, so they need more than a password. Porter admins use **two-step verification**: after their password, they enter a 6-digit code from an authenticator app on their phone. Porter asks for it when a Porter admin opens **Setup** or another admin screen, and sets it up with them there and then if they haven't set it up already. After that, it asks for a code again after each new sign-in, and every 30 days on each device.
+
+Until a Porter admin has entered their code on a device, Porter shows them what a worker sees there. Everyday work, such as checking in, loaning and returning equipment, the rota and tasks, never asks for a code, and workers are never asked. To set it up, see [Account security](/guides/account-security).
 
 A Porter access level sits on the person's **member record**, not on a Bethel ChMS role. This means anyone can have it: a volunteer who never uses Bethel ChMS, or a staff member with any Bethel ChMS role. Someone with Porter only can't open Bethel ChMS. Someone with both uses one email and password for both. See [Porter access levels](/guides/roles-and-permissions#porter-access-levels).
 
@@ -137,7 +145,9 @@ Because they already have a sign-in, Porter works for them as soon as you save. 
 | **Change their access level** | Open **Edit**, choose the other **Porter role** and click **Save changes**. | Click **Add user**, enter the email they sign in with, choose **Porter**, pick the new **Porter role** and link the same member record, then click **Create user**. Because they already sign in, the change applies straight away. |
 | **Remove Porter** | Open **Edit**, untick **Porter** and click **Save changes**. | Click **⋯** on their row and choose **Remove Porter**, then confirm with **Remove Porter**. |
 
-Removing Porter keeps the person's member record, past check-ins and sign-in, so you can give Porter back later. Deactivating a Bethel ChMS user also stops them using Porter, because they share one sign-in.
+Removing Porter signs the person out on every device straight away. If they still have Bethel ChMS, they can sign in to it again. It keeps their member record and past check-ins, so you can give Porter back later.
+
+Removing one app doesn't remove the other. If you **Deactivate** someone who has both Bethel ChMS and Porter, they keep Porter and can sign in to it again, but not to Bethel ChMS. To take Porter away from them too, open the **⋯** menu on their row and choose **Remove Porter**. See [What happens when you remove someone's access](/guides/account-security#what-happens-when-you-remove-someones-access).
 
 On the **Users** page, people with Porter only appear after your Bethel ChMS users. Their role shows as **No ChMS role** with **Porter only** underneath. For more, see [Give or remove Porter access](/guides/user-management#give-or-remove-porter-access).
 
@@ -147,7 +157,7 @@ Once Porter is switched on, work through these steps. Most of them are done insi
 
 <Steps>
   <Step title="Give yourself Porter admin access">
-    Give yourself, and anyone else who will run Porter, **Porter · Admin**. See [Someone who already uses Bethel ChMS](#someone-who-already-uses-bethel-chms).
+    Give yourself, and anyone else who will run Porter, **Porter · Admin**. See [Someone who already uses Bethel ChMS](#someone-who-already-uses-bethel-chms). The first time you open **Setup**, Porter asks you to set up [two-step verification](#two-step-verification-for-porter-admins).
   </Step>
   <Step title="Check your locations and events in Bethel ChMS">
     Porter uses the [locations](/guides/locations) and [events](/guides/managing-events) you already have in Bethel ChMS. Make sure **Public Check-in** is on for every event your workers check in to, because they scan the event's check-in QR code.
@@ -187,7 +197,7 @@ On iPhone and iPad, install the app before you turn on notifications, because no
     Enter your **Email** and **Password**. Tap the eye icon to show or hide your password. Let the security check finish.
   </Step>
   <Step title="Sign in">
-    Tap **Sign in**. Porter opens on **Home**.
+    Tap **Sign in**. Porter opens on **Home**. Signing in to Porter never asks for a code. Porter admins enter their [two-step verification](#two-step-verification-for-porter-admins) code when they open an admin screen.
   </Step>
 </Steps>
 
@@ -201,9 +211,9 @@ If the page says **This account doesn't have Porter access. Ask an admin at your
 
 Porter is the same app on every device. Only the way around it changes with the size of the screen.
 
-- **On a phone**, the tabs run along the bottom of the screen. The bar at the top shows the page's name, a way back, **Guide** (a book icon), which opens the guide for that screen, and your initials, which open a menu with **Sign out**. Porter admins also get a gear there for **Setup**.
-- **On a tablet held upright**, a narrow rail of icons runs down the left, with **Setup** among them for Porter admins, and your initials and **Sign out** at the foot.
-- **On a tablet on its side or a computer**, the rail is wider and names each tab. At its foot are your name, **Back to ChMS** (if you also use Bethel ChMS) and **Sign out**. The bar along the top shows where you are, for example *Projects › Carol Service*, with the page's buttons on the right, **Guide**, and **?** for the [keyboard shortcuts](/guides/porter-projects#keyboard-shortcuts).
+- **On a phone**, the tabs run along the bottom of the screen. The bar at the top shows the page's name, a way back, **Guide** (a book icon), which opens the guide for that screen, and your initials, which open a menu with **Back to ChMS** (if you also use Bethel ChMS), **Sign-in and security** and **Sign out**. Porter admins also get a gear there for **Setup**.
+- **On a tablet held upright**, a narrow rail of icons runs down the left, with **Setup** among them for Porter admins, and your initials and **Sign out** at the foot. Your initials open the same menu as on a phone.
+- **On a tablet on its side or a computer**, the rail is wider and names each tab. At its foot are your name, **Back to ChMS** (if you also use Bethel ChMS), **Sign-in and security** and **Sign out**. The bar along the top shows where you are, for example *Projects › Carol Service*, with the page's buttons on the right, **Guide**, and **?** for the [keyboard shortcuts](/guides/porter-projects#keyboard-shortcuts).
 
 | Tab | Who sees it | What it's for |
 | --- | --- | --- |
@@ -237,7 +247,7 @@ Under the card are:
 - **Check-in and loan history**, and **Report a fault**, for anything broken or not working.
 - **Turn on notifications**, for Porter admins, and for workers while they have equipment on loan, a slot on the rota or a task. See [Porter notifications and return reminders](/guides/porter-alerts).
 
-Porter admins also see **Notifications** on **Home** when there are open faults or missing items, and links to **Manual check-in** and **Setup**. Team leaders and Porter admins see **Not here yet** around service time. See [On the day](/guides/porter-rota#on-the-day).
+Porter admins also see **Notifications** on **Home** when there are open faults or missing items, and links to **Manual check-in** and **Setup**. Until a Porter admin has entered their two-step verification code on the device, **Home** shows them what a worker sees, plus the **Setup** link, which is where they enter it. Team leaders and Porter admins see **Not here yet** around service time. See [On the day](/guides/porter-rota#on-the-day).
 
 ## Move between Bethel ChMS and Porter
 
@@ -281,3 +291,4 @@ The **Porter** link only appears when Porter is switched on for your church and 
 - [User management](/guides/user-management)
 - [Roles and permissions](/guides/roles-and-permissions)
 - [Install the app](/getting-started/install-the-app)
+- [Account security](/guides/account-security)
