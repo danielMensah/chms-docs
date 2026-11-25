@@ -20,6 +20,7 @@
             "group": "Getting started",
             "pages": [
               "getting-started/introduction",
+              "getting-started/video-tours",
               "getting-started/setup",
               "getting-started/sign-in",
               "getting-started/find-your-way-around",
